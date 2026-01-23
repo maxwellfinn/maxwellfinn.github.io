@@ -41,6 +41,52 @@
             overflow-x: hidden;
         }
 
+        /* Promo Banner */
+        .promo-banner {
+            background: linear-gradient(90deg, var(--xh-orange) 0%, #FF9500 100%);
+            padding: 12px 24px;
+            text-align: center;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .promo-banner p {
+            font-size: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .promo-code {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 6px 16px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 16px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .promo-code:hover {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .promo-code svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .promo-code.copied {
+            background: rgba(34, 197, 94, 0.3);
+        }
+
         /* Floating CTA Bar */
         .floating-cta {
             position: fixed;
@@ -871,6 +917,37 @@
             height: 16px;
         }
 
+        .pricing-code-box {
+            background: var(--dark-elevated);
+            border: 2px dashed var(--xh-orange);
+            border-radius: 12px;
+            padding: 16px 24px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .pricing-code-box span {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .pricing-code-box code {
+            font-family: monospace;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--xh-orange);
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .pricing-code-box code:hover {
+            color: #FF9500;
+        }
+
         /* FAQ Section */
         .faq {
             padding: 120px 24px;
@@ -968,8 +1045,19 @@
         .final-cta p {
             font-size: 20px;
             color: var(--text-secondary);
-            margin-bottom: 48px;
+            margin-bottom: 24px;
             line-height: 1.7;
+        }
+
+        .final-cta-code {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .final-cta-code .promo-code {
+            background: rgba(255, 107, 0, 0.2);
+            border: 1px solid var(--xh-orange);
         }
 
         /* Footer */
@@ -1133,6 +1221,19 @@
     </style>
 </head>
 <body>
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+        <p>
+            Exclusive xHamster Deal: <strong>20% OFF</strong> The Handy 2 — Use Code
+            <span class="promo-code" onclick="copyCode(this)" title="Click to copy">
+                XHAMSTER20
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                </svg>
+            </span>
+        </p>
+    </div>
+
     <!-- Floating CTA Bar -->
     <div class="floating-cta" id="floatingCta">
         <div class="floating-cta-content">
@@ -1140,7 +1241,7 @@
                 <img src="Handy-2-Gallery-1-600x600.avif" alt="The Handy">
                 <div class="floating-cta-info">
                     <h4>The Handy 2 + xHamster</h4>
-                    <p><span class="price">$239</span> &bull; Free Shipping</p>
+                    <p><span class="price">20% OFF</span> with code <strong>XHAMSTER20</strong></p>
                 </div>
             </div>
             <a href="https://www.thehandy.com/" class="floating-cta-btn">
@@ -1162,7 +1263,7 @@
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
-                        Official Partner
+                        Exclusive xHamster Deal
                     </div>
                 </div>
                 <h1>Feel <span class="highlight">Every Scene</span> In Real Time</h1>
@@ -1170,7 +1271,7 @@
 
                 <div class="hero-cta-group">
                     <a href="https://www.thehandy.com/" class="btn-primary">
-                        Get The Handy 2 — $239
+                        Get 20% Off — Use Code XHAMSTER20
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                         </svg>
@@ -1449,13 +1550,13 @@
     <!-- Pricing -->
     <section class="pricing">
         <div class="section-header">
-            <div class="section-label">Special Offer</div>
-            <h2 class="section-title">Get Started Today</h2>
-            <p class="section-subtitle">Everything you need to experience xHamster like never before.</p>
+            <div class="section-label">Exclusive xHamster Offer</div>
+            <h2 class="section-title">Get 20% Off Today</h2>
+            <p class="section-subtitle">Use code <strong style="color: var(--xh-orange);">XHAMSTER20</strong> at checkout. This exclusive deal won't last forever.</p>
         </div>
 
         <div class="pricing-card">
-            <div class="pricing-badge">xHamster Partner Deal</div>
+            <div class="pricing-badge">Exclusive 20% Off</div>
             <div class="pricing-content">
                 <div class="pricing-details">
                     <h3>The Handy 2 Complete Kit</h3>
@@ -1500,10 +1601,14 @@
                     </div>
                 </div>
                 <div class="pricing-action">
-                    <div class="pricing-original">$269</div>
+                    <div class="pricing-original">$299</div>
                     <div class="pricing-current">$239</div>
-                    <div class="pricing-savings">Save $30 Today</div>
-                    <a href="https://www.thehandy.com/" class="pricing-cta">Order Now</a>
+                    <div class="pricing-savings">Save $60 with XHAMSTER20</div>
+                    <div class="pricing-code-box">
+                        <span>Your Code:</span>
+                        <code onclick="copyCode(this)">XHAMSTER20</code>
+                    </div>
+                    <a href="https://www.thehandy.com/" class="pricing-cta">Claim 20% Off Now</a>
                     <div class="pricing-trust">
                         <span>
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1605,8 +1710,11 @@
         <div class="final-cta-content">
             <h2>Ready to Feel the Difference?</h2>
             <p>Stop watching. Start feeling. The Handy 2 transforms every xHamster video into an immersive experience you have to feel to believe.</p>
+            <div class="final-cta-code">
+                Use code <span class="promo-code" onclick="copyCode(this)">XHAMSTER20<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></span> for 20% off
+            </div>
             <a href="https://www.thehandy.com/" class="btn-primary">
-                Get The Handy 2 — $239
+                Claim Your 20% Discount
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                 </svg>
@@ -1633,6 +1741,28 @@
 
     <!-- Scripts -->
     <script>
+        // Copy promo code function
+        function copyCode(element) {
+            const code = 'XHAMSTER20';
+            navigator.clipboard.writeText(code).then(() => {
+                element.classList.add('copied');
+                const originalText = element.innerHTML;
+                if (element.tagName === 'CODE') {
+                    element.textContent = 'Copied!';
+                } else {
+                    element.innerHTML = 'Copied! <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>';
+                }
+                setTimeout(() => {
+                    element.classList.remove('copied');
+                    if (element.tagName === 'CODE') {
+                        element.textContent = code;
+                    } else {
+                        element.innerHTML = originalText;
+                    }
+                }, 2000);
+            });
+        }
+
         // Floating CTA visibility
         const floatingCta = document.getElementById('floatingCta');
         let lastScrollY = window.scrollY;
