@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 Things Every Frequent Flyer Figures Out Too Late | The Travel Edit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #292D3A;
+            --pine-green: #476C58;
+            --off-white: #F9F8F6;
+            --white: #FFFFFF;
+            --cream: #FAF9F7;
+            --text-body: #374151;
+            --text-muted: #6B7280;
+            --border-light: #E5E7EB;
+            --accent-coral: #E07A5F;
+            --accent-gold: #D4A574;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            color: var(--text-body);
+            line-height: 1.8;
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+            font-size: 18px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 500;
+            line-height: 1.3;
+            color: var(--primary-dark);
+        }
+
+        /* Publication Header */
+        .pub-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border-light);
+            padding: 16px 24px;
+        }
+
+        .pub-header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pub-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .pub-nav {
+            display: flex;
+            gap: 32px;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pub-nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .pub-nav a:hover {
+            color: var(--primary-dark);
+        }
+
+        @media (max-width: 768px) {
+            .pub-nav {
+                display: none;
+            }
+        }
+
+        /* Sponsored Label */
+        .sponsored-label {
+            background: var(--cream);
+            padding: 12px 24px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .sponsored-label span {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+        }
+
+        .sponsored-label a {
+            color: var(--pine-green);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Article Container */
+        .article-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Article Header */
+        .article-header {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .article-category {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-coral);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .article-header h1 {
+            font-size: clamp(32px, 5vw, 46px);
+            margin-bottom: 24px;
+            line-height: 1.15;
+        }
+
+        .article-subtitle {
+            font-family: 'Source Serif 4', serif;
+            font-size: 20px;
+            color: var(--text-muted);
+            font-style: italic;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-light);
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .article-meta-divider {
+            width: 4px;
+            height: 4px;
+            background: var(--text-muted);
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        /* Hero Image */
+        .hero-image {
+            margin: 0 auto 48px;
+            max-width: 720px;
+            padding: 0 24px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* Article Content */
+        .article-content {
+            padding-bottom: 60px;
+        }
+
+        .article-content p {
+            margin-bottom: 24px;
+        }
+
+        .intro-text {
+            font-size: 20px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        /* Listicle Item */
+        .listicle-item {
+            margin-bottom: 56px;
+            padding-bottom: 56px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .listicle-item:last-of-type {
+            border-bottom: none;
+        }
+
+        .listicle-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            font-weight: 500;
+            color: var(--pine-green);
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: -10px;
+        }
+
+        .listicle-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+            line-height: 1.3;
+        }
+
+        .listicle-item p {
+            margin-bottom: 20px;
+        }
+
+        .listicle-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: var(--cream);
+            padding: 24px 28px;
+            border-radius: 8px;
+            margin: 24px 0;
+            border-left: 4px solid var(--pine-green);
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        /* Pro Tip */
+        .pro-tip {
+            background: linear-gradient(135deg, #f0f7f4 0%, #e8f0ed 100%);
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin: 24px 0;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .pro-tip-icon {
+            background: var(--pine-green);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .pro-tip-content {
+            flex: 1;
+        }
+
+        .pro-tip-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--pine-green);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .pro-tip-content p {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        /* Featured Product Card */
+        .featured-product {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #1f232d 100%);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 32px;
+            align-items: center;
+        }
+
+        @media (max-width: 600px) {
+            .featured-product {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 32px 24px;
+            }
+        }
+
+        .featured-product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 0;
+        }
+
+        .featured-product-content h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .featured-product-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .featured-product-content p {
+            font-size: 15px;
+            opacity: 0.85;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .featured-product-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--white);
+            text-decoration: none;
+            background: var(--pine-green);
+            padding: 12px 24px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .featured-product-link:hover {
+            background: #3a5a4a;
+            transform: translateY(-2px);
+        }
+
+        .featured-product-link svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.2s;
+        }
+
+        .featured-product-link:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* Quick Stats */
+        .quick-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cream);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .quick-stat strong {
+            color: var(--pine-green);
+        }
+
+        /* Bottom Line Box */
+        .bottom-line {
+            background: var(--pine-green);
+            color: var(--white);
+            padding: 32px;
+            border-radius: 12px;
+            margin: 48px 0;
+            text-align: center;
+        }
+
+        .bottom-line h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            color: var(--white);
+            opacity: 0.8;
+        }
+
+        .bottom-line p {
+            font-size: 20px;
+            margin: 0;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        /* Author Box */
+        .article-footer {
+            border-top: 1px solid var(--border-light);
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        .author-box {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .author-avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--accent-coral);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--primary-dark);
+            margin-bottom: 4px;
+        }
+
+        .author-info p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--cream);
+            padding: 60px 24px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .cta-inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 28px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--pine-green);
+            color: var(--white);
+            padding: 16px 36px;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #3a5a4a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(71, 108, 88, 0.3);
+        }
+
+        .cta-button svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .cta-note {
+            margin-top: 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        .site-footer {
+            background: var(--white);
+            padding: 40px 24px;
+            text-align: center;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .site-footer p {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Link styling */
+        .article-content a {
+            color: var(--pine-green);
+            text-decoration: underline;
+            text-decoration-color: rgba(71, 108, 88, 0.3);
+            text-underline-offset: 3px;
+            transition: text-decoration-color 0.2s;
+        }
+
+        .article-content a:hover {
+            text-decoration-color: var(--pine-green);
+        }
+
+        /* Share buttons row */
+        .share-row {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 40px;
+        }
+
+        .share-btn {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .share-btn:hover {
+            opacity: 0.85;
+        }
+
+        .share-btn.twitter {
+            background: #1DA1F2;
+            color: white;
+        }
+
+        .share-btn.facebook {
+            background: #4267B2;
+            color: white;
+        }
+
+        .share-btn.email {
+            background: var(--text-muted);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Publication Header -->
+    <header class="pub-header">
+        <div class="pub-header-inner">
+            <div class="pub-name">The Travel Edit</div>
+            <nav class="pub-nav">
+                <a href="#">Packing</a>
+                <a href="#">Airports</a>
+                <a href="#">Gear</a>
+                <a href="#">Hacks</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sponsored Label -->
+    <div class="sponsored-label">
+        <span>Presented by <a href="https://nomadlane.com" target="_blank" rel="noopener">Nomad Lane</a></span>
+    </div>
+
+    <!-- Article -->
+    <article>
+        <!-- Article Header -->
+        <header class="article-header">
+            <div class="article-container">
+                <div class="article-category">Travel Wisdom</div>
+                <h1>11 Things Every Frequent Flyer Figures Out Too Late</h1>
+                <p class="article-subtitle">The hard-won lessons that transform stressed travelers into effortless ones</p>
+                <div class="article-meta">
+                    <span>By Jordan Ellis</span>
+                    <div class="article-meta-divider"></div>
+                    <span>January 22, 2026</span>
+                    <div class="article-meta-divider"></div>
+                    <span>6 min read</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Image -->
+        <figure class="hero-image">
+            <img src="Homepage_AboutUs.webp" alt="Confident travelers walking through an airport">
+        </figure>
+
+        <!-- Article Content -->
+        <div class="article-container">
+            <div class="article-content">
+
+                <!-- Share Row -->
+                <div class="share-row">
+                    <a href="#" class="share-btn twitter">Share</a>
+                    <a href="#" class="share-btn facebook">Share</a>
+                    <a href="#" class="share-btn email">Email</a>
+                </div>
+
+                <p class="intro-text">There's a moment every frequent flyer remembers: the trip where everything finally clicked. The anxiety disappeared. The rushing stopped. Travel became... easy. We asked 50 road warriors what they wish they'd known sooner. Their answers might save you years of learning the hard way.</p>
+
+                <!-- Item 1 -->
+                <div class="listicle-item">
+                    <div class="listicle-number">01</div>
+                    <h2 class="listicle-title">Checked bags are a subscription you didn't know you signed up for</h2>
+                    <p>At $35-70 per flight, checking a bag on 15 round trips costs you over $1,000 a year. That's not a travel expense—it's a recurring fee for the privilege of waiting 30 minutes at baggage claim and occasionally losing your belongings.</p>
+                    <div class="quick-stat"><strong>$1,050+</strong> average annual checked bag fees</div>
+                    <div class="quick-stat"><strong>27 min</strong> average baggage claim wait</div>
+                    <p>The math is brutal, but once you see it, you can't unsee it.</p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="listicle-item">
+                    <div class="listicle-number">02</div>
+                    <h2 class="listicle-title">The overhead bin is not guaranteed real estate</h2>
+                    <p>Basic economy fares now represent 40% of domestic tickets sold—and most don't include overhead bin access. Even when they do, boarding Group 4 means watching flight attendants gate-check your roller bag anyway.</p>
+                    <img src="Nomad-Lane-Bento-Bag-Mar23-MarraCreative-71.webp" alt="Bag fitting perfectly in airline personal item sizer">
+                    <p>The only luggage space that's truly yours? The area under the seat in front of you. It's not glamorous, but it's guaranteed.</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="listicle-item">
+                    <div class="listicle-number">03</div>
+                    <h2 class="listicle-title">You're probably packing for a trip you're not taking</h2>
+                    <p>That "just in case" jacket. The extra pair of shoes. The third phone charger. Most travelers pack for hypothetical emergencies, not actual itineraries. The result: bags stuffed with items that never leave the hotel room.</p>
+                    <div class="pro-tip">
+                        <div class="pro-tip-icon">!</div>
+                        <div class="pro-tip-content">
+                            <div class="pro-tip-label">The 3-Day Rule</div>
+                            <p>If you haven't worn or used something on the last three trips, it doesn't need to come on the next one.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="listicle-item">
+                    <div class="listicle-number">04</div>
+                    <h2 class="listicle-title">Hotel toiletries are actually fine</h2>
+                    <p>Unless you have specific dermatological needs, the shampoo at your Marriott will get you through a three-day conference. That TSA-compliant toiletry kit you've been lugging around? It's taking up space that could hold another day's outfit.</p>
+                    <p>The frequent flyers we talked to were split: half had eliminated personal toiletries entirely, half kept only the essentials (medications, skincare specifics). Zero missed their travel-sized body wash.</p>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="listicle-item">
+                    <div class="listicle-number">05</div>
+                    <h2 class="listicle-title">Organization isn't optional—it's the whole game</h2>
+                    <p>Here's what separates anxious travelers from calm ones: knowing exactly where everything is. Not vaguely. Exactly. Laptop in the same pocket every time. Passport in the same spot every time. Chargers, headphones, snacks—all with designated homes.</p>
+                    <img src="image-one.webp" alt="Organized bag compartments showing dedicated spaces for items">
+                    <p>This isn't about being Type A. It's about eliminating the cognitive load of "where did I put that?" when you're rushing to make a connection.</p>
+                </div>
+
+                <!-- Item 6 - Featured Product -->
+                <div class="listicle-item">
+                    <div class="listicle-number">06</div>
+                    <h2 class="listicle-title">Your bag should have a system, not just space</h2>
+                    <p>Traditional bags treat interior space as a single cavity. You stuff things in, they shift during transit, and you spend ten minutes at your hotel reconstructing your packing system. This is why experienced travelers obsess over bag architecture—not just capacity.</p>
+
+                    <div class="featured-product">
+                        <img src="Nomad57.webp" alt="Nomad Lane Bento Bag">
+                        <div class="featured-product-content">
+                            <h4>Editor's Pick</h4>
+                            <h3>Nomad Lane Bento Bag</h3>
+                            <p>Designed like a Japanese bento box—everything has a compartment. Fits under any airline seat, holds 3+ days of clothes, includes a padded laptop sleeve. The bag that started the personal-item-only movement.</p>
+                            <a href="https://nomadlane.com/products/bento-bag" target="_blank" rel="noopener" class="featured-product-link">
+                                Shop Now — $298
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="listicle-item">
+                    <div class="listicle-number">07</div>
+                    <h2 class="listicle-title">The security line is a dress rehearsal, and you should practice</h2>
+                    <p>Veteran travelers treat TSA like a choreographed routine: laptop out before reaching the bins, shoes loosened, pockets emptied while still in line, bag positioned for easy scanning. They're through in 90 seconds while everyone else fumbles.</p>
+                    <img src="LaptopSecurity_4x5_v3_4c408048-bd24-4360-bfe5-0145986dbef4.webp" alt="Laptop being removed from bag at security">
+                    <p>The trick? Bags with dedicated laptop compartments that open flat for TSA. No digging, no holding up the line, no stress.</p>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="listicle-item">
+                    <div class="listicle-number">08</div>
+                    <h2 class="listicle-title">Wrinkle-resistant fabrics change everything</h2>
+                    <p>The limiting factor in packing light isn't space—it's wrinkling. Roll a cotton dress shirt and you'll look like you slept in it. But modern performance fabrics (merino wool, technical blends, wrinkle-free cotton) pack tight and arrive ready to wear.</p>
+                    <div class="highlight-box">
+                        <p>"I rebuilt my entire travel wardrobe around wrinkle-resistant pieces. It took about six months, but now I can pack for a week in a personal item." — Marcus, management consultant</p>
+                    </div>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="listicle-item">
+                    <div class="listicle-number">09</div>
+                    <h2 class="listicle-title">The trolley sleeve isn't a luxury—it's load-bearing infrastructure</h2>
+                    <p>Any bag you carry through an airport should attach to your rolling suitcase. Full stop. Holding a separate bag while dragging luggage is an ergonomic nightmare that compounds over a long travel day.</p>
+                    <img src="image_2d1407f1-c7fa-47a6-b606-16c592f2906f.webp" alt="Bag attached to rolling suitcase via trolley sleeve">
+                    <p>Look for a pass-through sleeve that sits flush against the suitcase handle. Your shoulders will thank you.</p>
+                </div>
+
+                <!-- Item 10 -->
+                <div class="listicle-item">
+                    <div class="listicle-number">10</div>
+                    <h2 class="listicle-title">The best flight is the one you can walk off and straight into an Uber</h2>
+                    <p>There's a specific pleasure that frequent flyers chase: landing, standing up, and walking directly to ground transportation. No carousel. No waiting. No anxiety. Just movement.</p>
+                    <img src="WomanCarryingBag_7dc7b42c-23b8-43ee-aae3-5b3602b6b195.webp" alt="Traveler walking confidently with personal item bag">
+                    <p>Once you've experienced it, checking a bag feels like voluntarily adding 45 minutes of friction to every trip.</p>
+                </div>
+
+                <!-- Item 11 -->
+                <div class="listicle-item">
+                    <div class="listicle-number">11</div>
+                    <h2 class="listicle-title">Packing light is a skill, and skills improve with practice</h2>
+                    <p>Nobody packs perfectly on their first carry-on-only trip. You'll bring too much. You'll forget something. You'll learn. By trip five, you'll have a system. By trip ten, it'll be automatic.</p>
+                    <p>The travelers who look effortless at the airport? They weren't born that way. They just started practicing sooner.</p>
+                    <div class="pro-tip">
+                        <div class="pro-tip-icon">→</div>
+                        <div class="pro-tip-content">
+                            <div class="pro-tip-label">Start here</div>
+                            <p>Pick one upcoming trip—ideally 2-3 nights—and commit to personal-item-only. Document what you pack, what you use, and what you wish you had. Iterate from there.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Line -->
+                <div class="bottom-line">
+                    <h3>The Bottom Line</h3>
+                    <p>The gap between stressed travelers and effortless ones isn't luck or status—it's systems. The right bag, the right packing approach, the right mindset. Start with one trip. The rest will follow.</p>
+                </div>
+
+                <!-- Article Footer -->
+                <footer class="article-footer">
+                    <div class="author-box">
+                        <div class="author-avatar">JE</div>
+                        <div class="author-info">
+                            <h4>Jordan Ellis</h4>
+                            <p>Jordan is a travel gear editor who's tested over 200 bags in the past three years. When not on a plane, you'll find them writing from coffee shops in Brooklyn.</p>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-inner">
+            <h3>Ready to Travel Lighter?</h3>
+            <p>The Nomad Lane Bento Bag is trusted by over 5,000 frequent travelers. See why Forbes and Travel + Leisure called it the smartest personal item on the market.</p>
+            <a href="https://nomadlane.com/products/bento-bag" target="_blank" rel="noopener" class="cta-button">
+                Shop Bento Bag — $298
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+            <p class="cta-note">Free shipping on US orders over $200 · 1-year warranty · 30-day returns</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>This is sponsored content produced in partnership with Nomad Lane. The Travel Edit editorial staff was not involved in its creation.</p>
+    </footer>
+
+</body>
+</html>
