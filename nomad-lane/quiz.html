@@ -6,17 +6,28 @@
     <title>Find Your Perfect Travel Bag | Nomad Lane Quiz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* ============================================
+           NOMAD LANE BRAND VARIABLES
+           Exact colors and styling from nomadlane.com
+           ============================================ */
         :root {
-            --primary-dark: #292D3A;
-            --pine-green: #476C58;
-            --white: #FFFFFF;
-            --cream: #FAF9F7;
-            --text-body: #374151;
-            --text-muted: #6B7280;
-            --accent-gold: #D4A853;
-            --success-green: #059669;
+            --nl-green: #476C58;
+            --nl-dark: #292D3A;
+            --nl-cream: #F9F8F6;
+            --nl-white: #FFFFFF;
+            --nl-text: #292D3A;
+            --nl-text-muted: #6B7280;
+            --nl-border: rgba(41, 45, 58, 0.1);
+        }
+
+        /* Font faces matching Nomad Lane */
+        @font-face {
+            font-family: 'PPFragment';
+            src: local('PPFragment-GlareLight');
+            font-weight: 300;
+            font-style: normal;
         }
 
         * {
@@ -30,59 +41,194 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            color: var(--primary-dark);
-            background: var(--white);
+            font-family: 'Assistant', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 400;
+            color: var(--nl-dark);
+            background: var(--nl-white);
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
         }
 
-        /* Landing Page Styles */
+        /* ============================================
+           NOMAD LANE LOGO STYLING
+           Matching their exact wordmark
+           ============================================ */
+        .nl-logo {
+            font-family: 'Assistant', sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .nl-logo-light {
+            color: var(--nl-white);
+        }
+
+        .nl-logo-dark {
+            color: var(--nl-dark);
+        }
+
+        /* ============================================
+           NOMAD LANE BUTTON STYLES
+           4px radius, specific hover states
+           ============================================ */
+        .nl-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 4px;
+            font-family: 'Assistant', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .nl-btn:hover {
+            opacity: 0.85;
+        }
+
+        .nl-btn-primary {
+            background: var(--nl-green);
+            color: var(--nl-cream);
+            border-color: var(--nl-green);
+        }
+
+        .nl-btn-secondary {
+            background: var(--nl-cream);
+            color: var(--nl-green);
+            border-color: var(--nl-green);
+        }
+
+        .nl-btn-dark {
+            background: var(--nl-dark);
+            color: var(--nl-cream);
+            border-color: var(--nl-dark);
+        }
+
+        .nl-btn-white {
+            background: var(--nl-white);
+            color: var(--nl-dark);
+            border-color: var(--nl-white);
+        }
+
+        .nl-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* ============================================
+           LANDING PAGE
+           ============================================ */
         .landing {
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+        }
+
+        /* Top Announcement Bar */
+        .announcement-bar {
+            background: var(--nl-dark);
+            color: var(--nl-white);
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+        .announcement-bar a {
+            color: var(--nl-white);
+            text-decoration: underline;
         }
 
         /* Navigation */
         .nav {
+            background: var(--nl-white);
             padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
+            border-bottom: 1px solid var(--nl-border);
         }
 
-        .nav-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
+        @media (max-width: 768px) {
+            .nav {
+                padding: 16px 20px;
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-link {
+            font-size: 13px;
             font-weight: 600;
-            color: var(--white);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--nl-dark);
             text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .nav-link:hover {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+            }
         }
 
         .nav-badge {
             font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            color: rgba(255,255,255,0.7);
+            color: var(--nl-text-muted);
         }
 
-        /* Hero Section */
+        /* Hero Section - Matching Nomad Lane homepage style */
         .hero {
-            flex: 1;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            min-height: 100vh;
+            min-height: calc(100vh - 120px);
         }
 
         @media (max-width: 1024px) {
             .hero {
                 grid-template-columns: 1fr;
+                min-height: auto;
+            }
+        }
+
+        .hero-visual {
+            position: relative;
+            background: var(--nl-cream);
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-image {
+                min-height: 400px;
             }
         }
 
@@ -90,117 +236,64 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 120px 80px;
-            background: var(--primary-dark);
-            color: var(--white);
+            padding: 80px 60px;
+            background: var(--nl-dark);
+            color: var(--nl-white);
         }
 
         @media (max-width: 768px) {
             .hero-content {
-                padding: 100px 24px 60px;
+                padding: 60px 24px;
             }
         }
 
-        .hero-eyebrow {
-            display: inline-flex;
+        .hero-rating {
+            display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--accent-gold);
+            gap: 12px;
             margin-bottom: 24px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        .hero-eyebrow svg {
-            width: 20px;
-            height: 20px;
+        .hero-stars {
+            color: #F9F8F6;
+            letter-spacing: 2px;
         }
 
         .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(36px, 5vw, 56px);
-            font-weight: 500;
+            font-family: 'Assistant', sans-serif;
+            font-size: clamp(36px, 5vw, 52px);
+            font-weight: 300;
             line-height: 1.15;
-            margin-bottom: 24px;
-        }
-
-        .hero-title span {
-            color: var(--accent-gold);
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
         }
 
         .hero-subtitle {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.7;
             opacity: 0.85;
-            max-width: 480px;
-            margin-bottom: 40px;
+            max-width: 440px;
+            margin-bottom: 32px;
         }
 
-        .hero-stats {
+        .hero-cta-group {
             display: flex;
-            gap: 40px;
-            margin-bottom: 48px;
-            flex-wrap: wrap;
-        }
-
-        .hero-stat {
-            text-align: left;
-        }
-
-        .hero-stat-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            font-weight: 500;
-            color: var(--accent-gold);
-            line-height: 1;
-        }
-
-        .hero-stat-label {
-            font-size: 13px;
-            opacity: 0.7;
-            margin-top: 4px;
-        }
-
-        .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: var(--white);
-            color: var(--primary-dark);
-            padding: 20px 40px;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            border: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-
-        .hero-cta:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-        }
-
-        .hero-cta svg {
-            width: 20px;
-            height: 20px;
-            transition: transform 0.3s;
-        }
-
-        .hero-cta:hover svg {
-            transform: translateX(6px);
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
         }
 
         .hero-meta {
             display: flex;
             align-items: center;
             gap: 24px;
-            margin-top: 24px;
-            font-size: 13px;
+            margin-top: 8px;
+            font-size: 12px;
             opacity: 0.6;
+            letter-spacing: 0.5px;
         }
 
         .hero-meta span {
@@ -209,253 +302,173 @@
             gap: 6px;
         }
 
-        .hero-visual {
-            position: relative;
-            overflow: hidden;
+        .hero-meta svg {
+            width: 14px;
+            height: 14px;
         }
 
-        @media (max-width: 1024px) {
-            .hero-visual {
-                height: 400px;
-            }
-        }
-
-        .hero-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                135deg,
-                rgba(41, 45, 58, 0.3) 0%,
-                transparent 50%
-            );
-        }
-
-        .hero-floating-card {
-            position: absolute;
-            bottom: 40px;
-            right: 40px;
-            background: var(--white);
-            padding: 24px;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            max-width: 280px;
+        /* Value Props Section */
+        .value-props {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-bottom: 1px solid var(--nl-border);
         }
 
         @media (max-width: 768px) {
-            .hero-floating-card {
-                display: none;
+            .value-props {
+                grid-template-columns: 1fr;
             }
         }
 
-        .floating-card-quote {
-            font-size: 15px;
-            line-height: 1.6;
-            font-style: italic;
-            color: var(--text-body);
+        .value-prop {
+            padding: 40px 32px;
+            text-align: center;
+            border-right: 1px solid var(--nl-border);
+        }
+
+        .value-prop:last-child {
+            border-right: none;
+        }
+
+        @media (max-width: 768px) {
+            .value-prop {
+                border-right: none;
+                border-bottom: 1px solid var(--nl-border);
+            }
+            .value-prop:last-child {
+                border-bottom: none;
+            }
+        }
+
+        .value-prop-icon {
+            font-size: 28px;
             margin-bottom: 16px;
         }
 
-        .floating-card-author {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .floating-card-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--pine-green);
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
+        .value-prop-title {
             font-size: 14px;
-        }
-
-        .floating-card-name {
             font-weight: 600;
-            font-size: 14px;
-        }
-
-        .floating-card-role {
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-
-        /* Social Proof Bar */
-        .social-proof {
-            background: var(--cream);
-            padding: 40px;
-            text-align: center;
-        }
-
-        .social-proof-inner {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .social-proof-label {
-            font-size: 12px;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--text-muted);
-            margin-bottom: 24px;
+            margin-bottom: 8px;
         }
 
-        .social-proof-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 60px;
-            flex-wrap: wrap;
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--text-muted);
-            opacity: 0.6;
+        .value-prop-text {
+            font-size: 14px;
+            color: var(--nl-text-muted);
+            line-height: 1.6;
         }
 
         /* Why Quiz Section */
-        .why-quiz {
-            padding: 120px 60px;
-            background: var(--white);
+        .why-section {
+            padding: 100px 40px;
+            background: var(--nl-cream);
         }
 
         @media (max-width: 768px) {
-            .why-quiz {
-                padding: 80px 24px;
+            .why-section {
+                padding: 60px 24px;
             }
         }
 
-        .why-quiz-inner {
-            max-width: 1200px;
+        .why-inner {
+            max-width: 1100px;
             margin: 0 auto;
         }
 
-        .why-quiz-header {
+        .section-header {
             text-align: center;
-            max-width: 650px;
-            margin: 0 auto 80px;
+            max-width: 600px;
+            margin: 0 auto 60px;
         }
 
-        .why-quiz-eyebrow {
+        .section-eyebrow {
             font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--pine-green);
-            margin-bottom: 16px;
             font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--nl-green);
+            margin-bottom: 16px;
         }
 
-        .why-quiz-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(32px, 4vw, 44px);
+        .section-title {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 300;
             line-height: 1.2;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
-        .why-quiz-subtitle {
-            font-size: 18px;
-            color: var(--text-muted);
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--nl-text-muted);
             line-height: 1.7;
         }
 
-        .why-quiz-grid {
+        .why-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 48px;
+            gap: 24px;
         }
 
-        @media (max-width: 900px) {
-            .why-quiz-grid {
+        @media (max-width: 800px) {
+            .why-grid {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 16px;
             }
         }
 
-        .why-quiz-card {
-            text-align: center;
+        .why-card {
+            background: var(--nl-white);
             padding: 40px 32px;
-            border-radius: 16px;
-            background: var(--cream);
-            transition: all 0.3s ease;
+            text-align: center;
         }
 
-        .why-quiz-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
-        }
-
-        .why-quiz-icon {
-            width: 72px;
-            height: 72px;
+        .why-card-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--nl-green);
+            color: var(--nl-white);
             border-radius: 50%;
-            background: var(--primary-dark);
-            color: var(--white);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 24px;
-            font-size: 28px;
+            margin: 0 auto 20px;
+            font-size: 24px;
         }
 
-        .why-quiz-card-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            margin-bottom: 12px;
+        .why-card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
         }
 
-        .why-quiz-card-text {
-            font-size: 15px;
-            color: var(--text-muted);
-            line-height: 1.7;
+        .why-card-text {
+            font-size: 14px;
+            color: var(--nl-text-muted);
+            line-height: 1.6;
         }
 
-        /* Product Preview */
-        .products-preview {
-            padding: 100px 60px;
-            background: var(--primary-dark);
-            color: var(--white);
+        /* Products Section */
+        .products-section {
+            padding: 100px 40px;
+            background: var(--nl-white);
         }
 
         @media (max-width: 768px) {
-            .products-preview {
-                padding: 80px 24px;
+            .products-section {
+                padding: 60px 24px;
             }
         }
 
-        .products-preview-inner {
+        .products-inner {
             max-width: 1200px;
             margin: 0 auto;
-        }
-
-        .products-preview-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .products-preview-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(28px, 4vw, 40px);
-            margin-bottom: 12px;
-        }
-
-        .products-preview-subtitle {
-            font-size: 17px;
-            opacity: 0.7;
         }
 
         .products-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
+            gap: 24px;
         }
 
         @media (max-width: 1024px) {
@@ -471,15 +484,7 @@
         }
 
         .product-card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .product-card:hover {
-            background: rgba(255,255,255,0.1);
-            transform: translateY(-4px);
+            background: var(--nl-cream);
         }
 
         .product-card-image {
@@ -494,91 +499,67 @@
 
         .product-card-name {
             font-weight: 600;
-            font-size: 16px;
+            font-size: 15px;
             margin-bottom: 4px;
         }
 
         .product-card-price {
             font-size: 14px;
-            opacity: 0.7;
+            color: var(--nl-text-muted);
         }
 
         .product-card-rating {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             margin-top: 8px;
-            font-size: 13px;
+            font-size: 12px;
+            color: var(--nl-text-muted);
         }
 
         .product-card-stars {
-            color: #F59E0B;
+            color: var(--nl-dark);
+            letter-spacing: 1px;
         }
 
-        /* Final CTA */
-        .final-cta-section {
-            padding: 120px 60px;
-            background: var(--cream);
+        /* Final CTA Section */
+        .final-cta {
+            padding: 100px 40px;
+            background: var(--nl-dark);
+            color: var(--nl-white);
             text-align: center;
         }
 
         @media (max-width: 768px) {
-            .final-cta-section {
-                padding: 80px 24px;
+            .final-cta {
+                padding: 60px 24px;
             }
         }
 
         .final-cta-inner {
-            max-width: 600px;
+            max-width: 550px;
             margin: 0 auto;
         }
 
         .final-cta-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(32px, 5vw, 48px);
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 300;
             line-height: 1.2;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .final-cta-text {
-            font-size: 18px;
-            color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: 40px;
-        }
-
-        .final-cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: var(--primary-dark);
-            color: var(--white);
-            padding: 20px 48px;
-            border-radius: 8px;
             font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            border: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 20px 40px rgba(41, 45, 58, 0.2);
-        }
-
-        .final-cta-button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 30px 60px rgba(41, 45, 58, 0.3);
-        }
-
-        .final-cta-button svg {
-            width: 20px;
-            height: 20px;
+            opacity: 0.8;
+            line-height: 1.7;
+            margin-bottom: 32px;
         }
 
         .final-cta-features {
             display: flex;
             justify-content: center;
             gap: 32px;
-            margin-top: 32px;
+            margin-top: 24px;
             flex-wrap: wrap;
         }
 
@@ -586,24 +567,23 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 14px;
-            color: var(--text-muted);
+            font-size: 13px;
+            opacity: 0.7;
         }
 
         .final-cta-feature svg {
-            width: 18px;
-            height: 18px;
-            color: var(--success-green);
+            width: 16px;
+            height: 16px;
+            color: var(--nl-green);
         }
 
         /* ============================================
-           QUIZ INTERFACE STYLES
+           QUIZ INTERFACE
            ============================================ */
-
         .quiz-container {
             display: none;
             min-height: 100vh;
-            background: var(--white);
+            background: var(--nl-white);
         }
 
         .quiz-container.active {
@@ -617,9 +597,15 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: var(--white);
-            border-bottom: 1px solid rgba(0,0,0,0.08);
+            background: var(--nl-white);
+            border-bottom: 1px solid var(--nl-border);
             padding: 16px 40px;
+        }
+
+        @media (max-width: 768px) {
+            .quiz-header {
+                padding: 16px 20px;
+            }
         }
 
         .quiz-header-inner {
@@ -630,39 +616,38 @@
             align-items: center;
         }
 
-        .quiz-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--primary-dark);
-            text-decoration: none;
-        }
-
         .quiz-progress-container {
             flex: 1;
-            max-width: 300px;
+            max-width: 280px;
             margin: 0 40px;
         }
 
+        @media (max-width: 600px) {
+            .quiz-progress-container {
+                display: none;
+            }
+        }
+
         .quiz-progress-text {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-bottom: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--nl-text-muted);
+            margin-bottom: 8px;
             text-align: center;
         }
 
         .quiz-progress-bar {
-            height: 6px;
-            background: rgba(0,0,0,0.08);
-            border-radius: 3px;
+            height: 3px;
+            background: var(--nl-border);
             overflow: hidden;
         }
 
         .quiz-progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, var(--pine-green), #6B9080);
-            border-radius: 3px;
-            transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            background: var(--nl-green);
+            transition: width 0.4s ease;
         }
 
         .quiz-close {
@@ -670,20 +655,20 @@
             border: none;
             cursor: pointer;
             padding: 8px;
-            color: var(--text-muted);
+            color: var(--nl-text-muted);
             transition: color 0.2s;
         }
 
         .quiz-close:hover {
-            color: var(--primary-dark);
+            color: var(--nl-dark);
         }
 
         .quiz-close svg {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
         }
 
-        /* Quiz Steps */
+        /* Quiz Body */
         .quiz-body {
             padding-top: 80px;
             min-height: 100vh;
@@ -695,12 +680,12 @@
         .quiz-step {
             display: none;
             width: 100%;
-            max-width: 800px;
+            max-width: 700px;
             padding: 60px 40px;
             margin: 0 auto;
             opacity: 0;
-            transform: translateX(40px);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(20px);
+            transition: all 0.4s ease;
         }
 
         .quiz-step.active {
@@ -709,12 +694,7 @@
 
         .quiz-step.visible {
             opacity: 1;
-            transform: translateX(0);
-        }
-
-        .quiz-step.exit {
-            opacity: 0;
-            transform: translateX(-40px);
+            transform: translateY(0);
         }
 
         @media (max-width: 768px) {
@@ -724,32 +704,32 @@
         }
 
         .quiz-step-number {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--pine-green);
-            margin-bottom: 12px;
+            font-size: 11px;
             font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--nl-green);
+            margin-bottom: 12px;
         }
 
         .quiz-question {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(28px, 4vw, 40px);
-            line-height: 1.25;
-            margin-bottom: 16px;
+            font-size: clamp(24px, 4vw, 32px);
+            font-weight: 300;
+            line-height: 1.3;
+            margin-bottom: 12px;
         }
 
         .quiz-question-subtitle {
-            font-size: 17px;
-            color: var(--text-muted);
-            margin-bottom: 48px;
+            font-size: 15px;
+            color: var(--nl-text-muted);
+            margin-bottom: 40px;
             line-height: 1.6;
         }
 
         /* Answer Options */
         .quiz-options {
             display: grid;
-            gap: 16px;
+            gap: 12px;
         }
 
         .quiz-options.grid-2 {
@@ -764,80 +744,54 @@
 
         .quiz-option {
             position: relative;
-            padding: 24px 28px;
-            border: 2px solid rgba(0,0,0,0.08);
-            border-radius: 12px;
+            padding: 20px 24px;
+            border: 1px solid var(--nl-border);
             cursor: pointer;
-            transition: all 0.3s ease;
-            background: var(--white);
+            transition: all 0.2s ease;
+            background: var(--nl-white);
         }
 
         .quiz-option:hover {
-            border-color: var(--pine-green);
-            background: rgba(71, 108, 88, 0.03);
+            border-color: var(--nl-green);
         }
 
         .quiz-option.selected {
-            border-color: var(--pine-green);
-            background: rgba(71, 108, 88, 0.08);
+            border-color: var(--nl-green);
+            background: rgba(71, 108, 88, 0.05);
         }
 
         .quiz-option.selected::after {
-            content: '';
+            content: '✓';
             position: absolute;
             top: 16px;
             right: 16px;
-            width: 24px;
-            height: 24px;
-            background: var(--pine-green);
+            width: 22px;
+            height: 22px;
+            background: var(--nl-green);
+            color: var(--nl-white);
             border-radius: 50%;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
-            background-size: 14px;
-            background-position: center;
-            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
         }
 
         .quiz-option-icon {
-            font-size: 32px;
-            margin-bottom: 12px;
+            font-size: 24px;
+            margin-bottom: 8px;
         }
 
         .quiz-option-title {
             font-weight: 600;
-            font-size: 17px;
+            font-size: 15px;
             margin-bottom: 4px;
         }
 
         .quiz-option-desc {
-            font-size: 14px;
-            color: var(--text-muted);
+            font-size: 13px;
+            color: var(--nl-text-muted);
             line-height: 1.5;
-        }
-
-        /* Visual Options (with images) */
-        .quiz-options.visual {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media (max-width: 600px) {
-            .quiz-options.visual {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .quiz-option.visual {
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .quiz-option-image {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .quiz-option.visual .quiz-option-content {
-            padding: 20px;
         }
 
         /* Quiz Navigation */
@@ -845,9 +799,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 48px;
+            margin-top: 40px;
             padding-top: 24px;
-            border-top: 1px solid rgba(0,0,0,0.08);
+            border-top: 1px solid var(--nl-border);
         }
 
         .quiz-back {
@@ -857,19 +811,22 @@
             background: none;
             border: none;
             cursor: pointer;
-            font-size: 15px;
-            color: var(--text-muted);
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: var(--nl-text-muted);
             padding: 12px 0;
             transition: color 0.2s;
         }
 
         .quiz-back:hover {
-            color: var(--primary-dark);
+            color: var(--nl-dark);
         }
 
         .quiz-back svg {
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
         }
 
         .quiz-back.hidden {
@@ -880,15 +837,18 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            background: var(--primary-dark);
-            color: var(--white);
+            background: var(--nl-green);
+            color: var(--nl-cream);
             border: none;
             cursor: pointer;
-            font-size: 15px;
+            font-family: inherit;
+            font-size: 13px;
             font-weight: 600;
-            padding: 16px 32px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 14px 28px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
             opacity: 0.4;
             pointer-events: none;
         }
@@ -899,27 +859,26 @@
         }
 
         .quiz-next.enabled:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(41, 45, 58, 0.2);
+            opacity: 0.85;
         }
 
         .quiz-next svg {
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
         }
 
-        /* Email Capture Step */
+        /* Email Capture */
         .email-capture {
             text-align: center;
         }
 
         .email-capture .quiz-question {
-            max-width: 500px;
-            margin: 0 auto 16px;
+            max-width: 450px;
+            margin: 0 auto 12px;
         }
 
         .email-form {
-            max-width: 440px;
+            max-width: 400px;
             margin: 0 auto;
         }
 
@@ -937,64 +896,66 @@
 
         .email-input {
             flex: 1;
-            padding: 18px 20px;
-            border: 2px solid rgba(0,0,0,0.08);
-            border-radius: 8px;
-            font-size: 16px;
+            padding: 14px 16px;
+            border: 1px solid var(--nl-border);
             font-family: inherit;
+            font-size: 15px;
             transition: border-color 0.2s;
         }
 
         .email-input:focus {
             outline: none;
-            border-color: var(--pine-green);
+            border-color: var(--nl-green);
         }
 
         .email-submit {
-            background: var(--pine-green);
-            color: var(--white);
+            background: var(--nl-green);
+            color: var(--nl-cream);
             border: none;
-            padding: 18px 32px;
-            border-radius: 8px;
-            font-size: 16px;
+            padding: 14px 24px;
+            font-family: inherit;
+            font-size: 13px;
             font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
             cursor: pointer;
-            transition: all 0.3s ease;
+            border-radius: 4px;
+            transition: opacity 0.2s;
             white-space: nowrap;
         }
 
         .email-submit:hover {
-            background: #3d5c4b;
+            opacity: 0.85;
         }
 
         .email-privacy {
-            font-size: 13px;
-            color: var(--text-muted);
+            font-size: 12px;
+            color: var(--nl-text-muted);
         }
 
         .email-skip {
             display: inline-block;
-            margin-top: 24px;
-            font-size: 14px;
-            color: var(--text-muted);
+            margin-top: 20px;
+            font-size: 13px;
+            color: var(--nl-text-muted);
             text-decoration: underline;
             cursor: pointer;
             background: none;
             border: none;
+            font-family: inherit;
         }
 
         .email-skip:hover {
-            color: var(--primary-dark);
+            color: var(--nl-dark);
         }
 
         /* ============================================
-           RESULTS PAGE STYLES
+           RESULTS PAGE
            ============================================ */
-
         .results-container {
             display: none;
             min-height: 100vh;
-            background: var(--cream);
+            background: var(--nl-cream);
         }
 
         .results-container.active {
@@ -1003,50 +964,51 @@
 
         /* Results Header */
         .results-header {
-            background: var(--primary-dark);
-            color: var(--white);
-            padding: 100px 60px 80px;
+            background: var(--nl-dark);
+            color: var(--nl-white);
+            padding: 80px 40px 60px;
             text-align: center;
         }
 
         @media (max-width: 768px) {
             .results-header {
-                padding: 80px 24px 60px;
+                padding: 60px 24px 40px;
             }
         }
 
-        .results-confetti {
-            font-size: 48px;
+        .results-icon {
+            font-size: 40px;
             margin-bottom: 16px;
         }
 
         .results-eyebrow {
-            font-size: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--accent-gold);
-            margin-bottom: 16px;
+            color: var(--nl-green);
+            margin-bottom: 12px;
         }
 
         .results-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(32px, 5vw, 52px);
-            line-height: 1.15;
-            margin-bottom: 16px;
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 12px;
         }
 
         .results-subtitle {
-            font-size: 18px;
+            font-size: 16px;
             opacity: 0.8;
-            max-width: 550px;
+            max-width: 500px;
             margin: 0 auto;
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
-        /* Results Match Card */
+        /* Match Card */
         .results-match {
-            max-width: 1100px;
-            margin: -40px auto 0;
+            max-width: 1000px;
+            margin: -30px auto 0;
             padding: 0 40px;
         }
 
@@ -1057,10 +1019,7 @@
         }
 
         .match-card {
-            background: var(--white);
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+            background: var(--nl-white);
             display: grid;
             grid-template-columns: 1fr 1fr;
         }
@@ -1073,7 +1032,7 @@
 
         .match-image-container {
             position: relative;
-            background: var(--cream);
+            background: var(--nl-cream);
         }
 
         .match-image {
@@ -1085,22 +1044,18 @@
 
         .match-badge {
             position: absolute;
-            top: 24px;
-            left: 24px;
-            background: var(--success-green);
-            color: var(--white);
+            top: 20px;
+            left: 20px;
+            background: var(--nl-green);
+            color: var(--nl-white);
             padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
             display: flex;
             align-items: center;
             gap: 6px;
-        }
-
-        .match-badge svg {
-            width: 16px;
-            height: 16px;
         }
 
         .match-content {
@@ -1117,31 +1072,31 @@
         }
 
         .match-eyebrow {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--pine-green);
-            margin-bottom: 8px;
+            font-size: 11px;
             font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--nl-green);
+            margin-bottom: 8px;
         }
 
         .match-name {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(28px, 4vw, 40px);
+            font-size: clamp(24px, 3vw, 36px);
+            font-weight: 300;
             line-height: 1.2;
             margin-bottom: 8px;
         }
 
         .match-price {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 600;
-            color: var(--pine-green);
+            color: var(--nl-green);
             margin-bottom: 16px;
         }
 
         .match-description {
-            font-size: 16px;
-            color: var(--text-body);
+            font-size: 15px;
+            color: var(--nl-text-muted);
             line-height: 1.7;
             margin-bottom: 24px;
         }
@@ -1150,7 +1105,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
 
         @media (max-width: 500px) {
@@ -1163,24 +1118,20 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .match-feature-icon {
-            width: 20px;
-            height: 20px;
-            background: var(--success-green);
+            width: 18px;
+            height: 18px;
+            background: var(--nl-green);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-        }
-
-        .match-feature-icon svg {
-            width: 12px;
-            height: 12px;
-            color: white;
+            color: var(--nl-white);
+            font-size: 10px;
         }
 
         .match-cta {
@@ -1188,63 +1139,65 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            background: var(--primary-dark);
-            color: var(--white);
-            padding: 18px 36px;
-            border-radius: 8px;
-            font-size: 16px;
+            background: var(--nl-green);
+            color: var(--nl-cream);
+            padding: 16px 32px;
+            border-radius: 4px;
+            font-size: 13px;
             font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: opacity 0.2s;
         }
 
         .match-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(41, 45, 58, 0.25);
+            opacity: 0.85;
         }
 
         .match-cta svg {
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
         }
 
         .match-rating {
             display: flex;
             align-items: center;
             gap: 8px;
-            margin-top: 20px;
-            font-size: 14px;
-            color: var(--text-muted);
+            margin-top: 16px;
+            font-size: 13px;
+            color: var(--nl-text-muted);
         }
 
         .match-stars {
-            color: #F59E0B;
+            color: var(--nl-dark);
+            letter-spacing: 1px;
         }
 
-        /* Why This Match Section */
+        /* Why This Match */
         .why-match {
-            padding: 80px 40px;
-            max-width: 1100px;
+            padding: 60px 40px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         @media (max-width: 768px) {
             .why-match {
-                padding: 60px 20px;
+                padding: 40px 20px;
             }
         }
 
         .why-match-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 28px;
+            font-size: 24px;
+            font-weight: 300;
             text-align: center;
-            margin-bottom: 48px;
+            margin-bottom: 40px;
         }
 
         .why-match-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            gap: 20px;
         }
 
         @media (max-width: 800px) {
@@ -1254,53 +1207,52 @@
         }
 
         .why-match-card {
-            background: var(--white);
-            padding: 32px;
-            border-radius: 16px;
+            background: var(--nl-white);
+            padding: 28px;
             text-align: center;
         }
 
         .why-match-icon {
-            font-size: 36px;
-            margin-bottom: 16px;
+            font-size: 28px;
+            margin-bottom: 12px;
         }
 
         .why-match-card-title {
             font-weight: 600;
-            font-size: 17px;
+            font-size: 15px;
             margin-bottom: 8px;
         }
 
         .why-match-card-text {
-            font-size: 14px;
-            color: var(--text-muted);
+            font-size: 13px;
+            color: var(--nl-text-muted);
             line-height: 1.6;
         }
 
         /* Other Recommendations */
         .other-recs {
-            padding: 60px 40px 100px;
-            max-width: 1100px;
+            padding: 40px 40px 80px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         @media (max-width: 768px) {
             .other-recs {
-                padding: 40px 20px 80px;
+                padding: 20px 20px 60px;
             }
         }
 
         .other-recs-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
+            font-size: 20px;
+            font-weight: 300;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 32px;
         }
 
         .other-recs-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            gap: 20px;
         }
 
         @media (max-width: 800px) {
@@ -1316,72 +1268,43 @@
         }
 
         .other-rec-card {
-            background: var(--white);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .other-rec-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            background: var(--nl-white);
         }
 
         .other-rec-image {
             width: 100%;
-            height: 200px;
+            aspect-ratio: 1;
             object-fit: cover;
         }
 
         .other-rec-content {
-            padding: 20px;
+            padding: 16px;
         }
 
         .other-rec-name {
             font-weight: 600;
-            font-size: 16px;
+            font-size: 14px;
             margin-bottom: 4px;
         }
 
         .other-rec-price {
-            font-size: 15px;
-            color: var(--pine-green);
-            font-weight: 600;
+            font-size: 14px;
+            color: var(--nl-green);
         }
 
         .other-rec-link {
             display: block;
-            margin-top: 12px;
-            font-size: 14px;
-            color: var(--pine-green);
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: var(--nl-green);
             text-decoration: none;
-            font-weight: 500;
         }
 
         .other-rec-link:hover {
             text-decoration: underline;
         }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-in {
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
-        .delay-4 { animation-delay: 0.4s; }
     </style>
 </head>
 <body>
@@ -1390,128 +1313,108 @@
          LANDING PAGE
          ============================================ -->
     <div class="landing" id="landing">
+        <!-- Announcement Bar -->
+        <div class="announcement-bar">
+            Take the quiz and find your perfect travel bag → 90 seconds, free results
+        </div>
+
         <!-- Navigation -->
         <nav class="nav">
-            <a href="https://nomadlane.com" class="nav-logo">Nomad Lane</a>
-            <span class="nav-badge">90-Second Quiz</span>
+            <div class="nav-links">
+                <a href="https://nomadlane.com/collections/best-sellers" class="nav-link">Best Sellers</a>
+                <a href="https://nomadlane.com/collections/all" class="nav-link">Bags</a>
+                <a href="https://nomadlane.com/collections/accessories" class="nav-link">Accessories</a>
+            </div>
+            <a href="https://nomadlane.com" class="nl-logo nl-logo-dark">NOMAD LANE</a>
+            <span class="nav-badge">Quiz</span>
         </nav>
 
         <!-- Hero -->
         <section class="hero">
-            <div class="hero-content">
-                <div class="hero-eyebrow">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                    </svg>
-                    Personalized Recommendation
-                </div>
-                <h1 class="hero-title">Not Sure Which <span>Travel Bag</span> Is Right for You?</h1>
-                <p class="hero-subtitle">Answer 6 quick questions and we'll match you with the perfect bag for your travel style, trip length, and packing habits. Takes less than 90 seconds.</p>
-
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <div class="hero-stat-number">50K+</div>
-                        <div class="hero-stat-label">Quiz takers</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-number">4.87</div>
-                        <div class="hero-stat-label">Avg. rating</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-number">93%</div>
-                        <div class="hero-stat-label">Match accuracy</div>
-                    </div>
-                </div>
-
-                <button class="hero-cta" onclick="startQuiz()">
-                    Find My Perfect Bag
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </button>
-
-                <div class="hero-meta">
-                    <span>
-                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        90 seconds
-                    </span>
-                    <span>
-                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        6 questions
-                    </span>
-                    <span>
-                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        100% free
-                    </span>
-                </div>
-            </div>
-
             <div class="hero-visual">
                 <img src="ManWomanCrossBody_734b9a70-85ad-4098-91e3-8694bc7d4fca.webp" alt="Travelers with Nomad Lane bags" class="hero-image">
-                <div class="hero-overlay"></div>
-
-                <div class="hero-floating-card">
-                    <p class="floating-card-quote">"The quiz recommended the Bento Bag and it's genuinely changed how I travel. Haven't checked a bag in 8 months."</p>
-                    <div class="floating-card-author">
-                        <div class="floating-card-avatar">MR</div>
-                        <div>
-                            <div class="floating-card-name">Michelle R.</div>
-                            <div class="floating-card-role">Marketing Director</div>
-                        </div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-rating">
+                    <span class="hero-stars">★★★★★</span>
+                    <span>5.0 | 5000+ Reviews</span>
+                </div>
+                <h1 class="hero-title">Find Your Perfect Travel Bag</h1>
+                <p class="hero-subtitle">Answer 6 quick questions and we'll match you with the ideal bag for your travel style. Takes 90 seconds.</p>
+                <div class="hero-cta-group">
+                    <button class="nl-btn nl-btn-white" onclick="startQuiz()">
+                        Take the Quiz
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </button>
+                    <div class="hero-meta">
+                        <span>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            90 seconds
+                        </span>
+                        <span>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            100% free
+                        </span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Social Proof -->
-        <section class="social-proof">
-            <div class="social-proof-inner">
-                <div class="social-proof-label">Featured In</div>
-                <div class="social-proof-logos">
-                    <span>Forbes</span>
-                    <span>Travel + Leisure</span>
-                    <span>GQ</span>
-                    <span>Condé Nast</span>
-                    <span>Wirecutter</span>
+        <!-- Value Props -->
+        <section class="value-props">
+            <div class="value-prop">
+                <div class="value-prop-icon">🎯</div>
+                <div class="value-prop-title">Personalized Match</div>
+                <div class="value-prop-text">Our algorithm matches your travel habits to the perfect bag</div>
+            </div>
+            <div class="value-prop">
+                <div class="value-prop-icon">⏱️</div>
+                <div class="value-prop-title">Skip the Research</div>
+                <div class="value-prop-text">Get a confident recommendation in 90 seconds</div>
+            </div>
+            <div class="value-prop">
+                <div class="value-prop-icon">✓</div>
+                <div class="value-prop-title">93% Accuracy</div>
+                <div class="value-prop-text">Quiz takers say their match was perfect for their needs</div>
+            </div>
+        </section>
+
+        <!-- Why Section -->
+        <section class="why-section">
+            <div class="why-inner">
+                <div class="section-header">
+                    <div class="section-eyebrow">Why Take the Quiz?</div>
+                    <h2 class="section-title">The Wrong Bag Costs More Than Money</h2>
+                    <p class="section-subtitle">Checked bag fees, gate-check stress, disorganized packing. The right bag eliminates all of it—but only if it matches how you actually travel.</p>
+                </div>
+
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="why-card-icon">💼</div>
+                        <h3 class="why-card-title">Travel Style Matters</h3>
+                        <p class="why-card-text">Business travelers need different features than weekend adventurers. We'll find your fit.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">📏</div>
+                        <h3 class="why-card-title">Size & Capacity</h3>
+                        <p class="why-card-text">From day trips to week-long journeys, we'll match you with the right capacity.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">💰</div>
+                        <h3 class="why-card-title">No Buyer's Remorse</h3>
+                        <p class="why-card-text">Skip the returns. Get a recommendation you'll love from day one.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Why Take Quiz -->
-        <section class="why-quiz">
-            <div class="why-quiz-inner">
-                <div class="why-quiz-header">
-                    <div class="why-quiz-eyebrow">Why Take the Quiz?</div>
-                    <h2 class="why-quiz-title">The Wrong Bag Costs You More Than Money</h2>
-                    <p class="why-quiz-subtitle">Checked bag fees, gate-check stress, disorganized packing, lost items... the right bag eliminates all of it. But only if it matches how you actually travel.</p>
-                </div>
-
-                <div class="why-quiz-grid">
-                    <div class="why-quiz-card">
-                        <div class="why-quiz-icon">🎯</div>
-                        <h3 class="why-quiz-card-title">Personalized Match</h3>
-                        <p class="why-quiz-card-text">Our algorithm considers your trip frequency, packing style, and travel preferences to recommend the ideal bag for your life.</p>
-                    </div>
-                    <div class="why-quiz-card">
-                        <div class="why-quiz-icon">⏱️</div>
-                        <h3 class="why-quiz-card-title">Skip the Research</h3>
-                        <p class="why-quiz-card-text">Stop scrolling through dozens of reviews and comparison articles. Get a confident recommendation in 90 seconds.</p>
-                    </div>
-                    <div class="why-quiz-card">
-                        <div class="why-quiz-icon">💰</div>
-                        <h3 class="why-quiz-card-title">No More Buyer's Remorse</h3>
-                        <p class="why-quiz-card-text">93% of quiz takers say their recommended bag perfectly matched their needs. No returns, no regrets.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Products Preview -->
-        <section class="products-preview">
-            <div class="products-preview-inner">
-                <div class="products-preview-header">
-                    <h2 class="products-preview-title">Our Award-Winning Collection</h2>
-                    <p class="products-preview-subtitle">Each bag is designed for a specific type of traveler. Which one is you?</p>
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="products-inner">
+                <div class="section-header">
+                    <div class="section-eyebrow">Our Collection</div>
+                    <h2 class="section-title">Smart Design. Seamless Travel.</h2>
+                    <p class="section-subtitle">Each bag is designed for a specific type of traveler. Which one is you?</p>
                 </div>
 
                 <div class="products-grid">
@@ -1564,15 +1467,13 @@
         </section>
 
         <!-- Final CTA -->
-        <section class="final-cta-section">
+        <section class="final-cta">
             <div class="final-cta-inner">
-                <h2 class="final-cta-title">Ready to Find Your Perfect Match?</h2>
-                <p class="final-cta-text">Join 50,000+ travelers who've discovered their ideal bag through our personalized recommendation quiz.</p>
-                <button class="final-cta-button" onclick="startQuiz()">
+                <h2 class="final-cta-title">Ready to Find Your Match?</h2>
+                <p class="final-cta-text">Join 50,000+ travelers who've discovered their perfect bag through our personalized quiz.</p>
+                <button class="nl-btn nl-btn-white" onclick="startQuiz()">
                     Take the 90-Second Quiz
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </button>
                 <div class="final-cta-features">
                     <div class="final-cta-feature">
@@ -1583,10 +1484,6 @@
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                         Instant results
                     </div>
-                    <div class="final-cta-feature">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                        Science-backed matching
-                    </div>
                 </div>
             </div>
         </section>
@@ -1596,10 +1493,9 @@
          QUIZ INTERFACE
          ============================================ -->
     <div class="quiz-container" id="quizContainer">
-        <!-- Quiz Header -->
         <header class="quiz-header">
             <div class="quiz-header-inner">
-                <a href="#" class="quiz-logo" onclick="exitQuiz(); return false;">Nomad Lane</a>
+                <a href="#" class="nl-logo nl-logo-dark" onclick="exitQuiz(); return false;">NOMAD LANE</a>
                 <div class="quiz-progress-container">
                     <div class="quiz-progress-text">Question <span id="currentStep">1</span> of 6</div>
                     <div class="quiz-progress-bar">
@@ -1614,9 +1510,8 @@
             </div>
         </header>
 
-        <!-- Quiz Body -->
         <div class="quiz-body">
-            <!-- Step 1: Travel Frequency -->
+            <!-- Step 1 -->
             <div class="quiz-step" id="step1" data-step="1">
                 <div class="quiz-step-number">Question 1 of 6</div>
                 <h2 class="quiz-question">How often do you travel?</h2>
@@ -1641,7 +1536,7 @@
                     <div class="quiz-option" data-value="digital-nomad" onclick="selectOption(this, 1)">
                         <div class="quiz-option-icon">💻</div>
                         <div class="quiz-option-title">Full-time traveler</div>
-                        <div class="quiz-option-desc">Living the digital nomad or remote work lifestyle</div>
+                        <div class="quiz-option-desc">Living the digital nomad lifestyle</div>
                     </div>
                 </div>
 
@@ -1657,7 +1552,7 @@
                 </div>
             </div>
 
-            <!-- Step 2: Trip Length -->
+            <!-- Step 2 -->
             <div class="quiz-step" id="step2" data-step="2">
                 <div class="quiz-step-number">Question 2 of 6</div>
                 <h2 class="quiz-question">What's your typical trip length?</h2>
@@ -1667,22 +1562,22 @@
                     <div class="quiz-option" data-value="day" onclick="selectOption(this, 2)">
                         <div class="quiz-option-icon">☀️</div>
                         <div class="quiz-option-title">Day trips</div>
-                        <div class="quiz-option-desc">Quick outings, no overnight stay</div>
+                        <div class="quiz-option-desc">Quick outings, no overnight</div>
                     </div>
                     <div class="quiz-option" data-value="weekend" onclick="selectOption(this, 2)">
                         <div class="quiz-option-icon">🌙</div>
                         <div class="quiz-option-title">1-3 nights</div>
-                        <div class="quiz-option-desc">Weekend getaways and short trips</div>
+                        <div class="quiz-option-desc">Weekend getaways</div>
                     </div>
                     <div class="quiz-option" data-value="week" onclick="selectOption(this, 2)">
                         <div class="quiz-option-icon">📅</div>
                         <div class="quiz-option-title">4-7 nights</div>
-                        <div class="quiz-option-desc">Full week vacations or business trips</div>
+                        <div class="quiz-option-desc">Full week trips</div>
                     </div>
                     <div class="quiz-option" data-value="extended" onclick="selectOption(this, 2)">
                         <div class="quiz-option-icon">🗺️</div>
                         <div class="quiz-option-title">Week+ adventures</div>
-                        <div class="quiz-option-desc">Extended travel requiring more versatility</div>
+                        <div class="quiz-option-desc">Extended travel</div>
                     </div>
                 </div>
 
@@ -1698,32 +1593,32 @@
                 </div>
             </div>
 
-            <!-- Step 3: Primary Use -->
+            <!-- Step 3 -->
             <div class="quiz-step" id="step3" data-step="3">
                 <div class="quiz-step-number">Question 3 of 6</div>
                 <h2 class="quiz-question">What's your primary travel purpose?</h2>
-                <p class="quiz-question-subtitle">We'll recommend features that match your travel style.</p>
+                <p class="quiz-question-subtitle">We'll recommend features that match your style.</p>
 
                 <div class="quiz-options grid-2">
                     <div class="quiz-option" data-value="business" onclick="selectOption(this, 3)">
                         <div class="quiz-option-icon">💼</div>
                         <div class="quiz-option-title">Business travel</div>
-                        <div class="quiz-option-desc">Meetings, conferences, client visits</div>
+                        <div class="quiz-option-desc">Meetings and conferences</div>
                     </div>
                     <div class="quiz-option" data-value="leisure" onclick="selectOption(this, 3)">
                         <div class="quiz-option-icon">🏖️</div>
                         <div class="quiz-option-title">Leisure & vacation</div>
-                        <div class="quiz-option-desc">Relaxation, exploration, adventure</div>
+                        <div class="quiz-option-desc">Relaxation and exploration</div>
                     </div>
                     <div class="quiz-option" data-value="mixed" onclick="selectOption(this, 3)">
                         <div class="quiz-option-icon">🔄</div>
                         <div class="quiz-option-title">Mix of both</div>
-                        <div class="quiz-option-desc">Business trips with leisure extensions</div>
+                        <div class="quiz-option-desc">Business + leisure</div>
                     </div>
                     <div class="quiz-option" data-value="commute" onclick="selectOption(this, 3)">
                         <div class="quiz-option-icon">🚇</div>
                         <div class="quiz-option-title">Daily commute + travel</div>
-                        <div class="quiz-option-desc">Need something that works every day</div>
+                        <div class="quiz-option-desc">Works every day</div>
                     </div>
                 </div>
 
@@ -1739,11 +1634,11 @@
                 </div>
             </div>
 
-            <!-- Step 4: Packing Style -->
+            <!-- Step 4 -->
             <div class="quiz-step" id="step4" data-step="4">
                 <div class="quiz-step-number">Question 4 of 6</div>
                 <h2 class="quiz-question">How would you describe your packing style?</h2>
-                <p class="quiz-question-subtitle">Be honest—we won't judge!</p>
+                <p class="quiz-question-subtitle">Be honest—we won't judge.</p>
 
                 <div class="quiz-options">
                     <div class="quiz-option" data-value="minimalist" onclick="selectOption(this, 4)">
@@ -1780,7 +1675,7 @@
                 </div>
             </div>
 
-            <!-- Step 5: Must-Have Feature -->
+            <!-- Step 5 -->
             <div class="quiz-step" id="step5" data-step="5">
                 <div class="quiz-step-number">Question 5 of 6</div>
                 <h2 class="quiz-question">What's your #1 must-have feature?</h2>
@@ -1790,22 +1685,22 @@
                     <div class="quiz-option" data-value="organization" onclick="selectOption(this, 5)">
                         <div class="quiz-option-icon">🗂️</div>
                         <div class="quiz-option-title">Organization</div>
-                        <div class="quiz-option-desc">Everything has its place, easy to find</div>
+                        <div class="quiz-option-desc">Everything has its place</div>
                     </div>
                     <div class="quiz-option" data-value="size" onclick="selectOption(this, 5)">
                         <div class="quiz-option-icon">📏</div>
                         <div class="quiz-option-title">Guaranteed fit</div>
-                        <div class="quiz-option-desc">Never get gate-checked, always carry on</div>
+                        <div class="quiz-option-desc">Never get gate-checked</div>
                     </div>
                     <div class="quiz-option" data-value="style" onclick="selectOption(this, 5)">
                         <div class="quiz-option-icon">✨</div>
                         <div class="quiz-option-title">Style & aesthetics</div>
-                        <div class="quiz-option-desc">Looks professional and put-together</div>
+                        <div class="quiz-option-desc">Looks professional</div>
                     </div>
                     <div class="quiz-option" data-value="versatility" onclick="selectOption(this, 5)">
                         <div class="quiz-option-icon">🔀</div>
                         <div class="quiz-option-title">Versatility</div>
-                        <div class="quiz-option-desc">Works for travel, work, and everyday</div>
+                        <div class="quiz-option-desc">Works for everything</div>
                     </div>
                 </div>
 
@@ -1821,7 +1716,7 @@
                 </div>
             </div>
 
-            <!-- Step 6: Budget -->
+            <!-- Step 6 -->
             <div class="quiz-step" id="step6" data-step="6">
                 <div class="quiz-step-number">Question 6 of 6</div>
                 <h2 class="quiz-question">What's your budget range?</h2>
@@ -1846,7 +1741,7 @@
                     <div class="quiz-option" data-value="luxury" onclick="selectOption(this, 6)">
                         <div class="quiz-option-icon">👑</div>
                         <div class="quiz-option-title">$300+</div>
-                        <div class="quiz-option-desc">Investment piece for years to come</div>
+                        <div class="quiz-option-desc">Investment piece for years</div>
                     </div>
                 </div>
 
@@ -1862,16 +1757,16 @@
                 </div>
             </div>
 
-            <!-- Email Capture Step (Optional) -->
+            <!-- Email Capture -->
             <div class="quiz-step email-capture" id="stepEmail" data-step="email">
-                <div class="quiz-step-number">Almost There!</div>
-                <h2 class="quiz-question">Where should we send your personalized results?</h2>
-                <p class="quiz-question-subtitle">Get your recommendation plus exclusive offers and travel tips.</p>
+                <div class="quiz-step-number">Almost There</div>
+                <h2 class="quiz-question">Where should we send your results?</h2>
+                <p class="quiz-question-subtitle">Get your recommendation plus exclusive offers.</p>
 
                 <div class="email-form">
                     <div class="email-input-group">
                         <input type="email" class="email-input" id="emailInput" placeholder="Enter your email">
-                        <button class="email-submit" onclick="submitEmail()">Get My Results</button>
+                        <button class="email-submit" onclick="submitEmail()">Get Results</button>
                     </div>
                     <p class="email-privacy">We respect your privacy. Unsubscribe anytime.</p>
                 </div>
@@ -1886,7 +1781,7 @@
          ============================================ -->
     <div class="results-container" id="resultsContainer">
         <header class="results-header">
-            <div class="results-confetti">🎉</div>
+            <div class="results-icon">✨</div>
             <div class="results-eyebrow">Your Perfect Match</div>
             <h1 class="results-title">We Found Your Bag</h1>
             <p class="results-subtitle">Based on your answers, here's the bag that will transform how you travel.</p>
@@ -1897,7 +1792,6 @@
                 <div class="match-image-container">
                     <img src="Nomad57.webp" alt="Recommended bag" class="match-image" id="matchImage">
                     <div class="match-badge">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                         <span id="matchPercent">96%</span> Match
                     </div>
                 </div>
@@ -1905,37 +1799,29 @@
                     <div class="match-eyebrow">Your Recommendation</div>
                     <h2 class="match-name" id="matchName">Bento Bag®</h2>
                     <div class="match-price" id="matchPrice">$298</div>
-                    <p class="match-description" id="matchDescription">The ultimate personal-item bag for frequent travelers who want organization, guaranteed overhead bin fit, and sophisticated style—all in one.</p>
+                    <p class="match-description" id="matchDescription">The ultimate personal-item bag for frequent travelers who want organization, guaranteed fit, and sophisticated style—all in one.</p>
 
                     <div class="match-features" id="matchFeatures">
                         <div class="match-feature">
-                            <div class="match-feature-icon">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            </div>
+                            <div class="match-feature-icon">✓</div>
                             <span>Fits under every airline seat</span>
                         </div>
                         <div class="match-feature">
-                            <div class="match-feature-icon">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            </div>
+                            <div class="match-feature-icon">✓</div>
                             <span>10+ organized compartments</span>
                         </div>
                         <div class="match-feature">
-                            <div class="match-feature-icon">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            </div>
+                            <div class="match-feature-icon">✓</div>
                             <span>Padded 15" laptop sleeve</span>
                         </div>
                         <div class="match-feature">
-                            <div class="match-feature-icon">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            </div>
+                            <div class="match-feature-icon">✓</div>
                             <span>Premium vegan leather</span>
                         </div>
                     </div>
 
                     <a href="https://nomadlane.com/products/bento-bag" target="_blank" class="match-cta" id="matchCta">
-                        Shop the Bento Bag
+                        Shop Now
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
 
@@ -1953,17 +1839,17 @@
                 <div class="why-match-card">
                     <div class="why-match-icon">✈️</div>
                     <h3 class="why-match-card-title">Built for Frequent Flyers</h3>
-                    <p class="why-match-card-text">Based on your travel frequency, you need durability and TSA-friendly design. This bag delivers both.</p>
+                    <p class="why-match-card-text">Your travel frequency demands durability and TSA-friendly design.</p>
                 </div>
                 <div class="why-match-card">
                     <div class="why-match-icon">📏</div>
                     <h3 class="why-match-card-title">Perfect Trip Length</h3>
-                    <p class="why-match-card-text">Fits 3-5 days of clothes easily—exactly what you need for your typical trips.</p>
+                    <p class="why-match-card-text">Fits 3-5 days of clothes—exactly what you need.</p>
                 </div>
                 <div class="why-match-card">
                     <div class="why-match-icon">💼</div>
                     <h3 class="why-match-card-title">Professional Look</h3>
-                    <p class="why-match-card-text">Sophisticated enough for business, versatile enough for leisure. You get both.</p>
+                    <p class="why-match-card-text">Sophisticated for business, versatile for leisure.</p>
                 </div>
             </div>
         </section>
@@ -2013,7 +1899,7 @@
                 image: "Nomad57.webp",
                 url: "https://nomadlane.com/products/bento-bag",
                 rating: "4.87 from 2,948 reviews",
-                description: "The ultimate personal-item bag for frequent travelers who want organization, guaranteed overhead bin fit, and sophisticated style—all in one.",
+                description: "The ultimate personal-item bag for frequent travelers who want organization, guaranteed fit, and sophisticated style—all in one.",
                 features: [
                     "Fits under every airline seat",
                     "10+ organized compartments",
@@ -2041,7 +1927,7 @@
                 image: "image-two.webp",
                 url: "https://nomadlane.com/products/origami-tote",
                 rating: "4.91 from 176 reviews",
-                description: "A beautifully designed tote that unfolds to reveal hidden organization. Perfect for stylish travelers who refuse to compromise.",
+                description: "A beautifully designed tote that unfolds to reveal hidden organization. Perfect for stylish travelers.",
                 features: [
                     "Elegant, professional appearance",
                     "Expandable interior design",
@@ -2065,14 +1951,12 @@
             }
         };
 
-        // Start Quiz
         function startQuiz() {
             document.getElementById('landing').style.display = 'none';
             document.getElementById('quizContainer').classList.add('active');
             showStep(1);
         }
 
-        // Exit Quiz
         function exitQuiz() {
             document.getElementById('quizContainer').classList.remove('active');
             document.getElementById('resultsContainer').classList.remove('active');
@@ -2080,7 +1964,6 @@
             resetQuiz();
         }
 
-        // Reset Quiz
         function resetQuiz() {
             currentStep = 1;
             Object.keys(answers).forEach(key => delete answers[key]);
@@ -2089,12 +1972,9 @@
             updateProgress();
         }
 
-        // Show Step
         function showStep(step) {
             const steps = document.querySelectorAll('.quiz-step');
-            steps.forEach(s => {
-                s.classList.remove('active', 'visible', 'exit');
-            });
+            steps.forEach(s => s.classList.remove('active', 'visible'));
 
             const targetStep = document.getElementById(step === 'email' ? 'stepEmail' : `step${step}`);
             if (targetStep) {
@@ -2108,13 +1988,11 @@
             updateProgress();
         }
 
-        // Update Progress
         function updateProgress() {
             const progress = (currentStep / totalSteps) * 100;
             document.getElementById('progressFill').style.width = `${progress}%`;
         }
 
-        // Select Option
         function selectOption(element, step) {
             const stepContainer = element.closest('.quiz-step');
             stepContainer.querySelectorAll('.quiz-option').forEach(opt => opt.classList.remove('selected'));
@@ -2123,141 +2001,102 @@
             document.getElementById(`next${step}`).classList.add('enabled');
         }
 
-        // Next Step
         function nextStep(step) {
             if (!answers[`step${step}`]) return;
 
             const currentStepEl = document.getElementById(`step${step}`);
-            currentStepEl.classList.add('exit');
+            currentStepEl.classList.remove('visible');
 
             setTimeout(() => {
-                currentStepEl.classList.remove('active', 'visible', 'exit');
-
+                currentStepEl.classList.remove('active');
                 if (step < totalSteps) {
                     currentStep = step + 1;
                     showStep(currentStep);
                 } else {
-                    // Show email capture or results
                     showStep('email');
                 }
-            }, 300);
+            }, 200);
         }
 
-        // Previous Step
         function prevStep(step) {
             if (step <= 1) return;
             currentStep = step - 1;
             showStep(currentStep);
         }
 
-        // Submit Email
         function submitEmail() {
             const email = document.getElementById('emailInput').value;
             if (email && email.includes('@')) {
-                // In production, would send to backend
                 console.log('Email captured:', email);
             }
             showResults();
         }
 
-        // Skip Email
         function skipEmail() {
             showResults();
         }
 
-        // Calculate Recommendation
         function calculateRecommendation() {
-            const scores = {
-                bento: 0,
-                ikigai: 0,
-                origami: 0,
-                tomodachi: 0
-            };
+            const scores = { bento: 0, ikigai: 0, origami: 0, tomodachi: 0 };
 
-            // Travel frequency scoring
             if (answers.step1 === 'frequent' || answers.step1 === 'digital-nomad') {
-                scores.bento += 3;
-                scores.ikigai += 2;
+                scores.bento += 3; scores.ikigai += 2;
             } else if (answers.step1 === 'moderate') {
-                scores.bento += 2;
-                scores.origami += 2;
+                scores.bento += 2; scores.origami += 2;
             } else {
-                scores.tomodachi += 2;
-                scores.origami += 1;
+                scores.tomodachi += 2; scores.origami += 1;
             }
 
-            // Trip length scoring
             if (answers.step2 === 'day') {
                 scores.tomodachi += 4;
             } else if (answers.step2 === 'weekend') {
-                scores.bento += 3;
-                scores.ikigai += 2;
+                scores.bento += 3; scores.ikigai += 2;
             } else if (answers.step2 === 'week') {
-                scores.bento += 3;
-                scores.origami += 2;
+                scores.bento += 3; scores.origami += 2;
             } else {
-                scores.ikigai += 3;
-                scores.bento += 2;
+                scores.ikigai += 3; scores.bento += 2;
             }
 
-            // Primary use scoring
             if (answers.step3 === 'business') {
-                scores.bento += 3;
-                scores.origami += 3;
+                scores.bento += 3; scores.origami += 3;
             } else if (answers.step3 === 'leisure') {
-                scores.ikigai += 2;
-                scores.tomodachi += 2;
+                scores.ikigai += 2; scores.tomodachi += 2;
             } else if (answers.step3 === 'mixed') {
-                scores.bento += 3;
-                scores.ikigai += 2;
+                scores.bento += 3; scores.ikigai += 2;
             } else {
-                scores.ikigai += 3;
-                scores.bento += 2;
+                scores.ikigai += 3; scores.bento += 2;
             }
 
-            // Packing style scoring
             if (answers.step4 === 'minimalist') {
-                scores.tomodachi += 3;
-                scores.bento += 2;
+                scores.tomodachi += 3; scores.bento += 2;
             } else if (answers.step4 === 'efficient') {
-                scores.bento += 3;
-                scores.ikigai += 2;
+                scores.bento += 3; scores.ikigai += 2;
             } else if (answers.step4 === 'prepared') {
-                scores.ikigai += 3;
-                scores.bento += 2;
+                scores.ikigai += 3; scores.bento += 2;
             } else {
-                scores.bento += 4; // Overpacker needs bento's organization
+                scores.bento += 4;
             }
 
-            // Must-have feature scoring
             if (answers.step5 === 'organization') {
                 scores.bento += 4;
             } else if (answers.step5 === 'size') {
-                scores.bento += 3;
-                scores.tomodachi += 2;
+                scores.bento += 3; scores.tomodachi += 2;
             } else if (answers.step5 === 'style') {
-                scores.origami += 4;
-                scores.bento += 2;
+                scores.origami += 4; scores.bento += 2;
             } else {
-                scores.ikigai += 3;
-                scores.bento += 2;
+                scores.ikigai += 3; scores.bento += 2;
             }
 
-            // Budget scoring
             if (answers.step6 === 'budget') {
                 scores.tomodachi += 4;
             } else if (answers.step6 === 'mid') {
-                scores.ikigai += 3;
-                scores.tomodachi += 2;
+                scores.ikigai += 3; scores.tomodachi += 2;
             } else if (answers.step6 === 'premium') {
-                scores.bento += 3;
-                scores.origami += 3;
+                scores.bento += 3; scores.origami += 3;
             } else {
-                scores.bento += 4;
-                scores.origami += 2;
+                scores.bento += 4; scores.origami += 2;
             }
 
-            // Find highest score
             let maxScore = 0;
             let recommendation = 'bento';
             for (const [product, score] of Object.entries(scores)) {
@@ -2267,22 +2106,19 @@
                 }
             }
 
-            // Calculate match percentage (normalize to 85-98% range)
             const maxPossible = 25;
             const matchPercent = Math.min(98, Math.max(85, Math.round(85 + (maxScore / maxPossible) * 13)));
 
             return { recommendation, matchPercent, scores };
         }
 
-        // Show Results
         function showResults() {
             document.getElementById('quizContainer').classList.remove('active');
             document.getElementById('resultsContainer').classList.add('active');
 
-            const { recommendation, matchPercent, scores } = calculateRecommendation();
+            const { recommendation, matchPercent } = calculateRecommendation();
             const product = products[recommendation];
 
-            // Update match card
             document.getElementById('matchImage').src = product.image;
             document.getElementById('matchPercent').textContent = matchPercent + '%';
             document.getElementById('matchName').textContent = product.name;
@@ -2290,90 +2126,43 @@
             document.getElementById('matchDescription').textContent = product.description;
             document.getElementById('matchRating').textContent = product.rating;
             document.getElementById('matchCta').href = product.url;
-            document.getElementById('matchCta').innerHTML = `
-                Shop the ${product.name}
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            `;
 
-            // Update features
             const featuresHtml = product.features.map(f => `
                 <div class="match-feature">
-                    <div class="match-feature-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    </div>
+                    <div class="match-feature-icon">✓</div>
                     <span>${f}</span>
                 </div>
             `).join('');
             document.getElementById('matchFeatures').innerHTML = featuresHtml;
 
-            // Update "why this match" section based on answers
             updateWhyMatch();
-
-            // Update other recommendations
             updateOtherRecs(recommendation);
-
-            // Scroll to top
             window.scrollTo(0, 0);
         }
 
         function updateWhyMatch() {
             const reasons = [];
 
-            // Based on frequency
             if (answers.step1 === 'frequent' || answers.step1 === 'digital-nomad') {
-                reasons.push({
-                    icon: '✈️',
-                    title: 'Built for Frequent Flyers',
-                    text: 'Your travel frequency demands durability and TSA-friendly design. This bag is engineered for heavy use.'
-                });
+                reasons.push({ icon: '✈️', title: 'Built for Frequent Flyers', text: 'Your travel frequency demands durability and TSA-friendly design.' });
             } else {
-                reasons.push({
-                    icon: '🎯',
-                    title: 'Perfect for Your Pace',
-                    text: 'Designed to make every trip—whether occasional or regular—smooth and stress-free.'
-                });
+                reasons.push({ icon: '🎯', title: 'Perfect for Your Pace', text: 'Designed to make every trip smooth and stress-free.' });
             }
 
-            // Based on trip length
             if (answers.step2 === 'weekend' || answers.step2 === 'week') {
-                reasons.push({
-                    icon: '📦',
-                    title: 'Right-Sized Capacity',
-                    text: `Fits ${answers.step2 === 'weekend' ? '2-4' : '4-7'} days of clothes comfortably—exactly what you need for your typical trips.`
-                });
+                reasons.push({ icon: '📦', title: 'Right-Sized Capacity', text: `Fits ${answers.step2 === 'weekend' ? '2-4' : '4-7'} days of clothes comfortably.` });
             } else if (answers.step2 === 'day') {
-                reasons.push({
-                    icon: '⚡',
-                    title: 'Streamlined for Day Trips',
-                    text: 'Compact enough for quick outings but organized enough to carry everything you need.'
-                });
+                reasons.push({ icon: '⚡', title: 'Streamlined for Day Trips', text: 'Compact but organized for quick outings.' });
             } else {
-                reasons.push({
-                    icon: '🗺️',
-                    title: 'Expandable for Adventures',
-                    text: 'Versatile enough to handle extended trips with smart packing techniques.'
-                });
+                reasons.push({ icon: '🗺️', title: 'Expandable for Adventures', text: 'Versatile enough for extended trips.' });
             }
 
-            // Based on purpose
             if (answers.step3 === 'business') {
-                reasons.push({
-                    icon: '💼',
-                    title: 'Professional Polish',
-                    text: 'Sophisticated enough for client meetings, organized enough for back-to-back travel days.'
-                });
+                reasons.push({ icon: '💼', title: 'Professional Polish', text: 'Sophisticated for meetings, organized for travel.' });
             } else if (answers.step3 === 'leisure') {
-                reasons.push({
-                    icon: '🏖️',
-                    title: 'Adventure Ready',
-                    text: 'Lightweight and durable for exploration, without sacrificing organization.'
-                });
+                reasons.push({ icon: '🏖️', title: 'Adventure Ready', text: 'Lightweight and durable for exploration.' });
             } else {
-                reasons.push({
-                    icon: '🔄',
-                    title: 'Dual-Purpose Design',
-                    text: 'Transitions seamlessly from boardroom to beach and back again.'
-                });
+                reasons.push({ icon: '🔄', title: 'Dual-Purpose Design', text: 'Transitions from boardroom to beach.' });
             }
 
             const grid = document.getElementById('whyMatchGrid');
@@ -2387,10 +2176,7 @@
         }
 
         function updateOtherRecs(mainRec) {
-            const otherProducts = Object.entries(products)
-                .filter(([key]) => key !== mainRec)
-                .slice(0, 3);
-
+            const otherProducts = Object.entries(products).filter(([key]) => key !== mainRec).slice(0, 3);
             const grid = document.getElementById('otherRecsGrid');
             grid.innerHTML = otherProducts.map(([key, p]) => `
                 <div class="other-rec-card">
@@ -2403,11 +2189,6 @@
                 </div>
             `).join('');
         }
-
-        // Initialize first step on quiz start
-        document.addEventListener('DOMContentLoaded', () => {
-            // Pre-load any necessary assets
-        });
     </script>
 
 </body>
