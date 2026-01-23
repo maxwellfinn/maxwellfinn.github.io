@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Traveling Light | A Visual Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #292D3A;
+            --pine-green: #476C58;
+            --white: #FFFFFF;
+            --cream: #FAF9F7;
+            --text-body: #374151;
+            --text-muted: #6B7280;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--primary-dark);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--pine-green), #6B9080);
+            width: 0%;
+            z-index: 9999;
+            transition: width 0.1s ease-out;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.4s ease;
+        }
+
+        .nav.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 16px 40px;
+            box-shadow: 0 2px 40px rgba(0,0,0,0.08);
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav.scrolled .nav-logo {
+            color: var(--primary-dark);
+        }
+
+        .nav-sponsor {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.7);
+            transition: color 0.3s;
+        }
+
+        .nav.scrolled .nav-sponsor {
+            color: var(--text-muted);
+        }
+
+        .nav-sponsor a {
+            color: inherit;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Hero Section - Full Screen Cinematic */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('Homepage_AboutUs.webp') center/cover;
+            transform: scale(1.1);
+            transition: transform 8s ease-out;
+        }
+
+        .hero.loaded .hero-bg {
+            transform: scale(1);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(41, 45, 58, 0.4) 0%,
+                rgba(41, 45, 58, 0.6) 50%,
+                rgba(41, 45, 58, 0.9) 100%
+            );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: var(--white);
+            max-width: 900px;
+            padding: 0 40px;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1.2s ease forwards 0.5s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 24px;
+            opacity: 0.8;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 8vw, 80px);
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto 48px;
+            line-height: 1.6;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            color: var(--white);
+            opacity: 0.7;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        .scroll-indicator span {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .scroll-indicator svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Chapter Sections */
+        .chapter {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chapter-inner {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 120px 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .chapter-inner {
+                grid-template-columns: 1fr;
+                gap: 48px;
+                padding: 80px 24px;
+            }
+        }
+
+        .chapter-content {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .chapter-content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .chapter-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 120px;
+            font-weight: 500;
+            color: var(--pine-green);
+            opacity: 0.15;
+            line-height: 1;
+            margin-bottom: -40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .chapter-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .chapter-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-body);
+        }
+
+        .chapter-text p {
+            margin-bottom: 20px;
+        }
+
+        .chapter-media {
+            position: relative;
+            opacity: 0;
+            transform: translateX(60px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+        }
+
+        .chapter-media.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .chapter:nth-child(even) .chapter-media {
+            transform: translateX(-60px);
+        }
+
+        .chapter:nth-child(even) .chapter-media.visible {
+            transform: translateX(0);
+        }
+
+        @media (max-width: 1024px) {
+            .chapter:nth-child(even) .chapter-inner {
+                direction: ltr;
+            }
+        }
+
+        .chapter:nth-child(even) .chapter-inner {
+            direction: rtl;
+        }
+
+        .chapter:nth-child(even) .chapter-inner > * {
+            direction: ltr;
+        }
+
+        .chapter-image {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+            transition: transform 0.6s ease;
+        }
+
+        .chapter-media:hover .chapter-image {
+            transform: scale(1.02);
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Big Stat Section */
+        .big-stat {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .big-stat-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(71, 108, 88, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(71, 108, 88, 0.2) 0%, transparent 50%);
+        }
+
+        .big-stat-content {
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+            padding: 60px 40px;
+        }
+
+        .big-stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(80px, 15vw, 180px);
+            font-weight: 500;
+            line-height: 1;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--white) 0%, rgba(255,255,255,0.7) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .big-stat-content.visible .big-stat-number {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .big-stat-label {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            opacity: 0.7;
+        }
+
+        /* Full Bleed Image */
+        .full-bleed {
+            height: 70vh;
+            min-height: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .full-bleed-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .full-bleed-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to right,
+                rgba(41, 45, 58, 0.8) 0%,
+                rgba(41, 45, 58, 0.4) 50%,
+                transparent 100%
+            );
+            display: flex;
+            align-items: center;
+        }
+
+        .full-bleed-content {
+            max-width: 500px;
+            padding: 60px;
+            color: var(--white);
+        }
+
+        .full-bleed-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(24px, 3vw, 36px);
+            font-style: italic;
+            line-height: 1.4;
+            margin-bottom: 24px;
+        }
+
+        .full-bleed-cite {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.7;
+        }
+
+        /* Product Feature */
+        .product-feature {
+            background: var(--cream);
+            padding: 140px 60px;
+        }
+
+        .product-feature-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .product-feature-inner {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .product-feature {
+                padding: 80px 24px;
+            }
+        }
+
+        .product-images {
+            position: relative;
+        }
+
+        .product-main-image {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 60px 120px rgba(0,0,0,0.15);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: var(--pine-green);
+            color: var(--white);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 20px 40px rgba(71, 108, 88, 0.4);
+        }
+
+        .product-badge-number {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .product-badge-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        .product-content {
+            padding: 20px 0;
+        }
+
+        .product-eyebrow {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--pine-green);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .product-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 4vw, 52px);
+            line-height: 1.15;
+            margin-bottom: 24px;
+        }
+
+        .product-description {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-body);
+            margin-bottom: 32px;
+        }
+
+        .product-features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .product-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .product-feature-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--pine-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .product-feature-icon svg {
+            width: 12px;
+            height: 12px;
+            color: white;
+        }
+
+        .product-feature-text {
+            font-size: 15px;
+            color: var(--text-body);
+            line-height: 1.5;
+        }
+
+        .product-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 20px 40px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 20px 40px rgba(41, 45, 58, 0.2);
+        }
+
+        .product-cta:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 60px rgba(41, 45, 58, 0.3);
+        }
+
+        .product-cta svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s;
+        }
+
+        .product-cta:hover svg {
+            transform: translateX(6px);
+        }
+
+        .product-meta {
+            display: flex;
+            gap: 32px;
+            margin-top: 24px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .product-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Testimonial Carousel */
+        .testimonials {
+            padding: 120px 60px;
+            background: var(--white);
+            overflow: hidden;
+        }
+
+        .testimonials-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 80px;
+        }
+
+        .testimonials-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .testimonials-subtitle {
+            color: var(--text-muted);
+            font-size: 18px;
+        }
+
+        .testimonials-track {
+            display: flex;
+            gap: 32px;
+            animation: scroll 30s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .testimonial-card {
+            flex-shrink: 0;
+            width: 400px;
+            background: var(--cream);
+            padding: 40px;
+            border-radius: 16px;
+        }
+
+        .testimonial-stars {
+            color: #F59E0B;
+            font-size: 18px;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--pine-green);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .testimonial-role {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Final CTA */
+        .final-cta {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta-bg {
+            position: absolute;
+            inset: 0;
+            background: url('WomanCarryingBag_7dc7b42c-23b8-43ee-aae3-5b3602b6b195.webp') center/cover;
+            opacity: 0.3;
+        }
+
+        .final-cta-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: var(--white);
+            padding: 60px 40px;
+            max-width: 700px;
+        }
+
+        .final-cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 5vw, 56px);
+            line-height: 1.15;
+            margin-bottom: 24px;
+        }
+
+        .final-cta-text {
+            font-size: 18px;
+            opacity: 0.85;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .final-cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--white);
+            color: var(--primary-dark);
+            padding: 20px 48px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .final-cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .final-cta-button svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .final-cta-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .final-cta-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .final-cta-badge svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--cream);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .nav {
+                padding: 16px 20px;
+            }
+
+            .hero-content {
+                padding: 0 20px;
+            }
+
+            .chapter-number {
+                font-size: 80px;
+                margin-bottom: -20px;
+            }
+
+            .product-features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials {
+                padding: 80px 20px;
+            }
+
+            .testimonial-card {
+                width: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="#" class="nav-logo">The Travel Edit</a>
+        <span class="nav-sponsor">Presented by <a href="https://nomadlane.com">Nomad Lane</a></span>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-label">A Visual Story</div>
+            <h1 class="hero-title">The Art of Traveling Light</h1>
+            <p class="hero-subtitle">How a generation of frequent flyers discovered freedom by leaving more behind</p>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Chapter 1 -->
+    <section class="chapter">
+        <div class="chapter-inner">
+            <div class="chapter-content">
+                <div class="chapter-number">01</div>
+                <h2 class="chapter-title">The Weight We Carry</h2>
+                <div class="chapter-text">
+                    <p>There's a moment in every airport, usually at the baggage carousel, where the math becomes unavoidable. You've paid $70 for the privilege of checking a bag. You've waited 32 minutes watching other people's suitcases pass by. And somewhere in the back of your mind, you're calculating whether your luggage made the same connection you almost missed.</p>
+                    <p>This is the tax that modern air travel extracts—not just in dollars, but in time, anxiety, and the creeping sense that there must be a better way.</p>
+                </div>
+            </div>
+            <div class="chapter-media">
+                <img src="ManCarryingBag_05df9a47-7a46-48a5-9e3f-30037a8f1efc.jpg" alt="Traveler with bag" class="chapter-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Big Stat -->
+    <section class="big-stat">
+        <div class="big-stat-bg"></div>
+        <div class="big-stat-content">
+            <div class="big-stat-number">$1,330</div>
+            <div class="big-stat-label">Average annual cost of checking bags for frequent travelers</div>
+        </div>
+    </section>
+
+    <!-- Chapter 2 -->
+    <section class="chapter">
+        <div class="chapter-inner">
+            <div class="chapter-content">
+                <div class="chapter-number">02</div>
+                <h2 class="chapter-title">The Overhead Bin Lottery</h2>
+                <div class="chapter-text">
+                    <p>The carry-on seemed like the answer—until airlines started treating overhead bin space as premium real estate. Basic economy fares, now 40% of domestic tickets, often don't include bin access at all. Even when they do, boarding Group 4 means watching gate agents tag your bag anyway.</p>
+                    <p>What frequent travelers discovered was counterintuitive: the only guaranteed luggage space isn't above you. It's below.</p>
+                </div>
+            </div>
+            <div class="chapter-media">
+                <img src="Nomad-Lane-Bento-Bag-Mar23-MarraCreative-71.webp" alt="Bag fitting in airline sizer" class="chapter-image">
+                <span class="image-caption">The personal item: your only guaranteed space</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Bleed Quote -->
+    <section class="full-bleed">
+        <img src="image_2d1407f1-c7fa-47a6-b606-16c592f2906f.webp" alt="Bag on luggage handle" class="full-bleed-image">
+        <div class="full-bleed-overlay">
+            <div class="full-bleed-content">
+                <p class="full-bleed-quote">"The personal item is the last piece of carry-on space that airlines can't take away from you. It's the only luggage that's truly yours."</p>
+                <cite class="full-bleed-cite">— Marcus Webb, Travel Industry Analyst</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter 3 -->
+    <section class="chapter">
+        <div class="chapter-inner">
+            <div class="chapter-content">
+                <div class="chapter-number">03</div>
+                <h2 class="chapter-title">The Architecture of Organization</h2>
+                <div class="chapter-text">
+                    <p>Traditional bags treat interior space as a single cavity. You stuff things in, they shift during transit, and you spend ten minutes at your hotel room reconstructing your packing system.</p>
+                    <p>The new generation of travel bags borrows from a different philosophy: like a Japanese bento box, everything should have its place. Designated zones. Compression systems. Quick-access pockets. Not just storage, but architecture.</p>
+                </div>
+            </div>
+            <div class="chapter-media">
+                <img src="image-one.webp" alt="Organized bag compartments" class="chapter-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Big Stat 2 -->
+    <section class="big-stat">
+        <div class="big-stat-bg"></div>
+        <div class="big-stat-content">
+            <div class="big-stat-number">17+ hrs</div>
+            <div class="big-stat-label">Time spent at baggage claim annually by frequent travelers</div>
+        </div>
+    </section>
+
+    <!-- Product Feature -->
+    <section class="product-feature">
+        <div class="product-feature-inner">
+            <div class="product-images fade-in">
+                <img src="Nomad57.webp" alt="Nomad Lane Bento Bag" class="product-main-image">
+                <div class="product-badge">
+                    <span class="product-badge-number">5K+</span>
+                    <span class="product-badge-label">Reviews</span>
+                </div>
+            </div>
+            <div class="product-content fade-in">
+                <div class="product-eyebrow">The Bag That Started It All</div>
+                <h2 class="product-title">Nomad Lane<br>Bento Bag</h2>
+                <p class="product-description">Designed by frequent flyers who grew tired of the choice between checking bags and traveling light. The Bento Bag fits under any airline seat while holding what most people pack in a carry-on.</p>
+                <div class="product-features-grid">
+                    <div class="product-feature-item">
+                        <div class="product-feature-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <span class="product-feature-text">Fits under every airline seat</span>
+                    </div>
+                    <div class="product-feature-item">
+                        <div class="product-feature-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <span class="product-feature-text">Holds 3+ days of clothes</span>
+                    </div>
+                    <div class="product-feature-item">
+                        <div class="product-feature-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <span class="product-feature-text">Padded 15" laptop sleeve</span>
+                    </div>
+                    <div class="product-feature-item">
+                        <div class="product-feature-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <span class="product-feature-text">Trolley sleeve pass-through</span>
+                    </div>
+                </div>
+                <a href="https://nomadlane.com/products/bento-bag" target="_blank" rel="noopener" class="product-cta">
+                    Shop Bento Bag — $298
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+                <div class="product-meta">
+                    <span>
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+                        Free Shipping
+                    </span>
+                    <span>
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        1-Year Warranty
+                    </span>
+                    <span>
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                        30-Day Returns
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="testimonials-header fade-in">
+            <h2 class="testimonials-title">What Travelers Say</h2>
+            <p class="testimonials-subtitle">Join 5,000+ frequent flyers who've transformed their travel experience</p>
+        </div>
+        <div class="testimonials-track">
+            <!-- First set -->
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"I've traveled with a TUMI for 15 years. The Bento Bag is better organized, lighter, and half the price. I'm never going back."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">JK</div>
+                    <div>
+                        <div class="testimonial-name">James K.</div>
+                        <div class="testimonial-role">Consultant, 80+ flights/year</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"The anxiety of 'will my bag fit?' is completely gone. It slips under the seat every single time. Worth every penny."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">SM</div>
+                    <div>
+                        <div class="testimonial-name">Sarah M.</div>
+                        <div class="testimonial-role">Marketing Director</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Packed for a 4-day conference with room to spare. The organization is incredible—everything has its place."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">DP</div>
+                    <div>
+                        <div class="testimonial-name">David P.</div>
+                        <div class="testimonial-role">Tech Executive</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"I stopped checking bags completely. The money I've saved in six months already paid for the bag twice over."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">LR</div>
+                    <div>
+                        <div class="testimonial-name">Lisa R.</div>
+                        <div class="testimonial-role">Sales Manager</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Duplicate for infinite scroll -->
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"I've traveled with a TUMI for 15 years. The Bento Bag is better organized, lighter, and half the price. I'm never going back."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">JK</div>
+                    <div>
+                        <div class="testimonial-name">James K.</div>
+                        <div class="testimonial-role">Consultant, 80+ flights/year</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"The anxiety of 'will my bag fit?' is completely gone. It slips under the seat every single time. Worth every penny."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">SM</div>
+                    <div>
+                        <div class="testimonial-name">Sarah M.</div>
+                        <div class="testimonial-role">Marketing Director</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Packed for a 4-day conference with room to spare. The organization is incredible—everything has its place."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">DP</div>
+                    <div>
+                        <div class="testimonial-name">David P.</div>
+                        <div class="testimonial-role">Tech Executive</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"I stopped checking bags completely. The money I've saved in six months already paid for the bag twice over."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">LR</div>
+                    <div>
+                        <div class="testimonial-name">Lisa R.</div>
+                        <div class="testimonial-role">Sales Manager</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="final-cta-bg"></div>
+        <div class="final-cta-content fade-in">
+            <h2 class="final-cta-title">Travel Lighter.<br>Arrive Faster.</h2>
+            <p class="final-cta-text">The Bento Bag is more than luggage—it's a system for stress-free travel. Join the thousands who've eliminated checked bag fees, skipped baggage claim, and discovered what it means to travel light.</p>
+            <a href="https://nomadlane.com/products/bento-bag" target="_blank" rel="noopener" class="final-cta-button">
+                Shop Bento Bag — $298
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+            <div class="final-cta-badges">
+                <div class="final-cta-badge">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Free Shipping Over $200
+                </div>
+                <div class="final-cta-badge">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    1-Year Warranty
+                </div>
+                <div class="final-cta-badge">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                    30-Day Returns
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">This is sponsored content produced in partnership with Nomad Lane.</p>
+    </footer>
+
+    <script>
+        // Hero animation on load
+        window.addEventListener('load', () => {
+            document.getElementById('hero').classList.add('loaded');
+        });
+
+        // Progress bar
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        });
+
+        // Nav background on scroll
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll animations with Intersection Observer
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe chapter content and media
+        document.querySelectorAll('.chapter-content, .chapter-media, .big-stat-content, .fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Counter animation for stats
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.big-stat-content').forEach(el => {
+            statObserver.observe(el);
+        });
+    </script>
+
+</body>
+</html>
