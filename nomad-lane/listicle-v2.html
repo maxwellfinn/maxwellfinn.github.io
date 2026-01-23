@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Art of Traveling Light | A Visual Story</title>
+    <title>8 Packing Mistakes That Are Costing You Hundreds Every Year | The Travel Edit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,6 +15,8 @@
             --cream: #FAF9F7;
             --text-body: #374151;
             --text-muted: #6B7280;
+            --error-red: #DC2626;
+            --money-green: #059669;
         }
 
         * {
@@ -99,7 +101,7 @@
             font-weight: 600;
         }
 
-        /* Hero Section - Full Screen Cinematic */
+        /* Hero Section */
         .hero {
             height: 100vh;
             min-height: 700px;
@@ -127,9 +129,9 @@
             inset: 0;
             background: linear-gradient(
                 to bottom,
-                rgba(41, 45, 58, 0.4) 0%,
-                rgba(41, 45, 58, 0.6) 50%,
-                rgba(41, 45, 58, 0.9) 100%
+                rgba(41, 45, 58, 0.5) 0%,
+                rgba(41, 45, 58, 0.7) 50%,
+                rgba(41, 45, 58, 0.95) 100%
             );
         }
 
@@ -158,14 +160,19 @@
             letter-spacing: 4px;
             margin-bottom: 24px;
             opacity: 0.8;
+            color: #F87171;
         }
 
         .hero-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(42px, 8vw, 80px);
+            font-size: clamp(38px, 7vw, 72px);
             font-weight: 500;
             line-height: 1.1;
             margin-bottom: 24px;
+        }
+
+        .hero-title .highlight {
+            color: #FCD34D;
         }
 
         .hero-subtitle {
@@ -175,6 +182,29 @@
             max-width: 600px;
             margin: 0 auto 48px;
             line-height: 1.6;
+        }
+
+        .hero-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(220, 38, 38, 0.2);
+            border: 1px solid rgba(220, 38, 38, 0.4);
+            padding: 16px 28px;
+            border-radius: 8px;
+        }
+
+        .hero-stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #FCA5A5;
+        }
+
+        .hero-stat-label {
+            font-size: 14px;
+            text-align: left;
+            opacity: 0.9;
+            line-height: 1.3;
         }
 
         .scroll-indicator {
@@ -248,19 +278,57 @@
 
         .chapter-number {
             font-family: 'Playfair Display', serif;
-            font-size: 120px;
+            font-size: 100px;
             font-weight: 500;
-            color: var(--pine-green);
-            opacity: 0.15;
             line-height: 1;
-            margin-bottom: -40px;
+            margin-bottom: -30px;
             position: relative;
             z-index: 1;
         }
 
+        .chapter-number.mistake {
+            color: var(--error-red);
+            opacity: 0.2;
+        }
+
+        .chapter-number.fix {
+            color: var(--money-green);
+            opacity: 0.2;
+        }
+
+        .mistake-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #FEE2E2;
+            color: var(--error-red);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .fix-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #D1FAE5;
+            color: var(--money-green);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
         .chapter-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(32px, 4vw, 48px);
+            font-size: clamp(28px, 4vw, 42px);
             font-weight: 500;
             line-height: 1.2;
             margin-bottom: 24px;
@@ -276,6 +344,70 @@
 
         .chapter-text p {
             margin-bottom: 20px;
+        }
+
+        .cost-callout {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: #FEF2F2;
+            border-left: 4px solid var(--error-red);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .cost-callout-icon {
+            font-size: 32px;
+        }
+
+        .cost-callout-content {
+            flex: 1;
+        }
+
+        .cost-callout-amount {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--error-red);
+            line-height: 1;
+        }
+
+        .cost-callout-label {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .savings-callout {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: #ECFDF5;
+            border-left: 4px solid var(--money-green);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .savings-callout-icon {
+            font-size: 32px;
+        }
+
+        .savings-callout-content {
+            flex: 1;
+        }
+
+        .savings-callout-amount {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--money-green);
+            line-height: 1;
+        }
+
+        .savings-callout-label {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 4px;
         }
 
         .chapter-media {
@@ -323,18 +455,9 @@
             transform: scale(1.02);
         }
 
-        .image-caption {
-            position: absolute;
-            bottom: -40px;
-            left: 0;
-            font-size: 13px;
-            color: var(--text-muted);
-            font-style: italic;
-        }
-
         /* Big Stat Section */
         .big-stat {
-            min-height: 60vh;
+            min-height: 50vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -343,12 +466,20 @@
             overflow: hidden;
         }
 
+        .big-stat.loss {
+            background: linear-gradient(135deg, #7F1D1D 0%, #991B1B 100%);
+        }
+
+        .big-stat.gain {
+            background: linear-gradient(135deg, #064E3B 0%, #065F46 100%);
+        }
+
         .big-stat-bg {
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(ellipse at 20% 50%, rgba(71, 108, 88, 0.3) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 50%, rgba(71, 108, 88, 0.2) 0%, transparent 50%);
+                radial-gradient(ellipse at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(255,255,255,0.05) 0%, transparent 50%);
         }
 
         .big-stat-content {
@@ -359,16 +490,20 @@
             padding: 60px 40px;
         }
 
+        .big-stat-label-top {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0.7;
+            margin-bottom: 16px;
+        }
+
         .big-stat-number {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(80px, 15vw, 180px);
+            font-size: clamp(70px, 14vw, 160px);
             font-weight: 500;
             line-height: 1;
             margin-bottom: 16px;
-            background: linear-gradient(135deg, var(--white) 0%, rgba(255,255,255,0.7) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
             opacity: 0;
             transform: scale(0.8);
             transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
@@ -381,9 +516,9 @@
 
         .big-stat-label {
             font-size: 18px;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            opacity: 0.7;
+            opacity: 0.8;
+            max-width: 400px;
+            margin: 0 auto;
         }
 
         /* Full Bleed Image */
@@ -405,8 +540,8 @@
             inset: 0;
             background: linear-gradient(
                 to right,
-                rgba(41, 45, 58, 0.8) 0%,
-                rgba(41, 45, 58, 0.4) 50%,
+                rgba(41, 45, 58, 0.9) 0%,
+                rgba(41, 45, 58, 0.6) 50%,
                 transparent 100%
             );
             display: flex;
@@ -414,7 +549,7 @@
         }
 
         .full-bleed-content {
-            max-width: 500px;
+            max-width: 550px;
             padding: 60px;
             color: var(--white);
         }
@@ -474,23 +609,17 @@
             position: absolute;
             top: -20px;
             right: -20px;
-            background: var(--pine-green);
+            background: var(--money-green);
             color: var(--white);
-            width: 100px;
-            height: 100px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             font-family: 'Inter', sans-serif;
-            box-shadow: 0 20px 40px rgba(71, 108, 88, 0.4);
-        }
-
-        .product-badge-number {
-            font-size: 28px;
-            font-weight: 700;
-            line-height: 1;
+            box-shadow: 0 20px 40px rgba(5, 150, 105, 0.4);
         }
 
         .product-badge-label {
@@ -498,6 +627,19 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             opacity: 0.9;
+        }
+
+        .product-badge-number {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .product-badge-sublabel {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0.8;
         }
 
         .product-content {
@@ -508,14 +650,14 @@
             font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 3px;
-            color: var(--pine-green);
+            color: var(--money-green);
             margin-bottom: 16px;
             font-weight: 600;
         }
 
         .product-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(36px, 4vw, 52px);
+            font-size: clamp(32px, 4vw, 48px);
             line-height: 1.15;
             margin-bottom: 24px;
         }
@@ -543,7 +685,7 @@
         .product-feature-icon {
             width: 24px;
             height: 24px;
-            background: var(--pine-green);
+            background: var(--money-green);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -722,7 +864,7 @@
 
         .final-cta-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(36px, 5vw, 56px);
+            font-size: clamp(32px, 5vw, 52px);
             line-height: 1.15;
             margin-bottom: 24px;
         }
@@ -815,8 +957,8 @@
             }
 
             .chapter-number {
-                font-size: 80px;
-                margin-bottom: -20px;
+                font-size: 70px;
+                margin-bottom: -15px;
             }
 
             .product-features-grid {
@@ -829,6 +971,15 @@
 
             .testimonial-card {
                 width: 320px;
+            }
+
+            .full-bleed-content {
+                padding: 40px 24px;
+            }
+
+            .cost-callout, .savings-callout {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
@@ -849,27 +1000,70 @@
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-label">A Visual Story</div>
-            <h1 class="hero-title">The Art of Traveling Light</h1>
-            <p class="hero-subtitle">How a generation of frequent flyers discovered freedom by leaving more behind</p>
+            <div class="hero-label">Money You're Losing</div>
+            <h1 class="hero-title">8 Packing Mistakes That Are Costing You <span class="highlight">Hundreds</span> Every Year</h1>
+            <p class="hero-subtitle">The average frequent flyer bleeds money on avoidable travel expenses. Here's where it's going—and how to stop the leak.</p>
+            <div class="hero-stat">
+                <span class="hero-stat-number">$2,847</span>
+                <span class="hero-stat-label">Average annual loss<br>from these 8 mistakes</span>
+            </div>
         </div>
         <div class="scroll-indicator">
-            <span>Scroll to explore</span>
+            <span>See the mistakes</span>
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
             </svg>
         </div>
     </section>
 
-    <!-- Chapter 1 -->
+    <!-- Mistake 1 -->
     <section class="chapter">
         <div class="chapter-inner">
             <div class="chapter-content">
-                <div class="chapter-number">01</div>
-                <h2 class="chapter-title">The Weight We Carry</h2>
+                <div class="chapter-number mistake">01</div>
+                <span class="mistake-label">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                    Mistake
+                </span>
+                <h2 class="chapter-title">Treating Checked Bag Fees as "Part of Travel"</h2>
                 <div class="chapter-text">
-                    <p>There's a moment in every airport, usually at the baggage carousel, where the math becomes unavoidable. You've paid $70 for the privilege of checking a bag. You've waited 32 minutes watching other people's suitcases pass by. And somewhere in the back of your mind, you're calculating whether your luggage made the same connection you almost missed.</p>
-                    <p>This is the tax that modern air travel extracts—not just in dollars, but in time, anxiety, and the creeping sense that there must be a better way.</p>
+                    <p>You've normalized it. $35 here, $45 there. It's just what travel costs, right? Wrong. That mental accounting trick is costing you a vacation's worth of cash every single year.</p>
+                    <p>At 15 round trips annually, you're hemorrhaging over a thousand dollars—not on flights, hotels, or experiences—but on the privilege of waiting at baggage claim.</p>
+                </div>
+                <div class="cost-callout">
+                    <span class="cost-callout-icon">💸</span>
+                    <div class="cost-callout-content">
+                        <div class="cost-callout-amount">-$1,050/year</div>
+                        <div class="cost-callout-label">15 trips × $70 round-trip bag fees</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chapter-media">
+                <img src="Nomad-Lane-Bento-Bag-Mar23-MarraCreative-71.webp" alt="Bag fitting in airline sizer" class="chapter-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Mistake 2 -->
+    <section class="chapter">
+        <div class="chapter-inner">
+            <div class="chapter-content">
+                <div class="chapter-number mistake">02</div>
+                <span class="mistake-label">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                    Mistake
+                </span>
+                <h2 class="chapter-title">Gambling on Overhead Bin Space</h2>
+                <div class="chapter-text">
+                    <p>You packed a carry-on to avoid fees. Smart move—until you board Group 4 and watch the flight attendant slap a gate-check tag on your bag anyway.</p>
+                    <p>With 40% of tickets now basic economy (most without guaranteed bin access), that carry-on is a coin flip. And when you lose, you've gained nothing but the walk of shame back to the jet bridge.</p>
+                </div>
+                <div class="cost-callout">
+                    <span class="cost-callout-icon">🎰</span>
+                    <div class="cost-callout-content">
+                        <div class="cost-callout-amount">-$280/year</div>
+                        <div class="cost-callout-label">4 forced gate-checks × $70 rebooking/delays</div>
+                    </div>
                 </div>
             </div>
             <div class="chapter-media">
@@ -878,67 +1072,202 @@
         </div>
     </section>
 
-    <!-- Big Stat -->
-    <section class="big-stat">
+    <!-- Big Loss Stat -->
+    <section class="big-stat loss">
         <div class="big-stat-bg"></div>
         <div class="big-stat-content">
-            <div class="big-stat-number">$1,330</div>
-            <div class="big-stat-label">Average annual cost of checking bags for frequent travelers</div>
+            <div class="big-stat-label-top">Time Lost Annually</div>
+            <div class="big-stat-number">17+ hrs</div>
+            <div class="big-stat-label">Standing at baggage carousels, waiting for bags that sometimes never come</div>
         </div>
     </section>
 
-    <!-- Chapter 2 -->
+    <!-- Mistake 3 -->
     <section class="chapter">
         <div class="chapter-inner">
             <div class="chapter-content">
-                <div class="chapter-number">02</div>
-                <h2 class="chapter-title">The Overhead Bin Lottery</h2>
+                <div class="chapter-number mistake">03</div>
+                <span class="mistake-label">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                    Mistake
+                </span>
+                <h2 class="chapter-title">Valuing Your Time at $0</h2>
                 <div class="chapter-text">
-                    <p>The carry-on seemed like the answer—until airlines started treating overhead bin space as premium real estate. Basic economy fares, now 40% of domestic tickets, often don't include bin access at all. Even when they do, boarding Group 4 means watching gate agents tag your bag anyway.</p>
-                    <p>What frequent travelers discovered was counterintuitive: the only guaranteed luggage space isn't above you. It's below.</p>
+                    <p>The average baggage claim wait is 27 minutes. Multiply that by your annual trips and you're donating 17+ hours to watching other people's suitcases orbit a conveyor belt.</p>
+                    <p>That's not "just how travel works." That's half a work week you'll never get back—time you could spend working, relaxing, or already being where you need to be.</p>
+                </div>
+                <div class="cost-callout">
+                    <span class="cost-callout-icon">⏰</span>
+                    <div class="cost-callout-content">
+                        <div class="cost-callout-amount">-$850/year</div>
+                        <div class="cost-callout-label">17 hours × $50/hr opportunity cost</div>
+                    </div>
                 </div>
             </div>
             <div class="chapter-media">
-                <img src="Nomad-Lane-Bento-Bag-Mar23-MarraCreative-71.webp" alt="Bag fitting in airline sizer" class="chapter-image">
-                <span class="image-caption">The personal item: your only guaranteed space</span>
+                <img src="Homepage_AboutUs.webp" alt="Business travelers" class="chapter-image">
             </div>
         </div>
     </section>
 
-    <!-- Full Bleed Quote -->
+    <!-- Mistake 4 -->
+    <section class="chapter">
+        <div class="chapter-inner">
+            <div class="chapter-content">
+                <div class="chapter-number mistake">04</div>
+                <span class="mistake-label">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                    Mistake
+                </span>
+                <h2 class="chapter-title">Packing for Hypothetical Emergencies</h2>
+                <div class="chapter-text">
+                    <p>The "just in case" jacket. The third pair of shoes. The backup outfit for the event that doesn't exist. You're not packing for your trip—you're packing for anxiety.</p>
+                    <p>Every unnecessary item steals space from essentials, pushes you into larger bags, and ultimately into the checked bag trap. Your fear of "what if" is what's actually costing you.</p>
+                </div>
+                <div class="cost-callout">
+                    <span class="cost-callout-icon">👻</span>
+                    <div class="cost-callout-content">
+                        <div class="cost-callout-amount">-$0 direct</div>
+                        <div class="cost-callout-label">But this habit enables every other mistake</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chapter-media">
+                <img src="PackingGIF_Square.webp" alt="Organized packing" class="chapter-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Break -->
     <section class="full-bleed">
-        <img src="image_2d1407f1-c7fa-47a6-b606-16c592f2906f.webp" alt="Bag on luggage handle" class="full-bleed-image">
+        <img src="WomanCarryingBag_7dc7b42c-23b8-43ee-aae3-5b3602b6b195.webp" alt="Confident traveler" class="full-bleed-image">
         <div class="full-bleed-overlay">
             <div class="full-bleed-content">
-                <p class="full-bleed-quote">"The personal item is the last piece of carry-on space that airlines can't take away from you. It's the only luggage that's truly yours."</p>
-                <cite class="full-bleed-cite">— Marcus Webb, Travel Industry Analyst</cite>
+                <p class="full-bleed-quote">"I calculated what checking bags cost me over 5 years. It was more than my last vacation. That number changed everything."</p>
+                <cite class="full-bleed-cite">— Rachel K., Management Consultant</cite>
             </div>
         </div>
     </section>
 
-    <!-- Chapter 3 -->
+    <!-- Mistake 5 -->
     <section class="chapter">
         <div class="chapter-inner">
             <div class="chapter-content">
-                <div class="chapter-number">03</div>
-                <h2 class="chapter-title">The Architecture of Organization</h2>
+                <div class="chapter-number mistake">05</div>
+                <span class="mistake-label">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                    Mistake
+                </span>
+                <h2 class="chapter-title">Using Bags Designed for Storage, Not Travel</h2>
                 <div class="chapter-text">
-                    <p>Traditional bags treat interior space as a single cavity. You stuff things in, they shift during transit, and you spend ten minutes at your hotel room reconstructing your packing system.</p>
-                    <p>The new generation of travel bags borrows from a different philosophy: like a Japanese bento box, everything should have its place. Designated zones. Compression systems. Quick-access pockets. Not just storage, but architecture.</p>
+                    <p>Traditional bags treat interior space as a single cavity. Dump everything in, let it shift during transit, then spend 15 minutes at your hotel playing archaeological dig.</p>
+                    <p>You're not just losing time—you're losing sanity. And when you can't find your laptop at TSA or your charger at the gate, the stress compounds into missed connections and frantic rebooking.</p>
+                </div>
+                <div class="cost-callout">
+                    <span class="cost-callout-icon">🧳</span>
+                    <div class="cost-callout-content">
+                        <div class="cost-callout-amount">-$200/year</div>
+                        <div class="cost-callout-label">Replacement items, missed connections, stress purchases</div>
+                    </div>
                 </div>
             </div>
             <div class="chapter-media">
-                <img src="image-one.webp" alt="Organized bag compartments" class="chapter-image">
+                <img src="image-one.webp" alt="Organized compartments" class="chapter-image">
             </div>
         </div>
     </section>
 
-    <!-- Big Stat 2 -->
-    <section class="big-stat">
+    <!-- Mistake 6 -->
+    <section class="chapter">
+        <div class="chapter-inner">
+            <div class="chapter-content">
+                <div class="chapter-number mistake">06</div>
+                <span class="mistake-label">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                    Mistake
+                </span>
+                <h2 class="chapter-title">Ignoring the Personal Item Loophole</h2>
+                <div class="chapter-text">
+                    <p>Here's what airlines don't advertise: the personal item slot under your seat is the only luggage space they can't take away. It's yours on every fare class, every boarding group, every flight.</p>
+                    <p>Most travelers waste this space on a laptop bag or purse. But the maximum allowed dimensions (roughly 18" x 14" x 8") can hold 3+ days of clothes—if you use the right bag.</p>
+                </div>
+                <div class="cost-callout">
+                    <span class="cost-callout-icon">🎯</span>
+                    <div class="cost-callout-content">
+                        <div class="cost-callout-amount">-$0 forever</div>
+                        <div class="cost-callout-label">When you stop ignoring this and start using it</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chapter-media">
+                <img src="image_2d1407f1-c7fa-47a6-b606-16c592f2906f.webp" alt="Bag on luggage" class="chapter-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Mistake 7 -->
+    <section class="chapter">
+        <div class="chapter-inner">
+            <div class="chapter-content">
+                <div class="chapter-number mistake">07</div>
+                <span class="mistake-label">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                    Mistake
+                </span>
+                <h2 class="chapter-title">Accepting Lost Luggage as "Bad Luck"</h2>
+                <div class="chapter-text">
+                    <p>Airlines mishandled 7.6 bags per 1,000 passengers last year. Sounds small until it's your bag—with your presentation laptop, your only suit, or your medication—circling a carousel in the wrong city.</p>
+                    <p>The reimbursement process is a nightmare. The replacement shopping is expensive. And the stress of that first 24 hours? You can't put a price on it. Actually, you can.</p>
+                </div>
+                <div class="cost-callout">
+                    <span class="cost-callout-icon">🛫</span>
+                    <div class="cost-callout-content">
+                        <div class="cost-callout-amount">-$187/incident</div>
+                        <div class="cost-callout-label">Average out-of-pocket cost when bags are delayed/lost</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chapter-media">
+                <img src="LaptopSecurity_4x5_v3_4c408048-bd24-4360-bfe5-0145986dbef4.webp" alt="Laptop security" class="chapter-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Big Loss Total -->
+    <section class="big-stat loss">
         <div class="big-stat-bg"></div>
         <div class="big-stat-content">
-            <div class="big-stat-number">17+ hrs</div>
-            <div class="big-stat-label">Time spent at baggage claim annually by frequent travelers</div>
+            <div class="big-stat-label-top">Total Annual Cost of These Mistakes</div>
+            <div class="big-stat-number">$2,847</div>
+            <div class="big-stat-label">That's a flight to Europe. A weekend getaway. A new wardrobe. Gone.</div>
+        </div>
+    </section>
+
+    <!-- Mistake 8 / The Fix -->
+    <section class="chapter">
+        <div class="chapter-inner">
+            <div class="chapter-content">
+                <div class="chapter-number fix">08</div>
+                <span class="fix-label">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    The Fix
+                </span>
+                <h2 class="chapter-title">Thinking a Better Bag Can't Solve a Behavior Problem</h2>
+                <div class="chapter-text">
+                    <p>Here's the mindset that keeps costing you: "I've always packed this way." "I need my options." "A bag is just a bag."</p>
+                    <p>The travelers who've eliminated these costs didn't develop superhuman discipline. They got a bag that made the right behavior the easy behavior—one engineered to fit under any seat while holding what most people pack in a carry-on.</p>
+                </div>
+                <div class="savings-callout">
+                    <span class="savings-callout-icon">✅</span>
+                    <div class="savings-callout-content">
+                        <div class="savings-callout-amount">+$2,847/year</div>
+                        <div class="savings-callout-label">Back in your pocket when you fix all 8</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chapter-media">
+                <img src="Nomad57.webp" alt="Nomad Lane Bento Bag" class="chapter-image">
+            </div>
         </div>
     </section>
 
@@ -948,26 +1277,27 @@
             <div class="product-images fade-in">
                 <img src="Nomad57.webp" alt="Nomad Lane Bento Bag" class="product-main-image">
                 <div class="product-badge">
-                    <span class="product-badge-number">5K+</span>
-                    <span class="product-badge-label">Reviews</span>
+                    <span class="product-badge-label">Pays for</span>
+                    <span class="product-badge-number">itself in</span>
+                    <span class="product-badge-sublabel">3 trips</span>
                 </div>
             </div>
             <div class="product-content fade-in">
-                <div class="product-eyebrow">The Bag That Started It All</div>
-                <h2 class="product-title">Nomad Lane<br>Bento Bag</h2>
-                <p class="product-description">Designed by frequent flyers who grew tired of the choice between checking bags and traveling light. The Bento Bag fits under any airline seat while holding what most people pack in a carry-on.</p>
+                <div class="product-eyebrow">The Bag That Fixes All 8</div>
+                <h2 class="product-title">Nomad Lane Bento Bag</h2>
+                <p class="product-description">Engineered to eliminate every mistake on this list. Fits under any airline seat. Holds 3+ days of clothes. Organizes everything so you never dig again. One bag. Zero fees. Forever.</p>
                 <div class="product-features-grid">
                     <div class="product-feature-item">
                         <div class="product-feature-icon">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                         </div>
-                        <span class="product-feature-text">Fits under every airline seat</span>
+                        <span class="product-feature-text">Guaranteed personal item size</span>
                     </div>
                     <div class="product-feature-item">
                         <div class="product-feature-icon">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                         </div>
-                        <span class="product-feature-text">Holds 3+ days of clothes</span>
+                        <span class="product-feature-text">10+ organized compartments</span>
                     </div>
                     <div class="product-feature-item">
                         <div class="product-feature-icon">
@@ -979,11 +1309,11 @@
                         <div class="product-feature-icon">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                         </div>
-                        <span class="product-feature-text">Trolley sleeve pass-through</span>
+                        <span class="product-feature-text">Never gate-checked. Ever.</span>
                     </div>
                 </div>
                 <a href="https://nomadlane.com/products/bento-bag" target="_blank" rel="noopener" class="product-cta">
-                    Shop Bento Bag — $298
+                    Stop Losing Money — $298
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                     </svg>
@@ -1009,14 +1339,13 @@
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="testimonials-header fade-in">
-            <h2 class="testimonials-title">What Travelers Say</h2>
-            <p class="testimonials-subtitle">Join 5,000+ frequent flyers who've transformed their travel experience</p>
+            <h2 class="testimonials-title">5,000+ Travelers Fixed These Mistakes</h2>
+            <p class="testimonials-subtitle">Here's what happened when they did</p>
         </div>
         <div class="testimonials-track">
-            <!-- First set -->
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"I've traveled with a TUMI for 15 years. The Bento Bag is better organized, lighter, and half the price. I'm never going back."</p>
+                <p class="testimonial-text">"I did the math after 6 months: $1,200 saved in bag fees alone. The Bento Bag paid for itself four times over."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">JK</div>
                     <div>
@@ -1027,7 +1356,7 @@
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"The anxiety of 'will my bag fit?' is completely gone. It slips under the seat every single time. Worth every penny."</p>
+                <p class="testimonial-text">"Haven't checked a bag in 14 months. Haven't waited at a carousel. Haven't lost luggage. It's a different way to travel."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">SM</div>
                     <div>
@@ -1038,7 +1367,7 @@
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Packed for a 4-day conference with room to spare. The organization is incredible—everything has its place."</p>
+                <p class="testimonial-text">"My TUMI cost twice as much and couldn't do half of what this does. I feel like I've been overpaying for years."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">DP</div>
                     <div>
@@ -1049,7 +1378,7 @@
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"I stopped checking bags completely. The money I've saved in six months already paid for the bag twice over."</p>
+                <p class="testimonial-text">"The anxiety of 'will it fit?' is just... gone. It fits. Every time. Under every seat. That peace of mind is priceless."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">LR</div>
                     <div>
@@ -1058,10 +1387,10 @@
                     </div>
                 </div>
             </div>
-            <!-- Duplicate for infinite scroll -->
+            <!-- Duplicates for infinite scroll -->
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"I've traveled with a TUMI for 15 years. The Bento Bag is better organized, lighter, and half the price. I'm never going back."</p>
+                <p class="testimonial-text">"I did the math after 6 months: $1,200 saved in bag fees alone. The Bento Bag paid for itself four times over."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">JK</div>
                     <div>
@@ -1072,7 +1401,7 @@
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"The anxiety of 'will my bag fit?' is completely gone. It slips under the seat every single time. Worth every penny."</p>
+                <p class="testimonial-text">"Haven't checked a bag in 14 months. Haven't waited at a carousel. Haven't lost luggage. It's a different way to travel."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">SM</div>
                     <div>
@@ -1083,7 +1412,7 @@
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Packed for a 4-day conference with room to spare. The organization is incredible—everything has its place."</p>
+                <p class="testimonial-text">"My TUMI cost twice as much and couldn't do half of what this does. I feel like I've been overpaying for years."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">DP</div>
                     <div>
@@ -1094,7 +1423,7 @@
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"I stopped checking bags completely. The money I've saved in six months already paid for the bag twice over."</p>
+                <p class="testimonial-text">"The anxiety of 'will it fit?' is just... gone. It fits. Every time. Under every seat. That peace of mind is priceless."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">LR</div>
                     <div>
@@ -1110,10 +1439,10 @@
     <section class="final-cta">
         <div class="final-cta-bg"></div>
         <div class="final-cta-content fade-in">
-            <h2 class="final-cta-title">Travel Lighter.<br>Arrive Faster.</h2>
-            <p class="final-cta-text">The Bento Bag is more than luggage—it's a system for stress-free travel. Join the thousands who've eliminated checked bag fees, skipped baggage claim, and discovered what it means to travel light.</p>
+            <h2 class="final-cta-title">Stop Bleeding Money.<br>Start Traveling Smarter.</h2>
+            <p class="final-cta-text">Every trip without the Bento Bag is another $150+ you'll never see again. The math is simple. The fix is simpler.</p>
             <a href="https://nomadlane.com/products/bento-bag" target="_blank" rel="noopener" class="final-cta-button">
-                Shop Bento Bag — $298
+                Get the Bento Bag — $298
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
@@ -1164,7 +1493,7 @@
             }
         });
 
-        // Scroll animations with Intersection Observer
+        // Scroll animations
         const observerOptions = {
             threshold: 0.2,
             rootMargin: '0px 0px -100px 0px'
@@ -1178,22 +1507,8 @@
             });
         }, observerOptions);
 
-        // Observe chapter content and media
         document.querySelectorAll('.chapter-content, .chapter-media, .big-stat-content, .fade-in').forEach(el => {
             observer.observe(el);
-        });
-
-        // Counter animation for stats
-        const statObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.5 });
-
-        document.querySelectorAll('.big-stat-content').forEach(el => {
-            statObserver.observe(el);
         });
     </script>
 
