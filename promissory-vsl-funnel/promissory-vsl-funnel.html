@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QSBS Tax Savings Assessment | Promissory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #a5e978;
+            --dark-teal: #032021;
+            --dark-bg: #0a2e2f;
+            --cream: #f5f3ec;
+            --light-green: #e8f5e0;
+            --accent-pink: #e84c8a;
+            --text-dark: #1a1a1a;
+            --text-muted: #5a6a6b;
+            --border-light: #d4e5d9;
+            --success: #22c55e;
+            --warning: #f59e0b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: var(--dark-teal);
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo svg {
+            height: 24px;
+            width: auto;
+        }
+
+        .header-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(165, 233, 120, 0.15);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            color: var(--primary-green);
+        }
+
+        .header-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Main Container */
+        .funnel-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            min-height: calc(100vh - 64px);
+        }
+
+        /* Screen Management */
+        .screen {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .screen.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* ==================== */
+        /* SCREEN 1: VSL PAGE */
+        /* ==================== */
+
+        .vsl-screen {
+            text-align: center;
+        }
+
+        .vsl-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 600;
+            color: var(--dark-teal);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .vsl-headline .highlight {
+            color: var(--primary-green);
+            background: var(--dark-teal);
+            padding: 0 8px;
+            border-radius: 4px;
+        }
+
+        .vsl-subheadline {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Video Container */
+        .video-container {
+            position: relative;
+            background: var(--dark-teal);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 32px;
+            aspect-ratio: 16/9;
+            box-shadow: 0 20px 60px rgba(3, 32, 33, 0.3);
+        }
+
+        .video-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--dark-teal), var(--dark-bg));
+            cursor: pointer;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 32px rgba(165, 233, 120, 0.4);
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(165, 233, 120, 0.5);
+        }
+
+        .play-button svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--dark-teal);
+            margin-left: 4px;
+        }
+
+        .video-duration {
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+
+        /* VSL Social Proof */
+        .vsl-social-proof {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .proof-item {
+            text-align: center;
+        }
+
+        .proof-number {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--dark-teal);
+        }
+
+        .proof-label {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* VSL CTA */
+        .vsl-cta {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            border: 2px solid var(--primary-green);
+        }
+
+        .vsl-cta h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark-teal);
+            margin-bottom: 8px;
+        }
+
+        .vsl-cta p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--dark-teal);
+            color: var(--primary-green);
+            font-size: 18px;
+            font-weight: 600;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 24px rgba(3, 32, 33, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(3, 32, 33, 0.4);
+        }
+
+        .cta-button svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .cta-subtext {
+            margin-top: 16px;
+            font-size: 13px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .cta-subtext svg {
+            width: 16px;
+            height: 16px;
+            color: var(--success);
+        }
+
+        /* ==================== */
+        /* QUIZ SCREENS */
+        /* ==================== */
+
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .quiz-progress {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .progress-step {
+            width: 40px;
+            height: 4px;
+            background: var(--border-light);
+            border-radius: 2px;
+            transition: background 0.3s ease;
+        }
+
+        .progress-step.active {
+            background: var(--primary-green);
+        }
+
+        .progress-step.completed {
+            background: var(--dark-teal);
+        }
+
+        .quiz-step-label {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .quiz-question {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(24px, 4vw, 32px);
+            font-weight: 600;
+            color: var(--dark-teal);
+            line-height: 1.3;
+        }
+
+        /* Quiz Options */
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .quiz-option {
+            background: white;
+            border: 2px solid var(--border-light);
+            border-radius: 12px;
+            padding: 20px 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .quiz-option:hover {
+            border-color: var(--primary-green);
+            background: var(--light-green);
+        }
+
+        .quiz-option.selected {
+            border-color: var(--dark-teal);
+            background: var(--light-green);
+        }
+
+        .option-radio {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--border-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .quiz-option.selected .option-radio {
+            border-color: var(--dark-teal);
+            background: var(--dark-teal);
+        }
+
+        .option-radio::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s ease;
+        }
+
+        .quiz-option.selected .option-radio::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .option-content {
+            flex: 1;
+        }
+
+        .option-title {
+            font-weight: 600;
+            color: var(--dark-teal);
+            font-size: 16px;
+        }
+
+        .option-description {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Trust/Fact Cards */
+        .trust-card {
+            background: linear-gradient(135deg, var(--dark-teal), var(--dark-bg));
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 24px;
+            color: white;
+            animation: slideIn 0.5s ease;
+        }
+
+        .trust-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .trust-card-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(165, 233, 120, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .trust-card-icon svg {
+            width: 20px;
+            height: 20px;
+            color: var(--primary-green);
+        }
+
+        .trust-card-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        .trust-card-content {
+            font-size: 16px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .trust-card-stat {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .trust-card-stat .big-number {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary-green);
+        }
+
+        .trust-card-stat .stat-text {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* Social Proof Card (variation) */
+        .social-proof-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 24px;
+            border: 1px solid var(--border-light);
+            animation: slideIn 0.5s ease;
+        }
+
+        .testimonial-quote {
+            font-style: italic;
+            color: var(--text-dark);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            color: var(--dark-teal);
+            font-size: 14px;
+        }
+
+        .testimonial-role {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .testimonial-result {
+            display: inline-block;
+            background: var(--light-green);
+            color: var(--dark-teal);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 50px;
+            margin-top: 4px;
+        }
+
+        /* Quiz Navigation */
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .back-button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 15px;
+            cursor: pointer;
+            padding: 12px 0;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: var(--dark-teal);
+        }
+
+        .back-button svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .next-button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--dark-teal);
+            color: var(--primary-green);
+            font-size: 16px;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .next-button.enabled {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .next-button.enabled:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(3, 32, 33, 0.3);
+        }
+
+        .next-button svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* ==================== */
+        /* EMAIL CAPTURE SCREEN */
+        /* ==================== */
+
+        .email-screen {
+            text-align: center;
+        }
+
+        .email-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .email-icon svg {
+            width: 40px;
+            height: 40px;
+            color: var(--dark-teal);
+        }
+
+        .email-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--dark-teal);
+            margin-bottom: 12px;
+        }
+
+        .email-subtext {
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .email-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--dark-teal);
+            margin-bottom: 6px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--border-light);
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+
+        .submit-button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: var(--dark-teal);
+            color: var(--primary-green);
+            font-size: 18px;
+            font-weight: 600;
+            padding: 18px 32px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 24px;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(3, 32, 33, 0.3);
+        }
+
+        .privacy-note {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 16px;
+        }
+
+        /* ==================== */
+        /* RESULTS SCREEN */
+        /* ==================== */
+
+        .results-screen {
+            text-align: center;
+        }
+
+        .results-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--light-green);
+            color: var(--dark-teal);
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin-bottom: 24px;
+        }
+
+        .results-badge svg {
+            width: 18px;
+            height: 18px;
+            color: var(--success);
+        }
+
+        .results-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(28px, 5vw, 40px);
+            font-weight: 600;
+            color: var(--dark-teal);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .results-subheadline {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Savings Display */
+        .savings-card {
+            background: linear-gradient(135deg, var(--dark-teal), var(--dark-bg));
+            border-radius: 20px;
+            padding: 40px;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .savings-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.7;
+            margin-bottom: 8px;
+        }
+
+        .savings-amount {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(48px, 10vw, 72px);
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 16px;
+        }
+
+        .savings-breakdown {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 600px) {
+            .savings-breakdown {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+
+        .breakdown-item {
+            text-align: center;
+        }
+
+        .breakdown-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .breakdown-label {
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        /* Qualification Score */
+        .qualification-section {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 40px;
+            border: 1px solid var(--border-light);
+        }
+
+        .qualification-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .qualification-title {
+            font-weight: 600;
+            color: var(--dark-teal);
+        }
+
+        .qualification-score {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            color: var(--success);
+        }
+
+        .score-bar {
+            height: 8px;
+            background: var(--border-light);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-green), var(--success));
+            border-radius: 4px;
+            transition: width 1s ease;
+        }
+
+        .qualification-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        @media (max-width: 500px) {
+            .qualification-items {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .qual-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            background: var(--light-green);
+            border-radius: 8px;
+            font-size: 14px;
+            color: var(--dark-teal);
+        }
+
+        .qual-item svg {
+            width: 18px;
+            height: 18px;
+            color: var(--success);
+            flex-shrink: 0;
+        }
+
+        /* Book Call CTA */
+        .book-call-section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            border: 2px solid var(--primary-green);
+            box-shadow: 0 8px 32px rgba(165, 233, 120, 0.2);
+        }
+
+        .book-call-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .book-call-header svg {
+            width: 28px;
+            height: 28px;
+            color: var(--dark-teal);
+        }
+
+        .book-call-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--dark-teal);
+        }
+
+        .book-call-subtitle {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .book-call-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .benefit-tag {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--light-green);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            color: var(--dark-teal);
+            font-weight: 500;
+        }
+
+        .benefit-tag svg {
+            width: 16px;
+            height: 16px;
+            color: var(--success);
+        }
+
+        .book-call-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--primary-green);
+            color: var(--dark-teal);
+            font-size: 18px;
+            font-weight: 700;
+            padding: 20px 48px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(165, 233, 120, 0.4);
+        }
+
+        .book-call-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(165, 233, 120, 0.5);
+        }
+
+        .book-call-button svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .urgency-text {
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .urgency-text strong {
+            color: var(--accent-pink);
+        }
+
+        /* Footer */
+        .funnel-footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 13px;
+            border-top: 1px solid var(--border-light);
+            margin-top: 40px;
+        }
+
+        .funnel-footer a {
+            color: var(--dark-teal);
+            text-decoration: none;
+        }
+
+        /* Loading State */
+        .loading-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(255,255,255,0.95);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .loading-overlay.active {
+            display: flex;
+        }
+
+        .loading-spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid var(--border-light);
+            border-top-color: var(--primary-green);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 16px;
+            color: var(--dark-teal);
+            font-weight: 500;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .funnel-container {
+                padding: 24px 16px;
+            }
+
+            .header-badge {
+                display: none;
+            }
+
+            .vsl-social-proof {
+                gap: 24px;
+            }
+
+            .proof-number {
+                font-size: 24px;
+            }
+
+            .vsl-cta {
+                padding: 24px;
+            }
+
+            .quiz-option {
+                padding: 16px 20px;
+            }
+
+            .trust-card, .social-proof-card {
+                padding: 20px;
+            }
+
+            .savings-card {
+                padding: 28px 24px;
+            }
+
+            .book-call-section {
+                padding: 28px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 149.88" height="24">
+                <path d="M263.1 25.04c10.92 0 17.81 1.85 23.02 7.06 6.39 6.39 9.24 17.31 9.24 41.33s-3.02 34.78-9.41 41.17c-5.21 5.21-11.93 7.06-22.85 7.06h-33.77c-10.92 0-17.81-1.85-23.02-7.06-6.39-6.39-9.24-17.3-9.24-41.33s3.03-34.78 9.41-41.17c5.21-5.21 11.93-7.06 22.85-7.06h33.77ZM235.21 45.2c-2.69 2.69-3.86 8.23-3.86 28.06s1.18 25.54 3.86 28.23c1.85 1.85 3.86 2.19 7.9 2.19h6.22c4.03 0 6.05-.34 7.9-2.19 2.69-2.69 3.86-8.74 3.86-28.06s-1.18-25.54-3.86-28.23c-1.85-1.85-3.86-2.19-7.9-2.19h-6.22c-4.03 0-6.05.33-7.9 2.19ZM435 26.04c21.51 0 26.72 8.91 26.72 28.56v66.03h-34.11V58.29c0-9.91-1.34-12.77-10.42-12.77H401.9v75.11h-32.6v-75.1h-25.54v75.11h-34.11v-94.6h125.34Zm173.38 0V45.2h-37.47c-3.36 0-4.71 1.68-4.71 4.03 0 2.01 1.18 3.53 3.86 5.54L595.6 74.6c11.76 9.07 15.96 14.62 15.96 24.36 0 12.6-8.23 21.67-25.2 21.67h-58.64v-19.15h40.66c3.7 0 5.04-1.68 5.04-4.2 0-2.19-1.18-3.7-4.03-5.88l-25.54-19.83c-11.59-9.07-15.8-14.28-15.8-24.03 0-12.43 8.24-21.51 24.87-21.51h55.45Zm92.73 0V45.2h-37.47c-3.36 0-4.71 1.68-4.71 4.03 0 2.01 1.18 3.53 3.86 5.54l25.54 19.83c11.76 9.07 15.96 14.62 15.96 24.36 0 12.6-8.23 21.67-25.2 21.67h-58.64v-19.15h40.66c3.7 0 5.04-1.68 5.04-4.2 0-2.19-1.18-3.7-4.03-5.88l-25.54-19.83c-11.59-9.07-15.79-14.28-15.79-24.03 0-12.43 8.23-21.51 24.87-21.51h55.45Zm79.81-1c10.92 0 17.81 1.85 23.02 7.06 6.39 6.39 9.24 17.31 9.24 41.33s-3.02 34.78-9.41 41.17c-5.21 5.21-11.93 7.06-22.85 7.06h-33.77c-10.92 0-17.81-1.85-23.02-7.06-6.39-6.39-9.24-17.3-9.24-41.33s3.02-34.78 9.41-41.17c5.21-5.21 11.93-7.06 22.85-7.06h33.77Zm-27.9 20.16c-2.69 2.69-3.86 8.23-3.86 28.06s1.18 25.54 3.86 28.23c1.85 1.85 3.86 2.19 7.9 2.19h6.22c4.03 0 6.05-.34 7.9-2.19 2.69-2.69 3.86-8.74 3.86-28.06s-1.18-25.54-3.86-28.23c-1.85-1.85-3.86-2.19-7.9-2.19h-6.22c-4.03 0-6.05.33-7.9 2.19Zm106.69-19.16v11.59c0 1.68.67 2.19 1.51 2.19 1.01 0 1.68-.51 3.36-1.51l18.99-10.76c1.68-1.18 2.86-1.51 4.87-1.51h3.86v32.43h-20.16c-5.71 0-8.57.67-10.42 2.35-1.51 1.68-2.02 4.03-2.02 8.23v51.58h-34.11V26.04h34.11Zm74.09 0 18.48 52.93c.84 2.52 1.34 2.69 2.19 2.69s1.18-.17 2.02-2.69l17.3-52.93H1000l-43.52 123.83h-26.04l6.22-17.3c1.01-2.86 1.34-4.03 1.34-5.21 0-1.34-.5-2.52-1.34-4.7l-39.32-96.61h36.46Zm-778.56.01v11.59c0 1.68.67 2.19 1.51 2.19 1.01 0 1.68-.51 3.36-1.51l18.99-10.76c1.68-1.18 2.86-1.51 4.87-1.51h3.86v32.43h-20.16c-5.71 0-8.57.67-10.42 2.35-1.51 1.68-2.02 4.03-2.02 8.23v51.58h-34.11V26.05h34.11ZM511.94 0v15.96h-34.95V0h34.95Zm-.51 26.04v94.6h-33.94v-94.6h33.94ZM98.63 9.41C93.42 4.2 85.36 3.02 72.75 3.02H0v117.62h36.46V83.51h.04V63.35h-.04V23.19h19.49c7.9 0 9.91.5 11.93 2.52 2.86 2.86 3.53 8.4 3.53 17.14 0 9.58-.84 15.12-3.7 17.98-2.02 2.02-3.86 2.52-11.76 2.52h-3.48v20.16h20.29c12.6 0 20.5-1.34 25.88-6.72 5.04-5.04 8.91-14.45 8.91-33.94s-3.7-28.23-8.91-33.44Z" fill="#a5e978"/>
+            </svg>
+        </div>
+        <div class="header-badge">
+            <span class="dot"></span>
+            <span>1,200+ founders served</span>
+        </div>
+    </header>
+
+    <main class="funnel-container">
+        <!-- SCREEN 1: VSL Landing -->
+        <section id="vsl-screen" class="screen active vsl-screen">
+            <h1 class="vsl-headline">
+                The <span class="highlight">Multiplier Method™</span> That Lets Startup Founders Keep $4-15M More at Exit
+            </h1>
+            <p class="vsl-subheadline">
+                Discover the little-known trust stacking strategy that 1,200+ founders have used to legally multiply their QSBS exclusion—before your next funding round makes it too expensive.
+            </p>
+
+            <div class="video-container">
+                <div class="video-placeholder" onclick="startQuiz()">
+                    <div class="play-button">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <span class="video-duration">▶ "How We Saved 1,200+ Founders $890M" (3:12)</span>
+                </div>
+            </div>
+
+            <div class="vsl-social-proof">
+                <div class="proof-item">
+                    <div class="proof-number">$890M+</div>
+                    <div class="proof-label">Protected at Exit</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number">1,200+</div>
+                    <div class="proof-label">Founders Served</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number">6 Days</div>
+                    <div class="proof-label">Avg. Setup Time</div>
+                </div>
+            </div>
+
+            <!-- Fascination Bullets -->
+            <div class="fascination-box" style="background: white; border-radius: 16px; padding: 24px 32px; margin-bottom: 24px; text-align: left; border-left: 4px solid var(--primary-green);">
+                <div style="font-weight: 600; color: var(--dark-teal); margin-bottom: 12px; font-size: 15px;">In the next 2 minutes, you'll discover:</div>
+                <ul style="list-style: none; padding: 0; margin: 0; color: var(--text-dark); font-size: 15px; line-height: 2;">
+                    <li style="display: flex; align-items: flex-start; gap: 10px;">
+                        <span style="color: var(--primary-green); font-weight: bold;">→</span>
+                        <span>Why waiting until your Series B could cost you <strong>$2M+ in unnecessary gift taxes</strong></span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 10px;">
+                        <span style="color: var(--primary-green); font-weight: bold;">→</span>
+                        <span>The IRS-approved loophole that lets you <strong>triple your $15M tax exclusion</strong> (IRC §1202(h))</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 10px;">
+                        <span style="color: var(--primary-green); font-weight: bold;">→</span>
+                        <span>Why your current CPA probably <strong>hasn't mentioned this</strong> (and it's not their fault)</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="vsl-cta">
+                <h3>Calculate Your Multiplier Method™ Savings</h3>
+                <p>Answer 6 quick questions to see your personalized tax savings estimate and qualification score.</p>
+                <button class="cta-button" onclick="startQuiz()">
+                    Start Free Assessment
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+                <div class="cta-subtext">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span>No credit card required • Results in 2 minutes</span>
+                </div>
+            </div>
+
+            <!-- Damaging Admission -->
+            <div class="honesty-box" style="background: #fff9e6; border: 1px solid #f0e4c4; border-radius: 12px; padding: 20px 24px; margin-top: 24px; text-align: left;">
+                <div style="font-weight: 600; color: var(--dark-teal); margin-bottom: 8px; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" width="18" height="18">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="8" x2="12" y2="12"/>
+                        <line x1="12" y1="16" x2="12.01" y2="16"/>
+                    </svg>
+                    Honest Note: This Isn't For Everyone
+                </div>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6; margin: 0;">
+                    The Multiplier Method™ works best for founders with $5M+ in equity who are 12+ months from exit. If you're under $5M or in active acquisition talks, QSBS stacking may not be your best option. Our assessment will tell you either way.
+                </p>
+            </div>
+        </section>
+
+        <!-- QUIZ QUESTION 1: Company Structure -->
+        <section id="quiz-1" class="screen quiz-screen">
+            <div class="quiz-header">
+                <div class="quiz-progress">
+                    <div class="progress-step active"></div>
+                    <div class="progress-step"></div>
+                    <div class="progress-step"></div>
+                    <div class="progress-step"></div>
+                    <div class="progress-step"></div>
+                    <div class="progress-step"></div>
+                </div>
+                <div class="quiz-step-label">Question 1 of 6</div>
+                <h2 class="quiz-question">What type of company do you have equity in?</h2>
+            </div>
+
+            <div class="quiz-options">
+                <div class="quiz-option" data-value="c-corp" data-score="3">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">U.S. C-Corporation</div>
+                        <div class="option-description">Delaware or other state C-corp</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="s-corp" data-score="1">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">S-Corporation</div>
+                        <div class="option-description">Pass-through entity structure</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="llc" data-score="1">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">LLC</div>
+                        <div class="option-description">Limited liability company</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="other" data-score="0">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">Other / Not sure</div>
+                        <div class="option-description">Different structure or uncertain</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Card 1: QSBS Fact -->
+            <div class="trust-card">
+                <div class="trust-card-header">
+                    <div class="trust-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <span class="trust-card-label">Tax Code Fact</span>
+                </div>
+                <div class="trust-card-content">
+                    QSBS (Qualified Small Business Stock) under IRC Section 1202 allows founders to exclude up to <strong>$15 million</strong> in capital gains from federal taxes—but only for C-corporations. The Multiplier Method™ lets you stack multiple exclusions.
+                </div>
+                <div class="trust-card-stat">
+                    <span class="big-number">$15M</span>
+                    <span class="stat-text">maximum exclusion per taxpayer</span>
+                </div>
+            </div>
+
+            <div class="quiz-nav">
+                <button class="back-button" onclick="goBack()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back
+                </button>
+                <button class="next-button" onclick="nextQuestion(2)">
+                    Continue
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- QUIZ QUESTION 2: Company Valuation -->
+        <section id="quiz-2" class="screen quiz-screen">
+            <div class="quiz-header">
+                <div class="quiz-progress">
+                    <div class="progress-step completed"></div>
+                    <div class="progress-step active"></div>
+                    <div class="progress-step"></div>
+                    <div class="progress-step"></div>
+                    <div class="progress-step"></div>
+                    <div class="progress-step"></div>
+                </div>
+                <div class="quiz-step-label">Question 2 of 6</div>
+                <h2 class="quiz-question">What's your company's approximate current valuation?</h2>
+            </div>
+
+            <div class="quiz-options">
+                <div class="quiz-option" data-value="under-10m" data-score="2">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">Under $10 million</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="10-50m" data-score="3">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">$10 - $50 million</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="50-200m" data-score="3">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">$50 - $200 million</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="200m-plus" data-score="3">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">$200 million+</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Proof Card -->
+            <div class="social-proof-card">
+                <div class="testimonial-quote">
+                    "I'd been meaning to set up QSBS trusts for two years. With Promissory, I had my trusts funded in six days. The potential tax savings at exit: ~$2.4 million."
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">DK</div>
+                    <div>
+                        <div class="testimonial-name">David Kim</div>
+                        <div class="testimonial-role">Founder & CEO, Series B SaaS</div>
+                        <span class="testimonial-result">Saved ~$2.4M</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-nav">
+                <button class="back-button" onclick="goBack()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back
+                </button>
+                <button class="next-button" onclick="nextQuestion(3)">
+                    Continue
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- QUIZ QUESTION 3: Equity Value -->
+        <section id="quiz-3" class="screen quiz-screen">
+            <div class="quiz-header">
+                <div class="quiz-progress">
+                    <div class="progress-step completed"></div>
+                    <div class="progress-step completed"></div>
+                    <div class="progress-step active"></div>
+                    <div class="progress-step"></div>
+                    <div class="progress-step"></div>
+                    <div class="progress-step"></div>
+                </div>
+                <div class="quiz-step-label">Question 3 of 6</div>
+                <h2 class="quiz-question">What's the approximate value of your personal equity stake?</h2>
+            </div>
+
+            <div class="quiz-options">
+                <div class="quiz-option" data-value="under-5m" data-score="1">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">Under $5 million</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="5-15m" data-score="2">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">$5 - $15 million</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="15-50m" data-score="3">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">$15 - $50 million</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="50m-plus" data-score="3">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">$50 million+</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Card 2: Stacking Fact -->
+            <div class="trust-card">
+                <div class="trust-card-header">
+                    <div class="trust-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <span class="trust-card-label">Key Insight</span>
+                </div>
+                <div class="trust-card-content">
+                    The $15M exclusion is <strong>per taxpayer</strong>—not per company. The Multiplier Method™ creates QSBS-eligible trusts to expand your exclusion to $30M, $45M, or more—<em>but it only works if done before your equity value makes gift taxes prohibitive.</em>
+                </div>
+                <div class="trust-card-stat">
+                    <span class="big-number">3x</span>
+                    <span class="stat-text">potential exclusion with Multiplier Method™</span>
+                </div>
+            </div>
+
+            <div class="quiz-nav">
+                <button class="back-button" onclick="goBack()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back
+                </button>
+                <button class="next-button" onclick="nextQuestion(4)">
+                    Continue
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- QUIZ QUESTION 4: Exit Timeline -->
+        <section id="quiz-4" class="screen quiz-screen">
+            <div class="quiz-header">
+                <div class="quiz-progress">
+                    <div class="progress-step completed"></div>
+                    <div class="progress-step completed"></div>
+                    <div class="progress-step completed"></div>
+                    <div class="progress-step active"></div>
+                    <div class="progress-step"></div>
+                    <div class="progress-step"></div>
+                </div>
+                <div class="quiz-step-label">Question 4 of 6</div>
+                <h2 class="quiz-question">When do you anticipate a potential exit event?</h2>
+            </div>
+
+            <div class="quiz-options">
+                <div class="quiz-option" data-value="6-12m" data-score="1">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">Within 6-12 months</div>
+                        <div class="option-description">Exit discussions may be underway</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="1-2y" data-score="3">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">1-2 years</div>
+                        <div class="option-description">Planning horizon but no active discussions</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="2-5y" data-score="3">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">2-5 years</div>
+                        <div class="option-description">Long-term planning stage</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="5y-plus" data-score="2">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">5+ years or unsure</div>
+                        <div class="option-description">No specific timeline in mind</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Proof Card -->
+            <div class="social-proof-card">
+                <div class="testimonial-quote">
+                    "Every founder I know who's had a meaningful exit shares the same regret: 'I wish I'd planned earlier.' QSBS stacking is the single highest-leverage tax decision you can make."
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">AT</div>
+                    <div>
+                        <div class="testimonial-name">Alex Tran</div>
+                        <div class="testimonial-role">Partner, Top-Tier VC Firm</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-nav">
+                <button class="back-button" onclick="goBack()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back
+                </button>
+                <button class="next-button" onclick="nextQuestion(5)">
+                    Continue
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- QUIZ QUESTION 5: State -->
+        <section id="quiz-5" class="screen quiz-screen">
+            <div class="quiz-header">
+                <div class="quiz-progress">
+                    <div class="progress-step completed"></div>
+                    <div class="progress-step completed"></div>
+                    <div class="progress-step completed"></div>
+                    <div class="progress-step completed"></div>
+                    <div class="progress-step active"></div>
+                    <div class="progress-step"></div>
+                </div>
+                <div class="quiz-step-label">Question 5 of 6</div>
+                <h2 class="quiz-question">What state do you currently reside in?</h2>
+            </div>
+
+            <div class="quiz-options">
+                <div class="quiz-option" data-value="ca" data-score="2">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">California</div>
+                        <div class="option-description">State does not conform to federal QSBS</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="conforming" data-score="3">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">TX, FL, WA, NV, or other no-income-tax state</div>
+                        <div class="option-description">Maximum potential savings</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="partial" data-score="3">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">NY, MA, IL, or other conforming state</div>
+                        <div class="option-description">State conforms to federal QSBS rules</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="other" data-score="2">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">Other state / Not sure</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Card 3: Legal Backing -->
+            <div class="trust-card">
+                <div class="trust-card-header">
+                    <div class="trust-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <span class="trust-card-label">Legal Fact</span>
+                </div>
+                <div class="trust-card-content">
+                    The Multiplier Method™ (QSBS trust stacking) is explicitly permitted under <strong>IRC Section 1202(h)</strong>. This isn't a loophole—it's how the law was written. Every Promissory trust is reviewed by an independent estate-planning attorney and includes a legal opinion letter.
+                </div>
+            </div>
+
+            <div class="quiz-nav">
+                <button class="back-button" onclick="goBack()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back
+                </button>
+                <button class="next-button" onclick="nextQuestion(6)">
+                    Continue
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- QUIZ QUESTION 6: Primary Goal -->
+        <section id="quiz-6" class="screen quiz-screen">
+            <div class="quiz-header">
+                <div class="quiz-progress">
+                    <div class="progress-step completed"></div>
+                    <div class="progress-step completed"></div>
+                    <div class="progress-step completed"></div>
+                    <div class="progress-step completed"></div>
+                    <div class="progress-step completed"></div>
+                    <div class="progress-step active"></div>
+                </div>
+                <div class="quiz-step-label">Question 6 of 6</div>
+                <h2 class="quiz-question">What's your primary goal right now?</h2>
+            </div>
+
+            <div class="quiz-options">
+                <div class="quiz-option" data-value="learn" data-score="1">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">Just learning about QSBS strategies</div>
+                        <div class="option-description">Researching options for the future</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="planning" data-score="2">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">Actively planning my tax strategy</div>
+                        <div class="option-description">Want to understand my options</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="ready" data-score="3">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">Ready to set up trusts this quarter</div>
+                        <div class="option-description">Looking for the right solution now</div>
+                    </div>
+                </div>
+                <div class="quiz-option" data-value="urgent" data-score="3">
+                    <div class="option-radio"></div>
+                    <div class="option-content">
+                        <div class="option-title">Urgent—exit may be approaching</div>
+                        <div class="option-description">Need to act quickly</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Proof Card -->
+            <div class="social-proof-card">
+                <div class="testimonial-quote">
+                    "I wish someone had told me about QSBS stacking when I was raising my Series A. By the time I learned about it, my company's valuation made the gift tax implications prohibitive."
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">SC</div>
+                    <div>
+                        <div class="testimonial-name">Sarah Chen</div>
+                        <div class="testimonial-role">Founder, Acquired by Salesforce</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-nav">
+                <button class="back-button" onclick="goBack()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back
+                </button>
+                <button class="next-button" onclick="showEmailCapture()">
+                    See My Results
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- EMAIL CAPTURE SCREEN -->
+        <section id="email-screen" class="screen email-screen">
+            <div class="email-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                </svg>
+            </div>
+            <h2 class="email-headline">Your Personalized Results Are Ready</h2>
+            <p class="email-subtext">Enter your details below to see your estimated tax savings and qualification score.</p>
+
+            <form class="email-form" onsubmit="showResults(event)">
+                <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-input" placeholder="John Smith" required id="userName">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Work Email</label>
+                    <input type="email" class="form-input" placeholder="john@company.com" required id="userEmail">
+                </div>
+                <button type="submit" class="submit-button">
+                    Reveal My Tax Savings
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </form>
+            <p class="privacy-note">Your information is secure. We never share your data with third parties.</p>
+        </section>
+
+        <!-- RESULTS SCREEN -->
+        <section id="results-screen" class="screen results-screen">
+            <div class="results-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <span>Your Multiplier Method™ Report Is Ready</span>
+            </div>
+
+            <h1 class="results-headline">
+                <span id="resultName">You</span> Could Keep an Extra
+            </h1>
+
+            <p class="results-subheadline" id="aspirationalText">
+                That's enough to fund your children's education, buy a second home, or invest in your next venture—without giving 23.8% to the IRS.
+            </p>
+
+            <div class="savings-card">
+                <div class="savings-label">Estimated Federal Tax Savings</div>
+                <div class="savings-amount" id="savingsAmount">$3,570,000</div>
+                <div class="savings-breakdown">
+                    <div class="breakdown-item">
+                        <div class="breakdown-value" id="exclusionAmount">$45M</div>
+                        <div class="breakdown-label">Total Exclusion</div>
+                    </div>
+                    <div class="breakdown-item">
+                        <div class="breakdown-value" id="trustCount">3</div>
+                        <div class="breakdown-label">Trusts Recommended</div>
+                    </div>
+                    <div class="breakdown-item">
+                        <div class="breakdown-value">23.8%</div>
+                        <div class="breakdown-label">Tax Rate Avoided</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="qualification-section">
+                <div class="qualification-header">
+                    <span class="qualification-title">Your Qualification Score</span>
+                    <span class="qualification-score">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span id="qualScore">Excellent</span>
+                    </span>
+                </div>
+                <div class="score-bar">
+                    <div class="score-fill" id="scoreFill" style="width: 0%"></div>
+                </div>
+                <div class="qualification-items" id="qualItems">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <div class="book-call-section">
+                <div class="book-call-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                        <line x1="16" y1="2" x2="16" y2="6"/>
+                        <line x1="8" y1="2" x2="8" y2="6"/>
+                        <line x1="3" y1="10" x2="21" y2="10"/>
+                    </svg>
+                    <h3 class="book-call-title">Book Your Strategy Call</h3>
+                </div>
+                <p class="book-call-subtitle">Speak with a Promissory advisor to create your personalized trust stacking strategy.</p>
+
+                <div class="book-call-benefits">
+                    <div class="benefit-tag">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        30-min call
+                    </div>
+                    <div class="benefit-tag">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        No obligation
+                    </div>
+                    <div class="benefit-tag">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Custom roadmap
+                    </div>
+                </div>
+
+                <button class="book-call-button" onclick="window.open('https://promissory.com/book-call', '_blank')">
+                    Schedule My Free Consultation
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+
+                <!-- Bonus Offer -->
+                <div style="background: var(--light-green); border-radius: 12px; padding: 16px 20px; margin-top: 20px; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" width="20" height="20">
+                            <path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+                        </svg>
+                        <span style="font-weight: 600; color: var(--dark-teal); font-size: 14px;">Book This Week & Get Free Bonus</span>
+                    </div>
+                    <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+                        Schedule your call before Friday and receive our <strong>QSBS Compliance Audit Checklist</strong> ($497 value)—the same tool our advisors use to verify 1202 eligibility.
+                    </p>
+                </div>
+
+                <p class="urgency-text">
+                    <strong>⏰ Time-Sensitive:</strong> Every month you delay, your equity appreciation increases gift tax implications. Founders who wait until post-Series B often pay 2-3x more.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="funnel-footer">
+        <p>© 2026 <a href="https://promissory.com">Promissory</a>. All rights reserved.</p>
+        <p style="margin-top: 8px; font-size: 12px; opacity: 0.8;">This assessment is for informational purposes only and does not constitute legal, tax, or financial advice.</p>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Calculating your results...</div>
+    </div>
+
+    <script>
+        // Quiz State Management
+        let currentScreen = 'vsl-screen';
+        let quizAnswers = {};
+        let totalScore = 0;
+        const screenHistory = ['vsl-screen'];
+
+        // Screen Navigation
+        function showScreen(screenId) {
+            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+            document.getElementById(screenId).classList.add('active');
+            currentScreen = screenId;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function startQuiz() {
+            screenHistory.push('quiz-1');
+            showScreen('quiz-1');
+        }
+
+        function goBack() {
+            if (screenHistory.length > 1) {
+                screenHistory.pop();
+                const prevScreen = screenHistory[screenHistory.length - 1];
+                showScreen(prevScreen);
+            }
+        }
+
+        // Quiz Option Selection
+        document.querySelectorAll('.quiz-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const parent = this.closest('.quiz-options');
+                parent.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
+                this.classList.add('selected');
+
+                // Enable next button
+                const nextBtn = this.closest('.quiz-screen').querySelector('.next-button');
+                if (nextBtn) nextBtn.classList.add('enabled');
+            });
+        });
+
+        function nextQuestion(nextNum) {
+            const currentQuizScreen = document.getElementById(currentScreen);
+            const selectedOption = currentQuizScreen.querySelector('.quiz-option.selected');
+
+            if (!selectedOption) return;
+
+            // Store answer
+            const questionNum = currentScreen.replace('quiz-', '');
+            const value = selectedOption.dataset.value;
+            const score = parseInt(selectedOption.dataset.score) || 0;
+
+            quizAnswers[`q${questionNum}`] = { value, score };
+            totalScore += score;
+
+            // Navigate to next
+            const nextScreen = `quiz-${nextNum}`;
+            screenHistory.push(nextScreen);
+            showScreen(nextScreen);
+        }
+
+        function showEmailCapture() {
+            const currentQuizScreen = document.getElementById(currentScreen);
+            const selectedOption = currentQuizScreen.querySelector('.quiz-option.selected');
+
+            if (!selectedOption) return;
+
+            // Store final answer
+            const value = selectedOption.dataset.value;
+            const score = parseInt(selectedOption.dataset.score) || 0;
+            quizAnswers['q6'] = { value, score };
+            totalScore += score;
+
+            screenHistory.push('email-screen');
+            showScreen('email-screen');
+        }
+
+        function showResults(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('userName').value;
+            const email = document.getElementById('userEmail').value;
+
+            // Show loading
+            document.getElementById('loadingOverlay').classList.add('active');
+
+            setTimeout(() => {
+                document.getElementById('loadingOverlay').classList.remove('active');
+
+                // Calculate results based on answers
+                calculateAndDisplayResults(name);
+
+                screenHistory.push('results-screen');
+                showScreen('results-screen');
+            }, 2000);
+        }
+
+        function calculateAndDisplayResults(name) {
+            // Get first name
+            const firstName = name.split(' ')[0];
+            document.getElementById('resultName').textContent = firstName + ',';
+
+            // Calculate savings based on equity answer
+            let equityValue = 30000000; // Default
+            const equityAnswer = quizAnswers['q3']?.value;
+
+            switch(equityAnswer) {
+                case 'under-5m': equityValue = 4000000; break;
+                case '5-15m': equityValue = 12000000; break;
+                case '15-50m': equityValue = 35000000; break;
+                case '50m-plus': equityValue = 75000000; break;
+            }
+
+            // Calculate savings (23.8% tax rate, assumes 2 additional trusts = $30M more exclusion)
+            const baseExclusion = 15000000;
+            const additionalExclusion = 30000000; // 2 trusts
+            const totalExclusion = Math.min(equityValue, baseExclusion + additionalExclusion);
+            const taxableWithout = Math.max(0, equityValue - baseExclusion);
+            const taxableWith = Math.max(0, equityValue - totalExclusion);
+            const savings = (taxableWithout - taxableWith) * 0.238;
+
+            document.getElementById('savingsAmount').textContent = '$' + Math.round(savings).toLocaleString();
+            document.getElementById('exclusionAmount').textContent = '$' + Math.round(totalExclusion / 1000000) + 'M';
+
+            // Determine trust count recommendation
+            const trustCount = equityValue > 30000000 ? 3 : equityValue > 15000000 ? 2 : 1;
+            document.getElementById('trustCount').textContent = trustCount;
+
+            // Qualification score
+            const maxScore = 18; // 6 questions * 3 max points
+            const scorePercent = Math.round((totalScore / maxScore) * 100);
+
+            let qualLabel = 'Good';
+            if (scorePercent >= 80) qualLabel = 'Excellent';
+            else if (scorePercent >= 60) qualLabel = 'Strong';
+            else if (scorePercent >= 40) qualLabel = 'Moderate';
+
+            document.getElementById('qualScore').textContent = qualLabel + ' (' + scorePercent + '%)';
+
+            // Animate score bar
+            setTimeout(() => {
+                document.getElementById('scoreFill').style.width = scorePercent + '%';
+            }, 300);
+
+            // Update aspirational text based on savings
+            const aspirationalEl = document.getElementById('aspirationalText');
+            if (savings >= 3000000) {
+                aspirationalEl.textContent = "That's enough to fund your children's education, buy a vacation home, and still have millions left to invest in your next venture—instead of sending it to the IRS.";
+            } else if (savings >= 1000000) {
+                aspirationalEl.textContent = "That's a second home, your kids' college funds, or a meaningful investment in your next startup—money that would otherwise go straight to federal taxes.";
+            } else {
+                aspirationalEl.textContent = "Even at this level, proper QSBS planning can protect hundreds of thousands that would otherwise be lost to capital gains taxes.";
+            }
+
+            // Qualification items
+            const qualItems = document.getElementById('qualItems');
+            const items = [];
+
+            if (quizAnswers['q1']?.value === 'c-corp') {
+                items.push('C-Corporation structure');
+            }
+            if (['10-50m', '50-200m', '200m-plus'].includes(quizAnswers['q2']?.value)) {
+                items.push('Significant company valuation');
+            }
+            if (['5-15m', '15-50m', '50m-plus'].includes(quizAnswers['q3']?.value)) {
+                items.push('Substantial equity stake');
+            }
+            if (['1-2y', '2-5y'].includes(quizAnswers['q4']?.value)) {
+                items.push('Optimal timing for planning');
+            }
+            if (['conforming', 'partial'].includes(quizAnswers['q5']?.value)) {
+                items.push('Favorable state tax treatment');
+            }
+            if (['ready', 'urgent'].includes(quizAnswers['q6']?.value)) {
+                items.push('Ready to take action');
+            }
+
+            qualItems.innerHTML = items.map(item => `
+                <div class="qual-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                    ${item}
+                </div>
+            `).join('');
+        }
+    </script>
+</body>
+</html>
