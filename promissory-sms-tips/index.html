@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 Days to Exit-Ready | Free SMS Course | Promissory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #a5e978;
+            --dark-teal: #032021;
+            --dark-bg: #0a2e2f;
+            --cream: #f5f3ec;
+            --light-green: #e8f5e0;
+            --accent-pink: #e84c8a;
+            --text-dark: #1a1a1a;
+            --text-muted: #5a6a6b;
+            --border-light: #d4e5d9;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --sms-blue: #007AFF;
+            --sms-gray: #e5e5ea;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: var(--dark-teal);
+            padding: 16px 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo svg {
+            height: 24px;
+            width: auto;
+        }
+
+        /* Main Container - Mobile First */
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 0;
+            min-height: calc(100vh - 56px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-teal) 0%, var(--dark-bg) 100%);
+            padding: 40px 24px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(165, 233, 120, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(165, 233, 120, 0.15);
+            border: 1px solid rgba(165, 233, 120, 0.3);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .badge svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .hero-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: white;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .hero-headline .highlight {
+            color: var(--primary-green);
+        }
+
+        .hero-subheadline {
+            font-size: 16px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        /* Phone Mockup with SMS Preview */
+        .phone-mockup {
+            position: relative;
+            max-width: 280px;
+            margin: 0 auto 32px;
+        }
+
+        .phone-frame {
+            background: #1a1a1a;
+            border-radius: 36px;
+            padding: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+
+        .phone-screen {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+        }
+
+        .phone-header {
+            background: #f6f6f6;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .phone-avatar {
+            width: 36px;
+            height: 36px;
+            background: var(--dark-teal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .phone-avatar svg {
+            width: 20px;
+            height: 20px;
+            color: var(--primary-green);
+        }
+
+        .phone-contact {
+            flex: 1;
+        }
+
+        .phone-contact-name {
+            font-weight: 600;
+            font-size: 14px;
+            color: #000;
+        }
+
+        .phone-contact-status {
+            font-size: 11px;
+            color: #8e8e93;
+        }
+
+        .sms-messages {
+            padding: 16px;
+            min-height: 200px;
+            background: white;
+        }
+
+        .sms-bubble {
+            max-width: 85%;
+            padding: 10px 14px;
+            border-radius: 18px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 1.4;
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .sms-bubble.incoming {
+            background: var(--sms-gray);
+            color: #000;
+            border-bottom-left-radius: 4px;
+        }
+
+        .sms-bubble.incoming:nth-child(1) { animation-delay: 0.3s; }
+        .sms-bubble.incoming:nth-child(2) { animation-delay: 0.8s; }
+        .sms-bubble.incoming:nth-child(3) { animation-delay: 1.3s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .sms-time {
+            text-align: center;
+            font-size: 11px;
+            color: #8e8e93;
+            margin-bottom: 12px;
+        }
+
+        /* Social Proof Strip */
+        .social-proof-strip {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            padding: 0 20px;
+        }
+
+        .proof-stat {
+            text-align: center;
+        }
+
+        .proof-stat-number {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--primary-green);
+        }
+
+        .proof-stat-label {
+            font-size: 11px;
+            color: rgba(255,255,255,0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Form Section */
+        .form-section {
+            background: white;
+            padding: 32px 24px;
+            border-radius: 24px 24px 0 0;
+            margin-top: -20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .form-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--dark-teal);
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .form-subtitle {
+            font-size: 14px;
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--dark-teal);
+            margin-bottom: 6px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--border-light);
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 4px rgba(165, 233, 120, 0.15);
+        }
+
+        .phone-input-wrapper {
+            display: flex;
+            gap: 8px;
+        }
+
+        .country-code {
+            width: 80px;
+            padding: 16px 12px;
+            border: 2px solid var(--border-light);
+            border-radius: 12px;
+            font-size: 16px;
+            background: var(--cream);
+            color: var(--dark-teal);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .phone-number-input {
+            flex: 1;
+        }
+
+        .submit-button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--dark-teal);
+            color: var(--primary-green);
+            font-size: 17px;
+            font-weight: 700;
+            padding: 18px 32px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 24px;
+            box-shadow: 0 4px 20px rgba(3, 32, 33, 0.3);
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(3, 32, 33, 0.4);
+        }
+
+        .submit-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .submit-button svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .privacy-note {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-top: 16px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .privacy-note svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            color: var(--success);
+        }
+
+        /* What You'll Learn Section */
+        .learn-section {
+            background: white;
+            padding: 32px 24px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--dark-teal);
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .tip-preview-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .tip-preview {
+            display: flex;
+            gap: 16px;
+            padding: 16px;
+            background: var(--cream);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .tip-preview:hover {
+            background: var(--light-green);
+        }
+
+        .tip-day {
+            width: 48px;
+            height: 48px;
+            background: var(--dark-teal);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .tip-day-label {
+            font-size: 9px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 0.5px;
+        }
+
+        .tip-day-number {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--primary-green);
+            line-height: 1;
+        }
+
+        .tip-content h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--dark-teal);
+            margin-bottom: 4px;
+        }
+
+        .tip-content p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .see-all-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--dark-teal);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .see-all-link:hover {
+            color: var(--primary-green);
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            background: linear-gradient(135deg, var(--dark-teal), var(--dark-bg));
+            padding: 32px 24px;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .testimonial-quote {
+            font-size: 15px;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            color: white;
+            font-size: 14px;
+        }
+
+        .testimonial-role {
+            font-size: 12px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Topics Grid */
+        .topics-section {
+            background: white;
+            padding: 32px 24px;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .topic-card {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .topic-card:hover {
+            background: var(--light-green);
+            transform: translateY(-2px);
+        }
+
+        .topic-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--dark-teal);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+        }
+
+        .topic-icon svg {
+            width: 20px;
+            height: 20px;
+            color: var(--primary-green);
+        }
+
+        .topic-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--dark-teal);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: var(--cream);
+            padding: 32px 24px;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 16px 20px;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark-teal);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+        }
+
+        .faq-question svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.open .faq-question svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            padding: 0 20px 16px;
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 16px 24px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+            display: none;
+            z-index: 100;
+        }
+
+        .sticky-cta.visible {
+            display: block;
+        }
+
+        .sticky-cta button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--dark-teal);
+            color: var(--primary-green);
+            font-size: 16px;
+            font-weight: 700;
+            padding: 16px 24px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .sticky-cta button svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-teal);
+            padding: 24px;
+            text-align: center;
+        }
+
+        .footer-logo svg {
+            height: 20px;
+            margin-bottom: 12px;
+        }
+
+        .footer p {
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .footer a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+        }
+
+        /* Success State */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 40px 24px;
+        }
+
+        .success-message.visible {
+            display: block;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .success-icon svg {
+            width: 40px;
+            height: 40px;
+            color: var(--success);
+        }
+
+        .success-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--dark-teal);
+            margin-bottom: 12px;
+        }
+
+        .success-text {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .success-next {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .success-next h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark-teal);
+            margin-bottom: 12px;
+        }
+
+        .success-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .success-step-num {
+            width: 24px;
+            height: 24px;
+            background: var(--dark-teal);
+            color: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .success-step p {
+            font-size: 13px;
+            color: var(--text-dark);
+        }
+
+        /* Responsive */
+        @media (min-width: 640px) {
+            .container {
+                max-width: 540px;
+            }
+
+            .hero-headline {
+                font-size: 38px;
+            }
+
+            .topics-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 149.88" height="24">
+                <path d="M263.1 25.04c10.92 0 17.81 1.85 23.02 7.06 6.39 6.39 9.24 17.31 9.24 41.33s-3.02 34.78-9.41 41.17c-5.21 5.21-11.93 7.06-22.85 7.06h-33.77c-10.92 0-17.81-1.85-23.02-7.06-6.39-6.39-9.24-17.3-9.24-41.33s3.03-34.78 9.41-41.17c5.21-5.21 11.93-7.06 22.85-7.06h33.77ZM235.21 45.2c-2.69 2.69-3.86 8.23-3.86 28.06s1.18 25.54 3.86 28.23c1.85 1.85 3.86 2.19 7.9 2.19h6.22c4.03 0 6.05-.34 7.9-2.19 2.69-2.69 3.86-8.74 3.86-28.06s-1.18-25.54-3.86-28.23c-1.85-1.85-3.86-2.19-7.9-2.19h-6.22c-4.03 0-6.05.33-7.9 2.19ZM435 26.04c21.51 0 26.72 8.91 26.72 28.56v66.03h-34.11V58.29c0-9.91-1.34-12.77-10.42-12.77H401.9v75.11h-32.6v-75.1h-25.54v75.11h-34.11v-94.6h125.34Zm173.38 0V45.2h-37.47c-3.36 0-4.71 1.68-4.71 4.03 0 2.01 1.18 3.53 3.86 5.54L595.6 74.6c11.76 9.07 15.96 14.62 15.96 24.36 0 12.6-8.23 21.67-25.2 21.67h-58.64v-19.15h40.66c3.7 0 5.04-1.68 5.04-4.2 0-2.19-1.18-3.7-4.03-5.88l-25.54-19.83c-11.59-9.07-15.8-14.28-15.8-24.03 0-12.43 8.24-21.51 24.87-21.51h55.45Zm92.73 0V45.2h-37.47c-3.36 0-4.71 1.68-4.71 4.03 0 2.01 1.18 3.53 3.86 5.54l25.54 19.83c11.76 9.07 15.96 14.62 15.96 24.36 0 12.6-8.23 21.67-25.2 21.67h-58.64v-19.15h40.66c3.7 0 5.04-1.68 5.04-4.2 0-2.19-1.18-3.7-4.03-5.88l-25.54-19.83c-11.59-9.07-15.79-14.28-15.79-24.03 0-12.43 8.23-21.51 24.87-21.51h55.45Zm79.81-1c10.92 0 17.81 1.85 23.02 7.06 6.39 6.39 9.24 17.31 9.24 41.33s-3.02 34.78-9.41 41.17c-5.21 5.21-11.93 7.06-22.85 7.06h-33.77c-10.92 0-17.81-1.85-23.02-7.06-6.39-6.39-9.24-17.3-9.24-41.33s3.02-34.78 9.41-41.17c5.21-5.21 11.93-7.06 22.85-7.06h33.77Zm-27.9 20.16c-2.69 2.69-3.86 8.23-3.86 28.06s1.18 25.54 3.86 28.23c1.85 1.85 3.86 2.19 7.9 2.19h6.22c4.03 0 6.05-.34 7.9-2.19 2.69-2.69 3.86-8.74 3.86-28.06s-1.18-25.54-3.86-28.23c-1.85-1.85-3.86-2.19-7.9-2.19h-6.22c-4.03 0-6.05.33-7.9 2.19Zm106.69-19.16v11.59c0 1.68.67 2.19 1.51 2.19 1.01 0 1.68-.51 3.36-1.51l18.99-10.76c1.68-1.18 2.86-1.51 4.87-1.51h3.86v32.43h-20.16c-5.71 0-8.57.67-10.42 2.35-1.51 1.68-2.02 4.03-2.02 8.23v51.58h-34.11V26.04h34.11Zm74.09 0 18.48 52.93c.84 2.52 1.34 2.69 2.19 2.69s1.18-.17 2.02-2.69l17.3-52.93H1000l-43.52 123.83h-26.04l6.22-17.3c1.01-2.86 1.34-4.03 1.34-5.21 0-1.34-.5-2.52-1.34-4.7l-39.32-96.61h36.46Zm-778.56.01v11.59c0 1.68.67 2.19 1.51 2.19 1.01 0 1.68-.51 3.36-1.51l18.99-10.76c1.68-1.18 2.86-1.51 4.87-1.51h3.86v32.43h-20.16c-5.71 0-8.57.67-10.42 2.35-1.51 1.68-2.02 4.03-2.02 8.23v51.58h-34.11V26.05h34.11ZM511.94 0v15.96h-34.95V0h34.95Zm-.51 26.04v94.6h-33.94v-94.6h33.94ZM98.63 9.41C93.42 4.2 85.36 3.02 72.75 3.02H0v117.62h36.46V83.51h.04V63.35h-.04V23.19h19.49c7.9 0 9.91.5 11.93 2.52 2.86 2.86 3.53 8.4 3.53 17.14 0 9.58-.84 15.12-3.7 17.98-2.02 2.02-3.86 2.52-11.76 2.52h-3.48v20.16h20.29c12.6 0 20.5-1.34 25.88-6.72 5.04-5.04 8.91-14.45 8.91-33.94s-3.7-28.23-8.91-33.44Z" fill="#a5e978"/>
+            </svg>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                Free 30-Day SMS Course
+            </div>
+
+            <h1 class="hero-headline">
+                The <span class="highlight">30-Day Exit Blueprint</span>
+            </h1>
+
+            <p class="hero-subheadline">
+                One text per day. 30 strategies that helped founders protect $890M+ at exit. The same playbook consultants charge $5,000+ to teach—delivered free to your phone.
+            </p>
+
+            <!-- Phone Mockup -->
+            <div class="phone-mockup">
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <div class="phone-header">
+                            <div class="phone-avatar">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                            <div class="phone-contact">
+                                <div class="phone-contact-name">Promissory Tips</div>
+                                <div class="phone-contact-status">Text Message</div>
+                            </div>
+                        </div>
+                        <div class="sms-messages">
+                            <div class="sms-time">Today 9:00 AM</div>
+                            <div class="sms-bubble incoming">
+                                <strong>Day 7:</strong> The 5-year rule ⏰
+                            </div>
+                            <div class="sms-bubble incoming">
+                                QSBS requires holding stock for 5+ years. But here's what most founders miss: the clock starts when stock is ISSUED, not when you founded the company.
+                            </div>
+                            <div class="sms-bubble incoming">
+                                Pro tip: Check your stock cert dates TODAY. Reply AUDIT for our free holding period calculator.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-proof-strip">
+                <div class="proof-stat">
+                    <div class="proof-stat-number">98%</div>
+                    <div class="proof-stat-label">Open Rate</div>
+                </div>
+                <div class="proof-stat">
+                    <div class="proof-stat-number">1,847</div>
+                    <div class="proof-stat-label">Subscribers</div>
+                </div>
+                <div class="proof-stat">
+                    <div class="proof-stat-number">4.9★</div>
+                    <div class="proof-stat-label">Rating</div>
+                </div>
+            </div>
+
+            <!-- Fascination Bullets -->
+            <div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 16px 20px; margin-top: 24px; text-align: left; border: 1px solid rgba(255,255,255,0.1);">
+                <div style="font-size: 13px; font-weight: 600; color: var(--primary-green); margin-bottom: 10px;">In 30 days, you'll discover:</div>
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: rgba(255,255,255,0.85); line-height: 1.9;">
+                    <li style="display: flex; align-items: flex-start; gap: 8px;">
+                        <span style="color: var(--primary-green);">→</span>
+                        <span>The "state loophole" that saves California founders an extra $1M+</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 8px;">
+                        <span style="color: var(--primary-green);">→</span>
+                        <span>Why your CPA probably hasn't mentioned QSBS (Day 3 explains why)</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 8px;">
+                        <span style="color: var(--primary-green);">→</span>
+                        <span>The $50M founder mistake that costs 23.8% at exit</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="form-section" id="signup-form">
+            <!-- Urgency Banner -->
+            <div style="background: linear-gradient(90deg, var(--dark-teal), var(--dark-bg)); color: white; padding: 12px 16px; border-radius: 12px; margin-bottom: 20px; text-align: center;">
+                <div style="font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                    <span style="background: var(--accent-pink); padding: 2px 8px; border-radius: 4px; font-size: 11px;">LIMITED</span>
+                    <span>Only <strong id="spotsLeft">127</strong> spots left this month</span>
+                </div>
+            </div>
+
+            <h2 class="form-title">Start Your Free Exit Blueprint</h2>
+            <p class="form-subtitle">One text per day. Unsubscribe anytime with STOP.</p>
+
+            <!-- Instant Bonus -->
+            <div style="background: var(--light-green); border-radius: 12px; padding: 16px; margin-bottom: 20px; display: flex; gap: 12px; align-items: flex-start;">
+                <div style="width: 36px; height: 36px; background: var(--dark-teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2" width="18" height="18">
+                        <path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+                    </svg>
+                </div>
+                <div>
+                    <div style="font-weight: 600; font-size: 14px; color: var(--dark-teal); margin-bottom: 4px;">Sign Up Now & Get Instant Bonus</div>
+                    <div style="font-size: 13px; color: var(--text-muted);">QSBS Eligibility Checklist ($197 value) — sent immediately after signup</div>
+                </div>
+            </div>
+
+            <form id="smsForm">
+                <div class="form-group">
+                    <label class="form-label">First Name</label>
+                    <input type="text" class="form-input" placeholder="Sarah" required id="firstName">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Mobile Number</label>
+                    <div class="phone-input-wrapper">
+                        <div class="country-code">+1</div>
+                        <input type="tel" class="form-input phone-number-input" placeholder="(555) 123-4567" required id="phoneNumber" pattern="[0-9\-\(\)\s]+">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Email (for your resources)</label>
+                    <input type="email" class="form-input" placeholder="sarah@company.com" required id="email">
+                </div>
+
+                <button type="submit" class="submit-button" id="submitBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                    </svg>
+                    Send Me Day 1
+                </button>
+
+                <div class="privacy-note">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span>By subscribing, you agree to receive SMS messages from Promissory. Message frequency varies. Msg & data rates may apply. Reply STOP to unsubscribe.</span>
+                </div>
+
+                <!-- Damaging Admission -->
+                <div style="background: #fff9e6; border: 1px solid #f0e4c4; border-radius: 10px; padding: 14px 16px; margin-top: 16px; text-align: left;">
+                    <div style="font-size: 12px; font-weight: 600; color: var(--dark-teal); margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" width="14" height="14">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="12"/>
+                            <line x1="12" y1="16" x2="12.01" y2="16"/>
+                        </svg>
+                        This isn't for everyone
+                    </div>
+                    <p style="font-size: 11px; color: var(--text-muted); margin: 0; line-height: 1.5;">
+                        If you're looking for overnight fixes or aren't willing to spend 30 seconds a day learning, this isn't for you. This is for founders serious about keeping what they've earned.
+                    </p>
+                </div>
+            </form>
+
+            <!-- Success Message (Hidden by default) -->
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                </div>
+                <h3 class="success-title">You're In! 🎉</h3>
+                <p class="success-text">Check your phone—Day 1 is on its way. Get ready to become exit-ready.</p>
+
+                <div class="success-next">
+                    <h4>What happens next:</h4>
+                    <div class="success-step">
+                        <div class="success-step-num">1</div>
+                        <p>You'll receive Day 1 within 5 minutes</p>
+                    </div>
+                    <div class="success-step">
+                        <div class="success-step-num">2</div>
+                        <p>One tip arrives each morning at 9am EST</p>
+                    </div>
+                    <div class="success-step">
+                        <div class="success-step-num">3</div>
+                        <p>Reply anytime—real humans respond</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What You'll Learn -->
+        <section class="learn-section">
+            <h2 class="section-title">Preview: What's Inside</h2>
+
+            <div class="tip-preview-list">
+                <div class="tip-preview">
+                    <div class="tip-day">
+                        <div class="tip-day-label">Day</div>
+                        <div class="tip-day-number">1</div>
+                    </div>
+                    <div class="tip-content">
+                        <h4>The $15M Question</h4>
+                        <p>Why 94% of founders leave millions on the table at exit (and the one decision that changes everything)</p>
+                    </div>
+                </div>
+
+                <div class="tip-preview">
+                    <div class="tip-day">
+                        <div class="tip-day-label">Day</div>
+                        <div class="tip-day-number">7</div>
+                    </div>
+                    <div class="tip-content">
+                        <h4>The 5-Year Clock</h4>
+                        <p>When QSBS holding periods actually start (most founders get this wrong)</p>
+                    </div>
+                </div>
+
+                <div class="tip-preview">
+                    <div class="tip-day">
+                        <div class="tip-day-label">Day</div>
+                        <div class="tip-day-number">14</div>
+                    </div>
+                    <div class="tip-content">
+                        <h4>Trust Stacking 101</h4>
+                        <p>How to multiply your $15M exclusion to $30M, $45M, or more—legally</p>
+                    </div>
+                </div>
+
+                <div class="tip-preview">
+                    <div class="tip-day">
+                        <div class="tip-day-label">Day</div>
+                        <div class="tip-day-number">21</div>
+                    </div>
+                    <div class="tip-content">
+                        <h4>The Gift Tax Trap</h4>
+                        <p>Why waiting until post-Series B can cost you 2-3x more (with real numbers)</p>
+                    </div>
+                </div>
+
+                <div class="tip-preview">
+                    <div class="tip-day">
+                        <div class="tip-day-label">Day</div>
+                        <div class="tip-day-number">30</div>
+                    </div>
+                    <div class="tip-content">
+                        <h4>Your Exit Checklist</h4>
+                        <p>The complete tax-optimized exit preparation timeline (what to do, when)</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#signup-form" class="see-all-link">+ 25 more tips covering M&A, state taxes, timing & more</a>
+        </section>
+
+        <!-- Topics Grid -->
+        <section class="topics-section">
+            <h2 class="section-title">Topics We Cover</h2>
+
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <div class="topic-title">QSBS Basics</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                            <line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
+                    </div>
+                    <div class="topic-title">Trust Strategies</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <div class="topic-title">Timing Tactics</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <div class="topic-title">Tax Planning</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="topic-title">M&A Prep</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        </svg>
+                    </div>
+                    <div class="topic-title">State Rules</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial -->
+        <section class="testimonial-section">
+            <div class="testimonial-card">
+                <p class="testimonial-quote">
+                    "I've been a founder for 8 years and thought I knew taxes. This SMS course taught me more in 30 days than my CPA did in 8 years. Day 14 alone was worth it—the trust stacking tip will save me $2M+ at exit."
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">JR</div>
+                    <div>
+                        <div class="testimonial-name">Jason Rivera</div>
+                        <div class="testimonial-role">Founder & CEO, Series B SaaS</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2 class="section-title">Quick Questions</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How many texts will I receive?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>One text per day for 30 days, delivered at 9am EST. That's it—no spam, no promotional messages, just valuable content.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Is this really free?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>100% free. We created this to help founders understand their options. Standard message and data rates from your carrier may apply.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How do I unsubscribe?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Simply reply STOP at any time to instantly unsubscribe. No questions asked, no hoops to jump through.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Who is this for?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Startup founders with equity in C-corporations who want to understand tax-optimized exit strategies. Best for those 1-5 years from a potential exit.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sticky CTA (appears on scroll) -->
+    <div class="sticky-cta" id="stickyCta">
+        <button onclick="scrollToForm()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+            </svg>
+            Start Free 30-Day Course
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 149.88" height="20">
+                <path d="M263.1 25.04c10.92 0 17.81 1.85 23.02 7.06 6.39 6.39 9.24 17.31 9.24 41.33s-3.02 34.78-9.41 41.17c-5.21 5.21-11.93 7.06-22.85 7.06h-33.77c-10.92 0-17.81-1.85-23.02-7.06-6.39-6.39-9.24-17.3-9.24-41.33s3.03-34.78 9.41-41.17c5.21-5.21 11.93-7.06 22.85-7.06h33.77ZM235.21 45.2c-2.69 2.69-3.86 8.23-3.86 28.06s1.18 25.54 3.86 28.23c1.85 1.85 3.86 2.19 7.9 2.19h6.22c4.03 0 6.05-.34 7.9-2.19 2.69-2.69 3.86-8.74 3.86-28.06s-1.18-25.54-3.86-28.23c-1.85-1.85-3.86-2.19-7.9-2.19h-6.22c-4.03 0-6.05.33-7.9 2.19ZM435 26.04c21.51 0 26.72 8.91 26.72 28.56v66.03h-34.11V58.29c0-9.91-1.34-12.77-10.42-12.77H401.9v75.11h-32.6v-75.1h-25.54v75.11h-34.11v-94.6h125.34Zm173.38 0V45.2h-37.47c-3.36 0-4.71 1.68-4.71 4.03 0 2.01 1.18 3.53 3.86 5.54L595.6 74.6c11.76 9.07 15.96 14.62 15.96 24.36 0 12.6-8.23 21.67-25.2 21.67h-58.64v-19.15h40.66c3.7 0 5.04-1.68 5.04-4.2 0-2.19-1.18-3.7-4.03-5.88l-25.54-19.83c-11.59-9.07-15.8-14.28-15.8-24.03 0-12.43 8.24-21.51 24.87-21.51h55.45Zm92.73 0V45.2h-37.47c-3.36 0-4.71 1.68-4.71 4.03 0 2.01 1.18 3.53 3.86 5.54l25.54 19.83c11.76 9.07 15.96 14.62 15.96 24.36 0 12.6-8.23 21.67-25.2 21.67h-58.64v-19.15h40.66c3.7 0 5.04-1.68 5.04-4.2 0-2.19-1.18-3.7-4.03-5.88l-25.54-19.83c-11.59-9.07-15.79-14.28-15.79-24.03 0-12.43 8.23-21.51 24.87-21.51h55.45Zm79.81-1c10.92 0 17.81 1.85 23.02 7.06 6.39 6.39 9.24 17.31 9.24 41.33s-3.02 34.78-9.41 41.17c-5.21 5.21-11.93 7.06-22.85 7.06h-33.77c-10.92 0-17.81-1.85-23.02-7.06-6.39-6.39-9.24-17.3-9.24-41.33s3.02-34.78 9.41-41.17c5.21-5.21 11.93-7.06 22.85-7.06h33.77Zm-27.9 20.16c-2.69 2.69-3.86 8.23-3.86 28.06s1.18 25.54 3.86 28.23c1.85 1.85 3.86 2.19 7.9 2.19h6.22c4.03 0 6.05-.34 7.9-2.19 2.69-2.69 3.86-8.74 3.86-28.06s-1.18-25.54-3.86-28.23c-1.85-1.85-3.86-2.19-7.9-2.19h-6.22c-4.03 0-6.05.33-7.9 2.19Zm106.69-19.16v11.59c0 1.68.67 2.19 1.51 2.19 1.01 0 1.68-.51 3.36-1.51l18.99-10.76c1.68-1.18 2.86-1.51 4.87-1.51h3.86v32.43h-20.16c-5.71 0-8.57.67-10.42 2.35-1.51 1.68-2.02 4.03-2.02 8.23v51.58h-34.11V26.04h34.11Zm74.09 0 18.48 52.93c.84 2.52 1.34 2.69 2.19 2.69s1.18-.17 2.02-2.69l17.3-52.93H1000l-43.52 123.83h-26.04l6.22-17.3c1.01-2.86 1.34-4.03 1.34-5.21 0-1.34-.5-2.52-1.34-4.7l-39.32-96.61h36.46Zm-778.56.01v11.59c0 1.68.67 2.19 1.51 2.19 1.01 0 1.68-.51 3.36-1.51l18.99-10.76c1.68-1.18 2.86-1.51 4.87-1.51h3.86v32.43h-20.16c-5.71 0-8.57.67-10.42 2.35-1.51 1.68-2.02 4.03-2.02 8.23v51.58h-34.11V26.05h34.11ZM511.94 0v15.96h-34.95V0h34.95Zm-.51 26.04v94.6h-33.94v-94.6h33.94ZM98.63 9.41C93.42 4.2 85.36 3.02 72.75 3.02H0v117.62h36.46V83.51h.04V63.35h-.04V23.19h19.49c7.9 0 9.91.5 11.93 2.52 2.86 2.86 3.53 8.4 3.53 17.14 0 9.58-.84 15.12-3.7 17.98-2.02 2.02-3.86 2.52-11.76 2.52h-3.48v20.16h20.29c12.6 0 20.5-1.34 25.88-6.72 5.04-5.04 8.91-14.45 8.91-33.94s-3.7-28.23-8.91-33.44Z" fill="#a5e978"/>
+            </svg>
+        </div>
+        <p>© 2026 <a href="https://promissory.com">Promissory</a>. All rights reserved.</p>
+        <p style="margin-top: 8px;"><a href="#">Privacy Policy</a> • <a href="#">Terms</a></p>
+    </footer>
+
+    <script>
+        // Form submission
+        document.getElementById('smsForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const firstName = document.getElementById('firstName').value;
+            const phone = document.getElementById('phoneNumber').value;
+            const email = document.getElementById('email').value;
+            const submitBtn = document.getElementById('submitBtn');
+
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span>Sending...</span>';
+
+            // Simulate API call
+            setTimeout(() => {
+                // Hide form, show success
+                document.getElementById('smsForm').style.display = 'none';
+                document.getElementById('successMessage').classList.add('visible');
+
+                // Hide sticky CTA
+                document.getElementById('stickyCta').style.display = 'none';
+
+                // Scroll to success message
+                document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 1500);
+        });
+
+        // Phone number formatting
+        document.getElementById('phoneNumber').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (value.length <= 3) {
+                    value = '(' + value;
+                } else if (value.length <= 6) {
+                    value = '(' + value.slice(0, 3) + ') ' + value.slice(3);
+                } else {
+                    value = '(' + value.slice(0, 3) + ') ' + value.slice(3, 6) + '-' + value.slice(6, 10);
+                }
+            }
+            e.target.value = value;
+        });
+
+        // Sticky CTA visibility
+        const stickyCta = document.getElementById('stickyCta');
+        const formSection = document.getElementById('signup-form');
+
+        window.addEventListener('scroll', () => {
+            const formRect = formSection.getBoundingClientRect();
+            const formVisible = formRect.top < window.innerHeight && formRect.bottom > 0;
+
+            if (!formVisible && window.scrollY > 500) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        });
+
+        function scrollToForm() {
+            formSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // FAQ toggle
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const isOpen = item.classList.contains('open');
+
+            // Close all FAQs
+            document.querySelectorAll('.faq-item').forEach(faq => faq.classList.remove('open'));
+
+            // Open clicked one if it wasn't open
+            if (!isOpen) {
+                item.classList.add('open');
+            }
+        }
+    </script>
+</body>
+</html>
