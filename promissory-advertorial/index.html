@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How One Founder Watched $4,714,000 Slip Away to the IRS—And the 43-Minute Fix That Could Have Saved It All</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #a5e978;
+            --dark-teal: #032021;
+            --dark-bg: #0a2e2f;
+            --cream: #f5f3ec;
+            --light-green: #e8f5e0;
+            --accent-pink: #e84c8a;
+            --text-dark: #1a1a1a;
+            --text-muted: #5a6a6b;
+            --border-light: #d4e5d9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        /* Urgency Banner */
+        .urgency-banner {
+            background: linear-gradient(90deg, var(--dark-teal), #0a4a4c);
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .urgency-banner strong {
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        /* Advertorial Header */
+        .advertorial-header {
+            background: var(--cream);
+            border-bottom: 1px solid var(--border-light);
+            padding: 12px 20px;
+            text-align: center;
+        }
+
+        .advertorial-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-teal) 0%, var(--dark-bg) 50%, #0d3a3b 100%);
+            padding: 60px 20px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a5e978' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .publication-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            height: 28px;
+        }
+
+        .logo svg {
+            height: 100%;
+            width: auto;
+        }
+
+        .pub-date {
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+        }
+
+        .reading-time {
+            color: var(--primary-green);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(28px, 5vw, 44px);
+            font-weight: 600;
+            color: white;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        h1 .highlight {
+            color: var(--primary-green);
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: rgba(255,255,255,0.85);
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+
+        .byline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            color: rgba(255,255,255,0.7);
+            font-size: 15px;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-green), #7bc962);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--dark-teal);
+            font-size: 18px;
+        }
+
+        .author-info {
+            text-align: left;
+        }
+
+        .author-name {
+            color: white;
+            font-weight: 600;
+        }
+
+        .author-title {
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Main Content */
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .content p {
+            margin-bottom: 24px;
+            font-size: 18px;
+        }
+
+        .lead-paragraph {
+            font-size: 21px;
+            line-height: 1.7;
+            color: var(--text-dark);
+            font-weight: 400;
+        }
+
+        .lead-paragraph::first-letter {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 72px;
+            float: left;
+            line-height: 0.8;
+            padding-right: 12px;
+            padding-top: 4px;
+            color: var(--dark-teal);
+            font-weight: 600;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--dark-teal);
+            margin: 48px 0 24px;
+            line-height: 1.3;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--dark-teal);
+            margin: 36px 0 16px;
+        }
+
+        /* Callout Boxes */
+        .callout {
+            background: var(--light-green);
+            border-left: 4px solid var(--primary-green);
+            padding: 24px 28px;
+            margin: 32px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .callout strong {
+            color: var(--dark-teal);
+        }
+
+        .callout-stat {
+            background: var(--dark-teal);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .callout-stat .big-number {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--primary-green);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .callout-stat .stat-label {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Quote */
+        blockquote {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-style: italic;
+            color: var(--dark-teal);
+            border-left: 4px solid var(--primary-green);
+            padding: 20px 0 20px 28px;
+            margin: 40px 0;
+            line-height: 1.5;
+        }
+
+        blockquote cite {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-style: normal;
+            color: var(--text-muted);
+            margin-top: 16px;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #fff5f5;
+            border: 1px solid #ffcdd2;
+            border-left: 4px solid #e57373;
+            padding: 24px 28px;
+            margin: 32px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box strong {
+            color: #c62828;
+        }
+
+        /* Pattern Interrupt Box */
+        .pattern-interrupt {
+            background: linear-gradient(135deg, var(--dark-teal), #0a4a4c);
+            color: white;
+            padding: 32px;
+            border-radius: 12px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .pattern-interrupt h3 {
+            color: var(--primary-green);
+            margin: 0 0 16px 0;
+            font-size: 20px;
+        }
+
+        .pattern-interrupt p {
+            margin: 0;
+            font-size: 17px;
+            opacity: 0.95;
+        }
+
+        /* Steps/Process */
+        .process-steps {
+            margin: 40px 0;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 24px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--dark-teal);
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark-teal);
+            margin-bottom: 8px;
+        }
+
+        .step-content p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        /* Testimonial */
+        .testimonial {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            margin: 40px 0;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-light);
+        }
+
+        .testimonial-text {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .testimonial-result {
+            background: var(--light-green);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: var(--dark-teal);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .testimonial-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            color: var(--dark-teal);
+        }
+
+        .testimonial-role {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Social Proof Bar */
+        .social-proof {
+            background: var(--dark-teal);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .social-proof-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .social-proof-label {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 24px;
+        }
+
+        .trust-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            opacity: 0.7;
+        }
+
+        .trust-logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: -0.5px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--dark-teal) 0%, var(--dark-bg) 100%);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--cream), transparent);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            max-width: 640px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 36px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.85);
+            font-size: 18px;
+            margin-bottom: 32px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--primary-green);
+            color: var(--dark-teal);
+            font-size: 18px;
+            font-weight: 600;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 24px rgba(165, 233, 120, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(165, 233, 120, 0.4);
+        }
+
+        .cta-button svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .cta-subtext {
+            margin-top: 20px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .cta-social-proof {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .cta-social-proof-stat {
+            font-size: 15px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .cta-social-proof-stat strong {
+            color: var(--primary-green);
+        }
+
+        /* Mini CTA */
+        .mini-cta {
+            background: linear-gradient(135deg, var(--dark-teal), #0a4a4c);
+            color: white;
+            padding: 32px;
+            border-radius: 12px;
+            margin: 48px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .mini-cta-text {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .mini-cta-text h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .mini-cta-text p {
+            margin: 0;
+            font-size: 15px;
+            opacity: 0.85;
+        }
+
+        .mini-cta-button {
+            background: var(--primary-green);
+            color: var(--dark-teal);
+            font-size: 15px;
+            font-weight: 600;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+
+        .mini-cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(165, 233, 120, 0.3);
+        }
+
+        /* Comparison Display */
+        .comparison-display {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 40px 0;
+        }
+
+        @media (max-width: 600px) {
+            .comparison-display {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .comparison-card {
+            padding: 28px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .comparison-card.without {
+            background: #fef5f5;
+            border: 1px solid #fecaca;
+        }
+
+        .comparison-card.with {
+            background: var(--light-green);
+            border: 2px solid var(--primary-green);
+        }
+
+        .comparison-card h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            color: var(--text-muted);
+        }
+
+        .comparison-card .amount {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .comparison-card.without .amount {
+            color: #dc2626;
+        }
+
+        .comparison-card.with .amount {
+            color: var(--dark-teal);
+        }
+
+        .comparison-card .label {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .comparison-card.with .savings-tag {
+            display: inline-block;
+            background: var(--dark-teal);
+            color: var(--primary-green);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 50px;
+            margin-top: 12px;
+        }
+
+        /* Highlight text */
+        .text-highlight {
+            background: linear-gradient(to bottom, transparent 60%, rgba(165, 233, 120, 0.3) 60%);
+            padding: 0 2px;
+        }
+
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 16px 20px;
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            z-index: 100;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .sticky-cta.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-cta-text {
+            font-size: 15px;
+            color: var(--text-dark);
+        }
+
+        .sticky-cta-text strong {
+            color: var(--dark-teal);
+        }
+
+        .sticky-cta-button {
+            background: var(--dark-teal);
+            color: var(--primary-green);
+            font-size: 15px;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .sticky-cta-button:hover {
+            background: #0a4a4c;
+        }
+
+        /* Interactive Calculator */
+        .calculator-section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin: 48px 0;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            border: 2px solid var(--primary-green);
+        }
+
+        .calculator-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            color: var(--dark-teal);
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .calculator-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 32px;
+        }
+
+        .calc-slider-container {
+            margin-bottom: 32px;
+        }
+
+        .calc-slider-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .calc-slider-label span {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .calc-slider-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--dark-teal);
+        }
+
+        .calc-slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: var(--border-light);
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .calc-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            cursor: pointer;
+            border: 3px solid var(--dark-teal);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .calc-slider::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            cursor: pointer;
+            border: 3px solid var(--dark-teal);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .calc-results {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        @media (max-width: 500px) {
+            .calc-results {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .calc-result-item {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .calc-result-item.tax {
+            background: #fef5f5;
+        }
+
+        .calc-result-item.savings {
+            background: var(--light-green);
+        }
+
+        .calc-result-label {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .calc-result-value {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .calc-result-item.tax .calc-result-value {
+            color: #dc2626;
+        }
+
+        .calc-result-item.savings .calc-result-value {
+            color: var(--dark-teal);
+        }
+
+        .calc-note {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 16px;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            border-bottom: 1px solid var(--border-light);
+            padding: 24px 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--dark-teal);
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* Aspiration Box */
+        .aspiration-box {
+            background: linear-gradient(135deg, var(--light-green), #d4f0c4);
+            border-radius: 16px;
+            padding: 36px;
+            margin: 48px 0;
+            text-align: center;
+        }
+
+        .aspiration-box h3 {
+            color: var(--dark-teal);
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .aspiration-items {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .aspiration-item {
+            text-align: center;
+        }
+
+        .aspiration-icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .aspiration-text {
+            font-size: 15px;
+            color: var(--dark-teal);
+            font-weight: 500;
+        }
+
+        /* Honesty Box */
+        .honesty-box {
+            background: #f8fafc;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 40px 0;
+        }
+
+        .honesty-box h4 {
+            font-size: 17px;
+            color: var(--dark-teal);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .honesty-box ul {
+            margin: 0;
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        .honesty-box li {
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-teal);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            .hero {
+                padding: 40px 16px 60px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .hero-subtitle {
+                font-size: 17px;
+            }
+
+            .content {
+                padding: 40px 16px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .lead-paragraph {
+                font-size: 18px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            blockquote {
+                font-size: 20px;
+            }
+
+            .callout-stat .big-number {
+                font-size: 42px;
+            }
+
+            .calculator-section {
+                padding: 24px;
+            }
+
+            .cta-section h2 {
+                font-size: 28px;
+            }
+
+            .sticky-cta {
+                flex-direction: column;
+                gap: 12px;
+                padding: 12px 16px;
+            }
+
+            .mini-cta {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="urgency-banner">
+        <strong>2026 Tax Planning Alert:</strong> With Q2 exits accelerating, founders who structure trusts now will be fully positioned before year-end.
+    </div>
+
+    <div class="advertorial-header">
+        <span class="advertorial-label">Partner Content</span>
+    </div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="publication-info">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 149.88" height="28">
+                        <path d="M263.1 25.04c10.92 0 17.81 1.85 23.02 7.06 6.39 6.39 9.24 17.31 9.24 41.33s-3.02 34.78-9.41 41.17c-5.21 5.21-11.93 7.06-22.85 7.06h-33.77c-10.92 0-17.81-1.85-23.02-7.06-6.39-6.39-9.24-17.3-9.24-41.33s3.03-34.78 9.41-41.17c5.21-5.21 11.93-7.06 22.85-7.06h33.77ZM235.21 45.2c-2.69 2.69-3.86 8.23-3.86 28.06s1.18 25.54 3.86 28.23c1.85 1.85 3.86 2.19 7.9 2.19h6.22c4.03 0 6.05-.34 7.9-2.19 2.69-2.69 3.86-8.74 3.86-28.06s-1.18-25.54-3.86-28.23c-1.85-1.85-3.86-2.19-7.9-2.19h-6.22c-4.03 0-6.05.33-7.9 2.19ZM435 26.04c21.51 0 26.72 8.91 26.72 28.56v66.03h-34.11V58.29c0-9.91-1.34-12.77-10.42-12.77H401.9v75.11h-32.6v-75.1h-25.54v75.11h-34.11v-94.6h125.34Zm173.38 0V45.2h-37.47c-3.36 0-4.71 1.68-4.71 4.03 0 2.01 1.18 3.53 3.86 5.54L595.6 74.6c11.76 9.07 15.96 14.62 15.96 24.36 0 12.6-8.23 21.67-25.2 21.67h-58.64v-19.15h40.66c3.7 0 5.04-1.68 5.04-4.2 0-2.19-1.18-3.7-4.03-5.88l-25.54-19.83c-11.59-9.07-15.8-14.28-15.8-24.03 0-12.43 8.24-21.51 24.87-21.51h55.45Zm92.73 0V45.2h-37.47c-3.36 0-4.71 1.68-4.71 4.03 0 2.01 1.18 3.53 3.86 5.54l25.54 19.83c11.76 9.07 15.96 14.62 15.96 24.36 0 12.6-8.23 21.67-25.2 21.67h-58.64v-19.15h40.66c3.7 0 5.04-1.68 5.04-4.2 0-2.19-1.18-3.7-4.03-5.88l-25.54-19.83c-11.59-9.07-15.79-14.28-15.79-24.03 0-12.43 8.23-21.51 24.87-21.51h55.45Zm79.81-1c10.92 0 17.81 1.85 23.02 7.06 6.39 6.39 9.24 17.31 9.24 41.33s-3.02 34.78-9.41 41.17c-5.21 5.21-11.93 7.06-22.85 7.06h-33.77c-10.92 0-17.81-1.85-23.02-7.06-6.39-6.39-9.24-17.3-9.24-41.33s3.02-34.78 9.41-41.17c5.21-5.21 11.93-7.06 22.85-7.06h33.77Zm-27.9 20.16c-2.69 2.69-3.86 8.23-3.86 28.06s1.18 25.54 3.86 28.23c1.85 1.85 3.86 2.19 7.9 2.19h6.22c4.03 0 6.05-.34 7.9-2.19 2.69-2.69 3.86-8.74 3.86-28.06s-1.18-25.54-3.86-28.23c-1.85-1.85-3.86-2.19-7.9-2.19h-6.22c-4.03 0-6.05.33-7.9 2.19Zm106.69-19.16v11.59c0 1.68.67 2.19 1.51 2.19 1.01 0 1.68-.51 3.36-1.51l18.99-10.76c1.68-1.18 2.86-1.51 4.87-1.51h3.86v32.43h-20.16c-5.71 0-8.57.67-10.42 2.35-1.51 1.68-2.02 4.03-2.02 8.23v51.58h-34.11V26.04h34.11Zm74.09 0 18.48 52.93c.84 2.52 1.34 2.69 2.19 2.69s1.18-.17 2.02-2.69l17.3-52.93H1000l-43.52 123.83h-26.04l6.22-17.3c1.01-2.86 1.34-4.03 1.34-5.21 0-1.34-.5-2.52-1.34-4.7l-39.32-96.61h36.46Zm-778.56.01v11.59c0 1.68.67 2.19 1.51 2.19 1.01 0 1.68-.51 3.36-1.51l18.99-10.76c1.68-1.18 2.86-1.51 4.87-1.51h3.86v32.43h-20.16c-5.71 0-8.57.67-10.42 2.35-1.51 1.68-2.02 4.03-2.02 8.23v51.58h-34.11V26.05h34.11ZM511.94 0v15.96h-34.95V0h34.95Zm-.51 26.04v94.6h-33.94v-94.6h33.94ZM98.63 9.41C93.42 4.2 85.36 3.02 72.75 3.02H0v117.62h36.46V83.51h.04V63.35h-.04V23.19h19.49c7.9 0 9.91.5 11.93 2.52 2.86 2.86 3.53 8.4 3.53 17.14 0 9.58-.84 15.12-3.7 17.98-2.02 2.02-3.86 2.52-11.76 2.52h-3.48v20.16h20.29c12.6 0 20.5-1.34 25.88-6.72 5.04-5.04 8.91-14.45 8.91-33.94s-3.7-28.23-8.91-33.44Z" fill="#a5e978"/>
+                    </svg>
+                </div>
+                <span class="pub-date">January 2026</span>
+                <span class="reading-time">9 min read</span>
+            </div>
+
+            <h1>How One Founder Watched <span class="highlight">$4,714,000</span> Slip Away to the IRS<br>—And the 43-Minute Fix That Could Have Saved It All</h1>
+
+            <p class="hero-subtitle">Yes, you've heard of QSBS. No, you haven't heard what I'm about to tell you. Here's the strategy that separates founders who keep millions from those who watch it disappear.</p>
+
+            <div class="byline">
+                <div class="author-avatar">JR</div>
+                <div class="author-info">
+                    <div class="author-name">James Richardson</div>
+                    <div class="author-title">Tax & Exit Strategy Editor</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="social-proof">
+        <div class="social-proof-inner">
+            <div class="social-proof-label">Trusted by founders of</div>
+            <div class="trust-logos">
+                <span class="trust-logo">[dribbleup]</span>
+                <span class="trust-logo">trust&will</span>
+                <span class="trust-logo">cars & bids</span>
+                <span class="trust-logo">ASSEMBLED BRANDS</span>
+                <span class="trust-logo">SweetLab</span>
+            </div>
+        </div>
+    </section>
+
+    <article class="content">
+        <p class="lead-paragraph">Marcus Chen stared at the term sheet, hands trembling slightly. Seven years. That's how long he'd poured everything into his supply chain software company. Seven years of missed birthdays, strained relationships, and betting his family's financial security on a vision only he could see. Now a Fortune 500 acquirer had just offered <strong>$47 million</strong> for his 23% stake.</p>
+
+        <p>He should have felt elated. Instead, his stomach dropped when his accountant delivered the news:</p>
+
+        <p><em>"Marcus, you're looking at roughly $11.2 million in combined federal and state taxes."</em></p>
+
+        <p>That's $11,200,000. Nearly a quarter of his life's work—not going to his family. Not funding his next venture. Not creating the charitable foundation his late mother had dreamed of. Just... <strong>gone.</strong></p>
+
+        <p>That sick feeling when you realize a massive chunk of everything you've built is about to evaporate? Marcus knows it intimately.</p>
+
+        <div class="pattern-interrupt">
+            <h3>But here's what makes Marcus's story painful—not inevitable.</h3>
+            <p>Had he known about a specific provision in the tax code—and structured around it 18 months earlier—he could have kept an additional <strong>$4,714,000</strong>. Legally. Using a strategy the IRS explicitly approves.</p>
+        </div>
+
+        <p>If you're a founder with significant equity in a C-corp, keep reading. What I'm about to share isn't theory. It's the difference between founders who lose millions and those who protect them.</p>
+
+        <h2>What Your CPA Gets Wrong About QSBS</h2>
+
+        <p>You've probably heard of QSBS—the Qualified Small Business Stock exclusion under Section 1202. Your accountant may have mentioned it. Maybe you've even assumed you have it handled.</p>
+
+        <p>Here's the quick version: Founders and early investors can exclude up to <span class="text-highlight">$15 million in capital gains</span> (or 10x their cost basis, whichever is greater) from federal taxes when selling qualified stock.</p>
+
+        <p>That's significant. And most financially-savvy founders know about it.</p>
+
+        <p><strong>But here's what most advisors fail to mention—the detail that changes everything:</strong></p>
+
+        <div class="callout">
+            <strong>That $15 million limit isn't capped per company. It's capped per taxpayer.</strong><br><br>
+            Read that again. The exclusion isn't a single $15M ceiling. It's $15 million <em>per qualifying taxpayer</em>. Which means your potential exclusion can be multiplied—legally—with the right structure in place.
+        </div>
+
+        <p>If you have $45 million in gains, you're not limited to excluding $15 million. With proper planning, you could potentially exclude the <em>entire amount</em>.</p>
+
+        <p>This isn't a gray area. It's not aggressive tax planning. It's how IRC Section 1202 was written.</p>
+
+        <h2>The "Trust Stacking" Strategy That Multiplies Your Exclusion</h2>
+
+        <p>The strategy is called QSBS "stacking." And while ultra-wealthy families and their private wealth advisors have used it for years, it's only recently become accessible to founders without $50,000 estate planning retainers.</p>
+
+        <p>Here's the core mechanism:</p>
+
+        <p>When you gift QSBS to a <em>non-grantor irrevocable trust</em>, that trust becomes its own taxpayer for federal income tax purposes. Which means it qualifies for its own $15 million exclusion.</p>
+
+        <p>Create two trusts for your beneficiaries? That's $30 million in additional exclusions.</p>
+
+        <div class="comparison-display">
+            <div class="comparison-card without">
+                <h4>Without Stacking</h4>
+                <div class="amount">$37.9M</div>
+                <div class="label">After-tax on $45M exit</div>
+            </div>
+            <div class="comparison-card with">
+                <h4>With Trust Stacking</h4>
+                <div class="amount">$45M</div>
+                <div class="label">After-tax on $45M exit</div>
+                <div class="savings-tag">Save $7.14M+</div>
+            </div>
+        </div>
+
+        <p>That's over <strong>$7 million in federal taxes alone</strong>—protected using a structure the IRS has explicitly blessed under Section 1202(h).</p>
+
+        <div class="aspiration-box">
+            <h3>What would you do with an extra $4.7 million?</h3>
+            <div class="aspiration-items">
+                <div class="aspiration-item">
+                    <div class="aspiration-icon">🚀</div>
+                    <div class="aspiration-text">Fund your next venture</div>
+                </div>
+                <div class="aspiration-item">
+                    <div class="aspiration-icon">👨‍👩‍👧‍👦</div>
+                    <div class="aspiration-text">Secure your family's future</div>
+                </div>
+                <div class="aspiration-item">
+                    <div class="aspiration-icon">🏠</div>
+                    <div class="aspiration-text">Buy the home you've earned</div>
+                </div>
+                <div class="aspiration-item">
+                    <div class="aspiration-icon">❤️</div>
+                    <div class="aspiration-text">Make an impact that matters</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <strong>Critical Timing Alert:</strong> QSBS stacking must be structured <em>before</em> your exit. Once you have a term sheet, it's too late. The trusts require time to establish, and stock transfers must happen before any sale. Most founders discover this strategy months—or years—too late.
+        </div>
+
+        <h2>Why Your Advisors Haven't Proactively Shared This</h2>
+
+        <p>If trust stacking is so powerful, why isn't every eligible founder doing it?</p>
+
+        <p>Three uncomfortable truths:</p>
+
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Complexity and Liability Exposure</h4>
+                    <p>Most CPAs and financial advisors aren't estate planning specialists. Recommending trust structures exposes them to liability they'd rather avoid. Easier to stick with standard advice and avoid the risk.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>The Traditional Fee Structure</h4>
+                    <p>Estate planning attorneys typically charge $30,000-$50,000+ per trust. They're incentivized toward ongoing relationships with high-net-worth individuals post-exit—not founders still building companies.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>The Timing Disconnect</h4>
+                    <p>Private wealth advisors who know this strategy engage with clients <em>after</em> exits—when structuring is no longer possible. They're not having conversations with founders who need it most: those still building.</p>
+                </div>
+            </div>
+        </div>
+
+        <p>The result? A strategy worth millions sits unused, known only to founders wealthy enough to afford specialized advice from day one.</p>
+
+        <div class="mini-cta">
+            <div class="mini-cta-text">
+                <h4>Curious what this could mean for you?</h4>
+                <p>See your potential tax savings in under 5 minutes.</p>
+            </div>
+            <a href="https://promissory.com/?ref=advertorial-mid" class="mini-cta-button">Calculate Your Savings →</a>
+        </div>
+
+        <h2>The July 2025 Changes Make This More Valuable Than Ever</h2>
+
+        <p>The One Big Beautiful Bill Act, signed July 4, 2025, expanded QSBS significantly:</p>
+
+        <div class="callout">
+            <ul style="margin: 0; padding-left: 20px;">
+                <li><strong>Exclusion cap raised from $10M to $15M</strong> per taxpayer</li>
+                <li><strong>Asset threshold increased from $50M to $75M</strong> for qualifying corporations</li>
+                <li><strong>New tiered schedule:</strong> 50% at 3 years, 75% at 4 years, 100% at 5 years</li>
+                <li><strong>Inflation indexing</strong> begins after 2026</li>
+            </ul>
+        </div>
+
+        <p>For stock issued after July 4, 2025, this means even greater opportunity. But it also means <strong>the window for establishing stacking structures has never been more valuable.</strong></p>
+
+        <blockquote>
+            "I wish someone had explained trust stacking when I was raising my Series A. By the time I understood it, my company's valuation made the gift tax implications prohibitive. The math is simple: start early, or leave millions on the table."
+            <cite>— Sarah Chen, Founder (Company acquired by Salesforce, 2024)</cite>
+        </blockquote>
+
+        <h2>The Problem With Traditional Trust Planning</h2>
+
+        <p>Even founders who know about QSBS stacking face a brutal reality. Traditional estate planning requires:</p>
+
+        <ul style="margin: 24px 0; padding-left: 24px;">
+            <li><strong>$30,000-$50,000</strong> in legal fees per trust</li>
+            <li><strong>3-6 months</strong> of back-and-forth with attorneys</li>
+            <li>Finding and vetting independent trustees</li>
+            <li>Ongoing compliance and administration headaches</li>
+            <li>Annual trust tax filings and IRS reporting</li>
+            <li>Gift tax valuation and documentation</li>
+        </ul>
+
+        <p>For founders already running on fumes building companies, this is a non-starter. The cognitive load alone pushes it to "someday"—which usually means never.</p>
+
+        <h2>A Different Approach: What Promissory Built</h2>
+
+        <p>I should be transparent: this article is sponsored by Promissory, a platform designed specifically to solve the QSBS trust problem for startup founders.</p>
+
+        <p>But here's why I agreed to write it: what they've built addresses the exact barriers that have kept this strategy out of reach for most founders.</p>
+
+        <div class="testimonial">
+            <p class="testimonial-text">"I'd been meaning to set up QSBS trusts for two years. Every time I talked to an estate attorney, I'd get overwhelmed by the complexity and $45K quotes. With Promissory, I had my trusts funded in six days. The process took maybe three hours of my actual time."</p>
+            <div class="testimonial-result">
+                <strong>Result:</strong> Two non-grantor trusts established, each eligible for $15M exclusion. Potential additional tax savings at exit: ~$2.4M
+            </div>
+            <div class="testimonial-author">
+                <div class="testimonial-avatar">DK</div>
+                <div>
+                    <div class="testimonial-name">David Kim</div>
+                    <div class="testimonial-role">Founder & CEO, Series B SaaS Company (Valuation: $180M)</div>
+                </div>
+            </div>
+        </div>
+
+        <p>Here's what makes their approach different:</p>
+
+        <h3>1. Create Your Trust in Days, Not Months</h3>
+        <p>Promissory's platform guides you through creating a sophisticated irrevocable trust designed for QSBS optimization. Answer guided questions about your goals, and the system generates your trust documents—reviewed by their legal team before execution.</p>
+
+        <h3>2. Built-in Professional Trustee</h3>
+        <p>Every trust includes professional custody with a Nevada-based trustee, providing strong asset protection and a favorable trust framework for holding private company equity. No hunting for independent trustees or worrying about compliance.</p>
+
+        <h3>3. They Handle the Complexity</h3>
+        <p>EIN applications. IRS filings. Annual trust reporting. Fiduciary documentation. Gift and estate valuations. All handled. You focus on building your company.</p>
+
+        <h3>4. Independent Attorney Review</h3>
+        <p>Before you sign anything, an independent, experienced estate-planning attorney reviews your structure. This isn't a rubber stamp—it's objective legal review ensuring alignment with your goals.</p>
+
+        <div class="calculator-section">
+            <h3 class="calculator-title">What Could Trust Stacking Save You?</h3>
+            <p class="calculator-subtitle">Adjust your expected exit value to see potential savings</p>
+
+            <div class="calc-slider-container">
+                <div class="calc-slider-label">
+                    <span>Your projected exit value</span>
+                    <span class="calc-slider-value" id="exitValue">$30,000,000</span>
+                </div>
+                <input type="range" class="calc-slider" id="exitSlider" min="5000000" max="100000000" value="30000000" step="1000000">
+            </div>
+
+            <div class="calc-results">
+                <div class="calc-result-item tax">
+                    <div class="calc-result-label">Tax without stacking</div>
+                    <div class="calc-result-value" id="taxWithout">$3,570,000</div>
+                </div>
+                <div class="calc-result-item savings">
+                    <div class="calc-result-label">Potential additional savings</div>
+                    <div class="calc-result-value" id="potentialSavings">$3,570,000</div>
+                </div>
+            </div>
+            <p class="calc-note">Based on 23.8% federal capital gains rate with two additional trusts. State taxes vary. Consult a tax professional for your specific situation.</p>
+        </div>
+
+        <h2>Is Trust Stacking Right for You?</h2>
+
+        <p>This strategy makes sense if:</p>
+
+        <ul style="margin: 24px 0; padding-left: 24px;">
+            <li>You hold equity in a U.S. C-corporation</li>
+            <li>Your company had less than $75M in gross assets when you acquired stock</li>
+            <li>Your potential exit could exceed $15M in gains</li>
+            <li>You have at least 18-24 months before a likely exit event</li>
+            <li>You want to maximize what you keep from your life's work</li>
+        </ul>
+
+        <div class="honesty-box">
+            <h4>⚖️ A Note on Fit and Limitations</h4>
+            <p style="margin-bottom: 12px;">In the interest of being direct: Promissory isn't right for everyone.</p>
+            <ul>
+                <li><strong>Extremely complex situations</strong> (multiple operating companies, international tax considerations, pre-existing trust structures) may need traditional estate planning attorneys who can spend 40+ hours on your specific case.</li>
+                <li><strong>California, Pennsylvania, and Mississippi</strong> don't conform to federal QSBS rules—you may still face state taxes even with perfect federal planning.</li>
+                <li><strong>If you're 6-12 months from exit</strong>, timing may be too tight. Better to know now than scramble later.</li>
+            </ul>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How much does it cost to set up QSBS trusts through Promissory?</div>
+            <div class="faq-answer">Promissory's pricing includes trust creation, professional trustee services, tax reporting, and ongoing administration—at a fraction of traditional estate planning fees. No hidden costs or hourly billing surprises. Specific pricing is available after your free assessment.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Is QSBS stacking legal?</div>
+            <div class="faq-answer">Yes. The per-taxpayer exclusion and gift transfer rules are explicitly outlined in IRC Section 1202 and Section 1202(h). This isn't a gray area—it's codified in the tax law. The key is proper structure and documentation, which Promissory's platform ensures.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What if my company doesn't exit?</div>
+            <div class="faq-answer">The trusts remain in place and can hold other assets. You haven't lost anything—and if circumstances change and an exit materializes, you're already positioned to maximize your exclusion.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Does the 5-year holding period reset when I create a trust?</div>
+            <div class="faq-answer">No. Under IRC Section 1202(h), when QSBS is transferred by gift, the recipient (including a trust) inherits the original holder's acquisition date. Your holding period is preserved.</div>
+        </div>
+
+        <h2>What Happened to Marcus?</h2>
+
+        <p>Remember Marcus—the founder who watched $4.7 million slip away?</p>
+
+        <p>After his exit, Marcus became an angel investor. He now requires every founder he backs to research QSBS trust stacking before their Series A closes. It's in his standard term sheet recommendations.</p>
+
+        <p><em>"I can't get that money back,"</em> he told me. <em>"But I can make sure other founders don't make the same mistake. The math is too clear. The cost of waiting is too high."</em></p>
+
+        <p>You've already built something valuable. You've already done the hard part. The only question is whether you'll protect what you've earned—or watch a significant portion of it disappear because of timing.</p>
+
+        <blockquote>
+            "Every founder I know who's had a meaningful exit shares the same regret: 'I wish I'd planned earlier.' QSBS trust stacking is the single highest-leverage tax decision most founders can make—but only if you make it before you need it."
+            <cite>— Alex Tran, Partner, Leading Venture Capital Firm</cite>
+        </blockquote>
+
+    </article>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>See Your Tax Savings in 5 Minutes</h2>
+            <p>Promissory makes QSBS trust planning accessible for founders at any stage. Get a free assessment to understand your potential savings—and what it would take to protect them.</p>
+            <a href="https://promissory.com/?ref=advertorial" class="cta-button">
+                Calculate My Potential Savings
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+            <p class="cta-subtext">No credit card. No commitment. No pressure.</p>
+            <div class="cta-social-proof">
+                <p class="cta-social-proof-stat">
+                    <strong>1,200+ founders</strong> have protected over <strong>$890M</strong> in potential exit proceeds
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p style="margin-bottom: 16px;">
+            <strong>Promissory</strong> — The most comprehensive trust management platform for startup founders.
+        </p>
+        <p style="margin-bottom: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            This content is sponsored by <a href="https://promissory.com">Promissory</a>. The information provided is for educational purposes only and does not constitute legal, tax, or financial advice. Consult qualified professionals before making tax planning decisions. All case studies and testimonials represent individual results; your outcome may vary.
+        </p>
+        <p>&copy; 2026 Promissory. All rights reserved.</p>
+    </footer>
+
+    <div class="sticky-cta" id="stickyCta">
+        <span class="sticky-cta-text">Calculate your <strong>potential tax savings</strong></span>
+        <a href="https://promissory.com/?ref=advertorial" class="sticky-cta-button">Get Free Assessment →</a>
+    </div>
+
+    <script>
+        // Interactive Calculator
+        const exitSlider = document.getElementById('exitSlider');
+        const exitValue = document.getElementById('exitValue');
+        const taxWithout = document.getElementById('taxWithout');
+        const potentialSavings = document.getElementById('potentialSavings');
+
+        function formatCurrency(num) {
+            return '$' + num.toLocaleString('en-US');
+        }
+
+        function calculateSavings(exitAmount) {
+            const exclusionPerTaxpayer = 15000000;
+            const taxRate = 0.238;
+
+            // Without stacking: only one $15M exclusion
+            const taxableWithout = Math.max(0, exitAmount - exclusionPerTaxpayer);
+            const taxOwedWithout = taxableWithout * taxRate;
+
+            // With 2 additional trusts: 3 total exclusions
+            const totalExclusion = exclusionPerTaxpayer * 3;
+            const taxableWith = Math.max(0, exitAmount - totalExclusion);
+            const taxOwedWith = taxableWith * taxRate;
+
+            const savings = taxOwedWithout - taxOwedWith;
+
+            return {
+                taxWithout: Math.round(taxOwedWithout),
+                savings: Math.round(savings)
+            };
+        }
+
+        function updateCalculator() {
+            const exit = parseInt(exitSlider.value);
+            const results = calculateSavings(exit);
+
+            exitValue.textContent = formatCurrency(exit);
+            taxWithout.textContent = formatCurrency(results.taxWithout);
+            potentialSavings.textContent = formatCurrency(results.savings);
+        }
+
+        exitSlider.addEventListener('input', updateCalculator);
+        updateCalculator();
+
+        // Sticky CTA visibility
+        const stickyCta = document.getElementById('stickyCta');
+
+        function handleScroll() {
+            const scrollY = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight;
+            const winHeight = window.innerHeight;
+            const scrollPercent = scrollY / (docHeight - winHeight);
+
+            if (scrollPercent > 0.15 && scrollPercent < 0.85) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
