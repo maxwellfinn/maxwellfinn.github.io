@@ -80,26 +80,17 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            text-decoration: none;
         }
 
-        .logo-icon {
-            width: 36px;
-            height: 36px;
-            background: var(--gradient-gold);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 16px;
-            color: var(--bg-primary);
+        .logo-img {
+            height: 38px;
+            width: auto;
         }
 
-        .logo-text {
-            font-weight: 700;
-            font-size: 16px;
-            color: var(--text-primary);
+        .footer-logo-img {
+            height: 32px;
+            width: auto;
         }
 
         .header-cta {
@@ -1204,18 +1195,12 @@
     <!-- Progress Bar -->
     <div class="progress-bar" id="progressBar"></div>
 
-    <!-- Advertorial Badge -->
-    <div class="advertorial-badge">
-        <span>Advertisement Feature</span>
-    </div>
-
     <!-- Header -->
     <header class="header">
         <div class="header-inner">
-            <div class="logo">
-                <div class="logo-icon">CA</div>
-                <span class="logo-text">Create Assistants</span>
-            </div>
+            <a href="https://createassistants.ai" class="logo" target="_blank" rel="noopener">
+                <img src="assets/logo-full.png" alt="Create Assistants" class="logo-img">
+            </a>
             <a href="https://createassistants.ai" class="header-cta" target="_blank" rel="noopener">Book Free Consultation</a>
         </div>
     </header>
@@ -1651,8 +1636,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-logo">
-            <div class="logo-icon" style="width:28px;height:28px;font-size:14px;">CA</div>
-            <span class="logo-text">Create Assistants</span>
+            <img src="assets/logo-full.png" alt="Create Assistants" class="footer-logo-img">
         </div>
         <p>Family-Owned USA Based Agency • AI-Powered Lead Management for Home Services</p>
         <p style="margin-top: 12px; font-size: 11px;">© 2026 Create Assistants. All rights reserved.</p>
