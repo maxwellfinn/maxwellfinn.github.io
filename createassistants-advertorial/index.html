@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover how top home service companies are using AI to respond to leads in under 5 seconds and closing 3X more deals without hiring additional staff.">
+    <title>Why Top Home Service Companies Are Closing 3X More Deals (Without Hiring More Staff)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0A0A0A;
+            --bg-secondary: #111111;
+            --bg-tertiary: #1A1A1A;
+            --gold-primary: #D4A853;
+            --gold-secondary: #F5C566;
+            --gold-dark: #B8943D;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B3B3B3;
+            --text-muted: #808080;
+            --border-color: #2A2A2A;
+            --gradient-gold: linear-gradient(135deg, #D4A853 0%, #F5C566 50%, #D4A853 100%);
+            --success-green: #28A745;
+            --error-red: #DC3545;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        /* Advertorial Badge */
+        .advertorial-badge {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 20px;
+            text-align: center;
+        }
+
+        .advertorial-badge span {
+            color: var(--text-muted);
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* Header */
+        .header {
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--gradient-gold);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 16px;
+            color: var(--bg-primary);
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--text-primary);
+        }
+
+        .header-cta {
+            background: var(--gradient-gold);
+            color: var(--bg-primary);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 168, 83, 0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 50px 20px 30px;
+        }
+
+        .hero .container {
+            max-width: 900px;
+        }
+
+        .byline {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .byline-avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #D4A853 0%, #F5C566 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-primary);
+            font-weight: 700;
+            font-size: 18px;
+            border: 2px solid var(--gold-primary);
+        }
+
+        .byline-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .byline-name {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .byline-meta {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .category-tag {
+            display: inline-block;
+            background: rgba(212, 168, 83, 0.15);
+            color: var(--gold-primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: clamp(28px, 5vw, 44px);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        h1 .highlight {
+            color: var(--gold-primary);
+        }
+
+        .hero-subtitle {
+            font-size: 19px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .hero-subtitle strong {
+            color: var(--text-primary);
+        }
+
+        /* Stats Banner */
+        .stats-banner {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 8px;
+        }
+
+        .stat-number {
+            font-size: clamp(26px, 4vw, 38px);
+            font-weight: 800;
+            color: var(--gold-primary);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .stat-source {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* First Mini CTA */
+        .mini-cta {
+            background: linear-gradient(135deg, rgba(212, 168, 83, 0.1) 0%, rgba(212, 168, 83, 0.05) 100%);
+            border: 1px solid rgba(212, 168, 83, 0.3);
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .mini-cta-text {
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        .mini-cta-text strong {
+            color: var(--text-primary);
+        }
+
+        .mini-cta-button {
+            background: var(--gradient-gold);
+            color: var(--bg-primary);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: transform 0.2s;
+        }
+
+        .mini-cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Article Content */
+        .article-content {
+            padding: 10px 0;
+        }
+
+        .article-content p {
+            margin-bottom: 22px;
+            color: var(--text-secondary);
+        }
+
+        .article-content p.lead {
+            font-size: 20px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .article-content p strong {
+            color: var(--text-primary);
+        }
+
+        h2 {
+            font-size: clamp(22px, 3.5vw, 30px);
+            font-weight: 700;
+            margin: 45px 0 22px;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 35px 0 18px;
+            color: var(--text-primary);
+        }
+
+        /* Callout Box */
+        .callout-box {
+            background: linear-gradient(135deg, rgba(212, 168, 83, 0.1) 0%, rgba(212, 168, 83, 0.05) 100%);
+            border-left: 4px solid var(--gold-primary);
+            padding: 22px 25px;
+            margin: 30px 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .callout-box p {
+            margin: 0;
+            font-size: 17px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .callout-box .source {
+            margin-top: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .callout-box .source a {
+            color: var(--gold-primary);
+            text-decoration: none;
+        }
+
+        .callout-box .source a:hover {
+            text-decoration: underline;
+        }
+
+        /* Quote Block */
+        .quote-block {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 35px 0;
+            position: relative;
+        }
+
+        .quote-block::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 70px;
+            color: var(--gold-primary);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .quote-text {
+            font-size: 18px;
+            font-style: italic;
+            color: var(--text-primary);
+            margin-bottom: 18px;
+            padding-left: 10px;
+        }
+
+        .quote-attribution {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .quote-avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--bg-tertiary);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-primary);
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .quote-avatar.gold {
+            background: linear-gradient(135deg, #D4A853 0%, #F5C566 100%);
+        }
+
+        .quote-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .quote-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .quote-name {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .quote-title {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .quote-verified {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 11px;
+            color: var(--success-green);
+            margin-top: 3px;
+        }
+
+        .quote-verified svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        /* Problem/Solution Cards */
+        .comparison-section {
+            margin: 40px 0;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .comparison-card {
+            padding: 25px;
+            border-radius: 14px;
+        }
+
+        .comparison-card.problem {
+            background: linear-gradient(135deg, rgba(220, 53, 69, 0.1) 0%, rgba(220, 53, 69, 0.05) 100%);
+            border: 1px solid rgba(220, 53, 69, 0.2);
+        }
+
+        .comparison-card.solution {
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(40, 167, 69, 0.05) 100%);
+            border: 1px solid rgba(40, 167, 69, 0.2);
+        }
+
+        .comparison-card h4 {
+            font-size: 16px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .comparison-card h4 svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .comparison-card.problem h4 {
+            color: #DC3545;
+        }
+
+        .comparison-card.solution h4 {
+            color: #28A745;
+        }
+
+        .comparison-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .comparison-card li {
+            padding: 6px 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .comparison-card li::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: 7px;
+            flex-shrink: 0;
+        }
+
+        .comparison-card.problem li::before {
+            background: #DC3545;
+        }
+
+        .comparison-card.solution li::before {
+            background: #28A745;
+        }
+
+        /* Testimonials Grid */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 35px 0;
+        }
+
+        .testimonial-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #D4A853 0%, #F5C566 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .testimonial-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .testimonial-role {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Feature List */
+        .feature-list {
+            margin: 25px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 18px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(212, 168, 83, 0.15);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-icon svg {
+            width: 22px;
+            height: 22px;
+            color: var(--gold-primary);
+        }
+
+        .feature-content h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text-primary);
+        }
+
+        .feature-content p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* CTA Sections */
+        .cta-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 40px 30px;
+            margin: 45px 0;
+            text-align: center;
+        }
+
+        .cta-section h3 {
+            font-size: 24px;
+            margin: 0 0 12px;
+        }
+
+        .cta-section p {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient-gold);
+            color: var(--bg-primary);
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 17px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 168, 83, 0.35);
+        }
+
+        .cta-button svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .cta-subtext {
+            margin-top: 15px;
+            font-size: 13px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .cta-subtext span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .cta-subtext svg {
+            width: 14px;
+            height: 14px;
+            color: var(--success-green);
+        }
+
+        /* Case Study Card */
+        .case-study {
+            background: var(--bg-secondary);
+            border-radius: 18px;
+            overflow: hidden;
+            margin: 35px 0;
+        }
+
+        .case-study-header {
+            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold-primary) 100%);
+            padding: 16px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .case-study-header span {
+            color: var(--bg-primary);
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .case-study-verified {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--bg-primary);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .case-study-verified svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .case-study-content {
+            padding: 25px;
+        }
+
+        .case-study-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .case-study-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .case-study-stat {
+            text-align: center;
+            padding: 18px 15px;
+            background: var(--bg-tertiary);
+            border-radius: 10px;
+        }
+
+        .case-study-stat-value {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--gold-primary);
+            margin-bottom: 4px;
+        }
+
+        .case-study-stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .case-study-quote {
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: 15px;
+            border-left: 3px solid var(--gold-primary);
+            padding-left: 15px;
+            margin-top: 15px;
+        }
+
+        /* Timeline */
+        .timeline {
+            margin: 35px 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 21px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-color);
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 20px;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .timeline-marker {
+            width: 44px;
+            height: 44px;
+            background: var(--bg-secondary);
+            border: 2px solid var(--gold-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--gold-primary);
+            flex-shrink: 0;
+            z-index: 1;
+            font-size: 15px;
+        }
+
+        .timeline-content h4 {
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .timeline-content p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Social Proof Bar */
+        .social-proof-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            padding: 25px;
+            background: var(--bg-secondary);
+            border-radius: 14px;
+            margin: 35px 0;
+            flex-wrap: wrap;
+        }
+
+        .social-proof-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-proof-item svg {
+            width: 18px;
+            height: 18px;
+            color: var(--gold-primary);
+        }
+
+        .social-proof-item span {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .social-proof-item strong {
+            color: var(--text-primary);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin: 45px 0;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .faq-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 18px 22px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-tertiary);
+        }
+
+        .faq-question svg {
+            width: 20px;
+            height: 20px;
+            color: var(--gold-primary);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-question svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer-inner {
+            padding: 0 22px 18px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .final-cta .container {
+            max-width: 680px;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(24px, 4vw, 34px);
+            margin-bottom: 18px;
+        }
+
+        .final-cta p {
+            font-size: 17px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .guarantee-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(40, 167, 69, 0.15);
+            border: 1px solid rgba(40, 167, 69, 0.3);
+            padding: 10px 18px;
+            border-radius: 25px;
+            margin-bottom: 25px;
+        }
+
+        .guarantee-badge svg {
+            width: 18px;
+            height: 18px;
+            color: #28A745;
+        }
+
+        .guarantee-badge span {
+            font-size: 13px;
+            color: #28A745;
+            font-weight: 500;
+        }
+
+        /* Urgency Banner */
+        .urgency-banner {
+            background: linear-gradient(135deg, rgba(212, 168, 83, 0.15) 0%, rgba(212, 168, 83, 0.05) 100%);
+            border: 1px solid rgba(212, 168, 83, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .urgency-banner p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .urgency-banner strong {
+            color: var(--gold-primary);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .footer p {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Sticky CTA (Mobile) */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(17, 17, 17, 0.98);
+            border-top: 1px solid var(--border-color);
+            padding: 12px 16px;
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+
+        .sticky-cta .cta-button {
+            width: 100%;
+            justify-content: center;
+            padding: 14px;
+            font-size: 15px;
+        }
+
+        /* Progress Indicator */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gradient-gold);
+            width: 0%;
+            z-index: 1001;
+            transition: width 0.1s;
+        }
+
+        /* Video Section */
+        .video-section {
+            margin: 40px 0;
+            border-radius: 16px;
+            overflow: hidden;
+            background: var(--bg-secondary);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .video-overlay:hover {
+            background: rgba(0,0,0,0.2);
+        }
+
+        .play-button {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+
+        .video-overlay:hover .play-button {
+            transform: scale(1.1);
+        }
+
+        .play-button svg {
+            width: 28px;
+            height: 28px;
+            color: var(--bg-primary);
+            margin-left: 4px;
+        }
+
+        /* Read time indicator */
+        .read-time {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--text-muted);
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .read-time svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .stat-item {
+                border-bottom: 1px solid var(--border-color);
+                padding-bottom: 15px;
+            }
+
+            .stat-item:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .case-study-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section {
+                padding: 30px 20px;
+            }
+
+            .social-proof-bar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .sticky-cta {
+                display: block;
+            }
+
+            .header-cta {
+                display: none;
+            }
+
+            .hero {
+                padding: 35px 20px 25px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .quote-text {
+                font-size: 16px;
+            }
+
+            .mini-cta {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cta-subtext {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Advertorial Badge -->
+    <div class="advertorial-badge">
+        <span>Advertisement Feature</span>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">
+                <div class="logo-icon">CA</div>
+                <span class="logo-text">Create Assistants</span>
+            </div>
+            <a href="https://createassistants.ai" class="header-cta" target="_blank" rel="noopener">Book Free Consultation</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <span class="category-tag">Home Services Industry Report</span>
+
+            <h1>The $120K Mistake <span class="highlight">95% of Home Service Companies</span> Make Every Year</h1>
+
+            <p class="hero-subtitle">Harvard research shows the company that responds first wins <strong>78% of jobs</strong>. Yet almost no contractors can respond fast enough. Inside: how a new AI system is helping HVAC, plumbing, and electrical companies close 3X more deals—<strong>without hiring additional staff</strong>.</p>
+
+            <div class="byline">
+                <div class="byline-avatar">TK</div>
+                <div class="byline-info">
+                    <span class="byline-name">Tucker Kennedy, Industry Analyst</span>
+                    <span class="byline-meta">Create Assistants Research • January 2026</span>
+                    <span class="read-time">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        7 min read
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Banner -->
+    <section class="container">
+        <div class="stats-banner animate-on-scroll">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">78%</div>
+                    <div class="stat-label">of homeowners hire the first company to respond</div>
+                    <div class="stat-source">Source: Lead Response Management Study</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">of home service companies fail to respond within 5 minutes</div>
+                    <div class="stat-source">Source: Valve+Meter Industry Study</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">21x</div>
+                    <div class="stat-label">higher conversion when responding in 5 min vs 1 hour</div>
+                    <div class="stat-source">Source: InsideSales.com Research</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- First Mini CTA -->
+    <section class="container">
+        <div class="mini-cta animate-on-scroll">
+            <div class="mini-cta-text"><strong>Already know you need faster lead response?</strong> Skip ahead and see how the AI system works for your specific business.</div>
+            <a href="https://createassistants.ai" class="mini-cta-button" target="_blank" rel="noopener">See Demo →</a>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="article-content">
+        <div class="container">
+            <p class="lead">Picture this: It's 2 AM on a Saturday. A homeowner's AC just died in the middle of a heat wave. They grab their phone and text three HVAC companies.</p>
+
+            <p>Company A responds in 5 seconds with a friendly message, answers their questions, and books an appointment for 8 AM.</p>
+
+            <p>Company B calls back at 9 AM Monday—52 hours later.</p>
+
+            <p>Company C never responds at all.</p>
+
+            <p><strong>Which company got the $2,400 emergency repair job?</strong></p>
+
+            <p>You already know the answer. And right now, for most home service companies, this exact scenario is playing out dozens of times per month—costing them hundreds of thousands in lost revenue they'll never see.</p>
+
+            <div class="callout-box animate-on-scroll">
+                <p>"You're 21 times more likely to convert a lead if you respond within 5 minutes versus waiting just one hour. Every 10-minute delay lowers conversion chances by 400%."</p>
+                <p class="source">— <a href="https://www.leadresponsemanagement.org/lrm_study" target="_blank" rel="noopener">Lead Response Management Study, InsideSales.com</a></p>
+            </div>
+
+            <p>The uncomfortable truth? According to industry research from Valve+Meter, <strong>95% of home service companies don't respond to leads within that critical 5-minute window</strong>. The average response time across the industry is 12-24 hours.</p>
+
+            <p>By then, that homeowner has already booked with whoever picked up first.</p>
+
+            <h2>The Math That Should Keep You Up at Night</h2>
+
+            <p>Let's get specific about what slow lead response actually costs.</p>
+
+            <p>A typical mid-sized home service company receives 150 leads per month. With an average job value of $1,200 and industry-standard 15% conversion rate, they're closing about 22-23 jobs monthly.</p>
+
+            <p>But here's what the research shows happens with instant response:</p>
+
+            <div class="comparison-section animate-on-scroll">
+                <div class="comparison-grid">
+                    <div class="comparison-card problem">
+                        <h4>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                            Without Fast Response
+                        </h4>
+                        <ul>
+                            <li>15% lead-to-booking rate</li>
+                            <li>150 leads × 15% = 22 jobs</li>
+                            <li>22 jobs × $1,200 = $26,400/month</li>
+                            <li>Annual revenue: ~$317K from leads</li>
+                            <li>Lost to faster competitors: $190K+/year</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card solution">
+                        <h4>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            With 5-Second Response
+                        </h4>
+                        <ul>
+                            <li>42% lead-to-booking rate</li>
+                            <li>150 leads × 42% = 63 jobs</li>
+                            <li>63 jobs × $1,200 = $75,600/month</li>
+                            <li>Annual revenue: ~$907K from leads</li>
+                            <li>Additional revenue: $590K+/year</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <p>Same leads. Same marketing spend. Same team. <strong>The only difference is response speed.</strong></p>
+
+            <h2>Why Hiring More Staff Doesn't Solve This</h2>
+
+            <p>The obvious solution seems simple: hire more office staff. Get a bigger team to handle calls.</p>
+
+            <p>But here's the reality check:</p>
+
+            <p>A full-time CSR costs $45,000-$60,000 annually in salary, benefits, training, and turnover costs (which averages 30-40% in this role). And they still can't work 24/7. They still take lunch breaks. They still get sick exactly when that emergency call comes in.</p>
+
+            <p>Plus, according to the Associated Builders and Contractors, there are currently <strong>440,000 unfilled positions</strong> in the construction industry—the highest level ever recorded. Finding reliable staff has never been harder.</p>
+
+            <div class="quote-block animate-on-scroll">
+                <p class="quote-text">We had two full-time staff members just answering phones, and we were still missing 40% of after-hours calls. Those were our highest-value emergency jobs—$2,000, $3,000 tickets—walking straight to competitors every single night.</p>
+                <div class="quote-attribution">
+                    <div class="quote-avatar gold">MR</div>
+                    <div class="quote-info">
+                        <span class="quote-name">Mike R.</span>
+                        <span class="quote-title">Owner, HVAC Company • Dallas, TX</span>
+                        <span class="quote-verified">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            Verified Client
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <p>The industry data backs this up: <strong>41% of online bookings for home services come in after hours</strong>—evenings, weekends, holidays. That's nearly half of all potential revenue happening while most businesses aren't responding.</p>
+
+            <h2>The Breakthrough: AI That Actually Books Jobs</h2>
+
+            <p>The solution didn't come from hiring more people. It came from asking a different question:</p>
+
+            <p><em>What if AI could respond to every lead within 5 seconds, 24/7—and actually book appointments like a trained sales professional?</em></p>
+
+            <p>Not a generic chatbot. Not voicemail. Not a "we'll call you back" message.</p>
+
+            <p>An AI system trained specifically on home service conversations that engages leads instantly through text, email, and chat—qualifying them, answering questions, handling objections, and booking them directly onto your calendar.</p>
+
+            <p>This is what <strong>Create Assistants</strong> has built.</p>
+
+            <!-- Video Section -->
+            <div class="video-section animate-on-scroll">
+                <div class="video-container">
+                    <video id="demoVideo" poster="assets/video-poster.jpg" preload="metadata">
+                        <source src="assets/demo.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay" onclick="playVideo()">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>How the 24/7 AI Prospect Management System Works</h2>
+
+            <div class="timeline animate-on-scroll">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h4>Instant Lead Capture (Under 5 Seconds)</h4>
+                        <p>The moment a lead comes in—from your website, Google, Facebook, Yelp, or any source—the AI reaches out via their preferred channel. No delay. No missed opportunities.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h4>Intelligent Qualification</h4>
+                        <p>The AI asks the right questions to understand job scope, urgency, and timeline—exactly like your best CSR, but without hold times or inconsistency.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h4>Objection Handling</h4>
+                        <p>Price shopping? Comparing quotes? The AI uses proven scripts that address concerns and communicate value—keeping prospects engaged instead of bouncing to competitors.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h4>Direct Calendar Booking</h4>
+                        <p>When the lead is ready, the AI books them directly onto your schedule—synced with ServiceTitan, Housecall Pro, Jobber, or your existing system. Your techs wake up to a full calendar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Real Results from Real Contractors</h3>
+
+            <!-- Case Study -->
+            <div class="case-study animate-on-scroll">
+                <div class="case-study-header">
+                    <span>Verified Case Study</span>
+                    <div class="case-study-verified">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        Results Verified
+                    </div>
+                </div>
+                <div class="case-study-content">
+                    <h4 class="case-study-title">Multi-Location HVAC Company Transforms After-Hours Revenue</h4>
+                    <div class="case-study-stats">
+                        <div class="case-study-stat">
+                            <div class="case-study-stat-value">258%</div>
+                            <div class="case-study-stat-label">Increase in after-hours bookings</div>
+                        </div>
+                        <div class="case-study-stat">
+                            <div class="case-study-stat-value">90%</div>
+                            <div class="case-study-stat-label">Lead-to-booking rate</div>
+                        </div>
+                        <div class="case-study-stat">
+                            <div class="case-study-stat-value">70%</div>
+                            <div class="case-study-stat-label">Of calls handled by AI</div>
+                        </div>
+                        <div class="case-study-stat">
+                            <div class="case-study-stat-value">$129M</div>
+                            <div class="case-study-stat-label">Annual revenue achieved</div>
+                        </div>
+                    </div>
+                    <p class="case-study-quote">"I can run a $100M+ business with 9 CSRs because the AI handles 70% of our entire call volume—all while booking at a higher rate than we ever achieved with humans alone."</p>
+                </div>
+            </div>
+
+            <!-- Additional Testimonials -->
+            <div class="testimonials-grid animate-on-scroll">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"First month we saw a $31,000 increase in booked jobs. Same marketing, same team—just faster response. The AI paid for itself in the first week."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JC</div>
+                        <div class="testimonial-info">
+                            <span class="testimonial-name">Josh C.</span>
+                            <span class="testimonial-role">HVAC Business Owner • Phoenix, AZ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Our after-hours bookings went from 12 per month to 47. That's $42,000 in additional revenue we were leaving on the table every single month."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SR</div>
+                        <div class="testimonial-info">
+                            <span class="testimonial-name">Sarah R.</span>
+                            <span class="testimonial-role">Plumbing Company Owner • Atlanta, GA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The AI handles the initial conversation so well that by the time my techs call to confirm, the customer is already sold. Close rates went through the roof."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">DM</div>
+                        <div class="testimonial-info">
+                            <span class="testimonial-name">David M.</span>
+                            <span class="testimonial-role">Electrical Contractor • Denver, CO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mid-Article CTA -->
+            <div class="cta-section animate-on-scroll">
+                <h3>See Exactly How This Works for Your Business</h3>
+                <p>Get a personalized demo showing how the AI would handle your specific leads—using your services, your pricing, and your calendar.</p>
+                <a href="https://createassistants.ai" class="cta-button" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    Book Your Free Demo
+                </a>
+                <div class="cta-subtext">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> No commitment required</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 15-minute personalized walkthrough</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> See your potential ROI calculated</span>
+                </div>
+            </div>
+
+            <h2>What Makes Create Assistants Different</h2>
+
+            <div class="feature-list animate-on-scroll">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Built Specifically for Home Services</h4>
+                        <p>Trained on 50,000+ home service conversations. Understands HVAC terminology, plumbing emergencies, and electrical issues. Not a generic chatbot adapted for contractors.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Seamless Calendar Integration</h4>
+                        <p>Works with ServiceTitan, Housecall Pro, Jobber, and virtually every scheduling platform. Leads get booked instantly—no double-entry or manual syncing required.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>True 24/7/365 Coverage</h4>
+                        <p>Holidays, weekends, 3 AM emergency calls—every lead gets the same instant, professional response. No gaps. No missed opportunities. Ever.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Customized to Your Brand</h4>
+                        <p>The AI learns your company's tone, pricing, service area, and unique selling points. Customers feel like they're talking to your team—because it represents your brand perfectly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section animate-on-scroll">
+                <h2>Questions Contractors Ask</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Will customers know they're talking to AI?
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">The AI is trained to sound natural and conversational—not robotic. In post-interaction surveys, 87% of homeowners didn't realize they were talking to AI until told. It matches your brand voice and handles conversations the way your best team member would.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        What if it books the wrong appointments?
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">The system includes built-in qualification logic and human review checkpoints. Accuracy rate is 99.2% on appointment bookings. For edge cases, alerts go to your team for quick confirmation. You maintain full control.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        How long until we see results?
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Most contractors see measurable improvement within the first 2 weeks. Average clients report a 30%+ increase in booked jobs within 30 days—using the exact same lead sources they had before. Implementation typically takes 2-3 days.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Does it integrate with our existing software?
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Yes. Create Assistants integrates with ServiceTitan, Housecall Pro, Jobber, FieldEdge, and most major CRM/scheduling platforms. The team handles full setup and ensures everything syncs seamlessly with your existing workflow.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        What's the cost compared to hiring?
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Significantly less than a single CSR salary—and it works 24/7 without breaks, sick days, or turnover. Most contractors see positive ROI within the first month. During your demo, the team will calculate your specific projected return.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="urgency-banner animate-on-scroll">
+                <p><strong>Industry reality:</strong> Contractors who adopt AI lead response in 2026 will build dominant market positions. Every month you wait, competitors who respond faster are capturing customers you'll never get back.</p>
+            </div>
+
+            <div class="social-proof-bar animate-on-scroll">
+                <div class="social-proof-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"></path><polyline points="18 17 12 11 8 15 3 10"></polyline></svg>
+                    <span><strong>$500M+</strong> in client revenue</span>
+                </div>
+                <div class="social-proof-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <span><strong>1,000+</strong> contractors served</span>
+                </div>
+                <div class="social-proof-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <span><strong>4.9/5</strong> rating (G2, Capterra)</span>
+                </div>
+                <div class="social-proof-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+                    <span><strong>USA-based</strong> family-owned</span>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="guarantee-badge">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span>Free consultation • No obligation • See your projected ROI</span>
+            </div>
+
+            <h2>Stop Losing Revenue to Faster Competitors</h2>
+            <p>Every minute you wait, another lead goes to the contractor who responds first. In 15 minutes, see exactly how AI-powered lead response would transform your business—with your numbers, your services, your calendar.</p>
+
+            <a href="https://createassistants.ai" class="cta-button" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Book Your Free Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <div class="logo-icon" style="width:28px;height:28px;font-size:14px;">CA</div>
+            <span class="logo-text">Create Assistants</span>
+        </div>
+        <p>Family-Owned USA Based Agency • AI-Powered Lead Management for Home Services</p>
+        <p style="margin-top: 12px; font-size: 11px;">© 2026 Create Assistants. All rights reserved.</p>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta">
+        <a href="https://createassistants.ai" class="cta-button" target="_blank" rel="noopener">
+            Book Free Consultation
+        </a>
+    </div>
+
+    <script>
+        // Progress bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+
+        // Animate on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Video play function
+        function playVideo() {
+            const video = document.getElementById('demoVideo');
+            const overlay = document.querySelector('.video-overlay');
+            overlay.style.display = 'none';
+            video.controls = true;
+            video.play();
+        }
+
+        // FAQ toggle
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('open');
+        }
+
+        // Hide sticky CTA when near bottom
+        window.addEventListener('scroll', () => {
+            const stickyCta = document.querySelector('.sticky-cta');
+            const footer = document.querySelector('.final-cta');
+            const footerTop = footer.getBoundingClientRect().top;
+
+            if (footerTop < window.innerHeight) {
+                stickyCta.style.transform = 'translateY(100%)';
+            } else {
+                stickyCta.style.transform = 'translateY(0)';
+            }
+        });
+    </script>
+</body>
+</html>
