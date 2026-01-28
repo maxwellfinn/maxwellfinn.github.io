@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minisocial | Authentic UGC from Real Creators | 25 Creators, 7 Days, $2,500</title>
+    <meta name="description" content="Get authentic user-generated content from 25+ micro-influencers in 7 days. Fully managed. 100% content ownership. Join 159+ DTC brands scaling with minisocial.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="minisocial | Your Competitors Have 50 Creators. You Have Zero.">
+    <meta property="og:description" content="Get authentic UGC from 25+ real micro-influencers in 7 days. Fully managed. $2,500.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/og-image.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary-gold: #FFD93D;
+            --primary-gold-hover: #E6C235;
+            --primary-gold-light: #FFF4CC;
+            --black: #000000;
+            --text-dark: #1A1A1A;
+            --text-medium: #4A4A4A;
+            --white: #FFFFFF;
+            --off-white: #FFFDF5;
+            --cream: #FFF9E6;
+            --light-gray: #F5F5F5;
+            --border-gray: #E5E5E5;
+            --accent-green: #10B981;
+            --accent-red: #EF4444;
+
+            --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --transition-fast: 0.15s ease;
+            --transition-medium: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+
+            --max-width: 1200px;
+            --section-padding-mobile: 64px 20px;
+            --section-padding-desktop: 96px 40px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-family);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--black);
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 4vw, 2.75rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+            font-weight: 600;
+        }
+
+        p {
+            color: var(--text-medium);
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
+        }
+
+        .text-highlight {
+            color: var(--black);
+            font-weight: 600;
+        }
+
+        .text-gold {
+            color: var(--primary-gold);
+        }
+
+        /* ===== LAYOUT ===== */
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 40px;
+            }
+        }
+
+        section {
+            padding: var(--section-padding-mobile);
+        }
+
+        @media (min-width: 768px) {
+            section {
+                padding: var(--section-padding-desktop);
+            }
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 16px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            transition: all var(--transition-fast);
+            min-height: 52px;
+        }
+
+        .btn-primary {
+            background: var(--primary-gold);
+            color: var(--black);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-gold-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--black);
+            border: 2px solid var(--black);
+        }
+
+        .btn-secondary:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .btn-large {
+            padding: 20px 40px;
+            font-size: 1.125rem;
+            min-height: 60px;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-gray);
+            transition: all var(--transition-medium);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            height: 32px;
+            width: auto;
+        }
+
+        .header-cta {
+            padding: 12px 24px;
+            font-size: 0.875rem;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+            padding-top: 120px;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--primary-gold-light);
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 24px;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .hero h1 {
+            margin-bottom: 24px;
+            animation: fadeInUp 0.6s ease 0.1s forwards;
+            opacity: 0;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.125rem, 2vw, 1.375rem);
+            color: var(--text-medium);
+            margin-bottom: 40px;
+            max-width: 600px;
+            animation: fadeInUp 0.6s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            animation: fadeInUp 0.6s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        @media (min-width: 480px) {
+            .hero-cta-group {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        .hero-trust {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border-gray);
+            animation: fadeInUp 0.6s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        .hero-trust-avatars {
+            display: flex;
+        }
+
+        .hero-trust-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 3px solid var(--white);
+            margin-left: -12px;
+            object-fit: cover;
+        }
+
+        .hero-trust-avatar:first-child {
+            margin-left: 0;
+        }
+
+        .hero-trust-text {
+            font-size: 0.875rem;
+            color: var(--text-medium);
+        }
+
+        .hero-trust-text strong {
+            color: var(--black);
+            font-weight: 600;
+        }
+
+        .hero-visual {
+            position: absolute;
+            right: -10%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 55%;
+            max-width: 700px;
+            z-index: 1;
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-visual {
+                display: block;
+            }
+        }
+
+        .hero-image-container {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-floating-card {
+            position: absolute;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 16px 20px;
+            box-shadow: var(--shadow-lg);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hero-floating-card-1 {
+            bottom: 20%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+
+        .hero-floating-card-2 {
+            top: 15%;
+            right: -5%;
+            animation-delay: 1.5s;
+        }
+
+        .floating-stat {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .floating-stat-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-gold-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .floating-stat-content h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 2px;
+        }
+
+        .floating-stat-content p {
+            font-size: 0.75rem;
+            color: var(--text-medium);
+            margin: 0;
+        }
+
+        /* ===== SOCIAL PROOF BAR ===== */
+        .social-proof-bar {
+            background: var(--white);
+            padding: 48px 20px;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .social-proof-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .social-proof-label {
+            font-size: 0.875rem;
+            color: var(--text-medium);
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        .brand-logos {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 32px 48px;
+            opacity: 0.7;
+        }
+
+        .brand-logo {
+            height: 28px;
+            width: auto;
+            filter: grayscale(100%);
+            transition: all var(--transition-medium);
+        }
+
+        .brand-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        @media (min-width: 768px) {
+            .brand-logo {
+                height: 32px;
+            }
+        }
+
+        /* ===== PROBLEM SECTION ===== */
+        .problem-section {
+            background: var(--off-white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 56px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-medium);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            margin-bottom: 20px;
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+        }
+
+        .problem-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .problem-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .problem-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-gray);
+            transition: all var(--transition-medium);
+        }
+
+        .problem-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .problem-icon {
+            width: 56px;
+            height: 56px;
+            background: #FEE2E2;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .problem-card h3 {
+            margin-bottom: 12px;
+            color: var(--black);
+        }
+
+        .problem-card p {
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+
+        .problem-stat {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 8px 12px;
+            background: #FEE2E2;
+            border-radius: 8px;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--accent-red);
+        }
+
+        /* ===== SOLUTION SECTION ===== */
+        .solution-section {
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solution-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 80px;
+            background: linear-gradient(to bottom, var(--border-gray), transparent);
+        }
+
+        .solution-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 64px;
+        }
+
+        .solution-intro h2 {
+            margin-bottom: 24px;
+        }
+
+        .solution-intro p {
+            font-size: 1.25rem;
+        }
+
+        .solution-highlight {
+            display: inline-block;
+            background: var(--primary-gold-light);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        .benefits-grid {
+            display: grid;
+            gap: 24px;
+            margin-bottom: 56px;
+        }
+
+        @media (min-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .benefit-card {
+            background: var(--cream);
+            border-radius: 20px;
+            padding: 32px;
+            text-align: center;
+            transition: all var(--transition-medium);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .benefit-icon {
+            width: 72px;
+            height: 72px;
+            background: var(--primary-gold);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .benefit-card p {
+            font-size: 0.9375rem;
+        }
+
+        .solution-cta {
+            text-align: center;
+        }
+
+        /* ===== HOW IT WORKS SECTION ===== */
+        .how-it-works {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .how-it-works .section-label {
+            color: var(--primary-gold);
+        }
+
+        .how-it-works h2 {
+            color: var(--white);
+        }
+
+        .how-it-works .section-header p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .steps-container {
+            display: grid;
+            gap: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .steps-container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 48px;
+            }
+        }
+
+        .step {
+            position: relative;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 64px;
+            height: 64px;
+            background: var(--primary-gold);
+            color: var(--black);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 24px;
+        }
+
+        .step h3 {
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .step p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9375rem;
+        }
+
+        .step-time {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            font-size: 0.8125rem;
+            color: var(--primary-gold);
+            font-weight: 500;
+        }
+
+        @media (min-width: 768px) {
+            .step:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                top: 32px;
+                right: -24px;
+                width: 48px;
+                height: 2px;
+                background: linear-gradient(to right, var(--primary-gold), transparent);
+            }
+        }
+
+        /* ===== CASE STUDY SECTION ===== */
+        .case-study {
+            background: var(--cream);
+        }
+
+        .case-study-content {
+            display: grid;
+            gap: 48px;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .case-study-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 64px;
+            }
+        }
+
+        .case-study-visual {
+            position: relative;
+        }
+
+        .case-study-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .case-study-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .case-study-result {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--white);
+            padding: 20px 28px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .result-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-green);
+            line-height: 1;
+        }
+
+        .result-label {
+            font-size: 0.875rem;
+            color: var(--text-medium);
+            font-weight: 500;
+        }
+
+        .case-study-text .section-label {
+            text-align: left;
+        }
+
+        .case-study-text h2 {
+            margin-bottom: 20px;
+        }
+
+        .case-study-text > p {
+            margin-bottom: 32px;
+        }
+
+        .case-study-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .stat-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .stat-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.8125rem;
+            color: var(--text-medium);
+        }
+
+        .testimonial {
+            background: var(--white);
+            padding: 24px;
+            border-radius: 16px;
+            border-left: 4px solid var(--primary-gold);
+        }
+
+        .testimonial-quote {
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--primary-gold-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        .testimonial-info h4 {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .testimonial-info p {
+            font-size: 0.8125rem;
+            color: var(--text-medium);
+            margin: 0;
+        }
+
+        /* ===== VALUE COMPARISON SECTION ===== */
+        .value-comparison {
+            background: var(--white);
+        }
+
+        .comparison-table {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .comparison-row {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+            }
+        }
+
+        .comparison-card {
+            padding: 32px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all var(--transition-medium);
+        }
+
+        .comparison-card.traditional {
+            background: #FEE2E2;
+            border: 2px solid transparent;
+        }
+
+        .comparison-card.diy {
+            background: var(--light-gray);
+            border: 2px solid transparent;
+        }
+
+        .comparison-card.minisocial {
+            background: var(--cream);
+            border: 2px solid var(--primary-gold);
+            transform: scale(1.02);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .comparison-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .comparison-card.traditional .comparison-badge {
+            background: #FECACA;
+            color: var(--accent-red);
+        }
+
+        .comparison-card.diy .comparison-badge {
+            background: var(--border-gray);
+            color: var(--text-medium);
+        }
+
+        .comparison-card.minisocial .comparison-badge {
+            background: var(--primary-gold);
+            color: var(--black);
+        }
+
+        .comparison-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .comparison-price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .comparison-card.minisocial .comparison-price {
+            color: var(--accent-green);
+        }
+
+        .comparison-detail {
+            font-size: 0.875rem;
+            color: var(--text-medium);
+            margin-bottom: 20px;
+        }
+
+        .comparison-features {
+            text-align: left;
+            list-style: none;
+        }
+
+        .comparison-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 0.875rem;
+            margin-bottom: 8px;
+            color: var(--text-medium);
+        }
+
+        .comparison-features li::before {
+            content: '✗';
+            color: var(--accent-red);
+            font-weight: 600;
+        }
+
+        .comparison-card.minisocial .comparison-features li::before {
+            content: '✓';
+            color: var(--accent-green);
+        }
+
+        .comparison-cta {
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .comparison-savings {
+            display: inline-block;
+            background: #D1FAE5;
+            color: #065F46;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        /* ===== URGENCY SECTION ===== */
+        .urgency-section {
+            background: linear-gradient(135deg, var(--black) 0%, #1a1a1a 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .urgency-content {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .urgency-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 217, 61, 0.2);
+            padding: 10px 20px;
+            border-radius: 100px;
+            margin-bottom: 32px;
+        }
+
+        .urgency-badge-icon {
+            font-size: 1.25rem;
+        }
+
+        .urgency-badge-text {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+        }
+
+        .urgency-section h2 {
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+
+        .urgency-section p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.125rem;
+            margin-bottom: 40px;
+        }
+
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+        }
+
+        .trust-badge-icon {
+            color: var(--primary-gold);
+            font-size: 1.25rem;
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq-section {
+            background: var(--off-white);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 16px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-gray);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: left;
+            color: var(--black);
+            transition: all var(--transition-fast);
+        }
+
+        .faq-question:hover {
+            background: var(--light-gray);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--primary-gold);
+            transition: transform var(--transition-fast);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-medium);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer-inner {
+            padding: 0 24px 24px;
+            color: var(--text-medium);
+            font-size: 0.9375rem;
+            line-height: 1.7;
+        }
+
+        /* ===== FINAL CTA SECTION ===== */
+        .final-cta {
+            background: var(--cream);
+            text-align: center;
+        }
+
+        .final-cta-content {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .final-cta h2 {
+            margin-bottom: 20px;
+        }
+
+        .final-cta > p {
+            font-size: 1.125rem;
+            margin-bottom: 40px;
+        }
+
+        .final-cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+
+        @media (min-width: 480px) {
+            .final-cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .final-cta-note {
+            font-size: 0.875rem;
+            color: var(--text-medium);
+        }
+
+        .final-cta-note strong {
+            color: var(--black);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 48px 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            height: 28px;
+            margin: 0 auto 24px;
+            filter: invert(1);
+        }
+
+        .footer p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+            transition: color var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-gold);
+        }
+
+        /* ===== STICKY CTA (Mobile) ===== */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            padding: 16px 20px;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            transform: translateY(100%);
+            transition: transform var(--transition-medium);
+        }
+
+        .sticky-cta.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-cta .btn {
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .sticky-cta {
+                display: none;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== REDUCED MOTION ===== */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="https://minisocial.com" aria-label="minisocial home">
+                <svg class="logo" fill="none" height="32" viewBox="0 0 160 68" xmlns="http://www.w3.org/2000/svg"><g fill="#000"><path d="m31.2887 17.2988c2.0373 1.0493 3.5583 2.9803 4.5691 5.8136l4.3858 12.2909-5.4015 1.931-3.9789-11.1539c-1.2029-3.3717-3.1239-4.5976-5.7552-3.6567-1.4156.5059-2.3131 1.3895-2.7022 2.6311-.4019 1.2682-.2817 2.8008.3655 4.6164l3.7583 10.5354-5.4409 1.9458-3.979-11.1538c-1.2028-3.3718-3.1041-4.6045-5.6753-3.6854-1.45503.5207-2.36627 1.4309-2.76033 2.7199-.41474 1.2958-.28076 2.8678.38125 4.7229l3.70208 10.3757-5.38173 1.924-7.37567-20.6715 5.38177-1.9241.87578 2.4547c.83539-2.571 2.52587-4.3225 5.05665-5.2278 2.8106-1.005 5.233-.7012 7.3097.8964.8945-2.6597 2.8559-4.5305 5.8655-5.6065 2.4914-.8925 4.7621-.8264 6.7993.2219z"/><path d="m43.2927 7.70689c-.7713-.51578-1.257-1.21893-1.4422-2.15384-.1822-.9142-.003-1.7495.5162-2.50098.5192-.75147 1.2669-1.22485 2.2008-1.41124s1.7851-.03155 2.5525.46351c.7674.49507 1.2521 1.19724 1.4343 2.11242.1862.93491.0109 1.79092-.5083 2.5424-.5152.77219-1.2423 1.24161-2.1762 1.428s-1.8057.03551-2.5771-.48027zm.2749 4.09371 5.6458-1.1263 4.2833 21.5276-5.6458 1.1262z"/><path d="m79.7615 10.6722c1.5319 1.6736 2.3722 4.0138 2.4993 7.0197l.5418 12.8284-5.7305.2426-.4965-11.7485c-.0729-1.715-.53-3.0316-1.3546-3.9724-.8225-.9191-2.0067-1.357-3.5504-1.2919-1.586.0671-2.8519.6933-3.7543 1.8984-.9241 1.2051-1.3447 2.7712-1.2629 4.6972l.458 10.8383-5.7098.2416-.927-21.93092 5.7098-.24161.1173 2.77313c1.6589-2.33921 3.9799-3.5611 6.9195-3.68635 2.8136-.11834 4.9868.65878 6.5403 2.33235z"/><path d="m93.9908 9.17324 5.6714.99116-3.7691 21.6232-5.6714-.9902zm1.2196-3.91714c-.533-.76036-.733-1.59073-.5684-2.52958.1595-.91814.6285-1.63215 1.3841-2.145951.7556-.5128194 1.6235-.684417 2.5613-.5207089.9388.1637079 1.6756.6153829 2.2136 1.3540399.538.73866.736 1.57001.576 2.48816-.163.93885-.635 1.67455-1.3907 2.18737-.7595.53451-1.6058.70907-2.5446.54536-.9388-.16272-1.6974-.61834-2.2313-1.37869z"/><path d="m34.1435 67.219c-2.2806-.6726-3.9927-1.7939-5.0971-3.3757l4.4627-3.004c.6915.9133 1.6205 1.5286 2.7938 1.8659 1.1536.3432 2.4057.2988 3.7563-.1321 1.0285-.3284 1.791-.7939 2.3013-1.4241s.6718-1.2377.4787-1.8432c-.2896-.9083-1.2747-1.3501-2.975-1.3185l-5.8251.1262c-3.7632.1124-6.0753-1.2179-6.9442-3.9428-.5537-1.7357-.1961-3.4733 1.0442-5.2268 1.2403-1.7534 3.0244-2.9901 5.3424-3.7307 2.1978-.7022 4.2883-.8353 6.2437-.4152 1.9417.4477 3.5229 1.3659 4.6972 2.7475l-4.3888 2.9586c-1.4284-1.3452-3.178-1.6765-5.234-1.0188-.8265.2643-1.4541.6647-1.9171 1.2348-.463.57-.6236 1.1114-.463 1.6153.2443.7673 1.0029 1.1253 2.2619 1.1016l5.6783-.1676c2.049-.0543 3.706.1952 5.0044.7149 1.3053.5395 2.2146 1.6499 2.7614 3.3659.6304 1.9783.3044 3.8836-.9635 5.6893-1.2826 1.8334-3.2539 3.1746-5.895 4.0178-2.4796.7909-4.8429.8343-7.1235.1617z"/><path d="m55.8785 58.969c-2.6243-1.7298-4.2784-4.2012-4.9453-7.4388-.662-3.217-.1182-6.141 1.6097-8.7692 1.7328-2.6075 4.2469-4.2505 7.5638-4.9349 3.2963-.6795 6.2546-.1647 8.8751 1.5444 2.6253 1.7297 4.2577 4.2051 4.9197 7.422.666 3.2377.1438 6.1578-1.5851 8.785s-4.2419 4.2712-7.5382 4.9507c-3.3169.6854-6.2753.1706-8.8997-1.5592zm11.8393-6.2061c.8551-1.4092 1.1073-3.0187.7359-4.8244s-1.2383-3.1844-2.581-4.1401c-1.3624-.9516-2.9337-1.2337-4.7168-.8658-1.7831.3678-3.114 1.2475-3.9898 2.6617s-1.128 3.0237-.7566 4.8284c.3714 1.8057 1.2383 3.1844 2.6018 4.1361 1.3624.9516 2.9337 1.2337 4.7168.8658 1.7821-.3678 3.114-1.2475 3.9897-2.6617z"/><path d="m81.4498 54.6763c-2.0047-2.4231-2.8411-5.29-2.5317-8.5809.3073-3.2692 1.6599-5.9092 4.0794-7.8944 2.3958-1.9665 5.2379-2.8057 8.546-2.4941 2.8027.2633 5.0931 1.2239 6.8742 2.86 1.7793 1.6568 2.8023 3.4349 3.1153 5.3155l-5.453 1.0188c-.1596-1.0148-.6915-1.9162-1.5939-2.7249-.9231-.8106-2.0481-1.2781-3.4184-1.4073-1.7486-.1647-3.2411.3333-4.4538 1.4744-1.2334 1.139-1.924 2.6065-2.0924 4.3994-.1645 1.7505.2403 3.3215 1.2363 4.713.996 1.3925 2.3486 2.1577 4.0972 2.3224 1.3486.1273 2.5396-.1015 3.5947-.7041 1.0561-.6026 1.7447-1.3678 2.0865-2.2939l5.1718 1.9764c-.661 1.8313-2.0164 3.3638-4.027 4.6222-2.0334 1.2771-4.44 1.7742-7.2418 1.5109-3.3504-.3146-6.0053-1.6923-7.9894-4.1134z"/><path d="m109.542 37.9153 5.652 1.0966-4.171 21.5503-5.652-1.0967zm1.293-3.8935c-.52-.7692-.703-1.6035-.522-2.5394.178-.9152.66-1.6203 1.424-2.1194.765-.499 1.635-.6538 2.57-.4723.935.1814 1.664.6469 2.188 1.3954.523.7495.708 1.5829.53 2.498-.181.9359-.667 1.6618-1.431 2.1608-.769.5197-1.619.6785-2.554.497-.937-.1804-1.686-.6499-2.205-1.4201z"/><path d="m122.761 59.8108c-1.928-2.3718-2.761-5.1943-2.523-8.4694.242-3.3176 1.479-6.0099 3.729-8.0552 2.227-2.0257 4.861-2.9369 7.922-2.713 2.998.2189 5.262 1.4684 6.792 3.7682l.193-2.641 5.763.4221-1.598 21.8924-5.763-.4221.196-2.6834c-1.849 2.074-4.273 3.002-7.269 2.7821-3.062-.2249-5.536-1.5109-7.442-3.8807zm13.373-2.6755c1.293-1.1381 1.996-2.6371 2.134-4.5178.134-1.8382-.344-3.424-1.459-4.7169s-2.549-2.0138-4.3-2.1411c-1.794-.1311-3.295.3541-4.543 1.4734s-1.93 2.5996-2.066 4.4803c-.139 1.9023.317 3.5069 1.39 4.7968 1.072 1.289 2.484 2.0089 4.279 2.14 1.751.1273 3.273-.3767 4.565-1.5147z"/><path d="m152.399 33.0815 5.709-.2504 1.385 31.6448-5.708.2505z"/></g></svg>
+            </a>
+            <a href="https://minisocial.com/start" class="btn btn-primary header-cta">Start a Campaign</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    <span>159+ brands already scaling</span>
+                </div>
+
+                <h1>Your Competitors Have 50 Creators Making Content Right Now.<br><span style="color: var(--primary-gold);">You Have Zero.</span></h1>
+
+                <p class="hero-subtitle">Get authentic UGC from 25+ real micro-influencers in 7 days. Fully managed. 100% content ownership. Starting at $2,500.</p>
+
+                <div class="hero-cta-group">
+                    <a href="https://minisocial.com/start" class="btn btn-primary btn-large">Get Your 7-Day Content Plan →</a>
+                    <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+                </div>
+
+                <div class="hero-trust">
+                    <div class="hero-trust-avatars">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Creator" class="hero-trust-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Creator" class="hero-trust-avatar">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="Creator" class="hero-trust-avatar">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="Creator" class="hero-trust-avatar">
+                    </div>
+                    <div class="hero-trust-text">
+                        <strong>50,000+ creators</strong> ready to authentically showcase your brand
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <img src="assets/hero-creator.jpg" alt="Content creator making authentic UGC" class="hero-image">
+                </div>
+                <div class="hero-floating-card hero-floating-card-1">
+                    <div class="floating-stat">
+                        <div class="floating-stat-icon">📈</div>
+                        <div class="floating-stat-content">
+                            <h4>47%</h4>
+                            <p>Higher CTR on UGC</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-floating-card hero-floating-card-2">
+                    <div class="floating-stat">
+                        <div class="floating-stat-icon">⚡</div>
+                        <div class="floating-stat-content">
+                            <h4>7 Days</h4>
+                            <p>Content delivered</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <section class="social-proof-bar">
+        <div class="social-proof-inner">
+            <p class="social-proof-label">Trusted by 159+ DTC brands who discovered the fastest path to authentic content</p>
+            <div class="brand-logos">
+                <svg class="brand-logo" viewBox="0 0 120 40" fill="#000"><text x="0" y="28" font-family="Arial Black" font-size="20" font-weight="900">OLIPOP</text></svg>
+                <svg class="brand-logo" viewBox="0 0 100 40" fill="#000"><text x="0" y="28" font-family="Arial Black" font-size="20" font-weight="900">Native</text></svg>
+                <svg class="brand-logo" viewBox="0 0 150 40" fill="#000"><text x="0" y="28" font-family="Arial Black" font-size="18" font-weight="900">Magic Spoon</text></svg>
+                <svg class="brand-logo" viewBox="0 0 120 40" fill="#000"><text x="0" y="28" font-family="Arial Black" font-size="20" font-weight="900">Blueland</text></svg>
+                <svg class="brand-logo" viewBox="0 0 100 40" fill="#000"><text x="0" y="28" font-family="Arial Black" font-size="20" font-weight="900">Care/of</text></svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority/Credibility Section -->
+    <section style="background: var(--white); padding: 48px 20px; border-bottom: 1px solid var(--border-gray);">
+        <div class="container" style="max-width: 900px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; text-align: center;">
+                <div style="flex: 1; min-width: 200px;">
+                    <div style="font-size: 2.5rem; font-weight: 800; color: var(--black);">500+</div>
+                    <div style="font-size: 0.875rem; color: var(--text-medium);">Vetted Creators in Network</div>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <div style="font-size: 2.5rem; font-weight: 800; color: var(--black);">159+</div>
+                    <div style="font-size: 0.875rem; color: var(--text-medium);">Successful Campaigns in 2025</div>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <div style="font-size: 2.5rem; font-weight: 800; color: var(--black);">7</div>
+                    <div style="font-size: 0.875rem; color: var(--text-medium);">Days Average Turnaround</div>
+                </div>
+            </div>
+            <div style="margin-top: 40px; padding: 24px; background: var(--cream); border-radius: 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px; justify-content: center;">
+                <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--primary-gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem;">KB</div>
+                <div style="flex: 1; min-width: 250px; text-align: left;">
+                    <p style="font-style: italic; color: var(--text-dark); margin-bottom: 8px; font-size: 0.9375rem;">"Agencies charge $15K but deliver generic content. Creators deliver authenticity. We built minisocial to connect brands with real people who actually love making content."</p>
+                    <p style="font-size: 0.8125rem; color: var(--text-medium); margin: 0;"><strong style="color: var(--black);">Kirsten Baumberger</strong> · Co-Founder, minisocial (ex-agency, now building the alternative)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">The Content Trap</span>
+                <h2>You're Stuck Choosing Between Expensive and Exhausting</h2>
+                <p>Traditional agencies force you to choose: spend $15K/month for slow, generic content—or spend weeks managing freelancers with inconsistent results. <strong style="color: var(--black);">There's a third way.</strong></p>
+            </div>
+
+            <div class="problem-grid">
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">😰</div>
+                    <h3>The Agency Money Pit</h3>
+                    <p>$15K/month. 2-month timelines. Content that looks corporate because it IS corporate. You're paying premium prices for mediocre authenticity.</p>
+                    <span class="problem-stat">$15K+ per campaign</span>
+                </div>
+
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">🎭</div>
+                    <h3>The Freelancer Roulette</h3>
+                    <p>Finding vetted creators, managing timelines, chasing deliverables. Every project is a gamble. Sometimes brilliant, often frustrating.</p>
+                    <span class="problem-stat">40+ hrs/month wasted</span>
+                </div>
+
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">📉</div>
+                    <h3>The Content Gap Grows</h3>
+                    <p>Your competitors are flooding social with authentic creator content while you're stuck producing 5 pieces a month. The algorithm doesn't wait.</p>
+                    <span class="problem-stat">10x behind competitors</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="solution-intro animate-on-scroll">
+                <h2>What If <span class="solution-highlight">25 Creators</span> Made Content For You Simultaneously?</h2>
+                <p>While you sleep, real micro-influencers are creating authentic content about your brand. Content you own forever. Content that converts.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon">🙌</div>
+                    <h3>Zero Management</h3>
+                    <p>We handle everything. Creator sourcing, vetting, communication, payments, licensing. You just approve final content.</p>
+                </div>
+
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon">👑</div>
+                    <h3>100% Ownership</h3>
+                    <p>Every photo, video, and testimonial is yours forever. Use it anywhere—ads, website, email, print. No expiration dates.</p>
+                </div>
+
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>7-Day Turnaround</h3>
+                    <p>From brief to delivered content in one week. Not months. Not "we'll get back to you." Seven days.</p>
+                </div>
+            </div>
+
+            <div class="solution-cta animate-on-scroll">
+                <a href="https://minisocial.com/start" class="btn btn-primary btn-large">Get Your Content Library →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Simple Process</span>
+                <h2>From Brief to Content Library in 3 Steps</h2>
+                <p>No complicated platforms. No endless negotiations. Just results.</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <h3>Brief Us</h3>
+                    <p>Tell us your goals, brand voice, and what content you need. Takes 20 minutes.</p>
+                    <span class="step-time">Day 1</span>
+                </div>
+
+                <div class="step animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <h3>We Match Creators</h3>
+                    <p>Our team handpicks 25+ micro-influencers who authentically fit your brand. Not algorithms—real humans.</p>
+                    <span class="step-time">Days 2-3</span>
+                </div>
+
+                <div class="step animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <h3>You Own Everything</h3>
+                    <p>Creators produce content, post to their audiences, and you receive a fully-licensed content library.</p>
+                    <span class="step-time">Day 7</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section class="case-study">
+        <div class="container">
+            <div class="case-study-content">
+                <div class="case-study-visual animate-on-scroll">
+                    <div class="case-study-image">
+                        <img src="assets/ugc-example.png" alt="UGC content example" loading="lazy">
+                    </div>
+                    <div class="case-study-result">
+                        <div class="result-number">+47%</div>
+                        <div class="result-label">Higher CTR vs. Agency Content</div>
+                    </div>
+                </div>
+
+                <div class="case-study-text animate-on-scroll">
+                    <span class="section-label">Real Results</span>
+                    <h2>From $8K/Month Agency Spend to 65+ Assets in 7 Days</h2>
+                    <p>A leading beverage brand was spending $8K/month with agencies and getting 3-4 content pieces with 6-week timelines. Here's what happened when they switched to minisocial:</p>
+
+                    <div style="background: var(--white); padding: 20px; border-radius: 12px; margin: 24px 0; border-left: 4px solid var(--primary-gold);">
+                        <div style="display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.875rem;">
+                            <div><strong>Day 1:</strong> Brief submitted</div>
+                            <div><strong>Day 3:</strong> 25 creators matched</div>
+                            <div><strong>Day 5:</strong> First drafts delivered</div>
+                            <div><strong>Day 7:</strong> 65+ assets approved</div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">65+</div>
+                            <div class="stat-label">UGC Assets (vs. 4 from agency)</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">47%</div>
+                            <div class="stat-label">Higher CTR Than Previous</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">7</div>
+                            <div class="stat-label">Days (vs. 6 weeks)</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">69%</div>
+                            <div class="stat-label">Cost Reduction</div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <p class="testimonial-quote">"Before minisocial, our content felt corporate—because it was made by an agency. Now we have real people creating content that actually looks like it belongs on social media. Our audience can tell the difference, and our metrics prove it."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar" style="background: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face') center/cover;">  </div>
+                            <div class="testimonial-info">
+                                <h4>Sarah Chen</h4>
+                                <p>Marketing Director, Beverage Brand</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Comparison Section -->
+    <section class="value-comparison">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">The Real Cost</span>
+                <h2>Stop Overpaying for Content</h2>
+                <p>See how minisocial stacks up against traditional approaches.</p>
+            </div>
+
+            <div class="comparison-table">
+                <div class="comparison-row">
+                    <div class="comparison-card traditional animate-on-scroll">
+                        <span class="comparison-badge">Traditional Agency</span>
+                        <h3>Influencer Agency</h3>
+                        <div class="comparison-price">$15K-30K</div>
+                        <p class="comparison-detail">Per creator partnership</p>
+                        <ul class="comparison-features">
+                            <li>Limited content rights</li>
+                            <li>6-8 week timelines</li>
+                            <li>Minimum commitments</li>
+                            <li>Hidden management fees</li>
+                        </ul>
+                    </div>
+
+                    <div class="comparison-card diy animate-on-scroll">
+                        <span class="comparison-badge">DIY Approach</span>
+                        <h3>Managing Yourself</h3>
+                        <div class="comparison-price">40+ hrs</div>
+                        <p class="comparison-detail">Per month of your time</p>
+                        <ul class="comparison-features">
+                            <li>Endless DM negotiations</li>
+                            <li>Contract headaches</li>
+                            <li>Payment logistics</li>
+                            <li>Quality inconsistency</li>
+                        </ul>
+                    </div>
+
+                    <div class="comparison-card minisocial animate-on-scroll">
+                        <span class="comparison-badge">Recommended</span>
+                        <h3>minisocial</h3>
+                        <div class="comparison-price">$2,500</div>
+                        <p class="comparison-detail">For 25 creators</p>
+                        <ul class="comparison-features">
+                            <li>100% lifetime content rights</li>
+                            <li>7-day delivery guaranteed</li>
+                            <li>No contracts or commitments</li>
+                            <li>Fully managed service</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-cta animate-on-scroll">
+                <div class="comparison-savings">💰 Save $12,500+ compared to traditional agencies</div>
+                <br>
+                <a href="https://minisocial.com/start" class="btn btn-primary btn-large">Start For $2,500 →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="urgency-section">
+        <div class="container">
+            <div class="urgency-content animate-on-scroll">
+                <div class="urgency-badge">
+                    <span class="urgency-badge-icon">⚡</span>
+                    <span class="urgency-badge-text">Limited Availability</span>
+                </div>
+
+                <h2>Results in 7 Days or We Keep Working<br>(No Extra Charge)</h2>
+
+                <p>We're so confident in our process that we guarantee delivery. If it takes longer, we don't charge more. That's how sure we are.</p>
+
+                <a href="https://minisocial.com/start" class="btn btn-primary btn-large">Get Your 7-Day Content Plan →</a>
+
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <span class="trust-badge-icon">✓</span>
+                        <span>No contracts required</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge-icon">✓</span>
+                        <span>$0 setup fees</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge-icon">✓</span>
+                        <span>100% content ownership</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge-icon">✓</span>
+                        <span>7-day delivery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Questions?</span>
+                <h2>Everything You Need to Know</h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>How do you ensure content quality?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Every creator in our network is vetted before joining. We review their content style, engagement rates, and authenticity. Plus, you approve all final content before it goes live. If something isn't right, we revise until it is—at no extra cost.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>Do I really own the content forever?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes, 100%. Our licensing agreement gives you perpetual, unlimited rights to all content created. Use it on ads, your website, email campaigns, print materials—anywhere you want, for as long as you want. No expiration, no additional fees.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>What if I don't like something?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            We include unlimited revisions in every campaign. Our team works directly with creators to ensure the content matches your brief perfectly. If a piece doesn't meet your standards, we'll get it fixed or replaced.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>Is it really just $2,500?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. $2,500 gets you 25 micro-influencer creators, all their content, full licensing rights, and our complete management service. No hidden fees, no surprise charges. What you see is what you pay.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>How fast can I get started?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            You can submit your brief today and have creator matching begin within 24-48 hours. From brief to delivered content library takes just 7 days. Most brands are up and running within a week of first contact.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-content animate-on-scroll">
+                <h2>Your 65-Piece Content Library Is 7 Days Away</h2>
+                <p>Click below to claim your content plan. Then reply with your brief, and we'll have creator content for you by next week.</p>
+
+                <div class="final-cta-buttons">
+                    <a href="https://minisocial.com/start" class="btn btn-primary btn-large">Get Your 7-Day Content Plan →</a>
+                    <a href="https://minisocial.com/demo" class="btn btn-secondary">Schedule a Strategy Call</a>
+                </div>
+
+                <p class="final-cta-note">
+                    <strong>Takes 30 seconds. No credit card required.</strong> Results in 7 days or we keep working—no extra charge.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <svg class="footer-logo" fill="none" height="28" viewBox="0 0 160 68" xmlns="http://www.w3.org/2000/svg"><g fill="#000"><path d="m31.2887 17.2988c2.0373 1.0493 3.5583 2.9803 4.5691 5.8136l4.3858 12.2909-5.4015 1.931-3.9789-11.1539c-1.2029-3.3717-3.1239-4.5976-5.7552-3.6567-1.4156.5059-2.3131 1.3895-2.7022 2.6311-.4019 1.2682-.2817 2.8008.3655 4.6164l3.7583 10.5354-5.4409 1.9458-3.979-11.1538c-1.2028-3.3718-3.1041-4.6045-5.6753-3.6854-1.45503.5207-2.36627 1.4309-2.76033 2.7199-.41474 1.2958-.28076 2.8678.38125 4.7229l3.70208 10.3757-5.38173 1.924-7.37567-20.6715 5.38177-1.9241.87578 2.4547c.83539-2.571 2.52587-4.3225 5.05665-5.2278 2.8106-1.005 5.233-.7012 7.3097.8964.8945-2.6597 2.8559-4.5305 5.8655-5.6065 2.4914-.8925 4.7621-.8264 6.7993.2219z"/><path d="m43.2927 7.70689c-.7713-.51578-1.257-1.21893-1.4422-2.15384-.1822-.9142-.003-1.7495.5162-2.50098.5192-.75147 1.2669-1.22485 2.2008-1.41124s1.7851-.03155 2.5525.46351c.7674.49507 1.2521 1.19724 1.4343 2.11242.1862.93491.0109 1.79092-.5083 2.5424-.5152.77219-1.2423 1.24161-2.1762 1.428s-1.8057.03551-2.5771-.48027zm.2749 4.09371 5.6458-1.1263 4.2833 21.5276-5.6458 1.1262z"/><path d="m79.7615 10.6722c1.5319 1.6736 2.3722 4.0138 2.4993 7.0197l.5418 12.8284-5.7305.2426-.4965-11.7485c-.0729-1.715-.53-3.0316-1.3546-3.9724-.8225-.9191-2.0067-1.357-3.5504-1.2919-1.586.0671-2.8519.6933-3.7543 1.8984-.9241 1.2051-1.3447 2.7712-1.2629 4.6972l.458 10.8383-5.7098.2416-.927-21.93092 5.7098-.24161.1173 2.77313c1.6589-2.33921 3.9799-3.5611 6.9195-3.68635 2.8136-.11834 4.9868.65878 6.5403 2.33235z"/><path d="m93.9908 9.17324 5.6714.99116-3.7691 21.6232-5.6714-.9902zm1.2196-3.91714c-.533-.76036-.733-1.59073-.5684-2.52958.1595-.91814.6285-1.63215 1.3841-2.145951.7556-.5128194 1.6235-.684417 2.5613-.5207089.9388.1637079 1.6756.6153829 2.2136 1.3540399.538.73866.736 1.57001.576 2.48816-.163.93885-.635 1.67455-1.3907 2.18737-.7595.53451-1.6058.70907-2.5446.54536-.9388-.16272-1.6974-.61834-2.2313-1.37869z"/><path d="m34.1435 67.219c-2.2806-.6726-3.9927-1.7939-5.0971-3.3757l4.4627-3.004c.6915.9133 1.6205 1.5286 2.7938 1.8659 1.1536.3432 2.4057.2988 3.7563-.1321 1.0285-.3284 1.791-.7939 2.3013-1.4241s.6718-1.2377.4787-1.8432c-.2896-.9083-1.2747-1.3501-2.975-1.3185l-5.8251.1262c-3.7632.1124-6.0753-1.2179-6.9442-3.9428-.5537-1.7357-.1961-3.4733 1.0442-5.2268 1.2403-1.7534 3.0244-2.9901 5.3424-3.7307 2.1978-.7022 4.2883-.8353 6.2437-.4152 1.9417.4477 3.5229 1.3659 4.6972 2.7475l-4.3888 2.9586c-1.4284-1.3452-3.178-1.6765-5.234-1.0188-.8265.2643-1.4541.6647-1.9171 1.2348-.463.57-.6236 1.1114-.463 1.6153.2443.7673 1.0029 1.1253 2.2619 1.1016l5.6783-.1676c2.049-.0543 3.706.1952 5.0044.7149 1.3053.5395 2.2146 1.6499 2.7614 3.3659.6304 1.9783.3044 3.8836-.9635 5.6893-1.2826 1.8334-3.2539 3.1746-5.895 4.0178-2.4796.7909-4.8429.8343-7.1235.1617z"/><path d="m55.8785 58.969c-2.6243-1.7298-4.2784-4.2012-4.9453-7.4388-.662-3.217-.1182-6.141 1.6097-8.7692 1.7328-2.6075 4.2469-4.2505 7.5638-4.9349 3.2963-.6795 6.2546-.1647 8.8751 1.5444 2.6253 1.7297 4.2577 4.2051 4.9197 7.422.666 3.2377.1438 6.1578-1.5851 8.785s-4.2419 4.2712-7.5382 4.9507c-3.3169.6854-6.2753.1706-8.8997-1.5592zm11.8393-6.2061c.8551-1.4092 1.1073-3.0187.7359-4.8244s-1.2383-3.1844-2.581-4.1401c-1.3624-.9516-2.9337-1.2337-4.7168-.8658-1.7831.3678-3.114 1.2475-3.9898 2.6617s-1.128 3.0237-.7566 4.8284c.3714 1.8057 1.2383 3.1844 2.6018 4.1361 1.3624.9516 2.9337 1.2337 4.7168.8658 1.7821-.3678 3.114-1.2475 3.9897-2.6617z"/><path d="m81.4498 54.6763c-2.0047-2.4231-2.8411-5.29-2.5317-8.5809.3073-3.2692 1.6599-5.9092 4.0794-7.8944 2.3958-1.9665 5.2379-2.8057 8.546-2.4941 2.8027.2633 5.0931 1.2239 6.8742 2.86 1.7793 1.6568 2.8023 3.4349 3.1153 5.3155l-5.453 1.0188c-.1596-1.0148-.6915-1.9162-1.5939-2.7249-.9231-.8106-2.0481-1.2781-3.4184-1.4073-1.7486-.1647-3.2411.3333-4.4538 1.4744-1.2334 1.139-1.924 2.6065-2.0924 4.3994-.1645 1.7505.2403 3.3215 1.2363 4.713.996 1.3925 2.3486 2.1577 4.0972 2.3224 1.3486.1273 2.5396-.1015 3.5947-.7041 1.0561-.6026 1.7447-1.3678 2.0865-2.2939l5.1718 1.9764c-.661 1.8313-2.0164 3.3638-4.027 4.6222-2.0334 1.2771-4.44 1.7742-7.2418 1.5109-3.3504-.3146-6.0053-1.6923-7.9894-4.1134z"/><path d="m109.542 37.9153 5.652 1.0966-4.171 21.5503-5.652-1.0967zm1.293-3.8935c-.52-.7692-.703-1.6035-.522-2.5394.178-.9152.66-1.6203 1.424-2.1194.765-.499 1.635-.6538 2.57-.4723.935.1814 1.664.6469 2.188 1.3954.523.7495.708 1.5829.53 2.498-.181.9359-.667 1.6618-1.431 2.1608-.769.5197-1.619.6785-2.554.497-.937-.1804-1.686-.6499-2.205-1.4201z"/><path d="m122.761 59.8108c-1.928-2.3718-2.761-5.1943-2.523-8.4694.242-3.3176 1.479-6.0099 3.729-8.0552 2.227-2.0257 4.861-2.9369 7.922-2.713 2.998.2189 5.262 1.4684 6.792 3.7682l.193-2.641 5.763.4221-1.598 21.8924-5.763-.4221.196-2.6834c-1.849 2.074-4.273 3.002-7.269 2.7821-3.062-.2249-5.536-1.5109-7.442-3.8807zm13.373-2.6755c1.293-1.1381 1.996-2.6371 2.134-4.5178.134-1.8382-.344-3.424-1.459-4.7169s-2.549-2.0138-4.3-2.1411c-1.794-.1311-3.295.3541-4.543 1.4734s-1.93 2.5996-2.066 4.4803c-.139 1.9023.317 3.5069 1.39 4.7968 1.072 1.289 2.484 2.0089 4.279 2.14 1.751.1273 3.273-.3767 4.565-1.5147z"/><path d="m152.399 33.0815 5.709-.2504 1.385 31.6448-5.708.2505z"/></g></svg>
+        <p>© 2026 minisocial. The UGC platform for DTC brands.</p>
+        <div class="footer-links">
+            <a href="https://minisocial.com/privacy">Privacy</a>
+            <a href="https://minisocial.com/terms">Terms</a>
+            <a href="https://minisocial.com/contact">Contact</a>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta" id="stickyCta">
+        <a href="https://minisocial.com/start" class="btn btn-primary">Get Your 7-Day Content Plan →</a>
+    </div>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Sticky CTA visibility
+        const stickyCta = document.getElementById('stickyCta');
+        const heroSection = document.querySelector('.hero');
+        const finalCta = document.querySelector('.final-cta');
+
+        const stickyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.target === heroSection) {
+                    if (!entry.isIntersecting) {
+                        stickyCta.classList.add('visible');
+                    } else {
+                        stickyCta.classList.remove('visible');
+                    }
+                }
+                if (entry.target === finalCta) {
+                    if (entry.isIntersecting) {
+                        stickyCta.classList.remove('visible');
+                    }
+                }
+            });
+        }, { threshold: 0 });
+
+        stickyObserver.observe(heroSection);
+        stickyObserver.observe(finalCta);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        const header = document.querySelector('.header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
