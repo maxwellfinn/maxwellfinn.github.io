@@ -1,0 +1,2079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 Days of Creator Marketing Tips — Free SMS Course | minisocial</title>
+    <meta name="description" content="Join 12,000+ DTC marketers getting daily micro-tips on UGC, creator marketing, and content strategy. Free 30-day SMS course from the team behind 159+ brand campaigns.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="30 Days of Creator Marketing Tips — Free SMS Course">
+    <meta property="og:description" content="Daily micro-tips that took brands from $0 to $10M+ in UGC-driven revenue. Delivered free to your phone.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/og-image.jpg">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "30 Days of Creator Marketing Tips",
+        "description": "Free SMS course on UGC, micro-influencer strategy, and creator content for DTC brands",
+        "provider": {
+            "@type": "Organization",
+            "name": "minisocial",
+            "url": "https://minisocial.com"
+        },
+        "courseMode": "SMS",
+        "isAccessibleForFree": true,
+        "numberOfCredits": 0,
+        "timeRequired": "PT5M"
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== CSS RESET & VARIABLES ===== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --gold: #FFD93D;
+            --gold-hover: #E6C235;
+            --gold-light: #FFF4CC;
+            --gold-glow: rgba(255, 217, 61, 0.4);
+            --black: #000000;
+            --text-dark: #1A1A1A;
+            --text-body: #374151;
+            --text-gray: #6B7280;
+            --text-light: #9CA3AF;
+            --white: #FFFFFF;
+            --cream: #FFFDF5;
+            --border: #E5E7EB;
+            --success: #10B981;
+            --success-light: #D1FAE5;
+
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+            --max-width: 1200px;
+            --transition: 0.2s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-body);
+            background: var(--white);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: var(--black);
+            text-decoration: underline;
+            text-decoration-color: var(--gold);
+            text-underline-offset: 3px;
+            transition: all var(--transition);
+        }
+
+        a:hover {
+            color: var(--gold-hover);
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 20px;
+        }
+
+        .header-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-logo {
+            height: 28px;
+        }
+
+        .header-cta {
+            display: none;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--gold);
+            color: var(--black);
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all var(--transition);
+        }
+
+        .header-cta:hover {
+            background: var(--gold-hover);
+            color: var(--black);
+            transform: translateY(-1px);
+        }
+
+        @media (min-width: 640px) {
+            .header-cta {
+                display: inline-flex;
+            }
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            padding: 120px 20px 80px;
+            background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        @media (min-width: 900px) {
+            .hero-inner {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--gold-light);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 24px;
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.25rem);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--black);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--text-gray);
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
+
+        /* ===== FORM STYLES ===== */
+        .form-container {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border);
+        }
+
+        .form-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .form-subtitle {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 24px;
+        }
+
+        .phone-input-wrapper {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .country-select {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 14px 12px;
+            background: var(--cream);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition);
+            min-width: 90px;
+        }
+
+        .country-select:hover, .country-select:focus {
+            border-color: var(--gold);
+        }
+
+        .phone-input {
+            flex: 1;
+            padding: 14px 16px;
+            font-size: 16px;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            outline: none;
+            transition: all var(--transition);
+            font-family: var(--font-sans);
+        }
+
+        .phone-input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px var(--gold-glow);
+        }
+
+        .phone-input::placeholder {
+            color: var(--text-light);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 16px 32px;
+            background: var(--gold);
+            color: var(--black);
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-submit:hover {
+            background: var(--gold-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px var(--gold-glow);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .form-microcopy {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-light);
+            margin-top: 16px;
+            line-height: 1.5;
+        }
+
+        .form-trust {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        .trust-icon {
+            color: var(--success);
+        }
+
+        /* ===== COUNTDOWN TIMER ===== */
+        .countdown-container {
+            background: linear-gradient(135deg, var(--black) 0%, #1A1A1A 100%);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .countdown-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .countdown-unit {
+            text-align: center;
+        }
+
+        .countdown-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .countdown-unit-label {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .countdown-separator {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        /* ===== LOADING STATE ===== */
+        .btn-submit.loading {
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        .btn-submit .spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--black);
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        .btn-submit.loading .spinner {
+            display: block;
+        }
+
+        .btn-submit.loading .btn-text {
+            display: none;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* ===== GUARANTEE BADGE ===== */
+        .guarantee-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+            padding: 12px 16px;
+            background: var(--success-light);
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #065F46;
+        }
+
+        .guarantee-badge svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        /* ===== COUNTRY DROPDOWN ===== */
+        .country-select-wrapper {
+            position: relative;
+        }
+
+        .country-select {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 14px 12px;
+            background: var(--cream);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition);
+            min-width: 100px;
+        }
+
+        .country-select:hover, .country-select:focus {
+            border-color: var(--gold);
+        }
+
+        .country-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            margin-top: 4px;
+            background: var(--white);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            z-index: 100;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .country-dropdown.open {
+            display: block;
+        }
+
+        .country-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 14px;
+            cursor: pointer;
+            transition: background var(--transition);
+        }
+
+        .country-option:hover {
+            background: var(--cream);
+        }
+
+        .country-option.selected {
+            background: var(--gold-light);
+        }
+
+        /* ===== HERO VISUAL ===== */
+        .hero-visual {
+            position: relative;
+            display: block;
+        }
+
+        @media (max-width: 899px) {
+            .hero-visual {
+                max-width: 280px;
+                margin: 0 auto;
+            }
+
+            .hero-phone-mockup {
+                transform: scale(0.85);
+            }
+
+            .floating-card {
+                display: none;
+            }
+        }
+
+        .hero-phone-mockup {
+            max-width: 320px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .phone-frame {
+            background: var(--black);
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+        }
+
+        .phone-screen {
+            background: var(--white);
+            border-radius: 32px;
+            padding: 20px;
+            min-height: 500px;
+        }
+
+        .sms-preview {
+            margin-bottom: 16px;
+        }
+
+        .sms-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .sms-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .sms-sender {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--black);
+        }
+
+        .sms-bubble {
+            background: var(--cream);
+            border-radius: 16px 16px 16px 4px;
+            padding: 16px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            max-width: 85%;
+        }
+
+        .sms-bubble strong {
+            color: var(--black);
+        }
+
+        .sms-time {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-left: 4px;
+        }
+
+        .floating-card {
+            position: absolute;
+            background: var(--white);
+            border-radius: 12px;
+            padding: 12px 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            font-size: 13px;
+            font-weight: 500;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-card-1 {
+            top: 10%;
+            right: -20px;
+            animation-delay: 0s;
+        }
+
+        .floating-card-2 {
+            bottom: 20%;
+            left: -30px;
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* ===== VALUE STACK SECTION ===== */
+        .value-stack {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .section-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-gray);
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .value-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .value-card {
+            background: var(--cream);
+            border-radius: 20px;
+            padding: 32px;
+            text-align: center;
+            transition: all var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .value-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+        }
+
+        .value-days {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gold-hover);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+
+        .value-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 16px;
+        }
+
+        .value-topics {
+            list-style: none;
+            text-align: left;
+        }
+
+        .value-topics li {
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--text-body);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .value-topics li::before {
+            content: "✓";
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        /* ===== SAMPLE TIPS SECTION ===== */
+        .sample-tips {
+            padding: 80px 20px;
+            background: var(--black);
+        }
+
+        .sample-tips .section-header {
+            color: var(--white);
+        }
+
+        .sample-tips h2 {
+            color: var(--white);
+        }
+
+        .sample-tips .section-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .tips-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .tip-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all var(--transition);
+        }
+
+        .tip-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+
+        .tip-day {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--gold);
+            color: var(--black);
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 100px;
+            margin-bottom: 16px;
+        }
+
+        .tip-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .tip-preview {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+        }
+
+        /* ===== SOCIAL PROOF SECTION ===== */
+        .social-proof {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .logos-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            margin-bottom: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .brand-logo {
+            height: 28px;
+            opacity: 0.6;
+            filter: grayscale(100%);
+            transition: all var(--transition);
+        }
+
+        .brand-logo:hover {
+            opacity: 1;
+            filter: none;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            background: var(--cream);
+            border-radius: 16px;
+            padding: 24px;
+            border-left: 4px solid var(--gold);
+        }
+
+        .testimonial-quote {
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--gold-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--black);
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--black);
+        }
+
+        .testimonial-title {
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        .live-counter {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: var(--success-light);
+            border-radius: 12px;
+        }
+
+        .live-counter-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #065F46;
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        /* ===== WHO IT'S FOR SECTION ===== */
+        .who-for {
+            padding: 80px 20px;
+            background: var(--cream);
+        }
+
+        .checklist {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+
+        .check-icon {
+            width: 28px;
+            height: 28px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .checklist-text {
+            font-size: 1rem;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        /* ===== SECONDARY CTA SECTION ===== */
+        .secondary-cta {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--cream) 0%, #FFF9E6 100%);
+        }
+
+        .cta-box {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            margin-bottom: 12px;
+        }
+
+        .cta-box .section-subtitle {
+            margin-bottom: 32px;
+        }
+
+        .cta-form {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .urgency-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: var(--black);
+            color: var(--white);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .urgency-badge span {
+            color: var(--gold);
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .faq-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--black);
+            cursor: pointer;
+            text-align: left;
+            font-family: var(--font-sans);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--gold);
+            transition: transform var(--transition);
+        }
+
+        .faq-item.open .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer-inner {
+            padding-bottom: 24px;
+            font-size: 15px;
+            color: var(--text-body);
+            line-height: 1.7;
+        }
+
+        /* ===== COMPLIANCE FOOTER ===== */
+        .footer {
+            padding: 40px 20px;
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .footer-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-logo {
+            height: 24px;
+            filter: brightness(0) invert(1);
+            margin: 0 auto 24px;
+        }
+
+        .compliance-text {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-copyright {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* ===== SUCCESS STATE ===== */
+        .success-state {
+            display: none;
+            text-align: center;
+            padding: 32px;
+        }
+
+        .success-state.visible {
+            display: block;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--success-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 40px;
+        }
+
+        .success-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 12px;
+        }
+
+        .success-subtitle {
+            font-size: 1rem;
+            color: var(--text-gray);
+            margin-bottom: 24px;
+        }
+
+        .success-steps {
+            text-align: left;
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .success-step {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            font-size: 14px;
+            color: var(--text-body);
+        }
+
+        .success-step-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* ===== STICKY MOBILE CTA ===== */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            padding: 16px 20px;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .sticky-cta.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-cta .btn-submit {
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .sticky-cta {
+                display: none;
+            }
+        }
+
+        /* ===== FORM ERROR STATES ===== */
+        .form-error {
+            color: #DC2626;
+            font-size: 13px;
+            margin-top: 8px;
+            display: none;
+        }
+
+        .form-error.visible {
+            display: block;
+        }
+
+        .phone-input.error {
+            border-color: #DC2626;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Screen reader only class */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Success Share CTA */
+        .success-share {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .success-share-text {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 12px;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 16px;
+            background: var(--cream);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: all var(--transition);
+            cursor: pointer;
+        }
+
+        .share-btn:hover {
+            background: var(--gold-light);
+            border-color: var(--gold);
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <svg class="header-logo" viewBox="0 0 160 68" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="#000"><path d="m31.2887 17.2988c2.0373 1.0493 3.5583 2.9803 4.5691 5.8136l4.3858 12.2909-5.4015 1.931-3.9789-11.1539c-1.2029-3.3717-3.1239-4.5976-5.7552-3.6567-1.4156.5059-2.3131 1.3895-2.7022 2.6311-.4019 1.2682-.2817 2.8008.3655 4.6164l3.7583 10.5354-5.4409 1.9458-3.979-11.1538c-1.2028-3.3718-3.1041-4.6045-5.6753-3.6854-1.45503.5207-2.36627 1.4309-2.76033 2.7199-.41474 1.2958-.28076 2.8678.38125 4.7229l3.70208 10.3757-5.38173 1.924-7.37567-20.6715 5.38177-1.9241.87578 2.4547c.83539-2.571 2.52587-4.3225 5.05665-5.2278 2.8106-1.005 5.233-.7012 7.3097.8964.8945-2.6597 2.8559-4.5305 5.8655-5.6065 2.4914-.8925 4.7621-.8264 6.7993.2219z"/><path d="m43.2927 7.70689c-.7713-.51578-1.257-1.21893-1.4422-2.15384-.1822-.9142-.003-1.7495.5162-2.50098.5192-.75147 1.2669-1.22485 2.2008-1.41124s1.7851-.03155 2.5525.46351c.7674.49507 1.2521 1.19724 1.4343 2.11242.1862.93491.0109 1.79092-.5083 2.5424-.5152.77219-1.2423 1.24161-2.1762 1.428s-1.8057.03551-2.5771-.48027zm.2749 4.09371 5.6458-1.1263 4.2833 21.5276-5.6458 1.1262z"/><path d="m79.7615 10.6722c1.5319 1.6736 2.3722 4.0138 2.4993 7.0197l.5418 12.8284-5.7305.2426-.4965-11.7485c-.0729-1.715-.53-3.0316-1.3546-3.9724-.8225-.9191-2.0067-1.357-3.5504-1.2919-1.586.0671-2.8519.6933-3.7543 1.8984-.9241 1.2051-1.3447 2.7712-1.2629 4.6972l.458 10.8383-5.7098.2416-.927-21.93092 5.7098-.24161.1173 2.77313c1.6589-2.33921 3.9799-3.5611 6.9195-3.68635 2.8136-.11834 4.9868.65878 6.5403 2.33235z"/><path d="m93.9908 9.17324 5.6714.99116-3.7691 21.6232-5.6714-.9902zm1.2196-3.91714c-.533-.76036-.733-1.59073-.5684-2.52958.1595-.91814.6285-1.63215 1.3841-2.145951.7556-.5128194 1.6235-.684417 2.5613-.5207089.9388.1637079 1.6756.6153829 2.2136 1.3540399.538.73866.736 1.57001.576 2.48816-.163.93885-.635 1.67455-1.3907 2.18737-.7595.53451-1.6058.70907-2.5446.54536-.9388-.16272-1.6974-.61834-2.2313-1.37869z"/><path d="m34.1435 67.219c-2.2806-.6726-3.9927-1.7939-5.0971-3.3757l4.4627-3.004c.6915.9133 1.6205 1.5286 2.7938 1.8659 1.1536.3432 2.4057.2988 3.7563-.1321 1.0285-.3284 1.791-.7939 2.3013-1.4241s.6718-1.2377.4787-1.8432c-.2896-.9083-1.2747-1.3501-2.975-1.3185l-5.8251.1262c-3.7632.1124-6.0753-1.2179-6.9442-3.9428-.5537-1.7357-.1961-3.4733 1.0442-5.2268 1.2403-1.7534 3.0244-2.9901 5.3424-3.7307 2.1978-.7022 4.2883-.8353 6.2437-.4152 1.9417.4477 3.5229 1.3659 4.6972 2.7475l-4.3888 2.9586c-1.4284-1.3452-3.178-1.6765-5.234-1.0188-.8265.2643-1.4541.6647-1.9171 1.2348-.463.57-.6236 1.1114-.463 1.6153.2443.7673 1.0029 1.1253 2.2619 1.1016l5.6783-.1676c2.049-.0543 3.706.1952 5.0044.7149 1.3053.5395 2.2146 1.6499 2.7614 3.3659.6304 1.9783.3044 3.8836-.9635 5.6893-1.2826 1.8334-3.2539 3.1746-5.895 4.0178-2.4796.7909-4.8429.8343-7.1235.1617z"/><path d="m55.8785 58.969c-2.6243-1.7298-4.2784-4.2012-4.9453-7.4388-.662-3.217-.1182-6.141 1.6097-8.7692 1.7328-2.6075 4.2469-4.2505 7.5638-4.9349 3.2963-.6795 6.2546-.1647 8.8751 1.5444 2.6253 1.7297 4.2577 4.2051 4.9197 7.422.666 3.2377.1438 6.1578-1.5851 8.785s-4.2419 4.2712-7.5382 4.9507c-3.3169.6854-6.2753.1706-8.8997-1.5592zm11.8393-6.2061c.8551-1.4092 1.1073-3.0187.7359-4.8244s-1.2383-3.1844-2.581-4.1401c-1.3624-.9516-2.9337-1.2337-4.7168-.8658-1.7831.3678-3.114 1.2475-3.9898 2.6617s-1.128 3.0237-.7566 4.8284c.3714 1.8057 1.2383 3.1844 2.6018 4.1361 1.3624.9516 2.9337 1.2337 4.7168.8658 1.7821-.3678 3.114-1.2475 3.9897-2.6617z"/><path d="m81.4498 54.6763c-2.0047-2.4231-2.8411-5.29-2.5317-8.5809.3073-3.2692 1.6599-5.9092 4.0794-7.8944 2.3958-1.9665 5.2379-2.8057 8.546-2.4941 2.8027.2633 5.0931 1.2239 6.8742 2.86 1.7793 1.6568 2.8023 3.4349 3.1153 5.3155l-5.453 1.0188c-.1596-1.0148-.6915-1.9162-1.5939-2.7249-.9231-.8106-2.0481-1.2781-3.4184-1.4073-1.7486-.1647-3.2411.3333-4.4538 1.4744-1.2334 1.139-1.924 2.6065-2.0924 4.3994-.1645 1.7505.2403 3.3215 1.2363 4.713.996 1.3925 2.3486 2.1577 4.0972 2.3224 1.3486.1273 2.5396-.1015 3.5947-.7041 1.0561-.6026 1.7447-1.3678 2.0865-2.2939l5.1718 1.9764c-.661 1.8313-2.0164 3.3638-4.027 4.6222-2.0334 1.2771-4.44 1.7742-7.2418 1.5109-3.3504-.3146-6.0053-1.6923-7.9894-4.1134z"/><path d="m109.542 37.9153 5.652 1.0966-4.171 21.5503-5.652-1.0967zm1.293-3.8935c-.52-.7692-.703-1.6035-.522-2.5394.178-.9152.66-1.6203 1.424-2.1194.765-.499 1.635-.6538 2.57-.4723.935.1814 1.664.6469 2.188 1.3954.523.7495.708 1.5829.53 2.498-.181.9359-.667 1.6618-1.431 2.1608-.769.5197-1.619.6785-2.554.497-.937-.1804-1.686-.6499-2.205-1.4201z"/><path d="m122.761 59.8108c-1.928-2.3718-2.761-5.1943-2.523-8.4694.242-3.3176 1.479-6.0099 3.729-8.0552 2.227-2.0257 4.861-2.9369 7.922-2.713 2.998.2189 5.262 1.4684 6.792 3.7682l.193-2.641 5.763.4221-1.598 21.8924-5.763-.4221.196-2.6834c-1.849 2.074-4.273 3.002-7.269 2.7821-3.062-.2249-5.536-1.5109-7.442-3.8807zm13.373-2.6755c1.293-1.1381 1.996-2.6371 2.134-4.5178.134-1.8382-.344-3.424-1.459-4.7169s-2.549-2.0138-4.3-2.1411c-1.794-.1311-3.295.3541-4.543 1.4734s-1.93 2.5996-2.066 4.4803c-.139 1.9023.317 3.5069 1.39 4.7968 1.072 1.289 2.484 2.0089 4.279 2.14 1.751.1273 3.273-.3767 4.565-1.5147z"/><path d="m152.399 33.0815 5.709-.2504 1.385 31.6448-5.708.2505z"/></g></svg>
+            <a href="#hero-form" class="header-cta">Get Free Tips →</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge fade-in">
+                    <span class="hero-badge-dot"></span>
+                    <span>Free 30-Day SMS Course</span>
+                </div>
+
+                <h1 class="fade-in">The UGC Playbook Your Competitors Don't Have — Texted Daily</h1>
+
+                <p class="hero-subtitle fade-in">Join 12,000+ DTC marketers getting daily micro-tips that took brands from $0 to $10M+ in UGC-driven revenue.</p>
+
+                <div class="form-container fade-in" id="hero-form">
+                    <div id="form-state">
+                        <!-- Countdown Timer with ARIA live region -->
+                        <div class="countdown-container">
+                            <div class="countdown-label">⚡ Free Enrollment Closes Friday, Feb 14 at Midnight</div>
+                            <div class="countdown-timer" role="timer" aria-live="polite" aria-atomic="true">
+                                <div class="countdown-unit">
+                                    <div class="countdown-value" id="countdown-hours">23</div>
+                                    <div class="countdown-unit-label">Hours</div>
+                                </div>
+                                <span class="countdown-separator" aria-hidden="true">:</span>
+                                <div class="countdown-unit">
+                                    <div class="countdown-value" id="countdown-minutes">59</div>
+                                    <div class="countdown-unit-label">Min</div>
+                                </div>
+                                <span class="countdown-separator" aria-hidden="true">:</span>
+                                <div class="countdown-unit">
+                                    <div class="countdown-value" id="countdown-seconds">59</div>
+                                    <div class="countdown-unit-label">Sec</div>
+                                </div>
+                            </div>
+                            <div class="sr-only" id="countdown-sr" aria-live="assertive"></div>
+                        </div>
+
+                        <h3 class="form-title">Get 30 Days of Creator Marketing Tips</h3>
+                        <p class="form-subtitle">One actionable tip per day. Straight to your phone.</p>
+
+                        <form id="sms-form">
+                            <div class="phone-input-wrapper">
+                                <div class="country-select-wrapper">
+                                    <div class="country-select" id="country-select" tabindex="0" role="button" aria-expanded="false">
+                                        <span class="country-flag">🇺🇸</span>
+                                        <span class="country-code">+1</span>
+                                        <span style="margin-left: auto; font-size: 10px;">▼</span>
+                                    </div>
+                                    <div class="country-dropdown" id="country-dropdown">
+                                        <div class="country-option selected" data-code="+1" data-flag="🇺🇸">🇺🇸 United States (+1)</div>
+                                        <div class="country-option" data-code="+1" data-flag="🇨🇦">🇨🇦 Canada (+1)</div>
+                                        <div class="country-option" data-code="+44" data-flag="🇬🇧">🇬🇧 United Kingdom (+44)</div>
+                                        <div class="country-option" data-code="+61" data-flag="🇦🇺">🇦🇺 Australia (+61)</div>
+                                        <div class="country-option" data-code="+49" data-flag="🇩🇪">🇩🇪 Germany (+49)</div>
+                                        <div class="country-option" data-code="+33" data-flag="🇫🇷">🇫🇷 France (+33)</div>
+                                        <div class="country-option" data-code="+31" data-flag="🇳🇱">🇳🇱 Netherlands (+31)</div>
+                                        <div class="country-option" data-code="+34" data-flag="🇪🇸">🇪🇸 Spain (+34)</div>
+                                    </div>
+                                </div>
+                                <input type="tel" class="phone-input" id="phone-input" placeholder="(555) 555-5555" required>
+                            </div>
+                            <p class="form-error" id="form-error">Please enter a valid phone number</p>
+
+                            <button type="submit" class="btn-submit" id="submit-btn">
+                                <span class="btn-text">Send My Free Tips →</span>
+                                <span class="spinner"></span>
+                            </button>
+                        </form>
+
+                        <p class="form-microcopy">
+                            30 tips over 30 days · Reply STOP anytime · Msg & data rates may apply
+                        </p>
+
+                        <!-- Guarantee Badge -->
+                        <div class="guarantee-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                            <span>100% Risk-Free — Cancel anytime with one text. No questions asked.</span>
+                        </div>
+
+                        <div class="form-trust">
+                            <div class="trust-item">
+                                <span class="trust-icon">🔒</span>
+                                <span>TCPA Compliant</span>
+                            </div>
+                            <div class="trust-item">
+                                <span class="trust-icon">✓</span>
+                                <span>12,847 subscribed</span>
+                            </div>
+                            <div class="trust-item">
+                                <span class="trust-icon">✓</span>
+                                <span>No spam ever</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="success-state" id="success-state" role="alert" aria-live="assertive">
+                        <div class="success-icon">🎉</div>
+                        <h3 class="success-title">You're In!</h3>
+                        <p class="success-subtitle">Your first tip is on its way. Check your phone!</p>
+                        <div class="success-steps">
+                            <div class="success-step">
+                                <span class="success-step-icon">1</span>
+                                <span>Check your texts in the next 60 seconds</span>
+                            </div>
+                            <div class="success-step">
+                                <span class="success-step-icon">2</span>
+                                <span>Reply YES to confirm your subscription</span>
+                            </div>
+                            <div class="success-step">
+                                <span class="success-step-icon">3</span>
+                                <span>Get ready for 30 days of game-changing tips</span>
+                            </div>
+                        </div>
+
+                        <!-- Referral Share CTA -->
+                        <div class="success-share">
+                            <p class="success-share-text">Know someone who'd benefit? Share with a colleague:</p>
+                            <div class="share-buttons">
+                                <a href="https://twitter.com/intent/tweet?text=Just%20signed%20up%20for%20minisocial%27s%20free%2030-day%20creator%20marketing%20tips%20via%20SMS.%20Highly%20recommend%20for%20DTC%20marketers!&url=https://maxwellfinn.github.io/minisocial-sms-tips" target="_blank" rel="noopener" class="share-btn">
+                                    𝕏 Share
+                                </a>
+                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://maxwellfinn.github.io/minisocial-sms-tips" target="_blank" rel="noopener" class="share-btn">
+                                    in Share
+                                </a>
+                                <button class="share-btn" onclick="navigator.clipboard.writeText('https://maxwellfinn.github.io/minisocial-sms-tips'); this.textContent='✓ Copied!';">
+                                    📋 Copy Link
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="sms-preview">
+                                <div class="sms-header">
+                                    <div class="sms-avatar">ms</div>
+                                    <span class="sms-sender">minisocial</span>
+                                </div>
+                                <div class="sms-bubble">
+                                    <strong>Day 3 Tip:</strong> Why do 10 micro-influencers beat 1 macro?
+                                    <br><br>
+                                    The math: Micro-influencers have 60% higher engagement rates and cost 1/10th the price.
+                                    <br><br>
+                                    10 creators × 10K followers each = 100K reach at 6% engagement = 6,000 engaged users.
+                                    <br><br>
+                                    1 macro × 100K followers at 1% = 1,000 engaged users.
+                                    <br><br>
+                                    <strong>Same budget. 6x the results.</strong>
+                                </div>
+                                <span class="sms-time">8:02 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-card floating-card-1">
+                        ✓ Day 12 tip opened
+                    </div>
+                    <div class="floating-card floating-card-2">
+                        📈 47% CTR increase
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Stack Section -->
+    <section class="value-stack fade-in">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-label">What You'll Learn</span>
+                <h2>30 Days. 30 Game-Changing Tips.</h2>
+                <p class="section-subtitle">From UGC basics to scaling strategies—everything you need to master creator marketing.</p>
+            </div>
+
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">📚</div>
+                    <div class="value-days">Days 1-10</div>
+                    <h3 class="value-title">Foundation</h3>
+                    <ul class="value-topics">
+                        <li>Why UGC outperforms brand content 6.9x</li>
+                        <li>Micro vs. macro influencer economics</li>
+                        <li>The trust psychology behind UGC</li>
+                        <li>Content formats that convert</li>
+                    </ul>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <div class="value-days">Days 11-20</div>
+                    <h3 class="value-title">Strategy</h3>
+                    <ul class="value-topics">
+                        <li>The brief template with 100% opt-in rates</li>
+                        <li>Creator selection metrics that predict ROI</li>
+                        <li>Multi-platform content repurposing</li>
+                        <li>Licensing clauses you're missing</li>
+                    </ul>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🚀</div>
+                    <div class="value-days">Days 21-30</div>
+                    <h3 class="value-title">Scaling</h3>
+                    <ul class="value-topics">
+                        <li>The ONE metric that predicts ad performance</li>
+                        <li>Building a perpetual content machine</li>
+                        <li>Budget allocation: $3K → $30K</li>
+                        <li>Your 30-day launch blueprint</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Tips Section -->
+    <section class="sample-tips fade-in">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-label" style="color: var(--gold);">Sneak Peek</span>
+                <h2>Here's a Taste of What's Coming</h2>
+                <p class="section-subtitle">Real tips from the course. No fluff. Just actionable insights.</p>
+            </div>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <span class="tip-day">Day 3</span>
+                    <h3 class="tip-title">Why 10 micro-influencers beat 1 macro influencer (the math)</h3>
+                    <p class="tip-preview">The engagement economics that top DTC brands understand—and agencies never tell you about.</p>
+                </div>
+
+                <div class="tip-card">
+                    <span class="tip-day">Day 12</span>
+                    <h3 class="tip-title">The brief template with 100% creator opt-in rate</h3>
+                    <p class="tip-preview">The exact framework we use for 159+ brand campaigns. Creators actually want to work with you.</p>
+                </div>
+
+                <div class="tip-card">
+                    <span class="tip-day">Day 24</span>
+                    <h3 class="tip-title">The licensing clause DTC brands always miss</h3>
+                    <p class="tip-preview">One legal detail that can save you $8K+ in content rights. Most brands learn this the hard way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof fade-in">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-label">Trusted By</span>
+                <h2>159+ DTC Brands Learn From Us</h2>
+            </div>
+
+            <div class="logos-row">
+                <svg class="brand-logo" viewBox="0 0 120 40" fill="#000"><text x="0" y="28" font-family="Arial Black" font-size="20" font-weight="900">OLIPOP</text></svg>
+                <svg class="brand-logo" viewBox="0 0 100 40" fill="#000"><text x="0" y="28" font-family="Arial Black" font-size="20" font-weight="900">Native</text></svg>
+                <svg class="brand-logo" viewBox="0 0 150 40" fill="#000"><text x="0" y="28" font-family="Arial Black" font-size="18" font-weight="900">Magic Spoon</text></svg>
+                <svg class="brand-logo" viewBox="0 0 120 40" fill="#000"><text x="0" y="28" font-family="Arial Black" font-size="20" font-weight="900">Blueland</text></svg>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"These tips literally changed how we run our creator program. Day 17 alone saved us $8K in licensing mistakes."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SC</div>
+                        <div>
+                            <div class="testimonial-name">Sarah Chen</div>
+                            <div class="testimonial-title">VP of Growth, OLIPOP</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"I look forward to these texts every morning. Quick, actionable, no fluff. Exactly what busy marketers need."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MT</div>
+                        <div>
+                            <div class="testimonial-name">Marcus Thompson</div>
+                            <div class="testimonial-title">CMO, Blueland</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"We implemented the Day 7 framework and saw a 47% improvement in creator response rates within a week."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JR</div>
+                        <div>
+                            <div class="testimonial-name">Jessica Rodriguez</div>
+                            <div class="testimonial-title">VP Marketing, Native</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="live-counter">
+                <div class="live-counter-text">
+                    <span class="live-dot"></span>
+                    <span id="live-readers">2,847</span> marketers reading today's tip right now
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For Section -->
+    <section class="who-for fade-in">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-label">Is This For You?</span>
+                <h2>This Free SMS Course Is Perfect If...</h2>
+            </div>
+
+            <div class="checklist">
+                <div class="checklist-item">
+                    <span class="check-icon">✓</span>
+                    <span class="checklist-text">You're a DTC brand spending $100K+ annually on paid acquisition</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">✓</span>
+                    <span class="checklist-text">You're tired of waiting 6+ weeks for agency content that underperforms</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">✓</span>
+                    <span class="checklist-text">You want to scale UGC without managing creators yourself</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">✓</span>
+                    <span class="checklist-text">You're curious about micro-influencers but don't know where to start</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">✓</span>
+                    <span class="checklist-text">You want insider tips from the team behind 159+ brand campaigns</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secondary CTA Section -->
+    <section class="secondary-cta fade-in">
+        <div class="section-inner">
+            <div class="cta-box">
+                <h2>🎯 Get Day 1's "10 Micro vs 1 Macro" Framework Free</h2>
+                <p class="section-subtitle">12,847 marketers already have it. The math that proves 10 small creators beat 1 big one — arriving in 60 seconds.</p>
+
+                <div class="cta-form">
+                    <div class="urgency-badge">
+                        ⚡ <span id="subscriber-count">12,847</span> marketers joined this week
+                    </div>
+
+                    <!-- Mini Countdown -->
+                    <div class="countdown-container" style="margin-bottom: 24px; background: var(--gold-light);">
+                        <div class="countdown-label" style="color: var(--black);">First tip drops in</div>
+                        <div style="font-size: 2rem; font-weight: 800; color: var(--black);">< 60 seconds</div>
+                    </div>
+
+                    <form id="secondary-form">
+                        <div class="phone-input-wrapper">
+                            <div class="country-select-wrapper">
+                                <div class="country-select country-select-2" tabindex="0" role="button" aria-expanded="false">
+                                    <span class="country-flag">🇺🇸</span>
+                                    <span class="country-code">+1</span>
+                                    <span style="margin-left: auto; font-size: 10px;">▼</span>
+                                </div>
+                                <div class="country-dropdown country-dropdown-2">
+                                    <div class="country-option selected" data-code="+1" data-flag="🇺🇸">🇺🇸 United States (+1)</div>
+                                    <div class="country-option" data-code="+1" data-flag="🇨🇦">🇨🇦 Canada (+1)</div>
+                                    <div class="country-option" data-code="+44" data-flag="🇬🇧">🇬🇧 United Kingdom (+44)</div>
+                                    <div class="country-option" data-code="+61" data-flag="🇦🇺">🇦🇺 Australia (+61)</div>
+                                    <div class="country-option" data-code="+49" data-flag="🇩🇪">🇩🇪 Germany (+49)</div>
+                                    <div class="country-option" data-code="+33" data-flag="🇫🇷">🇫🇷 France (+33)</div>
+                                </div>
+                            </div>
+                            <input type="tel" class="phone-input" id="phone-input-2" placeholder="(555) 555-5555" required>
+                        </div>
+                        <p class="form-error" id="form-error-2">Please enter a valid phone number</p>
+
+                        <button type="submit" class="btn-submit">
+                            <span class="btn-text">Yes, Send Me The Tips →</span>
+                            <span class="spinner"></span>
+                        </button>
+                    </form>
+
+                    <p class="form-microcopy">
+                        100% free · No credit card · Reply STOP anytime
+                    </p>
+
+                    <!-- Guarantee (standardized) -->
+                    <div class="guarantee-badge" style="margin-top: 16px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px;">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                        <span>100% Risk-Free — Cancel anytime with one text. No questions asked.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq fade-in">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-label">Questions?</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item open">
+                    <button class="faq-question">How often will I receive texts?</button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-inner">You'll receive one text message per day for 30 days. Each tip is designed to be read in under 60 seconds, so you can learn without disrupting your workflow. Messages are sent at 8am ET.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Is this really free?</button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-inner">100% free. No credit card required. No hidden fees. We created this course to share the strategies that have helped 159+ DTC brands succeed with creator content. Standard messaging rates from your carrier may apply.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Can I unsubscribe at any time?</button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-inner">Absolutely. Simply reply STOP to any message and you'll be immediately unsubscribed. No questions asked, no hard feelings. You can also reply HELP at any time if you have questions.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What is minisocial?</button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-inner">minisocial is a fully-managed UGC platform that pairs DTC brands with micro-influencers. We've helped 159+ brands like OLIPOP, Native, and Magic Spoon scale their creator content. This free SMS course shares the strategies we've learned from those campaigns.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Will you sell my phone number?</button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-inner">Never. Your privacy is important to us. We will only use your phone number to send you the 30-day tips course and occasional updates from minisocial (if you opt-in). We never sell, share, or rent your personal information. View our <a href="https://minisocial.com/privacy">Privacy Policy</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <svg class="footer-logo" viewBox="0 0 160 68" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="#fff"><path d="m31.2887 17.2988c2.0373 1.0493 3.5583 2.9803 4.5691 5.8136l4.3858 12.2909-5.4015 1.931-3.9789-11.1539c-1.2029-3.3717-3.1239-4.5976-5.7552-3.6567-1.4156.5059-2.3131 1.3895-2.7022 2.6311-.4019 1.2682-.2817 2.8008.3655 4.6164l3.7583 10.5354-5.4409 1.9458-3.979-11.1538c-1.2028-3.3718-3.1041-4.6045-5.6753-3.6854-1.45503.5207-2.36627 1.4309-2.76033 2.7199-.41474 1.2958-.28076 2.8678.38125 4.7229l3.70208 10.3757-5.38173 1.924-7.37567-20.6715 5.38177-1.9241.87578 2.4547c.83539-2.571 2.52587-4.3225 5.05665-5.2278 2.8106-1.005 5.233-.7012 7.3097.8964.8945-2.6597 2.8559-4.5305 5.8655-5.6065 2.4914-.8925 4.7621-.8264 6.7993.2219z"/><path d="m43.2927 7.70689c-.7713-.51578-1.257-1.21893-1.4422-2.15384-.1822-.9142-.003-1.7495.5162-2.50098.5192-.75147 1.2669-1.22485 2.2008-1.41124s1.7851-.03155 2.5525.46351c.7674.49507 1.2521 1.19724 1.4343 2.11242.1862.93491.0109 1.79092-.5083 2.5424-.5152.77219-1.2423 1.24161-2.1762 1.428s-1.8057.03551-2.5771-.48027zm.2749 4.09371 5.6458-1.1263 4.2833 21.5276-5.6458 1.1262z"/><path d="m79.7615 10.6722c1.5319 1.6736 2.3722 4.0138 2.4993 7.0197l.5418 12.8284-5.7305.2426-.4965-11.7485c-.0729-1.715-.53-3.0316-1.3546-3.9724-.8225-.9191-2.0067-1.357-3.5504-1.2919-1.586.0671-2.8519.6933-3.7543 1.8984-.9241 1.2051-1.3447 2.7712-1.2629 4.6972l.458 10.8383-5.7098.2416-.927-21.93092 5.7098-.24161.1173 2.77313c1.6589-2.33921 3.9799-3.5611 6.9195-3.68635 2.8136-.11834 4.9868.65878 6.5403 2.33235z"/><path d="m93.9908 9.17324 5.6714.99116-3.7691 21.6232-5.6714-.9902zm1.2196-3.91714c-.533-.76036-.733-1.59073-.5684-2.52958.1595-.91814.6285-1.63215 1.3841-2.145951.7556-.5128194 1.6235-.684417 2.5613-.5207089.9388.1637079 1.6756.6153829 2.2136 1.3540399.538.73866.736 1.57001.576 2.48816-.163.93885-.635 1.67455-1.3907 2.18737-.7595.53451-1.6058.70907-2.5446.54536-.9388-.16272-1.6974-.61834-2.2313-1.37869z"/><path d="m34.1435 67.219c-2.2806-.6726-3.9927-1.7939-5.0971-3.3757l4.4627-3.004c.6915.9133 1.6205 1.5286 2.7938 1.8659 1.1536.3432 2.4057.2988 3.7563-.1321 1.0285-.3284 1.791-.7939 2.3013-1.4241s.6718-1.2377.4787-1.8432c-.2896-.9083-1.2747-1.3501-2.975-1.3185l-5.8251.1262c-3.7632.1124-6.0753-1.2179-6.9442-3.9428-.5537-1.7357-.1961-3.4733 1.0442-5.2268 1.2403-1.7534 3.0244-2.9901 5.3424-3.7307 2.1978-.7022 4.2883-.8353 6.2437-.4152 1.9417.4477 3.5229 1.3659 4.6972 2.7475l-4.3888 2.9586c-1.4284-1.3452-3.178-1.6765-5.234-1.0188-.8265.2643-1.4541.6647-1.9171 1.2348-.463.57-.6236 1.1114-.463 1.6153.2443.7673 1.0029 1.1253 2.2619 1.1016l5.6783-.1676c2.049-.0543 3.706.1952 5.0044.7149 1.3053.5395 2.2146 1.6499 2.7614 3.3659.6304 1.9783.3044 3.8836-.9635 5.6893-1.2826 1.8334-3.2539 3.1746-5.895 4.0178-2.4796.7909-4.8429.8343-7.1235.1617z"/><path d="m55.8785 58.969c-2.6243-1.7298-4.2784-4.2012-4.9453-7.4388-.662-3.217-.1182-6.141 1.6097-8.7692 1.7328-2.6075 4.2469-4.2505 7.5638-4.9349 3.2963-.6795 6.2546-.1647 8.8751 1.5444 2.6253 1.7297 4.2577 4.2051 4.9197 7.422.666 3.2377.1438 6.1578-1.5851 8.785s-4.2419 4.2712-7.5382 4.9507c-3.3169.6854-6.2753.1706-8.8997-1.5592zm11.8393-6.2061c.8551-1.4092 1.1073-3.0187.7359-4.8244s-1.2383-3.1844-2.581-4.1401c-1.3624-.9516-2.9337-1.2337-4.7168-.8658-1.7831.3678-3.114 1.2475-3.9898 2.6617s-1.128 3.0237-.7566 4.8284c.3714 1.8057 1.2383 3.1844 2.6018 4.1361 1.3624.9516 2.9337 1.2337 4.7168.8658 1.7821-.3678 3.114-1.2475 3.9897-2.6617z"/><path d="m81.4498 54.6763c-2.0047-2.4231-2.8411-5.29-2.5317-8.5809.3073-3.2692 1.6599-5.9092 4.0794-7.8944 2.3958-1.9665 5.2379-2.8057 8.546-2.4941 2.8027.2633 5.0931 1.2239 6.8742 2.86 1.7793 1.6568 2.8023 3.4349 3.1153 5.3155l-5.453 1.0188c-.1596-1.0148-.6915-1.9162-1.5939-2.7249-.9231-.8106-2.0481-1.2781-3.4184-1.4073-1.7486-.1647-3.2411.3333-4.4538 1.4744-1.2334 1.139-1.924 2.6065-2.0924 4.3994-.1645 1.7505.2403 3.3215 1.2363 4.713.996 1.3925 2.3486 2.1577 4.0972 2.3224 1.3486.1273 2.5396-.1015 3.5947-.7041 1.0561-.6026 1.7447-1.3678 2.0865-2.2939l5.1718 1.9764c-.661 1.8313-2.0164 3.3638-4.027 4.6222-2.0334 1.2771-4.44 1.7742-7.2418 1.5109-3.3504-.3146-6.0053-1.6923-7.9894-4.1134z"/><path d="m109.542 37.9153 5.652 1.0966-4.171 21.5503-5.652-1.0967zm1.293-3.8935c-.52-.7692-.703-1.6035-.522-2.5394.178-.9152.66-1.6203 1.424-2.1194.765-.499 1.635-.6538 2.57-.4723.935.1814 1.664.6469 2.188 1.3954.523.7495.708 1.5829.53 2.498-.181.9359-.667 1.6618-1.431 2.1608-.769.5197-1.619.6785-2.554.497-.937-.1804-1.686-.6499-2.205-1.4201z"/><path d="m122.761 59.8108c-1.928-2.3718-2.761-5.1943-2.523-8.4694.242-3.3176 1.479-6.0099 3.729-8.0552 2.227-2.0257 4.861-2.9369 7.922-2.713 2.998.2189 5.262 1.4684 6.792 3.7682l.193-2.641 5.763.4221-1.598 21.8924-5.763-.4221.196-2.6834c-1.849 2.074-4.273 3.002-7.269 2.7821-3.062-.2249-5.536-1.5109-7.442-3.8807zm13.373-2.6755c1.293-1.1381 1.996-2.6371 2.134-4.5178.134-1.8382-.344-3.424-1.459-4.7169s-2.549-2.0138-4.3-2.1411c-1.794-.1311-3.295.3541-4.543 1.4734s-1.93 2.5996-2.066 4.4803c-.139 1.9023.317 3.5069 1.39 4.7968 1.072 1.289 2.484 2.0089 4.279 2.14 1.751.1273 3.273-.3767 4.565-1.5147z"/><path d="m152.399 33.0815 5.709-.2504 1.385 31.6448-5.708.2505z"/></g></svg>
+
+            <p class="compliance-text">
+                By providing your phone number, you consent to receive marketing text messages from minisocial. Message frequency: up to 30 messages over 30 days. Msg & data rates may apply. Reply HELP for help. Reply STOP to unsubscribe. View our <a href="https://minisocial.com/privacy" style="color: var(--gold);">Privacy Policy</a>.
+            </p>
+
+            <div class="footer-links">
+                <a href="https://minisocial.com/privacy">Privacy Policy</a>
+                <a href="https://minisocial.com/terms">Terms of Service</a>
+                <a href="https://minisocial.com">Visit minisocial.com</a>
+            </div>
+
+            <p class="footer-copyright">© 2026 minisocial. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta" id="sticky-cta">
+        <a href="#hero-form" class="btn-submit" style="text-decoration: none;">
+            Get Your Free Tips →
+        </a>
+    </div>
+
+    <script>
+        // ===== COUNTDOWN TIMER (Fixed date for transparency) =====
+        const initCountdown = () => {
+            // Fixed deadline: Feb 14, 2026 at midnight (ensures transparency)
+            // In production, this would be set by the backend
+            const now = new Date();
+            let deadline = new Date('2026-02-14T23:59:59');
+
+            // If deadline passed, set to next Friday at midnight (rolling weekly)
+            while (deadline < now) {
+                deadline.setDate(deadline.getDate() + 7);
+            }
+
+            let lastSrAnnounce = 0;
+
+            const updateCountdown = () => {
+                const current = new Date();
+                const diff = deadline - current;
+
+                if (diff <= 0) {
+                    // Enrollment reopened - set new deadline
+                    deadline.setDate(deadline.getDate() + 7);
+                    return;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                const hoursEl = document.getElementById('countdown-hours');
+                const minutesEl = document.getElementById('countdown-minutes');
+                const secondsEl = document.getElementById('countdown-seconds');
+
+                // Display hours including days (e.g., 47 hours if 1 day 23 hours left)
+                const totalHours = days * 24 + hours;
+                if (hoursEl) hoursEl.textContent = totalHours.toString().padStart(2, '0');
+                if (minutesEl) minutesEl.textContent = minutes.toString().padStart(2, '0');
+                if (secondsEl) secondsEl.textContent = seconds.toString().padStart(2, '0');
+
+                // Screen reader announcement every minute
+                const srEl = document.getElementById('countdown-sr');
+                if (srEl && current.getTime() - lastSrAnnounce > 60000) {
+                    srEl.textContent = `Enrollment closes in ${totalHours} hours, ${minutes} minutes`;
+                    lastSrAnnounce = current.getTime();
+                }
+            };
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        };
+        initCountdown();
+
+        // ===== COUNTRY DROPDOWN =====
+        const initCountryDropdowns = () => {
+            // Main form dropdown
+            const countrySelect = document.getElementById('country-select');
+            const countryDropdown = document.getElementById('country-dropdown');
+
+            if (countrySelect && countryDropdown) {
+                setupDropdown(countrySelect, countryDropdown);
+            }
+
+            // Secondary form dropdown
+            const countrySelect2 = document.querySelector('.country-select-2');
+            const countryDropdown2 = document.querySelector('.country-dropdown-2');
+
+            if (countrySelect2 && countryDropdown2) {
+                setupDropdown(countrySelect2, countryDropdown2);
+            }
+        };
+
+        const setupDropdown = (selectEl, dropdownEl) => {
+            selectEl.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = dropdownEl.classList.contains('open');
+
+                // Close all dropdowns
+                document.querySelectorAll('.country-dropdown').forEach(d => d.classList.remove('open'));
+
+                if (!isOpen) {
+                    dropdownEl.classList.add('open');
+                    selectEl.setAttribute('aria-expanded', 'true');
+                } else {
+                    selectEl.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            dropdownEl.querySelectorAll('.country-option').forEach(option => {
+                option.addEventListener('click', () => {
+                    const code = option.dataset.code;
+                    const flag = option.dataset.flag;
+
+                    selectEl.querySelector('.country-flag').textContent = flag;
+                    selectEl.querySelector('.country-code').textContent = code;
+
+                    // Update selected state
+                    dropdownEl.querySelectorAll('.country-option').forEach(o => o.classList.remove('selected'));
+                    option.classList.add('selected');
+
+                    dropdownEl.classList.remove('open');
+                    selectEl.setAttribute('aria-expanded', 'false');
+                });
+            });
+        };
+
+        // Close dropdowns on outside click
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.country-dropdown').forEach(d => d.classList.remove('open'));
+        });
+
+        initCountryDropdowns();
+
+        // ===== PHONE INPUT FORMATTING =====
+        const formatPhoneNumber = (value) => {
+            const phone = value.replace(/\D/g, '');
+            if (phone.length < 4) return phone;
+            if (phone.length < 7) return `(${phone.slice(0, 3)}) ${phone.slice(3)}`;
+            return `(${phone.slice(0, 3)}) ${phone.slice(3, 6)}-${phone.slice(6, 10)}`;
+        };
+
+        const phoneInputs = document.querySelectorAll('.phone-input');
+        phoneInputs.forEach(input => {
+            input.addEventListener('input', (e) => {
+                e.target.value = formatPhoneNumber(e.target.value);
+                e.target.classList.remove('error');
+                const errorEl = e.target.closest('form').querySelector('.form-error');
+                if (errorEl) errorEl.classList.remove('visible');
+            });
+        });
+
+        // ===== FORM VALIDATION & SUBMISSION WITH LOADING STATE =====
+        const validatePhone = (phone) => {
+            const cleaned = phone.replace(/\D/g, '');
+            return cleaned.length >= 10;
+        };
+
+        const handleFormSubmit = (formId, errorId) => {
+            const form = document.getElementById(formId);
+            if (!form) return;
+
+            const input = form.querySelector('.phone-input');
+            const error = document.getElementById(errorId);
+            const submitBtn = form.querySelector('.btn-submit');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                if (!validatePhone(input.value)) {
+                    input.classList.add('error');
+                    if (error) error.classList.add('visible');
+                    return;
+                }
+
+                // Show loading state
+                submitBtn.classList.add('loading');
+
+                // Simulate API call
+                setTimeout(() => {
+                    submitBtn.classList.remove('loading');
+
+                    // Show success state
+                    const formState = document.getElementById('form-state');
+                    const successState = document.getElementById('success-state');
+
+                    if (formState) formState.style.display = 'none';
+                    if (successState) successState.classList.add('visible');
+
+                    // Scroll to success for secondary form
+                    if (formId === 'secondary-form') {
+                        document.getElementById('hero-form').scrollIntoView({ behavior: 'smooth' });
+                    }
+
+                    // Trigger confetti effect
+                    createConfetti();
+                }, 1500);
+            });
+        };
+
+        handleFormSubmit('sms-form', 'form-error');
+        handleFormSubmit('secondary-form', 'form-error-2');
+
+        // ===== CONFETTI ANIMATION =====
+        const createConfetti = () => {
+            const colors = ['#FFD93D', '#E6C235', '#10B981', '#000000'];
+            const confettiCount = 50;
+
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.cssText = `
+                    position: fixed;
+                    width: 10px;
+                    height: 10px;
+                    background: ${colors[Math.floor(Math.random() * colors.length)]};
+                    left: ${Math.random() * 100}vw;
+                    top: -10px;
+                    opacity: 1;
+                    border-radius: ${Math.random() > 0.5 ? '50%' : '0'};
+                    pointer-events: none;
+                    z-index: 9999;
+                    animation: confetti-fall ${2 + Math.random() * 2}s ease-out forwards;
+                `;
+                document.body.appendChild(confetti);
+
+                setTimeout(() => confetti.remove(), 4000);
+            }
+        };
+
+        // Add confetti keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes confetti-fall {
+                to {
+                    transform: translateY(100vh) rotate(720deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // ===== FAQ ACCORDION =====
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const wasOpen = item.classList.contains('open');
+
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+
+                // Open clicked if it wasn't open
+                if (!wasOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+
+        // ===== STICKY CTA =====
+        const stickyCta = document.getElementById('sticky-cta');
+        const heroForm = document.getElementById('hero-form');
+
+        const checkStickyCta = () => {
+            if (!heroForm) return;
+            const heroRect = heroForm.getBoundingClientRect();
+            if (heroRect.bottom < 0) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        };
+
+        window.addEventListener('scroll', checkStickyCta, { passive: true });
+
+        // ===== FADE IN ANIMATIONS =====
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // ===== LIVE READER COUNTER =====
+        const liveReaders = document.getElementById('live-readers');
+        if (liveReaders) {
+            const baseCount = 2847;
+            setInterval(() => {
+                const variance = Math.floor(Math.random() * 40) - 20;
+                liveReaders.textContent = (baseCount + variance).toLocaleString();
+            }, 8000);
+        }
+
+        // ===== SUBSCRIBER COUNT ANIMATION =====
+        const subCount = document.getElementById('subscriber-count');
+        if (subCount) {
+            let count = 12800;
+            const targetCount = 12847;
+            const increment = () => {
+                if (count < targetCount) {
+                    count += Math.floor(Math.random() * 5) + 1;
+                    if (count > targetCount) count = targetCount;
+                    subCount.textContent = count.toLocaleString();
+                    setTimeout(increment, 200);
+                }
+            };
+            setTimeout(increment, 1000);
+        }
+    </script>
+</body>
+</html>
