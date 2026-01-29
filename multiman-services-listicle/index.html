@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Reasons Your Dirty Exterior Is Costing You Thousands | MultiMan Services</title>
+    <meta name="description" content="Discover the hidden costs of a neglected exterior and what smart homeowners in Wisconsin & Illinois do to protect their investment.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="multiman-services-logo.png">
+    <style>
+        :root {
+            --primary-navy: #1a2e5a;
+            --primary-navy-light: #2a4075;
+            --primary-navy-dark: #0f1c3a;
+            --accent-gold: #c9a962;
+            --accent-gold-light: #e6d4a8;
+            --accent-gold-dark: #a88a4a;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a4a4a;
+            --text-light: #6b6b6b;
+            --bg-cream: #faf9f7;
+            --bg-white: #ffffff;
+            --bg-light-navy: #f5f7fa;
+            --success-green: #2d8a4e;
+            --warning-red: #c94a4a;
+            --warning-orange: #e67e22;
+            --border-light: #e8e8e8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--bg-cream);
+            font-size: 17px;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.25;
+            font-weight: 600;
+        }
+
+        /* Container */
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Sticky CTA Bar */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg-white);
+            padding: 16px 20px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: none;
+        }
+
+        .sticky-cta.visible {
+            display: block;
+        }
+
+        .sticky-cta-inner {
+            max-width: 780px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .sticky-cta-text {
+            font-size: 14px;
+            color: var(--text-medium);
+        }
+
+        .sticky-cta-text strong {
+            color: var(--primary-navy);
+            display: block;
+        }
+
+        .sticky-cta-btn {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+            color: var(--primary-navy);
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(201,169,98,0.3);
+        }
+
+        .sticky-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201,169,98,0.4);
+        }
+
+        /* Header */
+        .site-header {
+            background: var(--bg-white);
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 780px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-logo {
+            height: 32px;
+        }
+
+        .header-cta {
+            background: var(--primary-navy);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .header-cta:hover {
+            background: var(--primary-navy-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(180deg, var(--bg-white) 0%, var(--bg-cream) 100%);
+            padding: 48px 24px 40px;
+        }
+
+        .hero-inner {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201,169,98,0.12);
+            color: var(--primary-navy);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success-green);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero-title {
+            font-size: clamp(32px, 6vw, 48px);
+            color: var(--primary-navy);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-title span {
+            color: var(--warning-red);
+        }
+
+        .hero-subtitle {
+            font-size: 19px;
+            color: var(--text-medium);
+            margin-bottom: 28px;
+            max-width: 600px;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 32px;
+        }
+
+        .hero-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-image {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+            margin-bottom: 32px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            padding: 24px;
+            background: var(--bg-white);
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--text-medium);
+        }
+
+        .trust-item span:first-child {
+            font-size: 18px;
+        }
+
+        /* Article Content */
+        .article-content {
+            background: var(--bg-white);
+            padding: 48px 24px;
+        }
+
+        .article-inner {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            margin-bottom: 48px;
+        }
+
+        .intro-lead {
+            font-size: 21px;
+            color: var(--text-dark);
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .intro-text {
+            font-size: 17px;
+            color: var(--text-medium);
+            margin-bottom: 20px;
+        }
+
+        /* Hook Box */
+        .hook-box {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-navy-light) 100%);
+            color: white;
+            padding: 28px;
+            border-radius: 12px;
+            margin: 32px 0;
+        }
+
+        .hook-box-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hook-box p {
+            font-size: 16px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .hook-box strong {
+            color: var(--accent-gold);
+        }
+
+        /* Listicle Item */
+        .listicle-item {
+            margin-bottom: 56px;
+            padding-bottom: 56px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .listicle-item:last-of-type {
+            border-bottom: none;
+        }
+
+        .listicle-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+            color: var(--primary-navy);
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 700;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(201,169,98,0.3);
+        }
+
+        .listicle-title {
+            font-size: clamp(24px, 4vw, 30px);
+            color: var(--primary-navy);
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+        }
+
+        .listicle-text {
+            font-size: 17px;
+            color: var(--text-medium);
+            margin-bottom: 20px;
+        }
+
+        .listicle-image {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 24px 0;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .listicle-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .listicle-image figcaption {
+            background: var(--bg-light-navy);
+            padding: 12px 16px;
+            font-size: 13px;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        /* Stat Highlight */
+        .stat-highlight {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: var(--bg-light-navy);
+            padding: 20px 24px;
+            border-radius: 10px;
+            margin: 24px 0;
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary-navy);
+            line-height: 1;
+        }
+
+        .stat-text {
+            font-size: 15px;
+            color: var(--text-medium);
+        }
+
+        /* Comparison Box */
+        .comparison-box {
+            background: var(--bg-cream);
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 28px 0;
+        }
+
+        .comparison-header {
+            background: var(--primary-navy);
+            color: white;
+            padding: 16px 20px;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .comparison-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .comparison-col {
+            padding: 24px 20px;
+        }
+
+        .comparison-col:first-child {
+            border-right: 1px solid var(--border-light);
+        }
+
+        .comparison-col h4 {
+            font-size: 15px;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        .comparison-col.bad h4 {
+            color: var(--warning-red);
+        }
+
+        .comparison-col.good h4 {
+            color: var(--success-green);
+        }
+
+        .comparison-col ul {
+            list-style: none;
+            font-size: 14px;
+            color: var(--text-medium);
+        }
+
+        .comparison-col li {
+            padding: 6px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .comparison-col.bad li::before {
+            content: '✗';
+            color: var(--warning-red);
+            font-weight: bold;
+        }
+
+        .comparison-col.good li::before {
+            content: '✓';
+            color: var(--success-green);
+            font-weight: bold;
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background: var(--bg-white);
+            border: 2px solid var(--border-light);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 32px 0;
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 24px;
+            font-size: 60px;
+            font-family: Georgia, serif;
+            color: var(--accent-gold);
+            line-height: 1;
+        }
+
+        .quote-text {
+            font-size: 18px;
+            font-style: italic;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            padding-left: 8px;
+        }
+
+        .quote-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .quote-author-img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .quote-author-info {
+            font-size: 14px;
+        }
+
+        .quote-author-name {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .quote-author-title {
+            color: var(--text-light);
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: rgba(201,74,74,0.08);
+            border-left: 4px solid var(--warning-red);
+            padding: 20px 24px;
+            border-radius: 0 10px 10px 0;
+            margin: 28px 0;
+        }
+
+        .warning-box-title {
+            font-weight: 700;
+            color: var(--warning-red);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .warning-box p {
+            font-size: 15px;
+            color: var(--text-dark);
+        }
+
+        /* Pro Tip Box */
+        .pro-tip-box {
+            background: rgba(45,138,78,0.08);
+            border-left: 4px solid var(--success-green);
+            padding: 20px 24px;
+            border-radius: 0 10px 10px 0;
+            margin: 28px 0;
+        }
+
+        .pro-tip-title {
+            font-weight: 700;
+            color: var(--success-green);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pro-tip-box p {
+            font-size: 15px;
+            color: var(--text-dark);
+        }
+
+        /* Inline CTA */
+        .inline-cta {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-navy-light) 100%);
+            color: white;
+            padding: 36px 32px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 48px 0;
+            box-shadow: 0 12px 40px rgba(26,46,90,0.2);
+        }
+
+        .inline-cta h3 {
+            font-size: 26px;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .inline-cta p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 24px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .inline-cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+            color: var(--primary-navy);
+            padding: 18px 36px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 17px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(201,169,98,0.4);
+        }
+
+        .inline-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(201,169,98,0.5);
+        }
+
+        .inline-cta-trust {
+            margin-top: 20px;
+            font-size: 13px;
+            opacity: 0.85;
+        }
+
+        /* Final Section */
+        .final-section {
+            margin-top: 48px;
+            padding-top: 48px;
+            border-top: 2px solid var(--border-light);
+        }
+
+        .final-title {
+            font-size: clamp(28px, 5vw, 36px);
+            color: var(--primary-navy);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .final-text {
+            font-size: 18px;
+            color: var(--text-medium);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        /* Final CTA Box */
+        .final-cta-box {
+            background: var(--bg-cream);
+            border: 2px solid var(--border-light);
+            border-radius: 20px;
+            padding: 40px 32px;
+            text-align: center;
+        }
+
+        .final-cta-badge {
+            display: inline-block;
+            background: var(--warning-orange);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .final-cta-title {
+            font-size: 28px;
+            color: var(--primary-navy);
+            margin-bottom: 16px;
+        }
+
+        .final-cta-subtitle {
+            font-size: 17px;
+            color: var(--text-medium);
+            margin-bottom: 28px;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+            color: var(--primary-navy);
+            padding: 20px 48px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 25px rgba(201,169,98,0.4);
+            margin-bottom: 24px;
+        }
+
+        .final-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 35px rgba(201,169,98,0.5);
+        }
+
+        .final-cta-features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            font-size: 14px;
+            color: var(--text-medium);
+        }
+
+        .final-cta-feature {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .final-cta-feature span:first-child {
+            color: var(--success-green);
+        }
+
+        /* Team Section */
+        .team-section {
+            background: var(--bg-light-navy);
+            padding: 48px 24px;
+            margin-top: 48px;
+        }
+
+        .team-inner {
+            max-width: 680px;
+            margin: 0 auto;
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .team-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 16px;
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+
+        .team-content h3 {
+            font-size: 24px;
+            color: var(--primary-navy);
+            margin-bottom: 12px;
+        }
+
+        .team-content p {
+            font-size: 15px;
+            color: var(--text-medium);
+            margin-bottom: 16px;
+        }
+
+        .team-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .team-credential {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--bg-white);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: var(--text-medium);
+        }
+
+        /* Footer */
+        .site-footer {
+            background: var(--primary-navy);
+            color: white;
+            padding: 48px 24px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            height: 36px;
+            margin-bottom: 20px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-text {
+            font-size: 14px;
+            opacity: 0.7;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            font-size: 14px;
+        }
+
+        .footer-links a {
+            color: white;
+            opacity: 0.8;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 32px 20px;
+            }
+
+            .article-content {
+                padding: 32px 20px;
+            }
+
+            .comparison-content {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-col:first-child {
+                border-right: none;
+                border-bottom: 1px solid var(--border-light);
+            }
+
+            .team-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .team-credentials {
+                justify-content: center;
+            }
+
+            .sticky-cta-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .sticky-cta-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .header-cta {
+                display: none;
+            }
+
+            .inline-cta {
+                padding: 28px 24px;
+            }
+
+            .final-cta-box {
+                padding: 32px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .trust-bar {
+                gap: 16px;
+            }
+
+            .trust-item {
+                font-size: 13px;
+            }
+
+            .stat-highlight {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .final-cta-features {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+
+        /* Reading Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+            width: 0%;
+            z-index: 1001;
+            transition: width 0.1s ease;
+        }
+
+        /* Social Proof Float */
+        .social-proof-float {
+            position: fixed;
+            bottom: 100px;
+            left: 20px;
+            background: var(--bg-white);
+            padding: 14px 18px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-medium);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            z-index: 999;
+            max-width: 280px;
+        }
+
+        .social-proof-float.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .social-proof-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success-green);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @media (max-width: 768px) {
+            .social-proof-float {
+                display: none;
+            }
+        }
+
+        /* Lead Capture Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.65);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            padding: 20px;
+        }
+
+        .modal-overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--bg-white);
+            border-radius: 20px;
+            max-width: 480px;
+            width: 100%;
+            padding: 40px 36px;
+            position: relative;
+            transform: translateY(20px) scale(0.95);
+            transition: all 0.3s ease;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.25);
+        }
+
+        .modal-overlay.visible .modal-content {
+            transform: translateY(0) scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 32px;
+            height: 32px;
+            border: none;
+            background: var(--bg-light-navy);
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            color: var(--text-light);
+            transition: all 0.2s ease;
+        }
+
+        .modal-close:hover {
+            background: var(--primary-navy);
+            color: white;
+        }
+
+        .modal-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+            color: var(--primary-navy);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .modal-title {
+            font-size: 28px;
+            color: var(--primary-navy);
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .modal-subtitle {
+            font-size: 16px;
+            color: var(--text-medium);
+            margin-bottom: 28px;
+            line-height: 1.5;
+        }
+
+        .modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .form-group input {
+            padding: 14px 16px;
+            border: 2px solid var(--border-light);
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-navy);
+            box-shadow: 0 0 0 3px rgba(26,46,90,0.1);
+        }
+
+        .modal-submit {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+            color: var(--primary-navy);
+            padding: 16px 24px;
+            border: none;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(201,169,98,0.4);
+            margin-top: 8px;
+        }
+
+        .modal-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(201,169,98,0.5);
+        }
+
+        .modal-trust {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 20px;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .modal-trust span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin: 48px 0;
+            padding: 40px 0;
+            border-top: 2px solid var(--border-light);
+        }
+
+        .faq-title {
+            font-size: 28px;
+            color: var(--primary-navy);
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            background: var(--bg-white);
+            transition: all 0.2s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--accent-gold);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 24px;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 17px;
+            font-weight: 600;
+            font-family: inherit;
+            color: var(--primary-navy);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--accent-gold);
+            transition: transform 0.2s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer-content {
+            padding: 0 24px 20px;
+            font-size: 16px;
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        /* Upgraded Testimonials */
+        .testimonial-enhanced {
+            background: var(--bg-white);
+            border: 2px solid var(--border-light);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 32px 0;
+            position: relative;
+        }
+
+        .testimonial-enhanced::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 28px;
+            font-size: 70px;
+            font-family: Georgia, serif;
+            color: var(--accent-gold);
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-stars span {
+            color: var(--accent-gold);
+            font-size: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 18px;
+            font-style: italic;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            padding-left: 8px;
+            line-height: 1.6;
+        }
+
+        .testimonial-author-enhanced {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .testimonial-author-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--primary-navy);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .testimonial-name {
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 16px;
+        }
+
+        .testimonial-location {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .testimonial-verified {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--success-green);
+            background: rgba(45,138,78,0.1);
+            padding: 6px 12px;
+            border-radius: 100px;
+        }
+
+        /* Nightmare Story Box */
+        .nightmare-box {
+            background: linear-gradient(135deg, #fff5f5 0%, #fef2f2 100%);
+            border: 1px solid rgba(201,74,74,0.2);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+
+        .nightmare-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            color: var(--warning-red);
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .nightmare-box p {
+            font-size: 15px;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .nightmare-cost {
+            display: inline-block;
+            background: var(--warning-red);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-top: 12px;
+        }
+
+        /* Timeline Cost Box */
+        .timeline-cost-box {
+            background: var(--bg-light-navy);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+
+        .timeline-header {
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .timeline-items {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            background: var(--bg-white);
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .timeline-item .time {
+            color: var(--text-medium);
+        }
+
+        .timeline-item .cost {
+            font-weight: 700;
+        }
+
+        .timeline-item.now .cost {
+            color: var(--success-green);
+        }
+
+        .timeline-item.later .cost {
+            color: var(--warning-orange);
+        }
+
+        .timeline-item.critical .cost {
+            color: var(--warning-red);
+        }
+
+        @media (max-width: 480px) {
+            .modal-content {
+                padding: 32px 24px;
+            }
+
+            .modal-title {
+                font-size: 24px;
+            }
+
+            .testimonial-author-enhanced {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Reading Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <img src="multiman-services-logo.png" alt="MultiMan Services" class="site-logo">
+            <a href="https://www.multimanservices.com/" class="header-cta" target="_blank" rel="noopener">Get Free Quote</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                <span>Updated January 2026</span>
+            </div>
+
+            <h1 class="hero-title">7 Reasons Your Dirty Exterior Is <span>Costing You Thousands</span></h1>
+
+            <p class="hero-subtitle">What smart Wisconsin & Illinois homeowners know about protecting their investment—and why waiting is the most expensive decision you'll make.</p>
+
+            <div class="hero-meta">
+                <span class="hero-meta-item">📖 8 min read</span>
+                <span class="hero-meta-item">👁️ 12,847 views</span>
+                <span class="hero-meta-item">⭐ 4.9/5 rating</span>
+            </div>
+
+            <figure class="hero-image">
+                <img src="roof-cleaning-horizontal-split-2.jpeg" alt="Before and after exterior cleaning transformation" loading="eager">
+            </figure>
+
+            <div class="trust-bar">
+                <div class="trust-item">
+                    <span>🏆</span>
+                    <span>A+ BBB Rated</span>
+                </div>
+                <div class="trust-item">
+                    <span>⭐</span>
+                    <span>4.9/5 (1,200+ Reviews)</span>
+                </div>
+                <div class="trust-item">
+                    <span>🛡️</span>
+                    <span>Fully Insured</span>
+                </div>
+                <div class="trust-item">
+                    <span>✓</span>
+                    <span>2,800+ Homes Cleaned</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <main class="article-content">
+        <article class="article-inner">
+
+            <!-- Introduction -->
+            <section class="intro-section">
+                <p class="intro-lead">Here's an uncomfortable truth most homeowners don't want to hear: <strong>your dirty exterior is silently draining thousands from your property value every single month.</strong></p>
+
+                <p class="intro-text">If you've noticed dark streaks creeping across your roof, green patches spreading on your siding, or a driveway that's more gray than white—you're not just looking at an eyesore. You're looking at money walking out the door.</p>
+
+                <p class="intro-text">And the longer you wait? The more expensive it gets.</p>
+
+                <div class="hook-box">
+                    <div class="hook-box-title">
+                        💰 The Hidden Math Nobody Talks About
+                    </div>
+                    <p>Research from the National Association of Realtors shows that homes with clean exteriors sell for <strong>5-10% more</strong> than comparable dirty homes. On a $350,000 house, that's <strong>$17,500-$35,000</strong> in potential lost value—all because of something that costs less than $600 to fix.</p>
+                </div>
+
+                <p class="intro-text">Below, we break down the 7 ways a dirty exterior quietly destroys your investment—and what the smartest homeowners in Wisconsin and Northern Illinois are doing about it.</p>
+            </section>
+
+            <!-- Listicle Item 1 -->
+            <section class="listicle-item">
+                <div class="listicle-number">1</div>
+                <h2 class="listicle-title">Buyers Judge Your Home in 7 Seconds (And They Don't Forgive)</h2>
+
+                <p class="listicle-text">Here's what happens when a potential buyer pulls up to your house: In the first 7 seconds, their brain has already made a decision. Clean exterior? "This home is well-maintained." Dirty exterior? "What else did they neglect?"</p>
+
+                <p class="listicle-text">This isn't opinion—it's neuroscience. Princeton researchers found that humans form first impressions in as little as 100 milliseconds, and those impressions are notoriously sticky.</p>
+
+                <figure class="listicle-image">
+                    <img src="house-washing-in-beloit-wi-soft-washing.webp" alt="Clean home exterior with pristine siding" loading="lazy">
+                    <figcaption>First impressions happen before buyers even open the car door</figcaption>
+                </figure>
+
+                <div class="stat-highlight">
+                    <div class="stat-number">94%</div>
+                    <div class="stat-text">of real estate agents say curb appeal is the single most important factor in getting a home sold quickly</div>
+                </div>
+
+                <p class="listicle-text">The worst part? Once a buyer mentally discounts your home, they negotiate harder on everything else. That "small" impression turns into thousands off your asking price.</p>
+
+                <div class="warning-box">
+                    <div class="warning-box-title">⚠️ The Halo Effect Works Both Ways</div>
+                    <p>A dirty exterior doesn't just look bad—it makes buyers assume your plumbing, HVAC, and foundation are neglected too. One visible problem creates imaginary problems everywhere.</p>
+                </div>
+            </section>
+
+            <!-- Listicle Item 2 -->
+            <section class="listicle-item">
+                <div class="listicle-number">2</div>
+                <h2 class="listicle-title">That Black Streaking? It's Eating Your Shingles Alive</h2>
+
+                <p class="listicle-text">Those dark streaks spreading across your roof aren't just dirt. They're Gloeocapsa Magma—a cyanobacteria that's literally feeding on the limestone in your shingles.</p>
+
+                <p class="listicle-text">Every day it spreads, it weakens your roof's protective granules. Left untreated, it can reduce your shingle lifespan by 10-15 years.</p>
+
+                <figure class="listicle-image">
+                    <img src="roof-cleaning.jpg" alt="Roof with algae streaks being cleaned" loading="lazy">
+                    <figcaption>Algae colonies spread rapidly and damage shingle integrity</figcaption>
+                </figure>
+
+                <div class="comparison-box">
+                    <div class="comparison-header">The Real Cost Comparison</div>
+                    <div class="comparison-content">
+                        <div class="comparison-col bad">
+                            <h4>Ignore It</h4>
+                            <ul>
+                                <li>Roof replacement: $8,000-$15,000</li>
+                                <li>Shingle lifespan: -10-15 years</li>
+                                <li>Insurance issues: possible denial</li>
+                                <li>Energy costs: +15% cooling</li>
+                            </ul>
+                        </div>
+                        <div class="comparison-col good">
+                            <h4>Clean It Now</h4>
+                            <ul>
+                                <li>Soft wash cleaning: $300-$500</li>
+                                <li>Shingle lifespan: maximized</li>
+                                <li>Insurance: fully covered</li>
+                                <li>Energy costs: optimized</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="listicle-text">The math is brutal: a $400 cleaning prevents a $12,000 roof replacement. That's a 30x return on investment.</p>
+
+                <div class="pro-tip-box">
+                    <div class="pro-tip-title">💡 Pro Tip: Soft Washing vs. Pressure Washing</div>
+                    <p>Never pressure wash a roof—the high pressure destroys shingles. Professional soft washing uses low-pressure application with specialized solutions that kill algae at the root without damaging your roof.</p>
+                </div>
+            </section>
+
+            <!-- Listicle Item 3 -->
+            <section class="listicle-item">
+                <div class="listicle-number">3</div>
+                <h2 class="listicle-title">Your Neighbors Are Judging (And So Is Your HOA)</h2>
+
+                <p class="listicle-text">Let's be honest: nobody wants to be "that house" on the street. The one with the green siding. The one with the black-streaked roof. The one that makes the whole neighborhood look worse.</p>
+
+                <p class="listicle-text">Beyond social pressure, many HOAs actively fine homeowners for exterior neglect. We've seen violations ranging from $100 to $500 per month until the issue is resolved.</p>
+
+                <figure class="listicle-image">
+                    <img src="Pressure-Washing.jpg" alt="Professional pressure washing service" loading="lazy">
+                    <figcaption>Maintain your standing in the neighborhood with regular cleaning</figcaption>
+                </figure>
+
+                <div class="testimonial-enhanced">
+                    <div class="testimonial-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testimonial-text">I kept putting it off until I got the HOA notice—$250/month fines starting in 30 days. MultiMan came out the very next day and made my house look brand new. My neighbors actually complimented me at the block party. Worth every penny and then some.</p>
+                    <div class="testimonial-author-enhanced">
+                        <div class="testimonial-author-info">
+                            <div class="testimonial-avatar">JM</div>
+                            <div>
+                                <div class="testimonial-name">Jennifer Martindale</div>
+                                <div class="testimonial-location">Homeowner, Beloit, WI • August 2025</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-verified">
+                            <span>✓</span> Verified Google Review
+                        </div>
+                    </div>
+                </div>
+
+                <p class="listicle-text">The flip side? When your home looks pristine, neighbors notice—and respect increases. It's an investment in both property value and community standing.</p>
+            </section>
+
+            <!-- Inline CTA -->
+            <div class="inline-cta">
+                <h3>Ready to Stop the Bleeding?</h3>
+                <p>Get a free, no-obligation assessment and find out exactly what your exterior needs—and what it will cost to fix.</p>
+                <a href="https://www.multimanservices.com/" class="inline-cta-btn" target="_blank" rel="noopener">Get Your Free Assessment →</a>
+                <div class="inline-cta-trust">
+                    ✓ $200 Value — FREE | ✓ No Pressure, No Obligation | ✓ Same-Week Availability
+                </div>
+            </div>
+
+            <!-- Listicle Item 4 -->
+            <section class="listicle-item">
+                <div class="listicle-number">4</div>
+                <h2 class="listicle-title">DIY Pressure Washing Often Costs More Than Hiring Pros</h2>
+
+                <p class="listicle-text">Every spring, thousands of well-meaning homeowners rent pressure washers and accidentally destroy their property. We see the aftermath constantly—and it's painful to witness.</p>
+
+                <div class="nightmare-box">
+                    <div class="nightmare-header">
+                        😰 Real Story: The Janesville Nightmare
+                    </div>
+                    <p>Last April, Tom R. from Janesville rented a 3,200 PSI pressure washer from Home Depot to clean his vinyl siding. "I watched a YouTube video—seemed simple enough." Within 20 minutes, he'd driven water behind three panels, creating the perfect environment for black mold. Two months later, his family started experiencing respiratory issues. <strong>The remediation company found mold had spread through the entire north wall.</strong></p>
+                    <span class="nightmare-cost">Total damage: $7,400 in mold remediation + siding replacement</span>
+                </div>
+
+                <p class="listicle-text">Tom's story isn't unusual. Here's what we see every single month:</p>
+
+                <ul style="margin: 20px 0; padding-left: 20px; color: var(--text-medium);">
+                    <li style="margin-bottom: 10px;"><strong>Water under siding</strong> causing mold and rot ($2,000-$8,000 repair)</li>
+                    <li style="margin-bottom: 10px;"><strong>Shingle damage</strong> from excessive pressure ($8,000-$15,000 replacement)</li>
+                    <li style="margin-bottom: 10px;"><strong>Deck wood fibers raised</strong>, requiring full sanding and refinishing ($500-$1,500)</li>
+                    <li style="margin-bottom: 10px;"><strong>Concrete etching</strong> from holding the wand too close (permanent damage)</li>
+                </ul>
+
+                <figure class="listicle-image">
+                    <img src="deck-cleaning.jpg" alt="Professional deck cleaning" loading="lazy">
+                    <figcaption>Improper pressure washing technique causes permanent wood damage</figcaption>
+                </figure>
+
+                <div class="stat-highlight">
+                    <div class="stat-number">6,057</div>
+                    <div class="stat-text">Americans were treated in emergency rooms for pressure washer injuries in 2023 alone (CPSC)</div>
+                </div>
+
+                <div class="timeline-cost-box">
+                    <div class="timeline-header">📊 The Real Math: DIY vs. Professional</div>
+                    <div class="timeline-items">
+                        <div class="timeline-item">
+                            <span class="time">Equipment rental</span>
+                            <span class="cost">$75-$150/day</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="time">Your time (weekend)</span>
+                            <span class="cost">8-12 hours</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="time">Risk of damage</span>
+                            <span class="cost">$500-$15,000</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="time">Guarantee included</span>
+                            <span class="cost" style="color: var(--warning-red);">None</span>
+                        </div>
+                        <div class="timeline-item now" style="background: rgba(45,138,78,0.1); border: 1px solid var(--success-green);">
+                            <span class="time"><strong>Professional soft wash</strong></span>
+                            <span class="cost">$350-$600 (fully guaranteed)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <div class="warning-box-title">⚠️ Insurance Reality Check</div>
+                    <p>If you damage your own property with a rented pressure washer, your homeowner's insurance typically won't cover it. Self-inflicted damage is excluded from most policies. Professional services carry $2M+ liability insurance specifically for this reason—if anything goes wrong, you're covered at zero cost.</p>
+                </div>
+            </section>
+
+            <!-- Listicle Item 5 -->
+            <section class="listicle-item">
+                <div class="listicle-number">5</div>
+                <h2 class="listicle-title">Mold and Mildew Are Health Hazards Hiding in Plain Sight</h2>
+
+                <p class="listicle-text">That green stuff spreading across your siding isn't just an eyesore—it's a respiratory hazard actively affecting your family's health right now. Outdoor mold colonies produce millions of microscopic spores that infiltrate your home every time you open a door, window, or run your HVAC system.</p>
+
+                <div class="nightmare-box">
+                    <div class="nightmare-header">
+                        🏥 The Madison Family's Wake-Up Call
+                    </div>
+                    <p>The Petersons lived with green siding for three years, assuming it was "just cosmetic." Their 8-year-old daughter developed persistent allergy symptoms—constant congestion, itchy eyes, recurring sinus infections. After three pediatrician visits and an allergist referral, tests revealed <strong>elevated Cladosporium and Alternaria sensitivity</strong>—common outdoor mold species. "Within two weeks of getting our house soft washed, her symptoms decreased by 80%," says Lisa Peterson. "We had no idea the exterior was connected to what was happening inside."</p>
+                </div>
+
+                <p class="listicle-text">For families with allergies, asthma, elderly members, or young children with developing immune systems, this isn't a cosmetic issue. It's a health priority the EPA explicitly warns about.</p>
+
+                <figure class="listicle-image">
+                    <img src="Soft-Washing.jpg" alt="Soft washing removing mold from siding" loading="lazy">
+                    <figcaption>Professional soft washing eliminates mold at the source</figcaption>
+                </figure>
+
+                <div class="stat-highlight">
+                    <div class="stat-number">93%</div>
+                    <div class="stat-text">of chronic sinus infections are linked to mold exposure, according to the Mayo Clinic</div>
+                </div>
+
+                <div class="comparison-box">
+                    <div class="comparison-header">Pressure Washing vs. Soft Washing: The Mold Truth</div>
+                    <div class="comparison-content">
+                        <div class="comparison-col bad">
+                            <h4>Pressure Washing</h4>
+                            <ul>
+                                <li>Blasts mold into the air</li>
+                                <li>Spores spread everywhere</li>
+                                <li>Root structure survives</li>
+                                <li>Regrowth in 3-6 months</li>
+                            </ul>
+                        </div>
+                        <div class="comparison-col good">
+                            <h4>Professional Soft Wash</h4>
+                            <ul>
+                                <li>Kills mold at cellular level</li>
+                                <li>EPA-approved solutions</li>
+                                <li>Destroys root structure</li>
+                                <li>Protection for 2-3 years</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pro-tip-box">
+                    <div class="pro-tip-title">💡 The Science Behind Soft Washing</div>
+                    <p>Our biodegradable cleaning solutions contain sodium hypochlorite and surfactants that penetrate mold colonies at the cellular level, destroying the organism entirely rather than just removing visible growth. This is why professional soft washing provides 2-3 years of protection versus pressure washing's 3-6 months.</p>
+                </div>
+            </section>
+
+            <!-- Listicle Item 6 -->
+            <section class="listicle-item">
+                <div class="listicle-number">6</div>
+                <h2 class="listicle-title">Every Day You Wait, The Problem Gets More Expensive</h2>
+
+                <p class="listicle-text">Here's the cruel math of exterior neglect that costs Wisconsin homeowners millions every year: organic growth doesn't plateau. It compounds. Exponentially. What costs $400 to fix in March costs $1,200 by October—and might require surface replacement by next spring.</p>
+
+                <p class="listicle-text">Algae, mold, and mildew are living organisms following the same growth curve as bacteria: they double their coverage every few weeks under favorable conditions. And in Wisconsin's humid summers? Conditions are always favorable.</p>
+
+                <div class="timeline-cost-box">
+                    <div class="timeline-header">📈 The Exponential Cost of Waiting (Real Client Data)</div>
+                    <div class="timeline-items">
+                        <div class="timeline-item now">
+                            <span class="time"><strong>Clean Now (January-March)</strong></span>
+                            <span class="cost">$350-$500</span>
+                        </div>
+                        <div class="timeline-item later">
+                            <span class="time">Wait until Summer</span>
+                            <span class="cost">$600-$850</span>
+                        </div>
+                        <div class="timeline-item critical">
+                            <span class="time">Wait until Fall</span>
+                            <span class="cost">$900-$1,400</span>
+                        </div>
+                        <div class="timeline-item critical">
+                            <span class="time">Wait until Next Year</span>
+                            <span class="cost">$1,500+ (possible permanent staining)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nightmare-box">
+                    <div class="nightmare-header">
+                        📉 The Beloit Driveway That Couldn't Be Saved
+                    </div>
+                    <p>In 2024, we received a call from a homeowner in Beloit whose concrete driveway had "a little oil staining." When we arrived, we found 4+ years of accumulated algae, mold, and organic matter that had penetrated deep into the concrete pores. Despite our best efforts with commercial-grade treatment, <strong>the staining had become permanent</strong>. The driveway couldn't be restored—only replaced.</p>
+                    <span class="nightmare-cost">Driveway replacement cost: $8,500. Prevention would have been: $275/year</span>
+                </div>
+
+                <figure class="listicle-image">
+                    <img src="concrete-cleaning-beloit-il.webp" alt="Before and after concrete cleaning" loading="lazy">
+                    <figcaption>Early intervention prevents deep staining that becomes permanent</figcaption>
+                </figure>
+
+                <div class="stat-highlight">
+                    <div class="stat-number">3x</div>
+                    <div class="stat-text">average cost increase when homeowners delay exterior cleaning by just 6 months</div>
+                </div>
+
+                <p class="listicle-text">The homeowners who save the most money aren't the ones who clean once when selling. They're the ones who establish annual maintenance before problems become emergencies. Prevention is always—<em>always</em>—cheaper than repair.</p>
+
+                <div class="pro-tip-box">
+                    <div class="pro-tip-title">💡 The Smart Homeowner Strategy</div>
+                    <p>Our most cost-conscious clients schedule annual maintenance in early spring (March-April). They pay the lowest rates, get priority scheduling, and their homes never reach the "heavy buildup" stage that doubles or triples cleaning costs. Many qualify for our 15% annual maintenance discount.</p>
+                </div>
+            </section>
+
+            <!-- Listicle Item 7 -->
+            <section class="listicle-item">
+                <div class="listicle-number">7</div>
+                <h2 class="listicle-title">You're Leaving $28,000 on the Table (Minimum)</h2>
+
+                <p class="listicle-text">Let's do the final math. On a $400,000 home, a 7% curb appeal premium equals $28,000. That's conservative—some studies show up to 10%.</p>
+
+                <p class="listicle-text">Professional exterior cleaning costs $400-$800. The return on investment is literally 35x to 70x.</p>
+
+                <figure class="listicle-image">
+                    <img src="multiman-service-hero-scaled.jpg" alt="Beautiful clean home exterior" loading="lazy">
+                    <figcaption>A clean exterior adds measurable value to your home</figcaption>
+                </figure>
+
+                <div class="stat-highlight">
+                    <div class="stat-number">35-70x</div>
+                    <div class="stat-text">return on investment for professional exterior cleaning when selling your home</div>
+                </div>
+
+                <p class="listicle-text">Even if you're not selling tomorrow, the protection and prevention benefits compound over time. Every year you maintain your exterior, you're avoiding expensive repairs and preserving your investment.</p>
+
+                <div class="testimonial-enhanced">
+                    <div class="testimonial-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testimonial-text">We cleaned our exterior two weeks before listing and received 3 offers in the first weekend—all above asking price. Our realtor said the curb appeal absolutely made the difference. The $475 we spent probably added $15,000+ to our final sale price. Best investment we made in the entire selling process.</p>
+                    <div class="testimonial-author-enhanced">
+                        <div class="testimonial-author-info">
+                            <div class="testimonial-avatar">DK</div>
+                            <div>
+                                <div class="testimonial-name">David & Sarah Kowalski</div>
+                                <div class="testimonial-location">Sold home in Rockford, IL • November 2025</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-verified">
+                            <span>✓</span> Verified Facebook Review
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2 class="faq-title">Common Questions (Answered Honestly)</h2>
+
+                <div class="faq-item">
+                    <button class="faq-question">Will soft washing damage my roof, siding, or surfaces?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>No—that's specifically why we use soft washing instead of high-pressure methods. Soft washing operates at just 60-100 PSI (garden hose pressure) versus pressure washing's 2,500-4,000 PSI. The cleaning power comes from specialized, biodegradable solutions—not brute force. We've cleaned over 2,800 homes without a single damage claim. Our $2M liability insurance covers your property just in case, but in 7+ years of operation, we've never needed to use it for surface damage.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How long does the cleaning take?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Most homes take 2-4 hours for complete exterior soft washing (house, roof, driveway, sidewalks). You don't need to be home—we just need access to an exterior water spigot. We'll text before we arrive and send photos when we're done. Many clients schedule cleaning for weekdays when they're at work and come home to a transformed exterior.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What if I'm not satisfied with the results?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>We offer a 100% satisfaction guarantee—period. If you're not completely happy with any aspect of our work, we'll return and re-treat the area at no charge. If you're still not satisfied, we'll refund your money. In 7 years, we've had exactly 3 refund requests out of 2,800+ jobs. We're confident you'll be thrilled, but you're protected either way.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Are your cleaning solutions safe for my plants, pets, and kids?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Yes. We use EPA-approved, biodegradable cleaning solutions that break down within 20 minutes of application. We pre-wet all landscaping before treatment and rinse thoroughly afterward. Our solutions are the same active ingredients found in pool water—just in different concentrations. Once dried (typically 1-2 hours), surfaces are completely safe for pets, children, and bare feet. We recommend keeping pets inside during the actual cleaning process as a precaution.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">I'm nervous about strangers at my home. What should I expect?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Completely understandable—your home is your sanctuary. Here's what to expect: Our technicians arrive in clearly marked MultiMan Services vehicles, wear company uniforms with photo ID badges, and will text you before arrival. You'll receive a real-time photo when we're on-site. All our team members are background-checked, and we're happy to send you your technician's profile in advance so you know exactly who's coming. You don't need to be home or interact at all if you prefer—many clients simply unlock the gate and go about their day.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How long will the results last?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Professional soft washing provides 2-3 years of protection versus pressure washing's 3-6 months. Why? Because our solutions kill organic growth at the root level—they don't just blast off surface contamination. The exact duration depends on factors like shade coverage, humidity, and proximity to trees, but most clients schedule maintenance every 18-24 months to keep their homes looking pristine year-round.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What does the free assessment actually include?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Our free assessment is a genuine $200 value that includes: (1) Complete exterior inspection identifying all problem areas, (2) Written assessment with photos documenting current conditions, (3) Customized treatment recommendations for your specific surfaces, (4) Detailed pricing breakdown with no hidden fees, (5) Estimated timeline and scheduling options. There's zero obligation and absolutely no pressure. Many homeowners use our assessment just to understand what their exterior needs, even if they don't schedule service immediately.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final Section -->
+            <section class="final-section">
+                <h2 class="final-title">The Bottom Line</h2>
+
+                <p class="final-text">Your home is likely your largest investment. Protecting it shouldn't be optional—and it doesn't have to be expensive or complicated.</p>
+
+                <div class="final-cta-box">
+                    <div class="final-cta-badge">⏰ Limited Availability</div>
+                    <h3 class="final-cta-title">Get Your Free Assessment</h3>
+                    <p class="final-cta-subtitle">Find out exactly what your exterior needs—and what it will cost to restore and protect your investment. No pressure, no obligation.</p>
+
+                    <a href="https://www.multimanservices.com/" class="final-cta-btn" target="_blank" rel="noopener">Yes, Assess My Home Free →</a>
+
+                    <div class="final-cta-features">
+                        <div class="final-cta-feature">
+                            <span>✓</span>
+                            <span>$200 Value — FREE</span>
+                        </div>
+                        <div class="final-cta-feature">
+                            <span>✓</span>
+                            <span>Same-Week Scheduling</span>
+                        </div>
+                        <div class="final-cta-feature">
+                            <span>✓</span>
+                            <span>100% Satisfaction Guaranteed</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="team-inner">
+            <img src="Multiman-Services-Team-Photo-Soft-Washing-Beloit.jpg" alt="MultiMan Services Team" class="team-image">
+            <div class="team-content">
+                <h3>About MultiMan Services</h3>
+                <p>Serving Wisconsin and Northern Illinois since 2018, MultiMan Services has transformed over 2,800 homes with professional soft washing and pressure washing. Our certified technicians use industry-leading techniques that clean thoroughly while protecting your surfaces.</p>
+                <div class="team-credentials">
+                    <div class="team-credential">
+                        <span>🏆</span>
+                        <span>A+ BBB Rating</span>
+                    </div>
+                    <div class="team-credential">
+                        <span>🛡️</span>
+                        <span>Fully Insured</span>
+                    </div>
+                    <div class="team-credential">
+                        <span>📍</span>
+                        <span>Beloit, WI Based</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <img src="multiman-services-logo.png" alt="MultiMan Services" class="footer-logo">
+        <p class="footer-text">© 2026 MultiMan Services. Professional Exterior Cleaning in Wisconsin & Illinois.</p>
+        <div class="footer-links">
+            <a href="https://www.multimanservices.com/" target="_blank" rel="noopener">Visit Website</a>
+            <a href="https://www.multimanservices.com/contact" target="_blank" rel="noopener">Contact Us</a>
+            <a href="tel:+16085551234">Call Now</a>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="stickyCta">
+        <div class="sticky-cta-inner">
+            <div class="sticky-cta-text">
+                <strong>Free Assessment ($200 Value)</strong>
+                Limited spots this month
+            </div>
+            <a href="https://www.multimanservices.com/" class="sticky-cta-btn" target="_blank" rel="noopener">Get Started →</a>
+        </div>
+    </div>
+
+    <!-- Social Proof Float -->
+    <div class="social-proof-float" id="socialProof">
+        <span class="social-proof-dot"></span>
+        <span id="proofText">Mike from Janesville just booked his free assessment</span>
+    </div>
+
+    <!-- Lead Capture Modal -->
+    <div class="modal-overlay" id="leadModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <span class="modal-badge">⚡ Limited Time</span>
+            <h3 class="modal-title">Claim Your Free $200 Home Assessment</h3>
+            <p class="modal-subtitle">Get a professional evaluation of your exterior—discover exactly what needs attention and what it will cost. No pressure, no obligation.</p>
+
+            <form class="modal-form" id="leadForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="John Smith" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(608) 555-1234" required>
+                </div>
+                <div class="form-group">
+                    <label for="zip">ZIP Code</label>
+                    <input type="text" id="zip" name="zip" placeholder="53511" pattern="[0-9]{5}" required>
+                </div>
+                <button type="submit" class="modal-submit">Yes, Send My Free Assessment →</button>
+            </form>
+
+            <div class="modal-trust">
+                <span>🔒 Your info is secure</span>
+                <span>✓ No spam, ever</span>
+                <span>⚡ Response within 24hrs</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal management
+        let modalShown = false;
+        const modal = document.getElementById('leadModal');
+
+        function showModal() {
+            if (!modalShown && !localStorage.getItem('modalDismissed')) {
+                modal.classList.add('visible');
+                document.body.style.overflow = 'hidden';
+                modalShown = true;
+            }
+        }
+
+        function closeModal() {
+            modal.classList.remove('visible');
+            document.body.style.overflow = '';
+            localStorage.setItem('modalDismissed', 'true');
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+
+            // Show success state
+            event.target.innerHTML = `
+                <div style="text-align: center; padding: 20px;">
+                    <div style="font-size: 48px; margin-bottom: 16px;">✅</div>
+                    <h4 style="color: var(--primary-navy); margin-bottom: 12px;">You're All Set!</h4>
+                    <p style="color: var(--text-medium);">We'll contact you within 24 hours to schedule your free assessment.</p>
+                </div>
+            `;
+
+            // Redirect after delay
+            setTimeout(() => {
+                window.open('https://www.multimanservices.com/', '_blank');
+                closeModal();
+            }, 2500);
+        }
+
+        // Close modal on overlay click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        // Close modal on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Reading progress bar with modal trigger at 50%
+        let modalTriggered = false;
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+
+            // Show sticky CTA after scrolling 40%
+            const stickyCta = document.getElementById('stickyCta');
+            if (scrolled > 40 && scrolled < 95) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+
+            // Trigger modal at 50% scroll
+            if (scrolled > 50 && !modalTriggered) {
+                modalTriggered = true;
+                setTimeout(showModal, 1500);
+            }
+        });
+
+        // Social proof notifications
+        const proofMessages = [
+            "Mike from Janesville just booked his free assessment",
+            "Sarah in Madison scheduled for this Saturday",
+            "Jennifer from Beloit: \"My roof looks brand new!\"",
+            "David in Rockford saved $12,000 vs. DIY damage",
+            "The Hendersons just completed their soft wash",
+            "3 homeowners in Rockton requested quotes today"
+        ];
+
+        let proofIndex = 0;
+        const socialProof = document.getElementById('socialProof');
+        const proofText = document.getElementById('proofText');
+
+        function showProof() {
+            proofText.textContent = proofMessages[proofIndex];
+            socialProof.classList.add('visible');
+
+            setTimeout(() => {
+                socialProof.classList.remove('visible');
+            }, 5000);
+
+            proofIndex = (proofIndex + 1) % proofMessages.length;
+        }
+
+        // Show first proof after 8 seconds, then every 25 seconds
+        setTimeout(() => {
+            showProof();
+            setInterval(showProof, 25000);
+        }, 8000);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // CTA button click handler - opens modal instead of direct link
+        document.querySelectorAll('.inline-cta-btn, .final-cta-btn, .sticky-cta-btn, .header-cta').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                localStorage.removeItem('modalDismissed');
+                modalShown = false;
+                showModal();
+            });
+        });
+    </script>
+</body>
+</html>
