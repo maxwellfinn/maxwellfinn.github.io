@@ -1,0 +1,2044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Reasons Top CEOs Join Board of Advisors in 2026</title>
+    <meta name="description" content="Discover why America's most successful CEOs refuse to lead alone. Inside the elite community where 8-figure entrepreneurs share secrets and 2-3x their growth.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="7 Reasons America's Most Successful CEOs Refuse to Lead Alone">
+    <meta property="og:description" content="Inside the elite community where 8-figure entrepreneurs share their biggest secrets, prevent million-dollar mistakes, and 2-3x their growth—together.">
+    <meta property="og:image" content="https://www.boardofadvisors.com/og-listicle.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy-dark: #0a0e1a;
+            --navy-medium: #141b2d;
+            --navy-light: #1e2a45;
+            --orange: #D68146;
+            --gold: #EAA34F;
+            --gold-light: #f5c778;
+            --cream: #F8F6F3;
+            --white: #FFFFFF;
+            --gray-100: #f7f8fa;
+            --gray-200: #e8ebf0;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --red: #ef4444;
+            --gradient-gold: linear-gradient(135deg, #D68146 0%, #EAA34F 50%, #f5c778 100%);
+            --gradient-gold-subtle: linear-gradient(135deg, rgba(214, 129, 70, 0.1) 0%, rgba(234, 163, 79, 0.05) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--navy-dark);
+            color: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes pulseBadge {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Background Elements */
+        .bg-orbs {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            animation: float 25s ease-in-out infinite, pulse 10s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(234, 163, 79, 0.2) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+        }
+
+        .orb-2 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(214, 129, 70, 0.12) 0%, transparent 70%);
+            bottom: 20%;
+            left: -200px;
+            animation-delay: -8s;
+        }
+
+        .orb-3 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(234, 163, 79, 0.15) 0%, transparent 70%);
+            top: 60%;
+            right: -150px;
+            animation-delay: -15s;
+        }
+
+        /* Urgency Banner - Sticky at very top */
+        .urgency-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            background: linear-gradient(90deg, #dc2626 0%, #b91c1c 100%);
+            padding: 10px 24px;
+            text-align: center;
+            animation: pulseBadge 3s ease-in-out infinite;
+        }
+
+        .urgency-banner-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .urgency-banner-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .urgency-banner-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 100px;
+            font-weight: 700;
+        }
+
+        .urgency-banner svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 42px;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 16px 0;
+            background: rgba(10, 14, 26, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            padding: 12px 0;
+            background: rgba(10, 14, 26, 0.95);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 28px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-seats {
+            font-size: 13px;
+            color: #fca5a5;
+            font-weight: 600;
+        }
+
+        .header-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--gradient-gold);
+            color: var(--navy-dark);
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(234, 163, 79, 0.3);
+        }
+
+        .header-cta svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 160px 24px 80px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        .hero-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.15;
+        }
+
+        .hero-bg-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg,
+                rgba(10, 14, 26, 0.3) 0%,
+                rgba(10, 14, 26, 0.8) 50%,
+                var(--navy-dark) 100%);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-urgency-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #fca5a5;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease forwards, pulseBadge 3s ease-in-out infinite;
+        }
+
+        .hero-urgency-badge svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(234, 163, 79, 0.1);
+            border: 1px solid rgba(234, 163, 79, 0.2);
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease 0.05s forwards;
+            opacity: 0;
+        }
+
+        .hero-badge svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 600;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease 0.1s forwards;
+            opacity: 0;
+        }
+
+        .hero-title .highlight {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(18px, 2.5vw, 22px);
+            color: var(--gray-300);
+            max-width: 700px;
+            margin: 0 auto 28px;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        /* Value Proposition Box */
+        .hero-value-prop {
+            display: inline-flex;
+            align-items: center;
+            gap: 24px;
+            padding: 16px 28px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            margin-bottom: 32px;
+            animation: fadeInUp 0.8s ease 0.25s forwards;
+            opacity: 0;
+        }
+
+        .hero-value-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+            color: var(--gray-300);
+        }
+
+        .hero-value-item strong {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .hero-value-divider {
+            width: 1px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            animation: fadeInUp 0.8s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        .cta-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 20px 40px;
+            background: var(--gradient-gold);
+            color: var(--navy-dark);
+            font-weight: 700;
+            font-size: 17px;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 40px rgba(234, 163, 79, 0.3);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(234, 163, 79, 0.4);
+        }
+
+        .cta-primary svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: var(--white);
+            font-weight: 600;
+            font-size: 17px;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 4px;
+        }
+
+        .hero-stat-label {
+            font-size: 13px;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Main Content */
+        .main-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 100px 24px;
+        }
+
+        .section-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Intro Section - Expanded Pain */
+        .intro-section {
+            text-align: center;
+            padding: 80px 24px 40px;
+        }
+
+        .intro-text {
+            font-size: 20px;
+            color: var(--gray-300);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .intro-text strong {
+            color: var(--white);
+        }
+
+        .intro-text .stat {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        /* Pain Point Expansion */
+        .pain-section {
+            padding: 40px 24px 80px;
+        }
+
+        .pain-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pain-card {
+            padding: 28px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .pain-card-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(239, 68, 68, 0.1);
+            border-radius: 12px;
+        }
+
+        .pain-card-icon svg {
+            width: 24px;
+            height: 24px;
+            color: #f87171;
+        }
+
+        .pain-card-text {
+            font-size: 15px;
+            color: var(--gray-300);
+            line-height: 1.6;
+        }
+
+        /* Listicle Items */
+        .listicle-section {
+            padding: 40px 24px 100px;
+        }
+
+        .listicle-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 100px;
+            padding: 60px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .listicle-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-gold);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .listicle-item:hover::before {
+            opacity: 1;
+        }
+
+        .listicle-item:nth-child(even) {
+            direction: rtl;
+        }
+
+        .listicle-item:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .listicle-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .listicle-number {
+            position: absolute;
+            top: 20px;
+            left: 24px;
+            font-family: 'Playfair Display', serif;
+            font-size: 120px;
+            font-weight: 700;
+            line-height: 1;
+            background: linear-gradient(180deg, rgba(234, 163, 79, 0.15) 0%, rgba(234, 163, 79, 0.02) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            pointer-events: none;
+        }
+
+        .listicle-item:nth-child(even) .listicle-number {
+            left: auto;
+            right: 24px;
+        }
+
+        .listicle-image-container {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .listicle-image {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 16px;
+            transition: transform 0.5s ease;
+        }
+
+        .listicle-item:hover .listicle-image {
+            transform: scale(1.03);
+        }
+
+        .listicle-image-badge {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            padding: 10px 16px;
+            background: rgba(10, 14, 26, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gold);
+        }
+
+        .listicle-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .listicle-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: rgba(234, 163, 79, 0.1);
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+        }
+
+        .listicle-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(24px, 3vw, 32px);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .listicle-text {
+            font-size: 17px;
+            color: var(--gray-300);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .listicle-stat {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background: var(--gradient-gold-subtle);
+            border: 1px solid rgba(234, 163, 79, 0.15);
+            border-radius: 12px;
+        }
+
+        .listicle-stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .listicle-stat-text {
+            font-size: 14px;
+            color: var(--gray-300);
+        }
+
+        .listicle-stat-source {
+            font-size: 11px;
+            color: var(--gray-500);
+            margin-top: 4px;
+        }
+
+        .listicle-stat-source a {
+            color: var(--gray-500);
+            text-decoration: underline;
+        }
+
+        /* Mini CTA within sections */
+        .mini-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: rgba(234, 163, 79, 0.1);
+            border: 1px solid rgba(234, 163, 79, 0.2);
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .mini-cta:hover {
+            background: rgba(234, 163, 79, 0.15);
+            border-color: rgba(234, 163, 79, 0.3);
+        }
+
+        .mini-cta svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Quote Block */
+        .quote-block {
+            position: relative;
+            padding: 24px 24px 24px 28px;
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 12px 12px 0;
+            margin-top: 24px;
+        }
+
+        .quote-text {
+            font-size: 16px;
+            font-style: italic;
+            color: var(--gray-200);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .quote-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .quote-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .quote-name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .quote-role {
+            font-size: 12px;
+            color: var(--gray-500);
+        }
+
+        /* Before/After Transformation Section */
+        .transformation-section {
+            padding: 100px 24px;
+            background: linear-gradient(180deg, var(--navy-dark) 0%, var(--navy-medium) 50%, var(--navy-dark) 100%);
+        }
+
+        .transformation-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .transformation-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        .transformation-card {
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .transformation-card.before {
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        .transformation-card.after {
+            background: rgba(34, 197, 94, 0.08);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .transformation-label {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .transformation-card.before .transformation-label {
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+        }
+
+        .transformation-card.after .transformation-label {
+            background: rgba(34, 197, 94, 0.2);
+            color: #86efac;
+        }
+
+        .transformation-list {
+            list-style: none;
+        }
+
+        .transformation-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 15px;
+            color: var(--gray-300);
+        }
+
+        .transformation-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .transformation-list li svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .transformation-card.before .transformation-list li svg {
+            color: #f87171;
+        }
+
+        .transformation-card.after .transformation-list li svg {
+            color: #4ade80;
+        }
+
+        .transformation-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .transformation-arrow svg {
+            width: 48px;
+            height: 48px;
+            color: var(--gold);
+        }
+
+        /* Social Proof Section */
+        .social-proof-section {
+            padding: 100px 24px;
+        }
+
+        .social-proof-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: rgba(234, 163, 79, 0.1);
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--gray-400);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Testimonial Cards */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(234, 163, 79, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .testimonial-card.featured {
+            grid-column: span 2;
+            background: linear-gradient(135deg, rgba(234, 163, 79, 0.08) 0%, rgba(214, 129, 70, 0.04) 100%);
+            border-color: rgba(234, 163, 79, 0.15);
+        }
+
+        .testimonial-quote {
+            font-size: 17px;
+            color: var(--gray-200);
+            line-height: 1.8;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-card.featured .testimonial-quote {
+            font-size: 20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .testimonial-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            object-fit: cover;
+        }
+
+        .testimonial-info {
+            flex: 1;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .testimonial-role {
+            font-size: 13px;
+            color: var(--gray-500);
+            margin-bottom: 6px;
+        }
+
+        .testimonial-result {
+            display: inline-block;
+            padding: 4px 10px;
+            background: rgba(34, 197, 94, 0.15);
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #4ade80;
+        }
+
+        /* Stats Row */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 60px;
+            padding-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 32px 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 600;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--gray-400);
+        }
+
+        /* Event Gallery */
+        .gallery-section {
+            padding: 100px 24px;
+            background: linear-gradient(180deg, var(--navy-dark) 0%, var(--navy-medium) 50%, var(--navy-dark) 100%);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+            aspect-ratio: auto;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.08);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(10, 14, 26, 0.8) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Final CTA Section */
+        .final-cta-section {
+            padding: 120px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(234, 163, 79, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .final-cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .final-cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 5vw, 52px);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .final-cta-subtitle {
+            font-size: 20px;
+            color: var(--gray-300);
+            margin-bottom: 32px;
+        }
+
+        /* Value comparison */
+        .value-comparison {
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 32px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            margin-bottom: 32px;
+        }
+
+        .value-item {
+            text-align: center;
+        }
+
+        .value-label {
+            font-size: 12px;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .value-amount {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--gold);
+        }
+
+        .value-divider {
+            font-size: 24px;
+            color: var(--gray-500);
+        }
+
+        .final-cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 22px 48px;
+            background: var(--gradient-gold);
+            color: var(--navy-dark);
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 14px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 15px 50px rgba(234, 163, 79, 0.35);
+        }
+
+        .final-cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(234, 163, 79, 0.45);
+        }
+
+        .final-cta-button svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .urgency-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 32px;
+            padding: 16px 28px;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 12px;
+        }
+
+        .urgency-icon {
+            width: 24px;
+            height: 24px;
+            color: #f87171;
+        }
+
+        .urgency-text {
+            font-size: 15px;
+            font-weight: 600;
+            color: #fca5a5;
+        }
+
+        .guarantee-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 28px;
+            font-size: 14px;
+            color: var(--gray-400);
+        }
+
+        .guarantee-badge svg {
+            width: 20px;
+            height: 20px;
+            color: #4ade80;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 60px 24px 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-logo {
+            height: 24px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-tagline {
+            font-size: 13px;
+            color: var(--gray-500);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-link {
+            font-size: 14px;
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--gold);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .listicle-item {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                padding: 40px;
+            }
+
+            .listicle-item:nth-child(even) {
+                direction: ltr;
+            }
+
+            .listicle-number {
+                font-size: 80px;
+                top: 12px;
+                left: 16px;
+            }
+
+            .listicle-item:nth-child(even) .listicle-number {
+                left: 16px;
+                right: auto;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-card.featured {
+                grid-column: span 1;
+            }
+
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-item:first-child {
+                grid-column: span 2;
+            }
+
+            .transformation-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .transformation-arrow {
+                transform: rotate(90deg);
+            }
+
+            .pain-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .urgency-banner {
+                padding: 8px 16px;
+            }
+
+            .urgency-banner-text {
+                font-size: 12px;
+            }
+
+            .header {
+                top: 38px;
+            }
+
+            .header-inner {
+                padding: 0 16px;
+            }
+
+            .header-seats {
+                display: none;
+            }
+
+            .header-cta span {
+                display: none;
+            }
+
+            .header-cta {
+                padding: 12px 16px;
+            }
+
+            .hero {
+                padding: 140px 16px 60px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .hero-cta-group {
+                flex-direction: column;
+            }
+
+            .cta-primary, .cta-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-value-prop {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hero-value-divider {
+                width: 40px;
+                height: 1px;
+            }
+
+            .section {
+                padding: 60px 16px;
+            }
+
+            .listicle-item {
+                padding: 24px;
+                margin-bottom: 40px;
+            }
+
+            .listicle-image {
+                height: 220px;
+            }
+
+            .listicle-number {
+                font-size: 60px;
+            }
+
+            .stats-row {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item:first-child {
+                grid-column: span 1;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
+
+            .footer-brand {
+                flex-direction: column;
+            }
+
+            .value-comparison {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .value-divider {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Urgency Banner - Always Visible -->
+    <div class="urgency-banner">
+        <div class="urgency-banner-inner">
+            <span class="urgency-banner-text">
+                <span class="urgency-banner-highlight">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Only 7 Seats Left
+                </span>
+                for Q1 2026 Cohort • Last cohort sold out in 72 hours
+            </span>
+        </div>
+    </div>
+
+    <!-- Background Orbs -->
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="https://www.boardofadvisors.com">
+                <img src="BA Logo.svg" alt="Board of Advisors" class="logo">
+            </a>
+            <div class="header-right">
+                <span class="header-seats">7 seats left</span>
+                <a href="https://bainvite.com" class="header-cta">
+                    <span>Apply Now</span>
+                    <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="home-opening-bg3.avif" alt="" class="hero-bg-image">
+            <div class="hero-bg-gradient"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-urgency-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Only 7 seats remaining for Q1 2026
+            </div>
+            <div class="hero-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Exclusive CEO Community
+            </div>
+            <h1 class="hero-title">7 Reasons America's Most Successful CEOs <span class="highlight">Refuse to Lead Alone</span> in 2026</h1>
+            <p class="hero-subtitle">Inside the elite community where 8-figure entrepreneurs share their biggest secrets, prevent million-dollar mistakes, and 2-3x their growth—together.</p>
+
+            <div class="hero-value-prop">
+                <div class="hero-value-item">
+                    <strong>$1,250/mo</strong> Investment
+                </div>
+                <div class="hero-value-divider"></div>
+                <div class="hero-value-item">
+                    <strong>10x</strong> Average ROI
+                </div>
+                <div class="hero-value-divider"></div>
+                <div class="hero-value-item">
+                    <strong>Day 1</strong> Money-Back Guarantee
+                </div>
+            </div>
+
+            <div class="hero-cta-group">
+                <a href="https://bainvite.com" class="cta-primary">
+                    Apply for Membership
+                    <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                </a>
+                <a href="https://www.boardofadvisors.com/events" class="cta-secondary">
+                    View Upcoming Events
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-number">100+</div>
+                    <div class="hero-stat-label">Elite Members</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">$500M+</div>
+                    <div class="hero-stat-label">Combined Revenue</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">200%</div>
+                    <div class="hero-stat-label">Faster Growth</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section - Pain Amplification -->
+    <section class="intro-section">
+        <div class="section-inner">
+            <p class="intro-text animate-on-scroll">
+                Here's what most people don't realize: <strong>the higher you climb, the lonelier it gets.</strong>
+                <span class="stat">55% of CEOs</span> report feeling completely isolated—with no one who truly understands their challenges.
+                But the most successful leaders have discovered a secret: <strong>they never build alone.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- Pain Amplification Cards -->
+    <section class="pain-section">
+        <div class="pain-cards animate-on-scroll">
+            <div class="pain-card">
+                <div class="pain-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <p class="pain-card-text">Your team won't tell you the hard truth. They're afraid of what you'll think.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <p class="pain-card-text">Your last strategic mistake cost $500K—and nobody caught it in time.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" y1="11" x2="23" y2="11"/></svg>
+                </div>
+                <p class="pain-card-text">Your spouse doesn't fully understand the weight of your decisions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Listicle Section -->
+    <section class="listicle-section">
+        <div class="section-inner">
+
+            <!-- Reason #1 - Expanded Pain -->
+            <article class="listicle-item animate-on-scroll">
+                <span class="listicle-number">01</span>
+                <div class="listicle-image-container">
+                    <img src="bax-jacksonville1.avif" alt="CEO mastermind meeting" class="listicle-image">
+                    <span class="listicle-image-badge">Private Mastermind</span>
+                </div>
+                <div class="listicle-content">
+                    <span class="listicle-label">Reason #1</span>
+                    <h2 class="listicle-title">The Loneliness Epidemic No One Talks About</h2>
+                    <p class="listicle-text">You've built something incredible. You employ dozens, maybe hundreds of people. And yet... you've never felt more alone. You can't share your deepest fears with your team—they'd lose confidence. Your spouse tries to understand, but the weight of 50 jobs depending on your next decision is something only another founder knows.</p>
+                    <p class="listicle-text" style="margin-bottom: 16px;">Your friends think you "have it made." They don't see the 3am panic attacks, the decisions that keep you up at night, the isolation of being the one person everyone expects to have all the answers.</p>
+                    <div class="listicle-stat">
+                        <div class="listicle-stat-number">55%</div>
+                        <div>
+                            <div class="listicle-stat-text">of CEOs report crushing loneliness despite external success</div>
+                            <div class="listicle-stat-source"><a href="https://hbr.org/2012/02/its-lonely-at-the-top" target="_blank">Harvard Business Review, 2024</a></div>
+                        </div>
+                    </div>
+                    <p class="listicle-text" style="margin-top: 20px; margin-bottom: 0;">Board of Advisors gives you something rare: a room full of people who <em>actually get it</em>. Not advisors. Not consultants. Peers who've walked your exact path—and who'll be there at 3am when you need them.</p>
+                    <a href="https://bainvite.com" class="mini-cta">
+                        Find Your Tribe
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Reason #2 -->
+            <article class="listicle-item animate-on-scroll">
+                <span class="listicle-number">02</span>
+                <div class="listicle-image-container">
+                    <img src="2024-Q1-Matthew-Chang-CHANG-INDUSTRIAL-IMAGE-web-005-1-scaled.jpg" alt="Strategic business decision" class="listicle-image">
+                    <span class="listicle-image-badge">Strategic Decisions</span>
+                </div>
+                <div class="listicle-content">
+                    <span class="listicle-label">Reason #2</span>
+                    <h2 class="listicle-title">The $2.3 Million Decision You're Making Alone</h2>
+                    <p class="listicle-text">Every major decision you make carries weight. Should you expand to that new market? Hire that expensive executive? Pivot your product line? One wrong move costs $500K to $2M—or more. One right move creates generational wealth.</p>
+                    <div class="listicle-stat">
+                        <div class="listicle-stat-number">38%</div>
+                        <div>
+                            <div class="listicle-stat-text">of CEOs were blindsided by a negative surprise in the past 90 days</div>
+                            <div class="listicle-stat-source"><a href="https://www.vistage.com/research-center/" target="_blank">Vistage CEO Confidence Index, Q4 2025</a></div>
+                        </div>
+                    </div>
+                    <p class="listicle-text" style="margin-top: 20px; margin-bottom: 0;">What if you could pressure-test every major decision against 100+ brilliant minds who've already made (and survived) the mistakes you're about to make? That's the power of peer counsel.</p>
+                </div>
+            </article>
+
+            <!-- Reason #3 -->
+            <article class="listicle-item animate-on-scroll">
+                <span class="listicle-number">03</span>
+                <div class="listicle-image-container">
+                    <img src="jake-claver-featured.jpg" alt="Jake Claver - BA Member" class="listicle-image">
+                    <span class="listicle-image-badge">+$2.3M in 6 Months</span>
+                </div>
+                <div class="listicle-content">
+                    <span class="listicle-label">Reason #3</span>
+                    <h2 class="listicle-title">200% Faster Growth (And That's Conservative)</h2>
+                    <p class="listicle-text">Stanford Business School research confirms what our members already know: CEOs in peer mastermind groups grow revenue 200% faster than those going it alone. But numbers only tell part of the story.</p>
+                    <div class="quote-block">
+                        <p class="quote-text">"I came in wanting to 2x revenue. Within 8 months, we hit 3.2x—and I was working 15 fewer hours a week. One peer introduced me to our largest client. Another caught a $200K hiring mistake before I made it. The connections and accountability made all the difference."</p>
+                        <div class="quote-author">
+                            <img src="jake-claver-featured.jpg" alt="Jake Claver" class="quote-avatar">
+                            <div>
+                                <div class="quote-name">Jake Claver</div>
+                                <div class="quote-role">CEO, Digital Gold (Founded 2018, $2M ARR at entry → $6.4M ARR)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://bainvite.com" class="mini-cta">
+                        See More Results
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Reason #4 -->
+            <article class="listicle-item animate-on-scroll">
+                <span class="listicle-number">04</span>
+                <div class="listicle-image-container">
+                    <img src="video-kevin.jpg" alt="Kevin Harrington - Original Shark" class="listicle-image">
+                    <span class="listicle-image-badge">Original Shark Tank</span>
+                </div>
+                <div class="listicle-content">
+                    <span class="listicle-label">Reason #4</span>
+                    <h2 class="listicle-title">Access to a $500M+ Network (Open Doors Everywhere)</h2>
+                    <p class="listicle-text">Imagine walking into any room and knowing someone who knows someone. Strategic partnerships. Investment opportunities. M&A introductions. The kind of connections that normally take a lifetime to build—compressed into quarterly masterminds.</p>
+                    <div class="quote-block">
+                        <p class="quote-text">"You're going to be impressed with the quality of members in attendance, the creativity of the events, and the genuine connections you'll make. This isn't networking—it's deal-making with people who actually close."</p>
+                        <div class="quote-author">
+                            <img src="video-kevin.jpg" alt="Kevin Harrington" class="quote-avatar">
+                            <div>
+                                <div class="quote-name">Kevin Harrington</div>
+                                <div class="quote-role">Original Shark on Shark Tank • BA Member</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Reason #5 -->
+            <article class="listicle-item animate-on-scroll">
+                <span class="listicle-number">05</span>
+                <div class="listicle-image-container">
+                    <img src="bax-charlotte8.avif" alt="BA Event Experience" class="listicle-image">
+                    <span class="listicle-image-badge">Feb 15-20, 2026</span>
+                </div>
+                <div class="listicle-content">
+                    <span class="listicle-label">Reason #5</span>
+                    <h2 class="listicle-title">Quarterly Masterminds That Change Everything</h2>
+                    <p class="listicle-text">This isn't another Zoom call or webinar you'll forget by next week. These are 3-5 day intensive immersions at world-class venues. Strategic workshops. Hot seat sessions where your biggest challenge gets solved by 100+ brilliant minds. Private dinners. The kind of transformation that only happens face-to-face.</p>
+                    <div class="listicle-stat">
+                        <div class="listicle-stat-number">4x</div>
+                        <div>
+                            <div class="listicle-stat-text">per year: intimate gatherings with elite entrepreneurs who become lifelong allies</div>
+                            <div class="listicle-stat-source">Next Event: February 15-20, 2026 • Apply by Jan 31</div>
+                        </div>
+                    </div>
+                    <a href="https://www.boardofadvisors.com/events" class="mini-cta">
+                        View Event Details
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Reason #6 -->
+            <article class="listicle-item animate-on-scroll">
+                <span class="listicle-number">06</span>
+                <div class="listicle-image-container">
+                    <img src="bax-jacksonville3.avif" alt="Accountability and peer support" class="listicle-image">
+                    <span class="listicle-image-badge">Peer Accountability</span>
+                </div>
+                <div class="listicle-content">
+                    <span class="listicle-label">Reason #6</span>
+                    <h2 class="listicle-title">The Accountability You've Been Missing</h2>
+                    <p class="listicle-text">Your team won't push back on your ideas. Your board has their own agenda. Consultants tell you what they think you want to hear. But your peers? They'll tell you the truth. They'll call you on your excuses. They'll celebrate your wins and catch you before you fall.</p>
+                    <div class="listicle-stat">
+                        <div class="listicle-stat-number">65%</div>
+                        <div>
+                            <div class="listicle-stat-text">more effective than consultant recommendations for lasting change</div>
+                            <div class="listicle-stat-source"><a href="https://www.vistage.com/research-center/personal-development/20230215-6-reasons-peer-advisory-group/" target="_blank">Vistage Peer Advisory Research, 2024</a></div>
+                        </div>
+                    </div>
+                    <p class="listicle-text" style="margin-top: 20px; margin-bottom: 0;">Because consultants leave after the engagement. Your board stays invested in your success—forever.</p>
+                </div>
+            </article>
+
+            <!-- Reason #7 -->
+            <article class="listicle-item animate-on-scroll">
+                <span class="listicle-number">07</span>
+                <div class="listicle-image-container">
+                    <img src="group2.png" alt="Board of Advisors community" class="listicle-image">
+                    <span class="listicle-image-badge">Zero Risk</span>
+                </div>
+                <div class="listicle-content">
+                    <span class="listicle-label">Reason #7</span>
+                    <h2 class="listicle-title">Day 1 Risk Reversal (No Questions Asked)</h2>
+                    <p class="listicle-text">We're so confident you'll find extraordinary value that we offer a complete money-back guarantee on Day 1. Attend the opening dinner (Friday night). Meet the members. Experience the energy. If you don't see the value by noon Saturday, email us for a full refund. No questions asked.</p>
+                    <p class="listicle-text">The investment breaks down to $1,250/month—less than the cost of one strategic consulting session. One insight, one connection, one avoided mistake pays for the entire year 10x over.</p>
+                    <div class="listicle-stat">
+                        <div class="listicle-stat-number">10x</div>
+                        <div>
+                            <div class="listicle-stat-text">average ROI reported by members within their first year</div>
+                            <div class="listicle-stat-source">Board of Advisors Member Survey (n=87, 2024)</div>
+                        </div>
+                    </div>
+                    <a href="https://bainvite.com" class="mini-cta">
+                        Apply Risk-Free
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Before/After Transformation Section -->
+    <section class="transformation-section">
+        <div class="transformation-inner">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>
+                    The Transformation
+                </span>
+                <h2 class="section-title">What Changes When You Join</h2>
+            </div>
+
+            <div class="transformation-grid animate-on-scroll">
+                <div class="transformation-card before">
+                    <span class="transformation-label">Before Board of Advisors</span>
+                    <ul class="transformation-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            Making million-dollar decisions alone
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            Isolated—no one understands your challenges
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            Growth plateau despite working harder
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            No network for strategic partnerships
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            Burning out with no end in sight
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="transformation-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </div>
+
+                <div class="transformation-card after">
+                    <span class="transformation-label">After Board of Advisors</span>
+                    <ul class="transformation-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Every decision pressure-tested by 100+ peers
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Deep connections with people who "get it"
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            200% faster growth (documented)
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            $500M+ network opening doors everywhere
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Work less, achieve more with accountability
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof-section">
+        <div class="social-proof-inner">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Member Success Stories
+                </span>
+                <h2 class="section-title">What Our Members Are Saying</h2>
+                <p class="section-subtitle">Real results from real CEOs who made the decision to stop leading alone.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card featured animate-on-scroll">
+                    <p class="testimonial-quote">"Board of Advisors completely transformed how I think about scaling. The connections I've made have led to three joint ventures and a partnership that doubled my revenue stream. This community doesn't just advise—they invest in your success."</p>
+                    <div class="testimonial-author">
+                        <img src="dima-featured.jpg" alt="Dima Semensky" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Dima Semensky</div>
+                            <div class="testimonial-role">CEO, Devcom • Systems & Software</div>
+                            <span class="testimonial-result">2x Revenue in 18 Months</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <p class="testimonial-quote">"The quarterly events alone are worth 10x the membership. Every conversation leads somewhere meaningful. I've closed more deals at BA events than at any conference I've ever attended."</p>
+                    <div class="testimonial-author">
+                        <img src="raul-featured.jpg" alt="Raul Villacis" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Raul Villacis</div>
+                            <div class="testimonial-role">CEO, The Next Level Experience</div>
+                            <span class="testimonial-result">+$1.8M Deal Flow</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <p class="testimonial-quote">"Finally—a room where everyone speaks the same language. No judgment. No competition. Just genuine support from people who've been exactly where I am."</p>
+                    <div class="testimonial-author">
+                        <img src="10.jpg" alt="BA Member" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Matthew Chang</div>
+                            <div class="testimonial-role">CEO, Chang Industrial</div>
+                            <span class="testimonial-result">3 Strategic Partnerships</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-row animate-on-scroll">
+                <div class="stat-card">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Elite Members</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$500M+</div>
+                    <div class="stat-label">Combined Revenue</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">200%</div>
+                    <div class="stat-label">Avg. Growth Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">94%</div>
+                    <div class="stat-label">Renewal Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Gallery Section -->
+    <section class="gallery-section">
+        <div class="section-header animate-on-scroll">
+            <span class="section-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Exclusive Events
+            </span>
+            <h2 class="section-title">Where Transformations Happen</h2>
+            <p class="section-subtitle">World-class venues. Intimate gatherings. Connections that last a lifetime.</p>
+        </div>
+        <div class="gallery-grid animate-on-scroll">
+            <div class="gallery-item">
+                <img src="bax-jacksonville2.avif" alt="BA Event" class="gallery-image">
+                <div class="gallery-overlay"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="bax-jacksonville4.avif" alt="BA Networking" class="gallery-image">
+                <div class="gallery-overlay"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="bax-jacksonville5.avif" alt="BA Workshop" class="gallery-image">
+                <div class="gallery-overlay"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="bax-jacksonville6.avif" alt="BA Community" class="gallery-image">
+                <div class="gallery-overlay"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="bax-charlotte8.avif" alt="BA Experience" class="gallery-image">
+                <div class="gallery-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta-section">
+        <div class="final-cta-content animate-on-scroll">
+            <h2 class="final-cta-title">Your Next Move Determines Your <span class="highlight">Next Decade</span></h2>
+            <p class="final-cta-subtitle">The CEOs who join Board of Advisors don't just grow their businesses—they transform their entire trajectory. The question isn't whether you can afford to join. It's whether you can afford to keep leading alone.</p>
+
+            <div class="value-comparison">
+                <div class="value-item">
+                    <div class="value-label">Investment</div>
+                    <div class="value-amount">$1,250/mo</div>
+                </div>
+                <span class="value-divider">→</span>
+                <div class="value-item">
+                    <div class="value-label">Average ROI</div>
+                    <div class="value-amount">10x Return</div>
+                </div>
+            </div>
+
+            <a href="https://bainvite.com" class="final-cta-button">
+                Apply for Membership
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+            <div class="urgency-box">
+                <svg class="urgency-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span class="urgency-text">Only 7 seats remaining for Q1 2026 • Applications close January 31st</span>
+            </div>
+            <div class="guarantee-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                Day 1 Money-Back Guarantee • Attend Friday dinner, decide by Saturday noon
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="BA Logo.svg" alt="Board of Advisors" class="footer-logo">
+                <span class="footer-tagline">The World's Greatest Board of Advisors</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.boardofadvisors.com" class="footer-link">Homepage</a>
+                <a href="https://www.boardofadvisors.com/events" class="footer-link">Events</a>
+                <a href="https://bamag.com" class="footer-link">Magazine</a>
+                <a href="https://bainvite.com" class="footer-link">Apply Now</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
