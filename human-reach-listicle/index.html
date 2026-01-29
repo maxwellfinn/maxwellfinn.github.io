@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Reasons Why $150K+ Professionals Are Finally Getting Interviews Again | The Human Reach</title>
+    <meta name="description" content="Discover why accomplished professionals are transforming their job search in just 7 days using this former Meta HR Executive's insider system.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-gold: #C5A05E;
+            --primary-gold-light: #E8D5B0;
+            --primary-gold-dark: #9A7B3F;
+            --dark-navy: #0F1A2A;
+            --navy: #1A2F47;
+            --navy-light: #243B55;
+            --cream: #FFFBF5;
+            --white: #FFFFFF;
+            --success: #10B981;
+            --text-muted: #64748b;
+            --gradient-gold: linear-gradient(135deg, #C5A05E 0%, #E8D5B0 50%, #C5A05E 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--dark-navy);
+            background: var(--cream);
+        }
+
+        /* Reading Progress Bar */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--gradient-gold);
+            width: 0%;
+            z-index: 10000;
+            transition: width 0.1s ease;
+        }
+
+        /* Top Bar - Minimal */
+        .top-bar {
+            background: var(--dark-navy);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .reading-time {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+
+        .reading-time svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--primary-gold);
+        }
+
+        /* Article Container */
+        .article-container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 60px 30px 100px;
+        }
+
+        /* Article Header */
+        .article-header {
+            margin-bottom: 50px;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .category-badge {
+            background: linear-gradient(135deg, var(--primary-gold), var(--primary-gold-dark));
+            color: var(--white);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .publish-date {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark-navy);
+            margin-bottom: 25px;
+        }
+
+        .article-subtitle {
+            font-size: 1.25rem;
+            color: var(--navy);
+            line-height: 1.7;
+            border-left: 4px solid var(--primary-gold);
+            padding-left: 20px;
+            margin-bottom: 35px;
+        }
+
+        /* Author Box */
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-gold);
+        }
+
+        .author-info h4 {
+            font-size: 1rem;
+            color: var(--dark-navy);
+            margin-bottom: 2px;
+        }
+
+        .author-info p {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .author-credential {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(197, 160, 94, 0.15);
+            color: var(--primary-gold-dark);
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* Hero Image */
+        .hero-image {
+            width: 100%;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+
+        /* Article Content */
+        .article-content p {
+            margin-bottom: 1.5em;
+            color: var(--navy);
+        }
+
+        .article-content p:first-of-type::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            float: left;
+            line-height: 0.8;
+            padding-right: 15px;
+            color: var(--primary-gold);
+            font-weight: 700;
+        }
+
+        .lead-paragraph {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--dark-navy);
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(197, 160, 94, 0.1), rgba(197, 160, 94, 0.05));
+            border: 1px solid rgba(197, 160, 94, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-style: italic;
+            color: var(--dark-navy);
+        }
+
+        /* Stats Callout */
+        .stats-callout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 50px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 25px 15px;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Reason Cards */
+        .reason-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 40px;
+            margin: 50px 0;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 60px rgba(0,0,0,0.12);
+        }
+
+        .reason-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--gradient-gold);
+        }
+
+        .reason-number {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            color: rgba(197, 160, 94, 0.1);
+            line-height: 1;
+        }
+
+        .reason-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--dark-navy);
+            color: var(--primary-gold);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .reason-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 20px;
+            line-height: 1.3;
+            padding-right: 60px;
+        }
+
+        .reason-content p {
+            margin-bottom: 1.2em;
+            color: var(--navy);
+        }
+
+        .reason-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Inline Quote */
+        .inline-quote {
+            border-left: 4px solid var(--primary-gold);
+            padding: 15px 0 15px 25px;
+            margin: 25px 0;
+            font-style: italic;
+            color: var(--dark-navy);
+            background: linear-gradient(90deg, rgba(197, 160, 94, 0.08), transparent);
+        }
+
+        .inline-quote cite {
+            display: block;
+            font-style: normal;
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+
+        /* Proof Points */
+        .proof-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px 0;
+        }
+
+        .proof-icon {
+            width: 28px;
+            height: 28px;
+            background: rgba(16, 185, 129, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .proof-icon svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--success);
+        }
+
+        .proof-text {
+            color: var(--navy);
+        }
+
+        /* Testimonial Card */
+        .testimonial-inline {
+            background: var(--dark-navy);
+            border-radius: 20px;
+            padding: 35px;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .testimonial-inline::before {
+            content: '"';
+            position: absolute;
+            top: 15px;
+            left: 25px;
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            color: var(--primary-gold);
+            opacity: 0.3;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            color: var(--white);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--primary-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--dark-navy);
+        }
+
+        .testimonial-info {
+            color: var(--white);
+        }
+
+        .testimonial-info strong {
+            display: block;
+            font-size: 14px;
+        }
+
+        .testimonial-info span {
+            font-size: 12px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Divider */
+        .content-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 60px 0;
+            color: var(--text-muted);
+        }
+
+        .content-divider::before,
+        .content-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(197, 160, 94, 0.3), transparent);
+        }
+
+        .content-divider svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--primary-gold);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--dark-navy), var(--navy));
+            border-radius: 32px;
+            padding: 60px 50px;
+            margin: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(197, 160, 94, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(197, 160, 94, 0.1) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--success);
+            margin-bottom: 25px;
+        }
+
+        .cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .cta-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 30px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-price {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .price-original {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.5);
+            text-decoration: line-through;
+        }
+
+        .price-current {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+        }
+
+        .price-period {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: var(--gradient-gold);
+            background-size: 200% 200%;
+            color: var(--dark-navy);
+            padding: 20px 45px;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 20px rgba(197, 160, 94, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 35px rgba(197, 160, 94, 0.5);
+            background-position: 100% 0;
+        }
+
+        .cta-button svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover svg {
+            transform: translateX(5px);
+        }
+
+        .cta-trust {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .trust-item svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--success);
+        }
+
+        /* What's Included */
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .included-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .included-item svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--primary-gold);
+            flex-shrink: 0;
+        }
+
+        .included-item span {
+            color: var(--white);
+            font-size: 14px;
+        }
+
+        /* Social Proof Bar */
+        .social-proof-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 16px;
+            margin: 40px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            flex-wrap: wrap;
+        }
+
+        .proof-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .proof-item svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--primary-gold);
+        }
+
+        .proof-item span {
+            font-size: 14px;
+            color: var(--navy);
+            font-weight: 500;
+        }
+
+        /* Guarantee Box */
+        .guarantee-box {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding: 30px;
+            background: rgba(16, 185, 129, 0.08);
+            border: 2px solid rgba(16, 185, 129, 0.2);
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .guarantee-seal {
+            width: 80px;
+            height: 80px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--success);
+            flex-shrink: 0;
+        }
+
+        .guarantee-seal .days {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--success);
+            line-height: 1;
+        }
+
+        .guarantee-seal .text {
+            font-size: 9px;
+            color: var(--dark-navy);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .guarantee-content h4 {
+            font-size: 1.1rem;
+            color: var(--dark-navy);
+            margin-bottom: 8px;
+        }
+
+        .guarantee-content p {
+            font-size: 14px;
+            color: var(--navy);
+            margin: 0;
+        }
+
+        /* Footer Note */
+        .footer-note {
+            text-align: center;
+            padding: 40px 30px;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .footer-note a {
+            color: var(--primary-gold);
+        }
+
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--dark-navy);
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            z-index: 999;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            box-shadow: 0 -5px 30px rgba(0,0,0,0.2);
+        }
+
+        .sticky-cta.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-cta-text {
+            color: var(--white);
+            font-size: 14px;
+        }
+
+        .sticky-cta-text strong {
+            color: var(--primary-gold);
+        }
+
+        .sticky-cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-gold);
+            color: var(--dark-navy);
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .sticky-cta-button:hover {
+            background: var(--primary-gold-light);
+        }
+
+        /* Urgency Banner */
+        .urgency-banner {
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .urgency-banner strong {
+            color: #fef08a;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-container {
+                padding: 40px 20px 120px;
+            }
+
+            .stats-callout {
+                grid-template-columns: 1fr;
+            }
+
+            .reason-card {
+                padding: 30px 25px;
+            }
+
+            .reason-number {
+                font-size: 4rem;
+                right: 15px;
+            }
+
+            .reason-title {
+                padding-right: 50px;
+            }
+
+            .cta-section {
+                padding: 40px 25px;
+            }
+
+            .included-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guarantee-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .social-proof-bar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .sticky-cta {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Reading Progress -->
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <!-- Urgency Banner -->
+    <div class="urgency-banner">
+        🔥 <strong>January Special:</strong> Launch pricing of $37 ends soon. Regular price will be $97.
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <img src="assets/The-Human-Reach-Logo.png.webp" alt="The Human Reach" class="logo">
+            <div class="reading-time">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/></svg>
+                <span>5 min read</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Container -->
+    <article class="article-container">
+        <!-- Article Header -->
+        <header class="article-header">
+            <div class="article-meta">
+                <span class="category-badge">Career Insights</span>
+                <span class="publish-date">Updated January 2026</span>
+            </div>
+
+            <h1 class="article-title">The "6-Second Signal" That's Getting $150K+ Professionals 3x More Interview Callbacks (While Everyone Else Gets Ghosted)</h1>
+
+            <p class="article-subtitle">A former Meta HR Executive exposes the hidden pattern that separates resumes hiring managers fight over from the ones they instantly delete—and why everything you've been told about job searching is backwards.</p>
+
+            <div class="author-box">
+                <img src="assets/AJ-Headshot.png.webp" alt="AJ Miles" class="author-avatar">
+                <div class="author-info">
+                    <h4>AJ Miles</h4>
+                    <p>Former Meta HR Executive • Career Strategist</p>
+                    <span class="author-credential">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Verified Expert
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <img src="assets/happy-excited-confident-professional-young-african-american-business-woman-office-leader-executive-wearing-suit-celebrating-success-standing-big-city-street-feeling-strong-powerful-concept_1254992-223989.jpg" alt="Professional celebrating career success" class="hero-image">
+
+        <!-- Article Content -->
+        <div class="article-content">
+            <p class="lead-paragraph">Let me tell you about two professionals I worked with last month. Both had 15+ years of experience. Both were targeting $180K roles. Both had been applying for 6+ months with zero results.</p>
+
+            <p>One changed <em>one thing</em> about their resume and landed 4 interviews in 2 weeks. The other is still waiting.</p>
+
+            <p>The difference? It has nothing to do with qualifications, experience, or even the jobs they applied for. <strong>It's a hidden pattern that most career advice completely ignores.</strong></p>
+
+            <p>After spending over a decade on the other side of the hiring table at companies like Meta—personally reviewing over 10,000 resumes and making hundreds of hiring decisions—I finally understand why so many talented professionals get overlooked. And more importantly, I know exactly how to fix it.</p>
+
+            <div class="highlight-box">
+                <p><strong>The uncomfortable truth:</strong> Your resume isn't being rejected because you're not qualified. It's being rejected in the first 6 seconds because it fails to trigger what I call the "High-Potential Signal"—the invisible pattern that makes hiring managers lean forward instead of moving on.</p>
+            </div>
+
+            <!-- Stats Callout -->
+            <div class="stats-callout">
+                <div class="stat-item">
+                    <div class="stat-number">59%</div>
+                    <div class="stat-label">of job seekers believe their applications never reach a human</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">72%</div>
+                    <div class="stat-label">say job searching has negatively affected their mental health</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6 sec</div>
+                    <div class="stat-label">average time recruiters spend on initial resume review</div>
+                </div>
+            </div>
+
+            <p>If you're an experienced professional who's been frustrated by the deafening silence from employers, these seven insights will change how you approach your job search.</p>
+        </div>
+
+        <!-- Reason 1 -->
+        <div class="reason-card">
+            <span class="reason-number">1</span>
+            <span class="reason-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Key Insight
+            </span>
+            <h2 class="reason-title">They Stopped Writing "Task Lists" and Started Telling "Impact Stories"</h2>
+            <div class="reason-content">
+                <p>Here's what I noticed after reviewing thousands of executive resumes: the ones that failed all looked the same. They read like job descriptions—bullet points listing responsibilities.</p>
+
+                <p><strong>The resumes that won?</strong> They read like case studies. Each bullet was a mini-story: challenge faced, action taken, measurable result achieved.</p>
+
+                <div class="inline-quote">
+                    "When I see 'Managed a team of 12,' I move on. When I see 'Transformed an underperforming team of 12 into the #1 revenue-generating unit, exceeding targets by 147%'—I reach for the phone."
+                    <cite>— AJ Miles, Former Meta HR Executive</cite>
+                </div>
+
+                <p>The difference isn't just cosmetic. It signals to hiring managers that you understand what actually matters: <em>outcomes, not activities.</em></p>
+            </div>
+        </div>
+
+        <!-- Reason 2 -->
+        <div class="reason-card">
+            <span class="reason-number">2</span>
+            <span class="reason-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Key Insight
+            </span>
+            <h2 class="reason-title">They Discovered the "6-Second Signal" That Gets Resumes Pulled</h2>
+            <div class="reason-content">
+                <p>Recruiters don't read resumes—at least not initially. They scan them. And in those crucial first 6 seconds, they're looking for specific <strong>visual patterns</strong> that signal "senior-level candidate."</p>
+
+                <p>Most $150K+ professionals unknowingly use formatting that screams "mid-level." Wrong fonts. Dense paragraphs. Buried achievements. Missing executive summary.</p>
+
+                <div class="proof-point">
+                    <div class="proof-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                    <span class="proof-text">Professionals who restructured their resume for the "6-second scan" saw <strong>3x more interview callbacks</strong> on average</span>
+                </div>
+
+                <p>It's not about lying or exaggerating. It's about presenting your genuine experience in a format that matches how senior hiring decisions are actually made.</p>
+            </div>
+        </div>
+
+        <!-- Social Proof Bar -->
+        <div class="social-proof-bar">
+            <div class="proof-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <span><strong>2,147</strong> professionals transformed</span>
+            </div>
+            <div class="proof-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <span>As seen on <strong>NBC, CBS, Fox</strong></span>
+            </div>
+            <div class="proof-item">
+                <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                <span>Placed at <strong>Google, Amazon, Meta</strong></span>
+            </div>
+        </div>
+
+        <!-- Reason 3 -->
+        <div class="reason-card">
+            <span class="reason-number">3</span>
+            <span class="reason-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Key Insight
+            </span>
+            <h2 class="reason-title">They Use "Decision-Maker Language" (Not Corporate Jargon)</h2>
+            <div class="reason-content">
+                <p>There's a specific vocabulary that makes hiring executives lean forward. And it's not the buzzwords most people think.</p>
+
+                <p>Words like "synergy," "leverage," and "optimize" actually trigger skepticism. They signal someone hiding behind jargon.</p>
+
+                <p><strong>Power words that work:</strong> Revenue. Profit. Efficiency. Retention. Acquisition. Margin. Scale.</p>
+
+                <div class="inline-quote">
+                    "Transformed underperforming division into profit center generating $4.2M annually while reducing operational costs 23%"
+                    <cite>— Example from a resume that landed a VP role at Amazon</cite>
+                </div>
+
+                <p>Notice the difference? Numbers. Impact. Language that speaks directly to business outcomes. This is what separates forgettable applications from interview invitations.</p>
+            </div>
+        </div>
+
+        <!-- Testimonial -->
+        <div class="testimonial-inline">
+            <p class="testimonial-text">"I'd sent 73 applications in 4 months. Zero callbacks. After day 3 of the system, I rewrote my summary using the High-Potential Signal framework. Within 11 days, I had interviews at Salesforce, Adobe, and ServiceNow. I accepted a VP offer at $215K—$47K more than my target. This system didn't just fix my resume. It changed how I see my entire career."</p>
+            <div class="testimonial-author">
+                <div class="testimonial-avatar">MK</div>
+                <div class="testimonial-info">
+                    <strong>Michael K.</strong>
+                    <span>VP of Operations, Enterprise SaaS • San Francisco, CA</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reason 4 -->
+        <div class="reason-card">
+            <span class="reason-number">4</span>
+            <span class="reason-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Key Insight
+            </span>
+            <h2 class="reason-title">They Stopped Fighting the ATS (And Started Using It)</h2>
+            <div class="reason-content">
+                <p>Here's an uncomfortable truth: obsessing over "beating the ATS" is a distraction. The robots aren't your enemy—<strong>unclear positioning is.</strong></p>
+
+                <p>Yes, keywords matter. But most advice gets this backwards. You don't stuff keywords hoping to trick an algorithm. You naturally integrate them because your resume clearly communicates your value for the specific role.</p>
+
+                <div class="proof-point">
+                    <div class="proof-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                    <span class="proof-text">When your positioning is clear, ATS compliance happens automatically</span>
+                </div>
+
+                <div class="proof-point">
+                    <div class="proof-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                    <span class="proof-text">A well-structured resume passes both machine AND human review</span>
+                </div>
+
+                <p>The professionals getting interviews aren't gaming systems. They're communicating clearly.</p>
+            </div>
+        </div>
+
+        <!-- Reason 5 -->
+        <div class="reason-card">
+            <span class="reason-number">5</span>
+            <span class="reason-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Key Insight
+            </span>
+            <h2 class="reason-title">They Quantify Everything (Even "Soft" Accomplishments)</h2>
+            <div class="reason-content">
+                <p>"But I don't have numbers for what I did."</p>
+
+                <p>I hear this constantly from accomplished professionals. And it's almost never true. Every achievement can be quantified—you just need to know how to look.</p>
+
+                <p><strong>Instead of:</strong> "Improved team morale"</p>
+                <p><strong>Write:</strong> "Reduced team turnover from 34% to 8% through restructured onboarding and mentorship program, saving estimated $420K in annual recruiting costs"</p>
+
+                <div class="inline-quote">
+                    "The professionals who land $150K+ roles aren't necessarily more accomplished than those who don't. They're just better at translating their accomplishments into the language of business impact."
+                    <cite>— AJ Miles</cite>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cost of Inaction -->
+        <div class="highlight-box" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(239, 68, 68, 0.03)); border-color: rgba(239, 68, 68, 0.2);">
+            <p style="font-style: normal; margin-bottom: 15px;"><strong>Let's talk about what happens if you don't change anything:</strong></p>
+            <p style="margin-bottom: 10px;">Every week that passes with your current resume is another week of missed opportunities. If you're targeting $150K+ roles, that's roughly <strong>$2,885 per week</strong> you're leaving on the table.</p>
+            <p style="margin-bottom: 0;">After 3 months of the same approach? That's $34,600 in potential earnings—and countless opportunities that went to someone whose resume simply presented their experience better than yours.</p>
+        </div>
+
+        <!-- Divider -->
+        <div class="content-divider">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+
+        <!-- Reason 6 -->
+        <div class="reason-card">
+            <span class="reason-number">6</span>
+            <span class="reason-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Key Insight
+            </span>
+            <h2 class="reason-title">They Audit for "Credibility Leaks" That Sabotage Applications</h2>
+            <div class="reason-content">
+                <p>You could have the perfect experience for a role and still get passed over because of small details that undermine your credibility.</p>
+
+                <p><strong>Common credibility leaks:</strong></p>
+
+                <div class="proof-point">
+                    <div class="proof-icon"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></div>
+                    <span class="proof-text">Inconsistent formatting that signals carelessness</span>
+                </div>
+
+                <div class="proof-point">
+                    <div class="proof-icon"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></div>
+                    <span class="proof-text">Outdated email addresses (aol.com, hotmail.com)</span>
+                </div>
+
+                <div class="proof-point">
+                    <div class="proof-icon"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></div>
+                    <span class="proof-text">Vague job titles that don't communicate level</span>
+                </div>
+
+                <div class="proof-point">
+                    <div class="proof-icon"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></div>
+                    <span class="proof-text">Generic objective statements that could apply to anyone</span>
+                </div>
+
+                <p>These might seem minor, but at the $150K+ level, attention to detail is assumed. Small oversights get interpreted as red flags.</p>
+            </div>
+        </div>
+
+        <!-- Reason 7 -->
+        <div class="reason-card">
+            <span class="reason-number">7</span>
+            <span class="reason-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Key Insight
+            </span>
+            <h2 class="reason-title">They Follow a Proven System (Instead of Guessing)</h2>
+            <div class="reason-content">
+                <p>The biggest difference between professionals who quickly land interviews and those stuck in application limbo? <strong>They stopped treating their job search like a lottery.</strong></p>
+
+                <p>Instead of random tweaks based on conflicting advice from the internet, they follow a structured system developed by someone who's been on the hiring side of the table.</p>
+
+                <p>That's exactly why I created the <strong>7-Day Resume Refresh Kit</strong>—a step-by-step system that walks you through transforming your resume from "ignored" to "in-demand."</p>
+
+                <div class="proof-point">
+                    <div class="proof-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                    <span class="proof-text">Day-by-day action plan (no overwhelm)</span>
+                </div>
+
+                <div class="proof-point">
+                    <div class="proof-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                    <span class="proof-text">Templates and swipe files for every section</span>
+                </div>
+
+                <div class="proof-point">
+                    <div class="proof-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                    <span class="proof-text">Insider frameworks from 10+ years in executive hiring</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guarantee Box -->
+        <div class="guarantee-box">
+            <div class="guarantee-seal">
+                <span class="days">30</span>
+                <span class="text">Day Money<br>Back</span>
+            </div>
+            <div class="guarantee-content">
+                <h4>The "Interview Momentum" Guarantee</h4>
+                <p><strong>Here's my promise:</strong> Complete the 7-day system. If you don't have a resume you're genuinely proud of—one that makes you excited to apply again—email us within 30 days for a complete refund. No hoops, no hassle, no hard feelings. Your transformation is guaranteed or it costs you nothing.</p>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <div class="cta-content">
+                <span class="cta-eyebrow">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    Launch Pricing Ends Soon
+                </span>
+
+                <h2 class="cta-title">This Is Your Fast-Track to Interview Momentum</h2>
+                <p class="cta-subtitle">In the next 7 days, you can completely transform your resume into a "High-Potential Signal" machine—or spend another month wondering why qualified candidates keep getting ghosted.</p>
+
+                <div class="included-grid">
+                    <div class="included-item">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span>7-Day Action System</span>
+                    </div>
+                    <div class="included-item">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span>Executive Templates</span>
+                    </div>
+                    <div class="included-item">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span>Power Words Swipe File</span>
+                    </div>
+                    <div class="included-item">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span>Impact Quantifier Guide</span>
+                    </div>
+                </div>
+
+                <div class="cta-price">
+                    <span class="price-original">$97</span>
+                    <span class="price-current">$37</span>
+                </div>
+                <p class="price-period">One-time payment • Lifetime access</p>
+
+                <a href="https://start.thehumanreach.com/7-day-resume-refresh-kit-v1" class="cta-button">
+                    Start My 7-Day Transformation
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                </a>
+
+                <div class="cta-trust">
+                    <span class="trust-item">
+                        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                        30-Day Guarantee
+                    </span>
+                    <span class="trust-item">
+                        <svg viewBox="0 0 24 24"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
+                        Instant Access
+                    </span>
+                    <span class="trust-item">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        Secure Checkout
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Testimonial -->
+        <div class="testimonial-inline">
+            <p class="testimonial-text">"At 52, I thought my age was the problem. Turns out, my resume was signaling 'experienced' instead of 'high-potential.' AJ's framework showed me exactly what to change. Within 3 weeks I had 5 interviews. Accepted a Chief of Staff position at a Series B startup—$195K plus equity. At 52. This system works."</p>
+            <div class="testimonial-author">
+                <div class="testimonial-avatar">SR</div>
+                <div class="testimonial-info">
+                    <strong>Sarah R.</strong>
+                    <span>Chief of Staff, Tech Startup • Austin, TX</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Note -->
+        <div class="footer-note">
+            <p>© 2026 The Human Reach Corporation. All Rights Reserved.</p>
+            <p style="margin-top: 10px;">Questions? <a href="mailto:support@thehumanreach.com">support@thehumanreach.com</a></p>
+        </div>
+    </article>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="stickyCta">
+        <span class="sticky-cta-text">Your next interview is 7 days away — <strong>Just $37</strong></span>
+        <a href="https://start.thehumanreach.com/7-day-resume-refresh-kit-v1" class="sticky-cta-button">
+            Start My Transformation
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+        </a>
+    </div>
+
+    <script>
+        // Reading Progress
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            document.getElementById('readingProgress').style.width = progress + '%';
+
+            // Sticky CTA visibility
+            const stickyCta = document.getElementById('stickyCta');
+            if (scrollTop > 800) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html>
