@@ -1,0 +1,2412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Effectiveness Assessment | The Human Reach</title>
+    <meta name="description" content="Discover why your resume isn't getting callbacks in 60 seconds. Free assessment reveals your hidden resume weakness.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-gold: #C5A05E;
+            --primary-gold-light: #E8D5B0;
+            --primary-gold-dark: #9A7B3F;
+            --dark-navy: #0A1422;
+            --navy: #162232;
+            --navy-light: #1E3048;
+            --cream: #FFFBF5;
+            --white: #FFFFFF;
+            --success: #10B981;
+            --warning: #F59E0B;
+            --danger: #EF4444;
+            --text-muted: #64748b;
+            --gradient-gold: linear-gradient(135deg, #C5A05E 0%, #E8D5B0 50%, #C5A05E 100%);
+            --gradient-gold-shine: linear-gradient(135deg, #C5A05E 0%, #F5E6C8 25%, #C5A05E 50%, #F5E6C8 75%, #C5A05E 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+            color: var(--dark-navy);
+            background: linear-gradient(165deg, #0A1422 0%, #162232 50%, #0F1A2A 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ========================================
+           STUNNING ANIMATED BACKGROUND
+           ======================================== */
+        .bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        /* Gradient Orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            animation: orb-float 20s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(197, 160, 94, 0.4) 0%, transparent 70%);
+            top: -200px;
+            left: -150px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(197, 160, 94, 0.3) 0%, transparent 70%);
+            bottom: -150px;
+            right: -100px;
+            animation-delay: -7s;
+        }
+
+        .orb-3 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(232, 213, 176, 0.25) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: -14s;
+        }
+
+        @keyframes orb-float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -40px) scale(1.05); }
+            50% { transform: translate(-20px, 20px) scale(0.95); }
+            75% { transform: translate(40px, 30px) scale(1.02); }
+        }
+
+        /* Floating Particles */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--primary-gold);
+            border-radius: 50%;
+            opacity: 0;
+            animation: particle-rise 15s linear infinite;
+        }
+
+        @keyframes particle-rise {
+            0% {
+                opacity: 0;
+                transform: translateY(100vh) scale(0);
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100vh) scale(1);
+            }
+        }
+
+        /* Grid Pattern Overlay */
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                linear-gradient(rgba(197, 160, 94, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(197, 160, 94, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+        }
+
+        /* ========================================
+           PROGRESS BAR - Premium Gold
+           ======================================== */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: rgba(255,255,255,0.05);
+            z-index: 1000;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--gradient-gold-shine);
+            background-size: 200% 100%;
+            width: 0%;
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 20px rgba(197, 160, 94, 0.6), 0 0 40px rgba(197, 160, 94, 0.3);
+            animation: shimmer 2s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* ========================================
+           TOP BAR - Clean & Centered
+           ======================================== */
+        .top-bar {
+            position: fixed;
+            top: 3px;
+            left: 0;
+            right: 0;
+            padding: 24px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            height: 80px;
+            filter: drop-shadow(0 4px 25px rgba(0,0,0,0.5));
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.03);
+        }
+
+        /* ========================================
+           MAIN CONTAINER
+           ======================================== */
+        .quiz-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 140px 20px 60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* ========================================
+           QUIZ CARD - Glassmorphism Premium
+           ======================================== */
+        .quiz-card {
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 32px;
+            max-width: 580px;
+            width: 100%;
+            padding: 48px 44px;
+            box-shadow:
+                0 32px 100px rgba(0,0,0,0.35),
+                0 0 0 1px rgba(197, 160, 94, 0.15),
+                inset 0 1px 0 rgba(255,255,255,0.9);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Premium Gold Top Border */
+        .quiz-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-gold-shine);
+            background-size: 200% 100%;
+            animation: shimmer 3s linear infinite;
+        }
+
+        /* Subtle Corner Accents */
+        .quiz-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle at top right, rgba(197, 160, 94, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* ========================================
+           STEPS ANIMATION
+           ======================================== */
+        .quiz-step {
+            display: none;
+            animation: stepFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .quiz-step.active {
+            display: block;
+        }
+
+        @keyframes stepFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* ========================================
+           LANDING STEP - Hero Experience
+           ======================================== */
+        .landing-content {
+            text-align: center;
+        }
+
+        .landing-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(239, 68, 68, 0.04));
+            border: 1px solid rgba(239, 68, 68, 0.15);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--danger);
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .badge-pulse {
+            width: 8px;
+            height: 8px;
+            background: var(--danger);
+            border-radius: 50%;
+            animation: badge-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes badge-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .landing-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.65rem, 3.5vw, 2.1rem);
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 16px;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+        }
+
+        .landing-title .highlight {
+            background: linear-gradient(135deg, var(--primary-gold), var(--primary-gold-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .landing-subtitle {
+            font-size: 0.95rem;
+            color: #4a5568;
+            margin-bottom: 28px;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .landing-subtitle strong {
+            color: var(--dark-navy);
+        }
+
+        /* ========================================
+           HERO IMAGE - Stunning Treatment
+           ======================================== */
+        .hero-image-container {
+            position: relative;
+            margin: 24px auto;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow:
+                0 25px 60px rgba(0,0,0,0.2),
+                0 0 0 1px rgba(197, 160, 94, 0.2);
+        }
+
+        .hero-image-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(10, 20, 34, 0.3) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .landing-image {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image-container:hover .landing-image {
+            transform: scale(1.03);
+        }
+
+        /* Golden Glow Effect */
+        .hero-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(ellipse, rgba(197, 160, 94, 0.25) 0%, transparent 60%);
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            filter: blur(50px);
+            animation: glow-pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+        }
+
+        /* ========================================
+           SOCIAL PROOF BAR
+           ======================================== */
+        .social-proof-bar {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(16, 185, 129, 0.03));
+            border: 1px solid rgba(16, 185, 129, 0.12);
+            border-radius: 50px;
+            padding: 10px 20px;
+            margin: 22px auto 24px;
+            font-size: 12px;
+            color: #047857;
+            font-weight: 500;
+        }
+
+        .avatars {
+            display: flex;
+        }
+
+        .avatar {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            border: 2px solid var(--white);
+            margin-left: -8px;
+            background: linear-gradient(135deg, var(--primary-gold), var(--primary-gold-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            font-weight: 700;
+            color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .avatar:first-child {
+            margin-left: 0;
+        }
+
+        .social-proof-bar strong {
+            color: #047857;
+        }
+
+        /* ========================================
+           BENEFITS - Inline Display
+           ======================================== */
+        .landing-benefits {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin: 22px 0 28px;
+            flex-wrap: wrap;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        .benefit-check {
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(135deg, var(--success), #059669);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .benefit-check svg {
+            width: 10px;
+            height: 10px;
+            fill: var(--white);
+        }
+
+        /* ========================================
+           START BUTTON - Premium CTA
+           ======================================== */
+        .start-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #C5A05E 0%, #D4B574 50%, #C5A05E 100%);
+            background-size: 200% 200%;
+            color: #1a1a1a;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow:
+                0 4px 20px rgba(197, 160, 94, 0.4),
+                0 0 0 1px rgba(255,255,255,0.1) inset;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .start-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .start-button:hover::before {
+            left: 100%;
+        }
+
+        .start-button:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 8px 30px rgba(197, 160, 94, 0.5),
+                0 0 0 1px rgba(255,255,255,0.2) inset;
+            background-position: 100% 0;
+        }
+
+        .start-button svg {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .start-button:hover svg {
+            transform: translateX(4px);
+        }
+
+        .landing-trust {
+            margin-top: 24px;
+            font-size: 11px;
+            color: #718096;
+            line-height: 1.6;
+        }
+
+        .landing-trust strong {
+            color: var(--dark-navy);
+            font-weight: 600;
+        }
+
+        /* ========================================
+           QUESTION STEPS
+           ======================================== */
+        .question-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .question-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: var(--gradient-gold);
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 20px;
+            box-shadow: 0 6px 20px rgba(197, 160, 94, 0.35);
+        }
+
+        .question-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark-navy);
+            line-height: 1.4;
+        }
+
+        /* ========================================
+           SOCIAL PROOF INTERSTITIALS
+           ======================================== */
+        .proof-interstitial {
+            background: linear-gradient(135deg, rgba(197, 160, 94, 0.08), rgba(197, 160, 94, 0.03));
+            border: 1px solid rgba(197, 160, 94, 0.15);
+            border-radius: 14px;
+            padding: 14px 18px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            animation: fadeSlideIn 0.5s ease;
+        }
+
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .proof-icon {
+            width: 38px;
+            height: 38px;
+            background: var(--gradient-gold);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .proof-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--dark-navy);
+        }
+
+        .proof-icon.stat-icon {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(239, 68, 68, 0.08));
+        }
+
+        .proof-icon.stat-icon svg {
+            fill: var(--danger);
+        }
+
+        .proof-icon.success-icon {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.08));
+        }
+
+        .proof-icon.success-icon svg {
+            fill: var(--success);
+        }
+
+        .proof-content {
+            flex: 1;
+        }
+
+        .proof-stat {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--dark-navy);
+            line-height: 1.4;
+        }
+
+        .proof-stat strong {
+            color: var(--primary-gold-dark);
+        }
+
+        .proof-source {
+            font-size: 10px;
+            color: #718096;
+            margin-top: 2px;
+        }
+
+        .proof-testimonial {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.06), rgba(16, 185, 129, 0.02));
+            border: 1px solid rgba(16, 185, 129, 0.12);
+        }
+
+        .proof-testimonial .proof-stat {
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .proof-testimonial .proof-author {
+            font-size: 11px;
+            color: var(--success);
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        /* ========================================
+           ANSWER OPTIONS - Interactive Cards
+           ======================================== */
+        .answer-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .answer-option {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, #FEFDFB 0%, #FAF8F5 100%);
+            border: 2px solid #f0ebe3;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .answer-option::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            background: linear-gradient(135deg, rgba(197, 160, 94, 0.1), rgba(197, 160, 94, 0.05));
+            transition: width 0.3s ease;
+        }
+
+        .answer-option:hover {
+            border-color: var(--primary-gold);
+            transform: translateX(4px);
+            box-shadow: 0 4px 15px rgba(197, 160, 94, 0.15);
+        }
+
+        .answer-option:hover::before {
+            width: 100%;
+        }
+
+        .answer-option.selected {
+            border-color: var(--primary-gold);
+            background: linear-gradient(135deg, rgba(197, 160, 94, 0.08), rgba(197, 160, 94, 0.03));
+            box-shadow: 0 6px 20px rgba(197, 160, 94, 0.2);
+        }
+
+        .answer-option.selected::before {
+            width: 100%;
+        }
+
+        .answer-radio {
+            width: 22px;
+            height: 22px;
+            border: 2px solid #d4c4a8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .answer-option:hover .answer-radio {
+            border-color: var(--primary-gold);
+        }
+
+        .answer-option.selected .answer-radio {
+            background: var(--gradient-gold);
+            border-color: var(--primary-gold);
+        }
+
+        .answer-option.selected .answer-radio::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--white);
+            border-radius: 50%;
+        }
+
+        .answer-text {
+            font-size: 0.9rem;
+            color: var(--dark-navy);
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
+
+        .answer-icon {
+            margin-left: auto;
+            opacity: 0;
+            transform: translateX(-5px);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .answer-option:hover .answer-icon,
+        .answer-option.selected .answer-icon {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .answer-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--primary-gold);
+        }
+
+        /* ========================================
+           NAVIGATION BUTTONS
+           ======================================== */
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .back-button {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 18px;
+            background: transparent;
+            border: 1.5px solid #d4d4d8;
+            border-radius: 10px;
+            color: #52525b;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .back-button:hover {
+            border-color: var(--dark-navy);
+            color: var(--dark-navy);
+            background: #fafafa;
+        }
+
+        .back-button svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .next-button {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 24px;
+            background: var(--dark-navy);
+            border: none;
+            border-radius: 10px;
+            color: var(--white);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .next-button.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .next-button:hover {
+            background: #1a3a5c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(10, 20, 34, 0.3);
+        }
+
+        .next-button svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* ========================================
+           EMAIL CAPTURE STEP
+           ======================================== */
+        .email-step {
+            text-align: center;
+        }
+
+        .email-icon {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            position: relative;
+        }
+
+        .email-icon::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), transparent);
+            animation: icon-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes icon-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+
+        .email-icon svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--success);
+            position: relative;
+            z-index: 1;
+        }
+
+        .email-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 12px;
+        }
+
+        .email-subtitle {
+            font-size: 0.9rem;
+            color: #4a5568;
+            margin-bottom: 24px;
+            max-width: 360px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .email-subtitle strong {
+            color: var(--dark-navy);
+        }
+
+        .email-social-proof {
+            background: linear-gradient(135deg, rgba(197, 160, 94, 0.08), rgba(197, 160, 94, 0.03));
+            border-radius: 12px;
+            padding: 12px 20px;
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+
+        .proof-stat {
+            font-size: 12px;
+            color: #4a5568;
+        }
+
+        .proof-stat strong {
+            color: var(--primary-gold-dark);
+        }
+
+        .email-form {
+            max-width: 340px;
+            margin: 0 auto;
+        }
+
+        .input-group {
+            margin-bottom: 12px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: all 0.25s ease;
+            background: #fafafa;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+            background: var(--white);
+            box-shadow: 0 0 0 4px rgba(197, 160, 94, 0.1);
+        }
+
+        .submit-button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--gradient-gold);
+            color: var(--dark-navy);
+            padding: 14px 28px;
+            border: none;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(197, 160, 94, 0.4);
+        }
+
+        .privacy-note {
+            margin-top: 18px;
+            font-size: 11px;
+            color: #718096;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .privacy-note svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--success);
+        }
+
+        /* ========================================
+           RESULTS STEP
+           ======================================== */
+        .results-step {
+            text-align: center;
+            position: relative;
+        }
+
+        /* Confetti Container */
+        .confetti-container {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .confetti {
+            position: absolute;
+            opacity: 0;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                opacity: 1;
+                transform: translateY(-20px) rotate(0deg) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(400px) rotate(720deg) scale(0.5);
+            }
+        }
+
+        /* Good News Banner */
+        .good-news-banner {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(16, 185, 129, 0.05));
+            border: 1.5px solid rgba(16, 185, 129, 0.25);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #047857;
+            margin-bottom: 28px;
+            animation: banner-slide 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes banner-slide {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .good-news-banner svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--success);
+        }
+
+        /* Score Display */
+        .result-score-container {
+            margin-bottom: 20px;
+        }
+
+        .result-score {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 18px;
+        }
+
+        .score-circle {
+            transform: rotate(-90deg);
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
+        }
+
+        .score-bg {
+            fill: none;
+            stroke: #f0f0f0;
+            stroke-width: 10;
+        }
+
+        .score-fill {
+            fill: none;
+            stroke: var(--warning);
+            stroke-width: 10;
+            stroke-linecap: round;
+            stroke-dasharray: 377;
+            stroke-dashoffset: 377;
+            transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .score-fill.low { stroke: var(--danger); }
+        .score-fill.medium { stroke: var(--warning); }
+        .score-fill.high { stroke: var(--success); }
+
+        .score-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .score-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            line-height: 1;
+        }
+
+        .score-label {
+            font-size: 10px;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 4px;
+        }
+
+        .result-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .result-badge.low {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--danger);
+        }
+
+        .result-badge.medium {
+            background: rgba(245, 158, 11, 0.1);
+            color: #d97706;
+        }
+
+        .result-badge.high {
+            background: rgba(16, 185, 129, 0.1);
+            color: #047857;
+        }
+
+        .comparison-stat {
+            background: linear-gradient(135deg, #FEFDFB, #FAF8F5);
+            border-radius: 12px;
+            padding: 12px 24px;
+            margin: 18px auto 24px;
+            display: inline-block;
+            border: 1px solid #f0ebe3;
+        }
+
+        .comparison-text {
+            font-size: 12px;
+            color: #4a5568;
+        }
+
+        .comparison-text strong {
+            color: var(--primary-gold-dark);
+        }
+
+        .result-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 12px;
+        }
+
+        .result-description {
+            font-size: 0.9rem;
+            color: #4a5568;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           DIAGNOSIS BOX
+           ======================================== */
+        .diagnosis-box {
+            background: linear-gradient(135deg, #FEFDFB 0%, #FAF8F5 100%);
+            border: 1px solid #f0ebe3;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 24px 0;
+            text-align: left;
+        }
+
+        .diagnosis-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        .diagnosis-icon {
+            width: 42px;
+            height: 42px;
+            background: var(--gradient-gold);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(197, 160, 94, 0.3);
+        }
+
+        .diagnosis-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--dark-navy);
+        }
+
+        .diagnosis-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+        }
+
+        .diagnosis-list {
+            list-style: none;
+        }
+
+        .diagnosis-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .diagnosis-item:last-child {
+            border-bottom: none;
+        }
+
+        .diagnosis-item svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--danger);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .diagnosis-text {
+            font-size: 13px;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+
+        /* ========================================
+           SOLUTION BOX - Premium Dark CTA
+           ======================================== */
+        .solution-box {
+            background: linear-gradient(165deg, #0F1A2A 0%, #162232 100%);
+            border-radius: 24px;
+            padding: 32px;
+            margin-top: 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solution-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(197, 160, 94, 0.15) 0%, transparent 40%),
+                radial-gradient(ellipse at 80% 80%, rgba(197, 160, 94, 0.1) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .solution-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Urgency Countdown */
+        .urgency-countdown {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 12px;
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            animation: urgency-glow 2.5s ease-in-out infinite;
+        }
+
+        @keyframes urgency-glow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.15); }
+            50% { box-shadow: 0 0 20px 5px rgba(239, 68, 68, 0.1); }
+        }
+
+        .urgency-label {
+            font-size: 11px;
+            color: #FCA5A5;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .mini-countdown {
+            display: flex;
+            gap: 4px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .countdown-unit {
+            background: rgba(255,255,255,0.1);
+            padding: 4px 8px;
+            border-radius: 6px;
+            min-width: 28px;
+        }
+
+        .solution-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--success);
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .solution-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .solution-subtitle {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            max-width: 380px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Testimonial */
+        .solution-testimonial {
+            background: rgba(197, 160, 94, 0.08);
+            border-radius: 14px;
+            padding: 18px;
+            margin: 20px 0;
+            border-left: 3px solid var(--primary-gold);
+            text-align: left;
+        }
+
+        .testimonial-quote {
+            font-size: 13px;
+            font-style: italic;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .author-name {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary-gold);
+        }
+
+        .author-title {
+            font-size: 10px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .star-rating {
+            color: #FBBF24;
+            font-size: 11px;
+            letter-spacing: 2px;
+            margin-top: 4px;
+        }
+
+        /* Features Grid */
+        .solution-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 12px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 10px;
+            font-size: 11px;
+            color: rgba(255,255,255,0.85);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .feature-item svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--primary-gold);
+            flex-shrink: 0;
+        }
+
+        /* Price Display */
+        .price-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        .price-original {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.4);
+            text-decoration: line-through;
+        }
+
+        .price-current {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+        }
+
+        .price-savings {
+            background: var(--success);
+            color: var(--white);
+            font-size: 10px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 50px;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #C5A05E 0%, #D4B574 50%, #C5A05E 100%);
+            background-size: 200% 200%;
+            color: #1a1a1a;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 25px rgba(197, 160, 94, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            position: relative;
+            overflow: hidden;
+            animation: cta-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes cta-pulse {
+            0%, 100% {
+                box-shadow: 0 6px 25px rgba(197, 160, 94, 0.4);
+            }
+            50% {
+                box-shadow: 0 6px 35px rgba(197, 160, 94, 0.6), 0 0 0 8px rgba(197, 160, 94, 0.08);
+            }
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 35px rgba(197, 160, 94, 0.5);
+            background-position: 100% 0;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .guarantee-text {
+            margin-top: 16px;
+            font-size: 11px;
+            color: rgba(255,255,255,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .guarantee-text svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--success);
+        }
+
+        /* ========================================
+           FOOTER
+           ======================================== */
+        .quiz-footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255,255,255,0.35);
+            font-size: 11px;
+        }
+
+        /* ========================================
+           RESPONSIVE DESIGN
+           ======================================== */
+        @media (max-width: 768px) {
+            .quiz-card {
+                padding: 36px 28px;
+                border-radius: 24px;
+            }
+
+            .landing-title {
+                font-size: 1.45rem;
+            }
+
+            .landing-benefits {
+                gap: 16px;
+            }
+
+            .solution-features {
+                grid-template-columns: 1fr;
+            }
+
+            .quiz-nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .back-button, .next-button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quiz-card {
+                padding: 28px 22px;
+            }
+
+            .top-bar {
+                padding: 18px 20px;
+            }
+
+            .logo {
+                height: 60px;
+            }
+
+            .landing-benefits {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero-image-container {
+                max-width: 260px;
+            }
+        }
+
+        /* ========================================
+           REDUCED MOTION SUPPORT
+           ======================================== */
+        @media (prefers-reduced-motion: reduce) {
+            .orb,
+            .particle,
+            .progress-bar,
+            .badge-pulse,
+            .hero-glow,
+            .email-icon::before,
+            .urgency-countdown,
+            .cta-button {
+                animation: none;
+            }
+
+            .quiz-step {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-canvas">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="particles" id="particles"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <img src="assets/The-Human-Reach-Logo.png.webp" alt="The Human Reach" class="logo">
+    </div>
+
+    <!-- Quiz Container -->
+    <div class="quiz-container">
+        <div class="quiz-card">
+
+            <!-- Step 0: Landing -->
+            <div class="quiz-step active" data-step="0">
+                <div class="landing-content">
+                    <span class="landing-badge">
+                        <span class="badge-pulse"></span>
+                        75% of Resumes Get Rejected in 6 Seconds
+                    </span>
+
+                    <h1 class="landing-title">
+                        Is Your Resume <span class="highlight">Costing You</span> Interview Opportunities?
+                    </h1>
+
+                    <p class="landing-subtitle">
+                        <strong>Discover in 60 seconds</strong> why your applications disappear into the void—and the exact fix that's helped 2,000+ professionals finally get callbacks.
+                    </p>
+
+                    <div class="hero-image-container">
+                        <div class="hero-glow"></div>
+                        <div class="hero-image-wrapper">
+                            <img src="assets/hero-celebrating.jpg" alt="Professional celebrating career success" class="landing-image">
+                        </div>
+                    </div>
+
+                    <div class="social-proof-bar">
+                        <div class="avatars">
+                            <span class="avatar">JM</span>
+                            <span class="avatar">SK</span>
+                            <span class="avatar">RT</span>
+                            <span class="avatar">+</span>
+                        </div>
+                        <span><strong>2,847</strong> professionals took this assessment this week</span>
+                    </div>
+
+                    <div class="landing-benefits">
+                        <span class="benefit-item">
+                            <span class="benefit-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                            60 seconds
+                        </span>
+                        <span class="benefit-item">
+                            <span class="benefit-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                            Personalized diagnosis
+                        </span>
+                        <span class="benefit-item">
+                            <span class="benefit-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                            Instant action plan
+                        </span>
+                    </div>
+
+                    <button class="start-button" onclick="startQuiz()">
+                        Discover What's Holding Me Back
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                    </button>
+
+                    <p class="landing-trust">
+                        Created by <strong>AJ Mizes</strong>, Former Meta HR Executive<br>
+                        Featured on NBC, CBS, Fox
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 1: Experience Level -->
+            <div class="quiz-step" data-step="1">
+                <div class="proof-interstitial">
+                    <div class="proof-icon stat-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                    </div>
+                    <div class="proof-content">
+                        <div class="proof-stat"><strong>98% of resumes</strong> are rejected by ATS software before a human ever sees them.</div>
+                        <div class="proof-source">— Harvard Business Review</div>
+                    </div>
+                </div>
+
+                <div class="question-header">
+                    <div class="question-number">1</div>
+                    <h2 class="question-text">What salary level are you targeting—and feeling qualified for but not landing?</h2>
+                </div>
+
+                <div class="answer-options">
+                    <div class="answer-option" data-value="entry" data-score="1">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">Entry-level ($40K-$70K)</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                    <div class="answer-option" data-value="mid" data-score="2">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">Mid-level ($70K-$120K)</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                    <div class="answer-option" data-value="senior" data-score="3">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">Senior/Manager ($120K-$180K)</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                    <div class="answer-option" data-value="executive" data-score="4">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">Director/Executive ($180K+)</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                </div>
+
+                <div class="quiz-nav">
+                    <button class="back-button" onclick="prevStep()">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                        Back
+                    </button>
+                    <button class="next-button" id="nextBtn1" onclick="nextStep()">
+                        Continue
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 2: Application Volume -->
+            <div class="quiz-step" data-step="2">
+                <div class="proof-interstitial proof-testimonial">
+                    <div class="proof-icon success-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    </div>
+                    <div class="proof-content">
+                        <div class="proof-stat">"After 50+ rejections, I changed ONE thing on my resume and got 4 callbacks in a week."</div>
+                        <div class="proof-author">— Michael T., Software Engineer (now at Amazon)</div>
+                    </div>
+                </div>
+
+                <div class="question-header">
+                    <div class="question-number">2</div>
+                    <h2 class="question-text">How many applications have you sent out—only to hear crickets?</h2>
+                </div>
+
+                <div class="answer-options">
+                    <div class="answer-option" data-value="few" data-score="1">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">Less than 10 applications</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                    <div class="answer-option" data-value="moderate" data-score="2">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">10-30 applications</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                    <div class="answer-option" data-value="many" data-score="3">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">30-50 applications</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                    <div class="answer-option" data-value="tons" data-score="4">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">50+ applications</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                </div>
+
+                <div class="quiz-nav">
+                    <button class="back-button" onclick="prevStep()">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                        Back
+                    </button>
+                    <button class="next-button" id="nextBtn2" onclick="nextStep()">
+                        Continue
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 3: Interview Rate -->
+            <div class="quiz-step" data-step="3">
+                <div class="proof-interstitial">
+                    <div class="proof-icon">
+                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+                    </div>
+                    <div class="proof-content">
+                        <div class="proof-stat">The average job seeker gets a <strong>2-3% callback rate</strong>. Our users average <strong>18-24%</strong> after optimization.</div>
+                        <div class="proof-source">— The Human Reach Internal Data (2,000+ users)</div>
+                    </div>
+                </div>
+
+                <div class="question-header">
+                    <div class="question-number">3</div>
+                    <h2 class="question-text">How frustrating is your callback rate right now?</h2>
+                </div>
+
+                <div class="answer-options">
+                    <div class="answer-option" data-value="none" data-score="1">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">Almost no callbacks (0-2%)</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                    <div class="answer-option" data-value="low" data-score="2">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">Very few callbacks (3-5%)</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                    <div class="answer-option" data-value="medium" data-score="3">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">Some callbacks (5-10%)</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                    <div class="answer-option" data-value="good" data-score="4">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">Decent callbacks (10%+) but want more</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                </div>
+
+                <div class="quiz-nav">
+                    <button class="back-button" onclick="prevStep()">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                        Back
+                    </button>
+                    <button class="next-button" id="nextBtn3" onclick="nextStep()">
+                        Continue
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 4: Resume Format -->
+            <div class="quiz-step" data-step="4">
+                <div class="proof-interstitial proof-testimonial">
+                    <div class="proof-icon success-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <div class="proof-content">
+                        <div class="proof-stat">"I was confident my resume was fine. Turns out it was missing 3 critical elements that were costing me interviews."</div>
+                        <div class="proof-author">— Jennifer K., Project Manager (landed $125K role in 3 weeks)</div>
+                    </div>
+                </div>
+
+                <div class="question-header">
+                    <div class="question-number">4</div>
+                    <h2 class="question-text">Be honest: how confident are you in your current resume?</h2>
+                </div>
+
+                <div class="answer-options">
+                    <div class="answer-option" data-value="basic" data-score="1">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">Honestly? I cringe when I look at it</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                    <div class="answer-option" data-value="duties" data-score="2">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">I know it's not great, but not sure why</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                    <div class="answer-option" data-value="some-metrics" data-score="3">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">It's decent but clearly missing something</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                    <div class="answer-option" data-value="optimized" data-score="4">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">Pretty confident—but still not enough callbacks</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                </div>
+
+                <div class="quiz-nav">
+                    <button class="back-button" onclick="prevStep()">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                        Back
+                    </button>
+                    <button class="next-button" id="nextBtn4" onclick="nextStep()">
+                        Continue
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 5: Biggest Challenge -->
+            <div class="quiz-step" data-step="5">
+                <div class="proof-interstitial">
+                    <div class="proof-icon">
+                        <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                    </div>
+                    <div class="proof-content">
+                        <div class="proof-stat">Job seekers who optimize their resume see an average <strong>312% increase</strong> in interview requests within 14 days.</div>
+                        <div class="proof-source">— The Human Reach Client Success Data</div>
+                    </div>
+                </div>
+
+                <div class="question-header">
+                    <div class="question-number">5</div>
+                    <h2 class="question-text">What keeps you up at night about your job search?</h2>
+                </div>
+
+                <div class="answer-options">
+                    <div class="answer-option" data-value="ghosted" data-score="1">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">The deafening silence—feeling completely invisible</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                    <div class="answer-option" data-value="underqualified" data-score="2">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">Knowing I'm qualified but can't prove it on paper</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                    <div class="answer-option" data-value="ats" data-score="3">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">Suspecting my resume never even reaches human eyes</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                    <div class="answer-option" data-value="standout" data-score="4">
+                        <div class="answer-radio"></div>
+                        <span class="answer-text">Watching less qualified people land roles I deserve</span>
+                        <span class="answer-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    </div>
+                </div>
+
+                <div class="quiz-nav">
+                    <button class="back-button" onclick="prevStep()">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                        Back
+                    </button>
+                    <button class="next-button" id="nextBtn5" onclick="nextStep()">
+                        See My Results
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 6: Email Capture -->
+            <div class="quiz-step" data-step="6">
+                <div class="email-step">
+                    <div class="email-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+
+                    <h2 class="email-title">Great News: Your Diagnosis Is Ready!</h2>
+                    <p class="email-subtitle">Based on your answers, I've identified <strong>specific issues</strong> holding back your resume. Enter your details to reveal your personalized score.</p>
+
+                    <div class="email-social-proof">
+                        <span class="proof-stat">
+                            <strong>87%</strong> of users discover issues they didn't know existed
+                        </span>
+                    </div>
+
+                    <form class="email-form" onsubmit="submitEmail(event)">
+                        <div class="input-group">
+                            <input type="text" id="userName" placeholder="Your first name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="userEmail" placeholder="Your best email" required>
+                        </div>
+                        <button type="submit" class="submit-button">
+                            Unlock My Diagnosis
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                        </button>
+                    </form>
+
+                    <p class="privacy-note">
+                        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                        100% secure. Your information is never shared.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 7: Results -->
+            <div class="quiz-step" data-step="7">
+                <div class="results-step">
+                    <div class="confetti-container" id="confettiContainer"></div>
+
+                    <div class="good-news-banner" id="goodNewsBanner">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <span id="goodNewsText">Analysis complete! Here's what we found...</span>
+                    </div>
+
+                    <div class="result-score-container">
+                        <div class="result-score">
+                            <svg class="score-circle" width="150" height="150" viewBox="0 0 150 150">
+                                <circle class="score-bg" cx="75" cy="75" r="60"/>
+                                <circle class="score-fill" id="scoreFill" cx="75" cy="75" r="60"/>
+                            </svg>
+                            <div class="score-text">
+                                <div class="score-number" id="scoreNumber">0</div>
+                                <div class="score-label">Resume Score</div>
+                            </div>
+                        </div>
+                        <span class="result-badge" id="resultBadge">Calculating...</span>
+                    </div>
+
+                    <div class="comparison-stat" id="comparisonStat">
+                        <span class="comparison-text">You scored higher than <strong id="percentileBetter">--</strong> of job seekers</span>
+                    </div>
+
+                    <h2 class="result-title" id="resultTitle">Analyzing Your Results...</h2>
+                    <p class="result-description" id="resultDescription">Please wait while we calculate your personalized diagnosis.</p>
+
+                    <!-- Diagnosis Box -->
+                    <div class="diagnosis-box">
+                        <div class="diagnosis-header">
+                            <div class="diagnosis-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                            </div>
+                            <h3 class="diagnosis-title">Your Resume's Hidden Weaknesses</h3>
+                        </div>
+                        <ul class="diagnosis-list" id="diagnosisList">
+                            <li class="diagnosis-item">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                <span class="diagnosis-text">Loading diagnosis...</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution Box -->
+                    <div class="solution-box">
+                        <div class="solution-content">
+                            <div class="urgency-countdown">
+                                <span class="urgency-label">Quiz-Taker Discount (62% off) Expires In:</span>
+                                <div class="mini-countdown">
+                                    <span class="countdown-unit" id="countdownHours">23</span>:<span class="countdown-unit" id="countdownMinutes">47</span>:<span class="countdown-unit" id="countdownSeconds">32</span>
+                                </div>
+                            </div>
+
+                            <span class="solution-badge">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Recommended Based On Your Results
+                            </span>
+
+                            <h3 class="solution-title">The 7-Day Resume Refresh Kit</h3>
+                            <p class="solution-subtitle">The exact system that transformed 2,000+ job seekers from "constantly ghosted" to landing 3-5 interviews per week—in just 7 days.</p>
+
+                            <div class="solution-testimonial">
+                                <p class="testimonial-quote">"I went from 0 callbacks to 4 interviews in 8 days. This kit actually works."</p>
+                                <div class="testimonial-author">
+                                    <span class="author-name">— Sarah M.</span>
+                                    <span class="author-title">Marketing Manager, landed $145K role</span>
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                            </div>
+
+                            <div class="solution-features">
+                                <div class="feature-item">
+                                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                    <span>7-Day Action System</span>
+                                </div>
+                                <div class="feature-item">
+                                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                    <span>Executive Templates</span>
+                                </div>
+                                <div class="feature-item">
+                                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                    <span>Power Words Swipe File</span>
+                                </div>
+                                <div class="feature-item">
+                                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                    <span>Impact Quantifier Guide</span>
+                                </div>
+                            </div>
+
+                            <div class="price-display">
+                                <span class="price-original">$97</span>
+                                <span class="price-current">$37</span>
+                                <span class="price-savings">Save 62%</span>
+                            </div>
+
+                            <a href="https://start.thehumanreach.com/7-day-resume-refresh-kit-v1" class="cta-button">
+                                Yes! Fix My Resume Now →
+                            </a>
+
+                            <p class="guarantee-text">
+                                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                                100% Risk-Free: 30-Day "Get More Interviews" Guarantee
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="quiz-footer">
+        <p>© 2026 The Human Reach Corporation. All Rights Reserved.</p>
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            const particleCount = 20;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particle.style.width = (Math.random() * 3 + 2) + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.opacity = Math.random() * 0.3 + 0.2;
+                container.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        let currentStep = 0;
+        const totalSteps = 7;
+        const answers = {};
+
+        function updateProgress() {
+            const progress = (currentStep / totalSteps) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function showStep(step) {
+            document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+            document.querySelector(`[data-step="${step}"]`).classList.add('active');
+            updateProgress();
+        }
+
+        function startQuiz() {
+            currentStep = 1;
+            showStep(currentStep);
+        }
+
+        function prevStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                showStep(currentStep);
+            }
+        }
+
+        function nextStep() {
+            if (currentStep < totalSteps) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        }
+
+        // Answer selection
+        document.querySelectorAll('.answer-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const parent = this.closest('.quiz-step');
+                const step = parent.dataset.step;
+
+                parent.querySelectorAll('.answer-option').forEach(o => o.classList.remove('selected'));
+                this.classList.add('selected');
+
+                answers[step] = {
+                    value: this.dataset.value,
+                    score: parseInt(this.dataset.score)
+                };
+
+                const nextBtn = document.getElementById('nextBtn' + step);
+                if (nextBtn) {
+                    nextBtn.classList.add('active');
+                }
+            });
+        });
+
+        function submitEmail(e) {
+            e.preventDefault();
+            const name = document.getElementById('userName').value;
+            const email = document.getElementById('userEmail').value;
+
+            answers.name = name;
+            answers.email = email;
+
+            currentStep = 7;
+            showStep(currentStep);
+
+            setTimeout(() => {
+                calculateResults();
+            }, 500);
+        }
+
+        function calculateResults() {
+            let totalScore = 0;
+            let maxScore = 20;
+
+            for (let i = 1; i <= 5; i++) {
+                if (answers[i]) {
+                    totalScore += answers[i].score;
+                }
+            }
+
+            const rawScore = Math.round((totalScore / maxScore) * 100);
+            const displayScore = Math.max(15, Math.min(65, 100 - rawScore + Math.floor(Math.random() * 15)));
+
+            createConfetti();
+            animateScore(displayScore);
+
+            const percentile = Math.max(15, Math.min(45, 100 - displayScore + Math.floor(Math.random() * 10)));
+            document.getElementById('percentileBetter').textContent = percentile + '%';
+
+            let resultLevel, badgeClass, title, description, diagnosis, goodNews;
+
+            if (displayScore < 35) {
+                resultLevel = 'Critical Issues Found';
+                badgeClass = 'low';
+                goodNews = `${answers.name || 'Great news'}, we found the exact problems—and they're all fixable!`;
+                title = 'We Found What\'s Blocking Your Callbacks';
+                description = `${answers.name || 'Friend'}, here's the breakthrough: your resume has specific, identifiable issues that are costing you interviews. This means we know exactly what to fix—and fixing them typically takes just 7 days.`;
+                diagnosis = [
+                    'Your resume format is triggering the "instant skip" response from hiring managers',
+                    'Missing the quantified achievements that make executives say "I need to meet this person"',
+                    'Failing the critical 6-second scan that determines if you get read or rejected',
+                    'Job duties instead of impact stories—the #1 reason qualified candidates get overlooked'
+                ];
+            } else if (displayScore < 55) {
+                resultLevel = 'Gaps Identified';
+                badgeClass = 'medium';
+                goodNews = `${answers.name || 'Good news'}, your issues are common and very fixable!`;
+                title = 'Your Resume Is Close—But Missing Key Elements';
+                description = `${answers.name || 'Friend'}, you're closer than you think. We've identified specific gaps that explain why you're getting passed over for roles you're qualified for. The fix? Strategic tweaks that take days, not weeks.`;
+                diagnosis = [
+                    'Your achievements aren\'t speaking the language hiring managers respond to',
+                    'Resume structure isn\'t optimized for the 6-second scan—you\'re losing them early',
+                    'Missing the "high-potential candidate" signals that trigger interview requests',
+                    'Your value proposition gets buried—decision-makers aren\'t seeing your best work'
+                ];
+            } else {
+                resultLevel = 'Room to Optimize';
+                badgeClass = 'medium';
+                goodNews = `${answers.name || 'Nice'}, you have a solid foundation—let's make it exceptional!`;
+                title = 'Small Tweaks Could Transform Your Results';
+                description = `${answers.name || 'Friend'}, you're in a great position. Your resume has a solid foundation, but strategic optimizations could dramatically increase your callback rate—we're talking 2-3x improvement potential.`;
+                diagnosis = [
+                    'Some achievements could be quantified more powerfully for maximum impact',
+                    'Resume positioning may not fully signal your true target level',
+                    'Executive summary has room for a stronger hook',
+                    'Power words and impact language could be elevated to premium positioning'
+                ];
+            }
+
+            document.getElementById('goodNewsText').textContent = goodNews;
+            document.getElementById('resultBadge').textContent = resultLevel;
+            document.getElementById('resultBadge').className = 'result-badge ' + badgeClass;
+            document.getElementById('resultTitle').textContent = title;
+            document.getElementById('resultDescription').textContent = description;
+
+            const diagnosisList = document.getElementById('diagnosisList');
+            diagnosisList.innerHTML = diagnosis.map(item =>
+                `<li class="diagnosis-item">
+                    <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                    <span class="diagnosis-text">${item}</span>
+                </li>`
+            ).join('');
+
+            const scoreFill = document.getElementById('scoreFill');
+            scoreFill.classList.remove('low', 'medium', 'high');
+            scoreFill.classList.add(badgeClass);
+
+            startCountdown();
+        }
+
+        function createConfetti() {
+            const container = document.getElementById('confettiContainer');
+            const colors = ['#C5A05E', '#E8D5B0', '#10B981', '#F59E0B', '#0F1A2A', '#ffffff'];
+            const shapes = ['circle', 'square', 'triangle'];
+
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+                    const size = Math.random() * 10 + 5;
+                    confetti.style.width = size + 'px';
+                    confetti.style.height = size + 'px';
+
+                    const shape = shapes[Math.floor(Math.random() * shapes.length)];
+                    if (shape === 'circle') {
+                        confetti.style.borderRadius = '50%';
+                    } else if (shape === 'triangle') {
+                        confetti.style.width = '0';
+                        confetti.style.height = '0';
+                        confetti.style.background = 'transparent';
+                        confetti.style.borderLeft = (size/2) + 'px solid transparent';
+                        confetti.style.borderRight = (size/2) + 'px solid transparent';
+                        confetti.style.borderBottom = size + 'px solid ' + colors[Math.floor(Math.random() * colors.length)];
+                    }
+
+                    confetti.style.animation = `confetti-fall ${Math.random() * 2 + 2}s ease-out forwards`;
+                    container.appendChild(confetti);
+
+                    setTimeout(() => confetti.remove(), 4000);
+                }, i * 30);
+            }
+        }
+
+        function startCountdown() {
+            let hours = 23;
+            let minutes = 47;
+            let seconds = 32;
+
+            const updateCountdown = () => {
+                seconds--;
+                if (seconds < 0) {
+                    seconds = 59;
+                    minutes--;
+                    if (minutes < 0) {
+                        minutes = 59;
+                        hours--;
+                        if (hours < 0) {
+                            hours = 23;
+                        }
+                    }
+                }
+
+                document.getElementById('countdownHours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('countdownMinutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('countdownSeconds').textContent = seconds.toString().padStart(2, '0');
+            };
+
+            setInterval(updateCountdown, 1000);
+        }
+
+        function animateScore(targetScore) {
+            const scoreNumber = document.getElementById('scoreNumber');
+            const scoreFill = document.getElementById('scoreFill');
+            const circumference = 2 * Math.PI * 60;
+
+            let currentScore = 0;
+            const duration = 1500;
+            const startTime = Date.now();
+
+            function animate() {
+                const elapsed = Date.now() - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+
+                currentScore = Math.round(targetScore * easeOut);
+                scoreNumber.textContent = currentScore;
+
+                const offset = circumference - (currentScore / 100) * circumference;
+                scoreFill.style.strokeDashoffset = offset;
+
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                }
+            }
+
+            animate();
+        }
+
+        updateProgress();
+    </script>
+</body>
+</html>
