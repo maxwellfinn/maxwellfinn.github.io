@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>How Much Is Your Home's Dirty Exterior Really Costing You? | Free Assessment</title>
+    <meta name="description" content="Take this 60-second quiz to discover how much value you're losing due to your home's exterior condition. Get a free personalized assessment.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="multiman-services-logo.png">
+
+    <!-- Meta Pixel Code (placeholder - replace YOUR_PIXEL_ID) -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        // fbq('init', 'YOUR_PIXEL_ID');
+        // fbq('track', 'PageView');
+    </script>
+
+    <style>
+        :root {
+            --primary-navy: #1a2e5a;
+            --primary-navy-light: #2a4075;
+            --primary-navy-dark: #0f1c3a;
+            --accent-gold: #c9a962;
+            --accent-gold-light: #e6d4a8;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a4a4a;
+            --text-light: #6b6b6b;
+            --bg-cream: #faf9f7;
+            --bg-white: #ffffff;
+            --success-green: #2d8a4e;
+            --warning-red: #c94a4a;
+            --warning-orange: #e67e22;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html, body {
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-cream);
+        }
+
+        /* Quiz Container */
+        .quiz-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .quiz-header {
+            background: var(--bg-white);
+            padding: 16px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #e8e8e8;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .quiz-header img {
+            height: 28px;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            background: var(--bg-white);
+            padding: 0 20px 16px;
+            position: sticky;
+            top: 60px;
+            z-index: 99;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #e8e8e8;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-gold) 0%, #d4b46e 100%);
+            border-radius: 4px;
+            transition: width 0.4s ease;
+            width: 0%;
+        }
+
+        .progress-text {
+            font-size: 13px;
+            color: var(--text-medium);
+            text-align: center;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .progress-text span {
+            color: var(--success-green);
+            font-weight: 600;
+        }
+
+        /* Quiz Content */
+        .quiz-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 24px 20px 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Screen */
+        .screen {
+            display: none;
+            flex-direction: column;
+            flex: 1;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .screen.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Intro Screen */
+        .intro-screen {
+            text-align: center;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        .intro-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--warning-orange) 0%, #d35400 100%);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            animation: pulse-badge 2s infinite;
+        }
+
+        @keyframes pulse-badge {
+            0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3); }
+            50% { transform: scale(1.02); box-shadow: 0 6px 20px rgba(230, 126, 34, 0.5); }
+        }
+
+        .intro-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(26px, 6vw, 36px);
+            font-weight: 700;
+            color: var(--primary-navy);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .intro-title span {
+            color: var(--warning-red);
+        }
+
+        .intro-subtitle {
+            font-size: 17px;
+            color: var(--text-medium);
+            margin-bottom: 24px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .intro-image {
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto 24px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Trust Badge Row - NEW */
+        .trust-badge-row {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: var(--text-medium);
+            background: var(--bg-white);
+            padding: 8px 12px;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .trust-badge-item span:first-child {
+            font-size: 14px;
+        }
+
+        .start-btn {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-navy-light) 100%);
+            color: var(--bg-white);
+            border: none;
+            padding: 20px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(26,46,90,0.35);
+            width: 100%;
+            max-width: 340px;
+        }
+
+        .start-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(26,46,90,0.45);
+        }
+
+        .start-btn:active {
+            transform: translateY(0);
+        }
+
+        .intro-trust {
+            margin-top: 20px;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .intro-trust span {
+            color: var(--success-green);
+            font-weight: 600;
+        }
+
+        /* Question Screen */
+        .question-screen {
+            justify-content: flex-start;
+        }
+
+        .question-number {
+            font-size: 13px;
+            color: var(--accent-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .question-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(22px, 5vw, 28px);
+            font-weight: 700;
+            color: var(--primary-navy);
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+
+        .question-subtitle {
+            font-size: 15px;
+            color: var(--text-light);
+            margin-bottom: 28px;
+        }
+
+        .question-context {
+            font-size: 12px;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Answer Options */
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .option-btn {
+            background: var(--bg-white);
+            border: 2px solid #e8e8e8;
+            padding: 18px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-align: left;
+            min-height: 72px;
+        }
+
+        .option-btn:hover {
+            border-color: var(--primary-navy);
+            background: rgba(26,46,90,0.02);
+        }
+
+        .option-btn.selected {
+            border-color: var(--primary-navy);
+            background: rgba(26,46,90,0.06);
+            box-shadow: inset 0 2px 8px rgba(26,46,90,0.08);
+        }
+
+        /* Mobile tap feedback */
+        @media (pointer: coarse) {
+            .option-btn:active {
+                background: rgba(26,46,90,0.1);
+                transform: scale(0.98);
+                transition: all 0.15s ease;
+            }
+        }
+
+        .option-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--bg-cream);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .option-text {
+            flex: 1;
+        }
+
+        .option-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        .option-desc {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .option-check {
+            width: 28px;
+            height: 28px;
+            border: 2px solid #d0d0d0;
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .option-btn.selected .option-check {
+            background: var(--primary-navy);
+            border-color: var(--primary-navy);
+        }
+
+        .option-btn.selected .option-check::after {
+            content: '✓';
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Multi-select options */
+        .multi-select .option-check {
+            border-radius: 6px;
+        }
+
+        .multi-select-hint {
+            font-size: 14px;
+            color: var(--primary-navy);
+            text-align: center;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        /* Continue Button */
+        .continue-btn {
+            background: linear-gradient(135deg, #999 0%, #777 100%);
+            color: var(--bg-white);
+            border: none;
+            padding: 18px 32px;
+            font-size: 17px;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 28px;
+            width: 100%;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .continue-btn.enabled {
+            opacity: 1;
+            pointer-events: auto;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-navy-light) 100%);
+            box-shadow: 0 4px 15px rgba(26,46,90,0.3);
+            animation: enablePulse 0.6s ease-out;
+        }
+
+        @keyframes enablePulse {
+            0% { box-shadow: 0 4px 15px rgba(26,46,90,0.3); }
+            50% { box-shadow: 0 6px 25px rgba(26,46,90,0.5); }
+            100% { box-shadow: 0 4px 15px rgba(26,46,90,0.3); }
+        }
+
+        .continue-btn.enabled:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26,46,90,0.4);
+        }
+
+        /* Back button - improved touch target */
+        .back-btn {
+            background: rgba(0,0,0,0.04);
+            border: none;
+            color: var(--text-medium);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 20px;
+            padding: 12px 16px;
+            border-radius: 8px;
+            min-height: 44px;
+        }
+
+        .back-btn:hover {
+            background: rgba(0,0,0,0.08);
+            color: var(--primary-navy);
+        }
+
+        /* Lead Capture Screen */
+        .lead-screen {
+            text-align: center;
+        }
+
+        .lead-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #d4b46e 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 36px;
+        }
+
+        .lead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(24px, 5vw, 30px);
+            font-weight: 700;
+            color: var(--primary-navy);
+            line-height: 1.3;
+            margin-bottom: 12px;
+        }
+
+        .lead-subtitle {
+            font-size: 16px;
+            color: var(--text-medium);
+            margin-bottom: 20px;
+            max-width: 360px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Trust Box Before Form - NEW */
+        .lead-trust-box {
+            background: rgba(45,138,78,0.08);
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            max-width: 360px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .lead-trust-box p {
+            font-size: 13px;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .lead-trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            font-size: 12px;
+            color: var(--text-medium);
+        }
+
+        .lead-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 360px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            text-align: left;
+        }
+
+        .form-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 16px 18px;
+            border: 2px solid #e8e8e8;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-navy);
+            background: rgba(26,46,90,0.02);
+        }
+
+        .form-input::placeholder {
+            color: #888;
+        }
+
+        .form-input.error {
+            border-color: var(--warning-red);
+        }
+
+        .form-error {
+            font-size: 12px;
+            color: var(--warning-red);
+            display: none;
+        }
+
+        .form-error.visible {
+            display: block;
+        }
+
+        .form-helper {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: -8px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #d4b46e 100%);
+            color: var(--primary-navy);
+            border: none;
+            padding: 20px 32px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(201,169,98,0.4);
+            margin-top: 8px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201,169,98,0.5);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .lead-privacy {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 16px;
+        }
+
+        .lead-privacy a {
+            color: var(--primary-navy);
+        }
+
+        /* Objection Preemption - NEW */
+        .lead-reassurance {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 16px;
+            font-size: 12px;
+            color: var(--text-medium);
+            text-align: left;
+            max-width: 360px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .lead-reassurance div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lead-reassurance span:first-child {
+            color: var(--success-green);
+        }
+
+        /* Results Screen */
+        .results-screen {
+            text-align: center;
+        }
+
+        .results-card {
+            background: var(--bg-white);
+            border-radius: 16px;
+            padding: 32px 24px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+            margin-bottom: 24px;
+        }
+
+        .results-label {
+            font-size: 13px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .results-amount {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(42px, 10vw, 56px);
+            font-weight: 700;
+            color: var(--warning-red);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .results-period {
+            font-size: 16px;
+            color: var(--text-medium);
+            margin-bottom: 24px;
+        }
+
+        .results-breakdown {
+            background: var(--bg-cream);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .breakdown-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 12px;
+        }
+
+        .breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #e8e8e8;
+            font-size: 14px;
+        }
+
+        .breakdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .breakdown-item span:first-child {
+            color: var(--text-medium);
+        }
+
+        .breakdown-item span:last-child {
+            color: var(--warning-red);
+            font-weight: 600;
+        }
+
+        /* Personalized Results Message - NEW */
+        .results-personalized {
+            background: rgba(45,138,78,0.08);
+            border-left: 4px solid var(--success-green);
+            padding: 16px;
+            border-radius: 0 10px 10px 0;
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+
+        .results-personalized strong {
+            color: var(--success-green);
+        }
+
+        .results-message {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-navy-light) 100%);
+            color: var(--bg-white);
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .results-message h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .results-message p {
+            font-size: 15px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .results-message strong {
+            color: var(--accent-gold);
+        }
+
+        /* Future Pacing - NEW */
+        .results-next-steps {
+            background: var(--bg-white);
+            border: 2px solid #e8e8e8;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .results-next-steps h4 {
+            font-size: 15px;
+            color: var(--primary-navy);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .results-next-steps ul {
+            list-style: none;
+            font-size: 14px;
+            color: var(--text-medium);
+        }
+
+        .results-next-steps li {
+            padding: 8px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .results-next-steps li span:first-child {
+            color: var(--success-green);
+            font-weight: bold;
+        }
+
+        /* Scarcity Box - NEW */
+        .results-scarcity {
+            background: rgba(230, 126, 34, 0.1);
+            border-left: 4px solid var(--warning-orange);
+            padding: 14px 16px;
+            border-radius: 0 10px 10px 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .countdown-timer {
+            background: var(--warning-orange);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 15px;
+        }
+
+        .results-cta {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #d4b46e 100%);
+            color: var(--primary-navy);
+            border: none;
+            padding: 22px 32px;
+            font-size: 19px;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 25px rgba(201,169,98,0.45);
+            width: 100%;
+            text-decoration: none;
+            display: block;
+        }
+
+        .results-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(201,169,98,0.55);
+        }
+
+        .results-subtext {
+            margin-top: 16px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .results-subtext strong {
+            color: var(--success-green);
+        }
+
+        .results-trust {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--text-medium);
+        }
+
+        .trust-item span:first-child {
+            font-size: 18px;
+        }
+
+        /* Testimonial Card - NEW */
+        .results-testimonial {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            text-align: left;
+        }
+
+        .testimonial-quote {
+            font-size: 14px;
+            color: var(--text-dark);
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-author {
+            font-size: 13px;
+            color: var(--text-medium);
+            font-weight: 600;
+        }
+
+        .testimonial-result {
+            font-size: 12px;
+            color: var(--success-green);
+        }
+
+        /* Loading Animation */
+        .loading-screen {
+            text-align: center;
+            justify-content: center;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid #e8e8e8;
+            border-top-color: var(--primary-navy);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 24px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 18px;
+            color: var(--primary-navy);
+            font-weight: 600;
+        }
+
+        .loading-subtext {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-top: 8px;
+        }
+
+        /* Loading Steps - NEW */
+        .loading-steps {
+            margin-top: 24px;
+            text-align: left;
+            max-width: 280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .loading-step {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--text-light);
+            opacity: 0.5;
+            transition: all 0.3s ease;
+        }
+
+        .loading-step.active {
+            color: var(--primary-navy);
+            opacity: 1;
+        }
+
+        .loading-step.complete {
+            color: var(--success-green);
+            opacity: 1;
+        }
+
+        /* Urgency Banner */
+        .urgency-banner {
+            background: linear-gradient(90deg, var(--warning-orange) 0%, #d35400 100%);
+            color: white;
+            text-align: center;
+            padding: 12px 16px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Social Proof Ticker */
+        .social-proof-ticker {
+            background: var(--bg-white);
+            padding: 14px 20px;
+            border-top: 1px solid #e8e8e8;
+            overflow: hidden;
+        }
+
+        .ticker-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-medium);
+        }
+
+        .ticker-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success-green);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.9); }
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .quiz-content {
+                padding: 20px 16px 32px;
+            }
+
+            .option-btn {
+                padding: 16px;
+            }
+
+            .option-icon {
+                width: 42px;
+                height: 42px;
+                font-size: 22px;
+            }
+
+            .trust-badge-row {
+                gap: 10px;
+            }
+
+            .trust-badge-item {
+                padding: 6px 10px;
+                font-size: 11px;
+            }
+
+            .lead-trust-badges {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 768px) and (orientation: landscape) {
+            .intro-image { display: none; }
+            .option-btn { padding: 12px 16px; min-height: 60px; }
+            .question-title { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Urgency Banner -->
+        <div class="urgency-banner" id="urgencyBanner">
+            ⏰ Only <span id="spotsLeft">6</span> FREE assessments remaining this week — After that: $149 booking fee
+        </div>
+
+        <!-- Header -->
+        <header class="quiz-header">
+            <img src="multiman-services-logo.png" alt="MultiMan Services">
+        </header>
+
+        <!-- Progress Bar (hidden on intro) -->
+        <div class="progress-container" id="progressContainer" style="display: none;">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="progress-text" id="progressText">Question 1 of 4 — <span>25% complete</span></p>
+        </div>
+
+        <!-- Quiz Content -->
+        <div class="quiz-content">
+
+            <!-- INTRO SCREEN -->
+            <div class="screen active" id="screen-intro">
+                <div class="intro-screen">
+                    <span class="intro-badge">⏰ Only 6 Free Spots Left This Week</span>
+                    <h1 class="intro-title">How Much Is Your Home's Dirty Exterior <span>Really Costing You?</span></h1>
+                    <p class="intro-subtitle">Most homeowners lose $10K-$20K in property value without realizing it. Find out your hidden cost in 60 seconds.</p>
+
+                    <div class="intro-image">
+                        <img src="roof-cleaning-horizontal-split-2.jpeg" alt="Before and after exterior cleaning">
+                    </div>
+
+                    <!-- Trust Badges - Moved Earlier -->
+                    <div class="trust-badge-row">
+                        <div class="trust-badge-item">
+                            <span>🏆</span>
+                            <span>A+ BBB Rated</span>
+                        </div>
+                        <div class="trust-badge-item">
+                            <span>⭐</span>
+                            <span>4.9/5 (1,200+ reviews)</span>
+                        </div>
+                        <div class="trust-badge-item">
+                            <span>🛡️</span>
+                            <span>Fully Insured</span>
+                        </div>
+                    </div>
+
+                    <button class="start-btn" onclick="startQuiz()">
+                        Yes, Show Me My Hidden Costs →
+                    </button>
+
+                    <p class="intro-trust">
+                        <span>✓ 100% Free</span> • No spam • Instant results • $200 assessment included
+                    </p>
+                </div>
+            </div>
+
+            <!-- QUESTION 1: Home Type -->
+            <div class="screen" id="screen-q1">
+                <div class="question-screen">
+                    <button class="back-btn" onclick="goBack(1)">← Back</button>
+                    <p class="question-number">Question 1 of 4</p>
+                    <h2 class="question-title">What type of property do you have?</h2>
+                    <p class="question-subtitle">This helps us calculate your specific exterior square footage.</p>
+                    <p class="question-context">💡 Your property type affects potential value impact</p>
+
+                    <div class="options-container" id="q1-options">
+                        <button class="option-btn" onclick="selectOption(1, 'single-family')">
+                            <div class="option-icon">🏠</div>
+                            <div class="option-text">
+                                <div class="option-title">Single-Family Home</div>
+                                <div class="option-desc">Detached house with yard</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                        <button class="option-btn" onclick="selectOption(1, 'townhouse')">
+                            <div class="option-icon">🏘️</div>
+                            <div class="option-text">
+                                <div class="option-title">Townhouse / Condo</div>
+                                <div class="option-desc">Attached or multi-unit</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                        <button class="option-btn" onclick="selectOption(1, 'multi-family')">
+                            <div class="option-icon">🏢</div>
+                            <div class="option-text">
+                                <div class="option-title">Multi-Family / Duplex</div>
+                                <div class="option-desc">2-4 units</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                        <button class="option-btn" onclick="selectOption(1, 'commercial')">
+                            <div class="option-icon">🏬</div>
+                            <div class="option-text">
+                                <div class="option-title">Commercial Property</div>
+                                <div class="option-desc">Business or retail</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                    </div>
+
+                    <button class="continue-btn" id="continue-q1" onclick="nextQuestion(2)">
+                        Next Step →
+                    </button>
+                </div>
+            </div>
+
+            <!-- QUESTION 2: Issues Noticed -->
+            <div class="screen" id="screen-q2">
+                <div class="question-screen">
+                    <button class="back-btn" onclick="goBack(2)">← Back</button>
+                    <p class="question-number">Question 2 of 4</p>
+                    <h2 class="question-title">Which of these costly issues have you noticed?</h2>
+                    <p class="multi-select-hint">Select any that apply (be honest—it helps accuracy)</p>
+
+                    <div class="options-container multi-select" id="q2-options">
+                        <button class="option-btn" onclick="toggleMultiOption(2, 'dark-streaks')">
+                            <div class="option-icon">🖤</div>
+                            <div class="option-text">
+                                <div class="option-title">Dark Streaks on Roof</div>
+                                <div class="option-desc">Black or brown streaking (most common)</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                        <button class="option-btn" onclick="toggleMultiOption(2, 'green-algae')">
+                            <div class="option-icon">🌿</div>
+                            <div class="option-text">
+                                <div class="option-title">Green Algae / Mildew</div>
+                                <div class="option-desc">On siding, fence, or deck</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                        <button class="option-btn" onclick="toggleMultiOption(2, 'dirty-concrete')">
+                            <div class="option-icon">⬛</div>
+                            <div class="option-text">
+                                <div class="option-title">Dirty Driveway / Walkways</div>
+                                <div class="option-desc">Stained or discolored concrete</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                        <button class="option-btn" onclick="toggleMultiOption(2, 'general-grime')">
+                            <div class="option-icon">💨</div>
+                            <div class="option-text">
+                                <div class="option-title">General Grime / Dullness</div>
+                                <div class="option-desc">Home looks faded or tired</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                        <button class="option-btn" onclick="toggleMultiOption(2, 'none')">
+                            <div class="option-icon">✨</div>
+                            <div class="option-text">
+                                <div class="option-title">None / My Home Looks Clean</div>
+                                <div class="option-desc">I don't notice any obvious issues</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                    </div>
+
+                    <button class="continue-btn" id="continue-q2" onclick="nextQuestion(3)">
+                        Next Step →
+                    </button>
+                </div>
+            </div>
+
+            <!-- QUESTION 3: Time Since Cleaning -->
+            <div class="screen" id="screen-q3">
+                <div class="question-screen">
+                    <button class="back-btn" onclick="goBack(3)">← Back</button>
+                    <p class="question-number">Question 3 of 4</p>
+                    <h2 class="question-title">When was your exterior last professionally cleaned?</h2>
+                    <p class="question-subtitle">This affects the buildup level and hidden cost.</p>
+                    <p class="question-context">💡 Most professionals recommend cleaning every 1-2 years</p>
+
+                    <div class="options-container" id="q3-options">
+                        <button class="option-btn" onclick="selectOption(3, 'less-than-1')">
+                            <div class="option-icon">✨</div>
+                            <div class="option-text">
+                                <div class="option-title">Less than 1 year ago</div>
+                                <div class="option-desc">Recently cleaned</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                        <button class="option-btn" onclick="selectOption(3, '1-2-years')">
+                            <div class="option-icon">📅</div>
+                            <div class="option-text">
+                                <div class="option-title">1-2 years ago</div>
+                                <div class="option-desc">Some buildup likely</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                        <button class="option-btn" onclick="selectOption(3, '3-5-years')">
+                            <div class="option-icon">⏰</div>
+                            <div class="option-text">
+                                <div class="option-title">3-5 years ago</div>
+                                <div class="option-desc">Significant buildup probable</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                        <button class="option-btn" onclick="selectOption(3, 'never')">
+                            <div class="option-icon">❓</div>
+                            <div class="option-text">
+                                <div class="option-title">5+ years or never</div>
+                                <div class="option-desc">Heavy buildup expected</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                    </div>
+
+                    <button class="continue-btn" id="continue-q3" onclick="nextQuestion(4)">
+                        Next Step →
+                    </button>
+                </div>
+            </div>
+
+            <!-- QUESTION 4: Primary Concern -->
+            <div class="screen" id="screen-q4">
+                <div class="question-screen">
+                    <button class="back-btn" onclick="goBack(4)">← Back</button>
+                    <p class="question-number">Question 4 of 4</p>
+                    <h2 class="question-title">What's driving you to look into this?</h2>
+                    <p class="question-subtitle">This helps us prioritize what matters most to you.</p>
+
+                    <div class="options-container" id="q4-options">
+                        <button class="option-btn" onclick="selectOption(4, 'curb-appeal')">
+                            <div class="option-icon">👀</div>
+                            <div class="option-text">
+                                <div class="option-title">Curb Appeal & Pride</div>
+                                <div class="option-desc">I want my home to be the best on the block</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                        <button class="option-btn" onclick="selectOption(4, 'property-value')">
+                            <div class="option-icon">💰</div>
+                            <div class="option-text">
+                                <div class="option-title">Protecting Property Value</div>
+                                <div class="option-desc">Concerned about my home's worth</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                        <button class="option-btn" onclick="selectOption(4, 'selling-soon')">
+                            <div class="option-icon">🏷️</div>
+                            <div class="option-text">
+                                <div class="option-title">Selling Soon</div>
+                                <div class="option-desc">Preparing to list in the next 6-12 months</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                        <button class="option-btn" onclick="selectOption(4, 'preventing-damage')">
+                            <div class="option-icon">🛡️</div>
+                            <div class="option-text">
+                                <div class="option-title">Preventing Damage</div>
+                                <div class="option-desc">Want to stop small issues becoming big ones</div>
+                            </div>
+                            <div class="option-check"></div>
+                        </button>
+                    </div>
+
+                    <button class="continue-btn" id="continue-q4" onclick="showLeadCapture()">
+                        See My Results →
+                    </button>
+                </div>
+            </div>
+
+            <!-- LEAD CAPTURE SCREEN -->
+            <div class="screen" id="screen-lead">
+                <div class="lead-screen">
+                    <div class="lead-icon">📊</div>
+                    <h2 class="lead-title">Your Results Are Calculated!</h2>
+                    <p class="lead-subtitle">Enter your email below to unlock your personalized cost analysis. This custom assessment is yours to keep.</p>
+
+                    <!-- Trust Box Before Form -->
+                    <div class="lead-trust-box">
+                        <p>Why homeowners trust us:</p>
+                        <div class="lead-trust-badges">
+                            <div>🏆 A+ BBB</div>
+                            <div>🛡️ Insured</div>
+                            <div>⭐ 4.9/5</div>
+                        </div>
+                    </div>
+
+                    <form class="lead-form" id="leadForm" onsubmit="submitLead(event)">
+                        <div class="form-group">
+                            <label class="form-label" for="userName">Your Name</label>
+                            <input type="text" class="form-input" id="userName" placeholder="John Smith" autocomplete="name" required>
+                            <span class="form-error" id="nameError">Please enter your name</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="userEmail">Email Address</label>
+                            <input type="email" class="form-input" id="userEmail" placeholder="john@example.com" autocomplete="email" required>
+                            <span class="form-error" id="emailError">Please enter a valid email</span>
+                            <span class="form-helper">We'll send your detailed assessment here</span>
+                        </div>
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            Unlock My Cost Analysis →
+                        </button>
+                    </form>
+
+                    <!-- Objection Preemption -->
+                    <div class="lead-reassurance">
+                        <div><span>✓</span> 100% Free — No credit card needed</div>
+                        <div><span>✓</span> No sales pressure — Just get the numbers</div>
+                        <div><span>✓</span> Instant results — See your analysis immediately</div>
+                    </div>
+
+                    <p class="lead-privacy">
+                        🔒 Your information is secure and will never be shared or sold.
+                    </p>
+                </div>
+            </div>
+
+            <!-- LOADING SCREEN -->
+            <div class="screen" id="screen-loading">
+                <div class="loading-screen">
+                    <div class="loading-spinner"></div>
+                    <p class="loading-text">Calculating Your Hidden Costs...</p>
+                    <p class="loading-subtext">Comparing your home to similar properties in your area</p>
+
+                    <div class="loading-steps">
+                        <div class="loading-step" id="step1">
+                            <span>○</span> Checking your property type...
+                        </div>
+                        <div class="loading-step" id="step2">
+                            <span>○</span> Analyzing exterior issues...
+                        </div>
+                        <div class="loading-step" id="step3">
+                            <span>○</span> Running market comparison...
+                        </div>
+                        <div class="loading-step" id="step4">
+                            <span>○</span> Generating personalized report...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESULTS SCREEN -->
+            <div class="screen" id="screen-results">
+                <div class="results-screen">
+                    <div class="results-card">
+                        <p class="results-label">Your Estimated Hidden Cost</p>
+                        <p class="results-amount" id="totalCost">$12,450</p>
+                        <p class="results-period">in potential lost property value</p>
+
+                        <div class="results-breakdown">
+                            <p class="breakdown-title">How This Breaks Down:</p>
+                            <div class="breakdown-item">
+                                <span>Reduced Curb Appeal Impact</span>
+                                <span id="curbCost">-$7,500</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Exterior Surface Degradation</span>
+                                <span id="damageCost">-$3,200</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Buyer Perception Discount</span>
+                                <span id="perceptionCost">-$1,750</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personalized Message Based on Q4 -->
+                    <div class="results-personalized" id="personalizedMessage">
+                        <strong>Based on your goal:</strong> Since you're focused on protecting property value, addressing these issues now could prevent further depreciation and maintain your home's market position.
+                    </div>
+
+                    <div class="results-message">
+                        <h3>Great News: You Can Fix This in 48 Hours</h3>
+                        <p>A professional exterior cleaning typically costs <strong>$400-$800</strong> and can restore your full property value—that's a potential <strong>15-30x return</strong> on a weekend decision.</p>
+                    </div>
+
+                    <!-- Future Pacing -->
+                    <div class="results-next-steps">
+                        <h4>What Happens Next:</h4>
+                        <ul>
+                            <li><span>✓</span> Schedule your FREE $200 assessment (takes 10 mins)</li>
+                            <li><span>✓</span> Our expert evaluates your specific exterior condition</li>
+                            <li><span>✓</span> Get a written savings plan with before/after projections</li>
+                            <li><span>✓</span> No pressure, no obligation—just get the information</li>
+                        </ul>
+                    </div>
+
+                    <!-- Scarcity with Countdown -->
+                    <div class="results-scarcity">
+                        <span>⏰ Only <span id="resultSpots">5</span> assessment spots left</span>
+                        <span class="countdown-timer" id="countdownTimer">23:59</span>
+                    </div>
+
+                    <!-- Micro-Trust Bar - NEW -->
+                    <div style="background: rgba(45,138,78,0.06); padding: 10px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 13px; color: var(--text-medium); display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                        <span>✓ <strong>1,200+</strong> homeowners trusted us</span>
+                        <span>•</span>
+                        <span>⭐ <strong>4.9/5</strong> rating</span>
+                        <span>•</span>
+                        <span style="color: var(--success-green);">Last verified today</span>
+                    </div>
+
+                    <a href="https://www.multimanservices.com/" class="results-cta" target="_blank" rel="noopener">
+                        Yes, Book My Free Assessment →
+                    </a>
+
+                    <p class="results-subtext">
+                        <strong>✓ $200 Value — FREE</strong> for quiz completers only<br>
+                        Most clients schedule within 24 hours
+                    </p>
+
+                    <div class="results-trust">
+                        <div class="trust-item">
+                            <span>🏆</span>
+                            <span>A+ BBB Rating</span>
+                        </div>
+                        <div class="trust-item">
+                            <span>🛡️</span>
+                            <span>Fully Insured</span>
+                        </div>
+                        <div class="trust-item">
+                            <span>⭐</span>
+                            <span>4.9/5 Stars</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial -->
+                    <div class="results-testimonial">
+                        <p class="testimonial-quote">"I had no idea my exterior was costing me that much. The assessment was eye-opening, and fixing it was so simple. My home looks like new!"</p>
+                        <p class="testimonial-author">— Jennifer M., Madison</p>
+                        <p class="testimonial-result">Discovered $14,200 hidden cost • Scheduled same day</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Social Proof Ticker -->
+        <div class="social-proof-ticker" id="socialProof">
+            <div class="ticker-content">
+                <span class="ticker-dot"></span>
+                <span id="tickerText">Jennifer from Madison: "Discovered $14,200 hidden cost. Scheduling my cleaning!"</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Quiz State
+        let currentScreen = 'intro';
+        let answers = {
+            q1: null,
+            q2: [],
+            q3: null,
+            q4: null
+        };
+        let userData = {};
+
+        // Progress tracking
+        const totalQuestions = 4;
+
+        function updateProgress(questionNum) {
+            const progress = (questionNum / totalQuestions) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+
+            const progressMessages = {
+                1: "25% complete",
+                2: "50% — You're halfway there!",
+                3: "75% — Almost done!",
+                4: "100% — Final question!"
+            };
+
+            document.getElementById('progressText').innerHTML =
+                `Question ${questionNum} of ${totalQuestions} — <span>${progressMessages[questionNum]}</span>`;
+        }
+
+        function showScreen(screenId) {
+            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+            document.getElementById('screen-' + screenId).classList.add('active');
+            currentScreen = screenId;
+
+            // Show/hide progress bar
+            const progressContainer = document.getElementById('progressContainer');
+            if (screenId === 'intro' || screenId === 'lead' || screenId === 'loading' || screenId === 'results') {
+                progressContainer.style.display = 'none';
+            } else {
+                progressContainer.style.display = 'block';
+            }
+
+            // Scroll to top smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function startQuiz() {
+            // Track pixel event
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'AddToCart', { content_name: 'Quiz Started', content_type: 'quiz_start' });
+            }
+
+            showScreen('q1');
+            updateProgress(1);
+        }
+
+        function selectOption(questionNum, value) {
+            answers['q' + questionNum] = value;
+
+            // Update UI
+            const container = document.getElementById('q' + questionNum + '-options');
+            container.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('selected'));
+            event.currentTarget.classList.add('selected');
+
+            // Enable continue button
+            document.getElementById('continue-q' + questionNum).classList.add('enabled');
+        }
+
+        function toggleMultiOption(questionNum, value) {
+            // Special handling for "none" option
+            if (value === 'none') {
+                // Clear other selections
+                answers['q' + questionNum] = ['none'];
+                const container = document.getElementById('q' + questionNum + '-options');
+                container.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('selected'));
+                event.currentTarget.classList.add('selected');
+            } else {
+                // Remove "none" if selecting other options
+                const noneIndex = answers['q' + questionNum].indexOf('none');
+                if (noneIndex > -1) {
+                    answers['q' + questionNum].splice(noneIndex, 1);
+                    const noneBtn = document.querySelector('[onclick*="\'none\'"]');
+                    if (noneBtn) noneBtn.classList.remove('selected');
+                }
+
+                const index = answers['q' + questionNum].indexOf(value);
+                if (index > -1) {
+                    answers['q' + questionNum].splice(index, 1);
+                    event.currentTarget.classList.remove('selected');
+                } else {
+                    answers['q' + questionNum].push(value);
+                    event.currentTarget.classList.add('selected');
+                }
+            }
+
+            // Enable continue if at least one selected
+            const btn = document.getElementById('continue-q' + questionNum);
+            if (answers['q' + questionNum].length > 0) {
+                btn.classList.add('enabled');
+            } else {
+                btn.classList.remove('enabled');
+            }
+        }
+
+        function nextQuestion(nextNum) {
+            showScreen('q' + nextNum);
+            updateProgress(nextNum);
+        }
+
+        function goBack(currentNum) {
+            if (currentNum === 1) {
+                showScreen('intro');
+            } else {
+                showScreen('q' + (currentNum - 1));
+                updateProgress(currentNum - 1);
+            }
+        }
+
+        function showLeadCapture() {
+            showScreen('lead');
+        }
+
+        function validateForm() {
+            let isValid = true;
+
+            const name = document.getElementById('userName').value.trim();
+            const email = document.getElementById('userEmail').value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Reset errors
+            document.querySelectorAll('.form-input').forEach(i => i.classList.remove('error'));
+            document.querySelectorAll('.form-error').forEach(e => e.classList.remove('visible'));
+
+            if (!name || name.length < 2) {
+                document.getElementById('userName').classList.add('error');
+                document.getElementById('nameError').classList.add('visible');
+                document.getElementById('userName').focus();
+                isValid = false;
+            }
+
+            if (!emailRegex.test(email)) {
+                document.getElementById('userEmail').classList.add('error');
+                document.getElementById('emailError').classList.add('visible');
+                if (isValid) document.getElementById('userEmail').focus();
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function submitLead(e) {
+            e.preventDefault();
+
+            if (!validateForm()) return;
+
+            userData = {
+                name: document.getElementById('userName').value.trim(),
+                email: document.getElementById('userEmail').value.trim()
+            };
+
+            // Track pixel event
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', { content_name: 'Quiz Lead Captured' });
+            }
+
+            // Show loading with animated steps
+            showScreen('loading');
+            animateLoadingSteps();
+
+            // Calculate and show results after delay
+            setTimeout(() => {
+                calculateResults();
+                showScreen('results');
+                startCountdown();
+
+                // Track completion
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'CompleteRegistration', { content_name: 'Quiz Completed' });
+                }
+            }, 3000);
+        }
+
+        function animateLoadingSteps() {
+            const steps = ['step1', 'step2', 'step3', 'step4'];
+            let delay = 0;
+
+            steps.forEach((step, index) => {
+                setTimeout(() => {
+                    document.getElementById(step).classList.add('active');
+                    document.getElementById(step).querySelector('span').textContent = '●';
+                }, delay);
+
+                setTimeout(() => {
+                    document.getElementById(step).classList.remove('active');
+                    document.getElementById(step).classList.add('complete');
+                    document.getElementById(step).querySelector('span').textContent = '✓';
+                }, delay + 600);
+
+                delay += 700;
+            });
+        }
+
+        function calculateResults() {
+            // Base cost calculation based on answers
+            let baseCost = 9500; // Higher base for credibility
+
+            // Adjust based on home type (compressed multipliers)
+            if (answers.q1 === 'single-family') baseCost += 1500;
+            if (answers.q1 === 'multi-family') baseCost += 2500;
+            if (answers.q1 === 'commercial') baseCost += 4000;
+
+            // Adjust based on issues (more issues = higher cost, but capped)
+            const issues = answers.q2.filter(i => i !== 'none');
+            baseCost += Math.min(issues.length * 1200, 3600); // Cap at 3 issues worth
+
+            // Adjust based on time since cleaning (compressed)
+            if (answers.q3 === '1-2-years') baseCost += 800;
+            if (answers.q3 === '3-5-years') baseCost += 2000;
+            if (answers.q3 === 'never') baseCost += 3000;
+
+            // Adjust based on concern (selling soon = higher perceived loss)
+            if (answers.q4 === 'selling-soon') baseCost += 2000;
+            if (answers.q4 === 'property-value') baseCost += 1200;
+
+            // CREDIBILITY CAP: Keep results in believable range $9,500-$18,500
+            baseCost = Math.min(Math.max(baseCost, 9500), 18500);
+
+            // Calculate breakdown
+            const curbCost = Math.round(baseCost * 0.55);
+            const damageCost = Math.round(baseCost * 0.30);
+            const perceptionCost = baseCost - curbCost - damageCost;
+
+            // Update results
+            document.getElementById('totalCost').textContent = '$' + baseCost.toLocaleString();
+            document.getElementById('curbCost').textContent = '-$' + curbCost.toLocaleString();
+            document.getElementById('damageCost').textContent = '-$' + damageCost.toLocaleString();
+            document.getElementById('perceptionCost').textContent = '-$' + perceptionCost.toLocaleString();
+
+            // Check if user selected "None" on Q2 - adjust messaging for cognitive fluency
+            const selectedNone = answers.q2.includes('none');
+
+            // Update personalized message based on Q4 (with Q2 "none" awareness)
+            let personalizedMessages;
+
+            if (selectedNone) {
+                // User said home looks clean - reframe as maintenance optimization
+                personalizedMessages = {
+                    'curb-appeal': `<strong>Great news—your home is well-maintained!</strong> Even clean-looking exteriors accumulate microscopic buildup that affects curb appeal over time. Our assessment identifies any invisible issues before they become visible problems.`,
+                    'property-value': `<strong>Smart thinking!</strong> Your home appears clean, but professional assessments often uncover hidden factors that impact property value. Think of this as a "wellness check" for your biggest investment.`,
+                    'selling-soon': `<strong>You're ahead of the game!</strong> Since your exterior looks good, you're in a strong position. Our assessment will confirm there's nothing that could surprise a home inspector or give buyers negotiating power.`,
+                    'preventing-damage': `<strong>Prevention is the best strategy!</strong> Even when your home looks clean, early detection of potential issues can save thousands in future repairs. A professional eye catches what homeowners miss.`
+                };
+            } else {
+                personalizedMessages = {
+                    'curb-appeal': `<strong>Based on your goal:</strong> Since curb appeal matters to you, imagine driving up to your home and feeling proud every single day. A clean exterior transforms not just your property, but how you feel about coming home.`,
+                    'property-value': `<strong>Based on your goal:</strong> You're smart to protect your investment. Every month you wait, your property value continues to depreciate. The good news? This is completely reversible with a single professional cleaning.`,
+                    'selling-soon': `<strong>Based on your goal:</strong> Homes with clean exteriors sell 12% faster and for 3-5% more. With your listing timeline, addressing this now could mean thousands more in your pocket at closing.`,
+                    'preventing-damage': `<strong>Based on your goal:</strong> You're thinking ahead. Left untreated, algae and grime don't just look bad—they actively damage your surfaces. A cleaning now prevents expensive repairs later.`
+                };
+            }
+
+            document.getElementById('personalizedMessage').innerHTML =
+                personalizedMessages[answers.q4] || personalizedMessages['property-value'];
+
+            // Random spots remaining
+            const spotsLeft = Math.floor(Math.random() * 3) + 4;
+            document.getElementById('resultSpots').textContent = spotsLeft;
+        }
+
+        function startCountdown() {
+            let timeLeft = 24 * 60; // 24 hours in minutes
+
+            function updateTimer() {
+                const hours = Math.floor(timeLeft / 60);
+                const minutes = timeLeft % 60;
+                document.getElementById('countdownTimer').textContent =
+                    hours + ':' + (minutes < 10 ? '0' : '') + minutes;
+
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    setTimeout(updateTimer, 60000); // Update every minute
+                }
+            }
+
+            // Start with a random time under 24 hours for authenticity
+            timeLeft = Math.floor(Math.random() * 1380) + 60; // 1-24 hours
+            updateTimer();
+        }
+
+        // Social proof ticker - more specific and credible
+        const proofMessages = [
+            "Jennifer from Madison: \"Discovered $14,200 hidden cost. Scheduling my cleaning!\"",
+            "Mike from Janesville just scheduled his free assessment (2 mins ago)",
+            "David from Beloit: \"Had no idea my exterior was costing me $11,800\"",
+            "Sarah from Rockford completed her assessment → saved $300 by acting this month",
+            "Robert from Milwaukee: \"The before/after photos were incredible!\""
+        ];
+
+        let proofIndex = 0;
+
+        function updateTicker() {
+            const ticker = document.getElementById('tickerText');
+            ticker.style.opacity = 0;
+            setTimeout(() => {
+                ticker.textContent = proofMessages[proofIndex];
+                ticker.style.opacity = 1;
+                proofIndex = (proofIndex + 1) % proofMessages.length;
+            }, 300);
+        }
+
+        // Update ticker every 6 seconds
+        setInterval(updateTicker, 6000);
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Reset multi-select array
+            answers.q2 = [];
+
+            // Randomize initial spots
+            const spotsLeft = Math.floor(Math.random() * 3) + 5;
+            document.getElementById('spotsLeft').textContent = spotsLeft;
+        });
+
+        // Exit intent tracking (for retargeting)
+        window.addEventListener('beforeunload', () => {
+            if (currentScreen.startsWith('q') || currentScreen === 'lead') {
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'ViewContent', { content_name: 'Quiz Abandoned', content_type: 'abandoned_quiz' });
+                }
+            }
+        });
+    </script>
+</body>
+</html>
