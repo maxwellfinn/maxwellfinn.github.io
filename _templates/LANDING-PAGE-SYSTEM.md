@@ -1,128 +1,170 @@
 # Landing Page Creation System
 
-This system allows you to create and deploy landing pages entirely through conversation with Claude. No code editing required - just describe what you want, and the page gets built and pushed to production.
+Create world-class, psychology-driven landing pages entirely through conversation. Every page goes through research, expert copywriting, and a 10-expert review panel before deployment.
 
-## How It Works
+---
 
-1. **Tell me what you need** - Describe your landing page (product, offer, target audience)
-2. **I select the template** - Based on your needs, I pick the best template type
-3. **I customize it** - Fill in your content, colors, images, and CTAs
-4. **I deploy it** - Create the directory, save the file, and push to GitHub Pages
-5. **You get the URL** - Your page is live at `maxwellfinn.github.io/your-page-name/`
+## The Process
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  1. DISCOVERY                                                │
+│     → Analyze offer URL / materials                          │
+│     → Extract brand colors, fonts, voice                     │
+│     → Deep-dive ICP research                                 │
+│     → Study 2026 CRO/design trends                           │
+├─────────────────────────────────────────────────────────────┤
+│  2. PSYCHOLOGY-DRIVEN CREATION                               │
+│     → System 1 triggers (emotional, fast)                    │
+│     → System 2 triggers (rational, deliberate)               │
+│     → Neuromarketing principles                              │
+│     → NLP language patterns                                  │
+│     → Behavioral economics                                   │
+├─────────────────────────────────────────────────────────────┤
+│  3. EXPERT REVIEW PANEL (10 Experts)                         │
+│     → Each expert scores 0-100                               │
+│     → Must achieve 90+ average to ship                       │
+│     → Iterate until threshold met                            │
+├─────────────────────────────────────────────────────────────┤
+│  4. DEPLOYMENT                                               │
+│     → Assets organized in /assets/ folder                    │
+│     → Technical QA checklist                                 │
+│     → Push to production                                     │
+│     → Deliver live URL + preview link                        │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Quick Start
+
+Provide me with:
+1. **Offer URL** (or detailed description)
+2. **Brand materials** (logo, website URL, or screenshots)
+3. **CTA destination** (where buttons should link)
+4. **Any assets** (images, testimonials in a folder)
+
+Example:
+```
+Create a landing page for https://example.com/offer
+Brand assets are in the /client-name/ folder.
+CTA should go to https://example.com/checkout
+No approvals needed after plan approval.
+```
+
+I will execute the full workflow autonomously and deliver a 90+ expert-scored page to production.
+
+---
 
 ## Available Templates
 
-### 1. Listicle (`listicle.html`)
-Best for: Educational content, "X reasons why...", feature comparisons
-- Numbered list format with images
-- Stats and data points
-- Quote blocks and testimonials
-- Dark theme with gold accents (customizable)
+| Template | Best For | Key Features |
+|----------|----------|--------------|
+| `listicle.html` | "X Reasons Why..." content | Numbered sections, stats, quotes |
+| `advertorial.html` | Native ads, editorial sales copy | Article format, case studies, FAQ |
+| `vsl.html` | Video sales letters | Video player, trust stats |
+| `simple-sales.html` | Direct offers | Features grid, pricing card |
 
-### 2. Advertorial (`advertorial.html`)
-Best for: Native advertising, editorial content, long-form sales copy
-- Article/blog-style layout
-- Byline and publication styling
-- Problem/solution comparison cards
-- Case studies and social proof
-- FAQ sections
-- Progress reading bar
+---
 
-### 3. VSL - Video Sales Letter (`vsl.html`)
-Best for: Video-focused offers, webinar replays, product demos
-- Hero section with video player
-- Play button overlay
-- Trust indicators
-- Testimonial grid
-- Clean, focused design
+## The Expert Review Panel
 
-### 4. Simple Sales Page (`simple-sales.html`)
-Best for: Direct offers, product launches, simple conversions
-- Bold hero section
-- Feature cards grid
-- Pricing/offer card
-- Minimal and fast-loading
+Every landing page is reviewed by 10 virtual experts before deployment:
 
-## Quick Start Examples
+| Expert | Specialty |
+|--------|-----------|
+| **David Ogilvy** | Headlines, brand voice, elegant persuasion |
+| **Claude Hopkins** | Specificity, offers, reason-why copy |
+| **Gary Halbert** | Hooks, curiosity, emotional triggers |
+| **Joanna Wiebe** | Voice of customer, clarity, CTA optimization |
+| **Peep Laja** | CRO, friction points, trust signals |
+| **Robert Cialdini** | 7 principles of persuasion |
+| **Daniel Kahneman** | System 1/2, behavioral economics |
+| **Richard Bandler** | NLP patterns, embedded commands |
+| **Oli Gardner** | Visual hierarchy, mobile UX, attention ratio |
+| **Oren Klaff** | Frame control, status, intrigue |
 
-### Example 1: Create an advertorial for a SaaS product
-```
-"Create an advertorial landing page for my AI writing tool called WriteGenius.
-Target audience: content marketers. Main benefit: write 10x faster content.
-Price: $49/month. CTA goes to writegenius.io"
-```
+**Minimum threshold: 90/100 average score**
 
-### Example 2: Create a listicle for a community/membership
-```
-"Create a listicle landing page with 5 reasons to join my mastermind group
-called 'Growth Circle'. It costs $500/month and we have 50 members who have
-seen 2x revenue growth on average. I have testimonials from John (SaaS founder)
-and Sarah (agency owner)."
-```
+If below 90, I iterate and improve until threshold is met.
 
-### Example 3: Create a VSL page
-```
-"Create a video sales letter page for my course on Facebook Ads. The video
-is at /my-video.mp4. Main promise: Learn to run profitable ads in 30 days.
-Price: $997 one-time."
-```
+---
 
-## Customization Options
+## Psychology Framework
 
-When creating a landing page, you can specify:
+### System 1 Triggers (Emotional/Fast)
+- Visual hierarchy and contrast
+- Social proof (testimonials, numbers)
+- Authority signals
+- Scarcity and urgency
+- Reciprocity (free value first)
 
-**Branding:**
-- Logo image path
-- Brand name
-- Brand URL
-- Color scheme (dark/light, accent colors)
+### System 2 Triggers (Rational/Slow)
+- ROI calculations
+- Feature comparisons
+- Risk reversal (guarantees)
+- Specific numbers and data
+- Logical flow (Problem → Solution → Proof → CTA)
 
-**Content:**
-- Headlines and subheadlines
-- Body copy and paragraphs
-- Statistics and data points
-- Testimonials (name, role, quote, result)
-- Features and benefits
-- FAQ items
+### Neuromarketing
+- Pattern interrupts in first 3 seconds
+- Color psychology
+- Eye direction toward CTAs
+- Memory anchoring with rule of 3
 
-**Media:**
-- Hero background image
-- Section images
-- Video URLs (YouTube, Vimeo, or self-hosted)
-- Logos and icons
+### NLP Patterns
+- Presuppositions ("When you start seeing results...")
+- Embedded commands ("Imagine yourself...")
+- Future pacing
+- Sensory language (see, feel, hear)
 
-**Conversion:**
-- CTA button text
-- CTA destination URL
-- Urgency elements
-- Guarantee text
-- Pricing information
+### Behavioral Economics
+- Anchoring (show higher price first)
+- Loss aversion framing
+- Social proof ("Join 10,000+ others")
+- Commitment/consistency (small yes → big yes)
+
+---
+
+## Deliverables
+
+After completion, you receive:
+1. **Live URL**: `https://maxwellfinn.github.io/page-name/`
+2. **Chrome preview**: Local file path
+3. **Asset folder**: `/page-name/assets/`
+4. **Expert scores**: Summary of panel feedback
+
+---
 
 ## Directory Structure
 
 ```
 maxwellfinn.github.io/
-├── _templates/           # Template files (don't edit these)
+├── _templates/
+│   ├── LANDING-PAGE-SYSTEM.md    # This file
+│   ├── WORKFLOW.md               # Detailed workflow docs
+│   ├── EXPERT-REVIEW-TEMPLATE.md # Scoring template
 │   ├── listicle.html
 │   ├── advertorial.html
 │   ├── vsl.html
-│   ├── simple-sales.html
-│   └── LANDING-PAGE-SYSTEM.md
-├── your-landing-page/    # Your custom landing pages
-│   ├── index.html
-│   └── images/
-├── another-page/
+│   └── simple-sales.html
+├── client-page-name/
 │   ├── index.html
 │   └── assets/
+│       ├── logo.png
+│       ├── hero.jpg
+│       └── ...
 └── ...
 ```
 
+---
+
 ## Existing Landing Pages
 
-| Directory | Type | Brand/Product | Status |
-|-----------|------|---------------|--------|
+| Directory | Type | Brand | Status |
+|-----------|------|-------|--------|
 | ba-listicle | Listicle | Board of Advisors | Live |
-| ba-sales-page | Sales Page | Board of Advisors | Live |
+| ba-sales-page | Sales | Board of Advisors | Live |
 | board-of-advisors-vsl | VSL | Board of Advisors | Live |
 | createassistants-advertorial | Advertorial | Create Assistants | Live |
 | createassistants-listicle | Listicle | Create Assistants | Live |
@@ -139,50 +181,49 @@ maxwellfinn.github.io/
 | the-handy | Multiple | The Handy | Live |
 | multiman-services-* | Various | Multiman Services | Live |
 
-## Color Schemes Reference
+---
 
-### Dark + Gold (Premium)
+## Color Schemes
+
+### Premium (Navy + Gold)
 ```css
 --bg-dark: #0a0e1a;
 --accent: #EAA34F;
 ```
 
-### Dark + Orange (Modern)
+### Modern (Black + Orange)
 ```css
 --bg-dark: #0a0a0a;
 --accent: #ff5722;
 ```
 
-### Dark + Blue (Corporate)
+### Corporate (Navy + Blue)
 ```css
 --bg-dark: #0f172a;
 --accent: #3b82f6;
 ```
 
-### Dark + Green (Growth)
+### Growth (Black + Green)
 ```css
 --bg-dark: #0a0a0a;
 --accent: #22c55e;
 ```
 
-## Deployment Workflow
+---
 
-When you ask me to create a landing page:
+## Related Documentation
 
-1. I create a new directory: `/your-page-name/`
-2. I generate the HTML from the template with your content
-3. I save it as `/your-page-name/index.html`
-4. I commit and push to GitHub
-5. Your page is live at `https://maxwellfinn.github.io/your-page-name/`
+- **[WORKFLOW.md](WORKFLOW.md)** - Complete 4-phase workflow details
+- **[EXPERT-REVIEW-TEMPLATE.md](EXPERT-REVIEW-TEMPLATE.md)** - Scoring template with all 10 experts
 
-Pages typically go live within 1-2 minutes after push.
+---
 
 ## Need Changes?
 
-Just tell me what to update:
+Just tell me:
 - "Change the headline to..."
-- "Add a new testimonial from..."
-- "Update the CTA to point to..."
-- "Change the color scheme to blue"
+- "Add a testimonial from..."
+- "Update the CTA URL to..."
+- "Switch to blue color scheme"
 
-I'll make the edit and push the update immediately.
+I'll edit and redeploy immediately.
