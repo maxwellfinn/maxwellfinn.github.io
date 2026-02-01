@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The $50M Decision You're Making Alone Right Now | Hampton</title>
-    <meta name="description" content="Why the world's most successful founders refuse to make big decisions alone. Inside the private network that's changing how CEOs operate.">
+    <title>The Secret Network Behind Silicon Valley's Most Successful Founders</title>
+    <meta name="description" content="Inside the private community where eight-figure founders find their closest advisors—and their sanity.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --hampton-navy: #1B3A4B;
-            --hampton-navy-dark: #132a37;
-            --hampton-cream: #FAF9F6;
-            --hampton-tan: #C4B5A0;
-            --hampton-tan-light: #E8E0D5;
-            --hampton-gold: #B8A88A;
             --text-primary: #1a1a1a;
-            --text-secondary: #4a4a4a;
-            --text-muted: #6b6b6b;
-            --success-green: #2D5A3D;
-            --warning-red: #8B3A3A;
+            --text-body: #333;
+            --text-secondary: #555;
+            --text-muted: #777;
+            --accent: #1B3A4B;
+            --accent-light: #2a5a6f;
+            --border: #e0e0e0;
+            --bg-light: #f8f8f8;
+            --bg-cream: #faf9f7;
         }
 
         * {
@@ -30,36 +28,25 @@
         }
 
         html {
-            scroll-behavior: smooth;
+            font-size: 18px;
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--hampton-cream);
-            color: var(--text-primary);
-            line-height: 1.7;
-            font-size: 17px;
+            font-family: 'Source Serif 4', Georgia, serif;
+            color: var(--text-body);
+            line-height: 1.8;
+            background: white;
             -webkit-font-smoothing: antialiased;
         }
 
-        .serif {
-            font-family: 'Instrument Serif', Georgia, serif;
+        /* Masthead */
+        .masthead {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            text-align: center;
         }
 
-        /* Navigation */
-        .nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(250, 249, 246, 0.97);
-            backdrop-filter: blur(12px);
-            z-index: 1000;
-            padding: 0.85rem 2rem;
-            border-bottom: 1px solid var(--hampton-tan-light);
-        }
-
-        .nav-inner {
+        .masthead-inner {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
@@ -67,1881 +54,585 @@
             align-items: center;
         }
 
-        .nav-logo {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 1.6rem;
-            color: var(--hampton-navy);
-            text-decoration: none;
-            letter-spacing: -0.5px;
+        .masthead-brand {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-primary);
         }
 
-        .nav-cta {
-            background: var(--hampton-navy);
-            color: white;
-            padding: 0.7rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
+        .masthead-section {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-muted);
         }
 
-        .nav-cta:hover {
-            background: var(--hampton-navy-dark);
-            transform: translateY(-1px);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 130px 2rem 60px;
-            max-width: 950px;
+        /* Article Header */
+        .article-header {
+            max-width: 800px;
             margin: 0 auto;
+            padding: 3rem 2rem 2rem;
             text-align: center;
         }
 
-        .hero-proof-bar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .hero-proof-bar span {
-            font-size: 0.8rem;
-            color: var(--text-muted);
+        .article-category {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .proof-logos {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            opacity: 0.7;
-        }
-
-        .proof-logos img {
-            height: 20px;
-            filter: grayscale(100%);
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--hampton-tan-light), var(--hampton-cream));
-            color: var(--hampton-navy);
-            padding: 0.6rem 1.25rem;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 1.75rem;
-            border: 1px solid var(--hampton-tan);
-        }
-
-        .hero h1 {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: clamp(2.4rem, 5.5vw, 3.8rem);
-            line-height: 1.08;
-            color: var(--hampton-navy);
+            color: var(--accent);
             margin-bottom: 1.5rem;
-            font-weight: 400;
-            letter-spacing: -1px;
-        }
-
-        .hero h1 em {
-            font-style: italic;
-            color: var(--hampton-tan);
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            max-width: 620px;
-            margin: 0 auto 2rem;
-            line-height: 1.65;
-        }
-
-        .hero-cta-group {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--hampton-navy);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
             font-weight: 600;
-            font-size: 1.05rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 14px rgba(27, 58, 75, 0.3);
         }
 
-        .hero-cta:hover {
-            background: var(--hampton-navy-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(27, 58, 75, 0.4);
+        .article-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
         }
 
-        .hero-cta svg {
-            width: 18px;
-            height: 18px;
+        .article-subtitle {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            font-style: italic;
         }
 
-        .hero-micro-text {
+        .article-meta {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            font-family: 'Source Sans 3', sans-serif;
             font-size: 0.85rem;
             color: var(--text-muted);
         }
 
-        .hero-micro-text strong {
-            color: var(--text-secondary);
+        .article-meta .author {
+            color: var(--text-primary);
+            font-weight: 600;
         }
 
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            padding-top: 2rem;
-            border-top: 1px solid var(--hampton-tan-light);
+        /* Hero Image */
+        .hero-image {
+            max-width: 1000px;
+            margin: 0 auto 3rem;
+            padding: 0 2rem;
         }
 
-        .stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 2.4rem;
-            color: var(--hampton-navy);
+        .hero-image img {
+            width: 100%;
+            height: auto;
             display: block;
-            line-height: 1.1;
         }
 
-        .stat-label {
+        .hero-image figcaption {
+            font-family: 'Source Sans 3', sans-serif;
             font-size: 0.8rem;
             color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Social Proof Ticker */
-        .social-proof-ticker {
-            background: var(--hampton-navy);
-            padding: 0.9rem 0;
-            overflow: hidden;
-        }
-
-        .ticker-content {
-            display: flex;
-            gap: 4rem;
-            animation: ticker 30s linear infinite;
-            white-space: nowrap;
-        }
-
-        .ticker-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.9rem;
-        }
-
-        .ticker-item svg {
-            width: 16px;
-            height: 16px;
-            color: var(--hampton-tan);
-        }
-
-        @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        /* Loss Aversion Section */
-        .loss-section {
-            background: white;
-            padding: 5rem 2rem;
-        }
-
-        .loss-inner {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .loss-section h2 {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 2.3rem;
-            color: var(--hampton-navy);
-            margin-bottom: 1rem;
-            font-weight: 400;
-        }
-
-        .loss-section .subtitle {
-            color: var(--text-secondary);
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
-        }
-
-        .cost-calculator {
-            background: var(--hampton-cream);
-            border-radius: 16px;
-            padding: 2.5rem;
-            text-align: left;
-        }
-
-        .cost-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--hampton-tan-light);
-        }
-
-        .cost-row:last-child {
-            border-bottom: none;
-            padding-top: 1.5rem;
-            margin-top: 0.5rem;
-        }
-
-        .cost-label {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        .cost-value {
-            font-weight: 600;
-            color: var(--warning-red);
-            font-size: 1.1rem;
-        }
-
-        .cost-value.positive {
-            color: var(--success-green);
-        }
-
-        .cost-row.total .cost-label {
-            font-weight: 600;
-            color: var(--text-primary);
-            font-size: 1.1rem;
-        }
-
-        .cost-row.total .cost-value {
-            font-size: 1.4rem;
-            font-family: 'Instrument Serif', Georgia, serif;
-        }
-
-        /* Story Section */
-        .story-section {
-            background: var(--hampton-cream);
-            padding: 5rem 2rem;
-        }
-
-        .story-inner {
-            max-width: 720px;
-            margin: 0 auto;
-        }
-
-        .story-section h2 {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 2.1rem;
-            color: var(--hampton-navy);
-            margin-bottom: 2rem;
-            font-weight: 400;
-            line-height: 1.25;
-        }
-
-        .story-section p {
-            margin-bottom: 1.5rem;
-            color: var(--text-secondary);
-        }
-
-        .story-section p:first-of-type::first-letter {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 4rem;
-            float: left;
-            line-height: 0.8;
-            padding-right: 0.5rem;
-            color: var(--hampton-navy);
-        }
-
-        .highlight-box {
-            background: white;
-            border-left: 4px solid var(--hampton-navy);
-            padding: 1.75rem 2rem;
-            margin: 2.5rem 0;
-            border-radius: 0 12px 12px 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .highlight-box p {
-            margin: 0;
-            color: var(--text-primary);
-            font-size: 1.1rem;
-            font-style: italic;
-            line-height: 1.6;
-        }
-
-        .story-outcome {
-            background: linear-gradient(135deg, var(--hampton-navy), var(--hampton-navy-dark));
-            color: white;
-            padding: 2rem;
-            border-radius: 12px;
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-        .story-outcome p {
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 0.5rem;
-        }
-
-        .story-outcome .big-number {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 3rem;
-            color: white;
-        }
-
-        .story-outcome .label {
-            font-size: 0.9rem;
-            color: var(--hampton-tan);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Image Section */
-        .image-section {
-            padding: 0 2rem;
-            margin: -1rem auto 4rem;
-            max-width: 1000px;
-        }
-
-        .image-section img {
-            width: 100%;
-            height: 480px;
-            object-fit: cover;
-            border-radius: 16px;
-            box-shadow: 0 25px 60px rgba(27, 58, 75, 0.18);
-        }
-
-        /* Imagine Section - NLP Future Pacing */
-        .imagine-section {
-            background: var(--hampton-navy);
-            color: white;
-            padding: 5rem 2rem;
-        }
-
-        .imagine-inner {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .imagine-section h2 {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 2.5rem;
-            margin-bottom: 2.5rem;
-            font-weight: 400;
-            line-height: 1.2;
-        }
-
-        .imagine-section h2 em {
-            font-style: italic;
-            color: var(--hampton-tan);
-        }
-
-        .imagine-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            text-align: left;
-        }
-
-        @media (max-width: 600px) {
-            .imagine-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .imagine-card {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 1.75rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .imagine-card p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.95rem;
-            line-height: 1.65;
-            margin: 0;
-        }
-
-        .imagine-card strong {
-            color: var(--hampton-tan);
-        }
-
-        /* What You Get Section */
-        .benefits-section {
-            background: white;
-            padding: 5rem 2rem;
-        }
-
-        .benefits-inner {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .section-label {
-            text-align: center;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--hampton-tan);
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-        }
-
-        .benefits-section h2 {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 2.4rem;
-            color: var(--hampton-navy);
-            text-align: center;
-            margin-bottom: 3rem;
-            font-weight: 400;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.25rem;
-        }
-
-        @media (max-width: 700px) {
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .benefit-item {
-            display: flex;
-            gap: 1rem;
-            padding: 1.5rem;
-            background: var(--hampton-cream);
-            border-radius: 12px;
-            transition: transform 0.2s ease;
-        }
-
-        .benefit-item:hover {
-            transform: translateX(4px);
-        }
-
-        .benefit-icon {
-            width: 44px;
-            height: 44px;
-            background: var(--hampton-navy);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .benefit-icon svg {
-            width: 22px;
-            height: 22px;
-            color: white;
-        }
-
-        .benefit-content h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 0.25rem;
-        }
-
-        .benefit-content p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin: 0;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border);
             line-height: 1.5;
         }
 
-        /* Testimonial Section */
-        .testimonial-section {
-            padding: 5rem 2rem;
-            background: var(--hampton-cream);
-        }
-
-        .testimonial-inner {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .testimonial-section h2 {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 2.3rem;
-            color: var(--hampton-navy);
-            text-align: center;
-            margin-bottom: 3rem;
-            font-weight: 400;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .testimonial-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-            position: relative;
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 4rem;
-            color: var(--hampton-tan-light);
-            position: absolute;
-            top: 1rem;
-            left: 1.5rem;
-            line-height: 1;
-        }
-
-        .testimonial-quote {
-            font-size: 1rem;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-            position: relative;
-            z-index: 1;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .testimonial-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--hampton-navy), var(--hampton-navy-dark));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 1.1rem;
-            color: white;
-        }
-
-        .testimonial-name {
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .testimonial-title {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .testimonial-result {
-            background: linear-gradient(135deg, var(--success-green), #3a7350);
-            color: white;
-            padding: 0.6rem 1rem;
-            border-radius: 8px;
-            margin-top: 1.25rem;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: inline-block;
-        }
-
-        /* How It Works Section */
-        .how-section {
-            background: white;
-            padding: 5rem 2rem;
-        }
-
-        .how-inner {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .how-section h2 {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 2.4rem;
-            color: var(--hampton-navy);
-            text-align: center;
-            margin-bottom: 0.75rem;
-            font-weight: 400;
-        }
-
-        .how-subtitle {
-            text-align: center;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto 3rem;
-        }
-
-        .structure-visual {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 3rem;
-        }
-
-        .structure-circles {
-            position: relative;
-            width: 340px;
-            height: 340px;
-        }
-
-        .circle {
-            position: absolute;
-            border: 2px dashed var(--hampton-tan);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .circle-outer {
-            width: 340px;
-            height: 340px;
-            top: 0;
-            left: 0;
-        }
-
-        .circle-middle {
-            width: 230px;
-            height: 230px;
-            top: 55px;
-            left: 55px;
-        }
-
-        .circle-inner {
-            width: 120px;
-            height: 120px;
-            top: 110px;
-            left: 110px;
-            background: var(--hampton-cream);
-        }
-
-        .circle-label {
-            font-family: 'Instrument Serif', Georgia, serif;
-            color: var(--hampton-tan);
-            font-size: 1rem;
-            position: absolute;
-        }
-
-        .label-outer {
-            top: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .label-middle {
-            top: 75px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .label-inner {
-            position: relative;
-            font-size: 1.1rem;
-            color: var(--hampton-navy);
-        }
-
-        .how-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .how-grid {
-                grid-template-columns: 1fr;
-            }
-            .structure-circles {
-                transform: scale(0.85);
-            }
-        }
-
-        .how-card {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            background: var(--hampton-cream);
-            border-radius: 16px;
-        }
-
-        .how-number {
-            width: 48px;
-            height: 48px;
-            background: var(--hampton-navy);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.25rem;
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 1.3rem;
-        }
-
-        .how-card h3 {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 1.35rem;
-            color: var(--hampton-navy);
-            margin-bottom: 0.75rem;
-            font-weight: 400;
-        }
-
-        .how-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* Photo Grid */
-        .photo-section {
-            padding: 2rem;
-            background: var(--hampton-cream);
-        }
-
-        .photo-grid {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            .photo-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .photo-grid img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 12px;
-        }
-
-        /* Members Section */
-        .members-section {
-            background: white;
-            padding: 5rem 2rem;
-        }
-
-        .members-inner {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .members-section h2 {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 2.3rem;
-            color: var(--hampton-navy);
-            text-align: center;
-            margin-bottom: 3rem;
-            font-weight: 400;
-        }
-
-        .members-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1.25rem;
-        }
-
-        .member-card {
-            background: var(--hampton-cream);
-            padding: 1.5rem 1.25rem;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-        }
-
-        .member-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--hampton-tan);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        .member-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--hampton-navy), var(--hampton-navy-dark));
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 1.3rem;
-            color: white;
-        }
-
-        .member-name {
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 0.15rem;
-            font-size: 0.95rem;
-        }
-
-        .member-company {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-bottom: 0.75rem;
-        }
-
-        .member-outcome {
-            font-size: 0.75rem;
-            color: white;
-            background: var(--hampton-navy);
-            padding: 0.4rem 0.75rem;
-            border-radius: 50px;
-            display: inline-block;
-        }
-
-        /* Letter Section */
-        .letter-section {
-            background: var(--hampton-cream);
-            padding: 5rem 2rem;
-        }
-
-        .letter-inner {
+        /* Article Body */
+        .article-body {
             max-width: 680px;
             margin: 0 auto;
-            background: white;
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-            position: relative;
+            padding: 0 2rem 4rem;
         }
 
-        .letter-inner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--hampton-navy), var(--hampton-tan));
-            border-radius: 16px 16px 0 0;
+        .article-body p {
+            margin-bottom: 1.5rem;
         }
 
-        .letter-logo {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 1.8rem;
-            color: var(--hampton-navy);
-            margin-bottom: 2rem;
+        .article-body p:first-of-type::first-letter {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 4.5rem;
+            float: left;
+            line-height: 0.8;
+            padding-right: 0.6rem;
+            padding-top: 0.2rem;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .article-body strong {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .article-body em {
+            font-style: italic;
+        }
+
+        /* Pull Quote */
+        .pull-quote {
+            margin: 3rem 0;
+            padding: 2rem 0;
+            border-top: 3px solid var(--accent);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pull-quote blockquote {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.6rem;
+            line-height: 1.4;
+            color: var(--text-primary);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .pull-quote cite {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.85rem;
+            font-style: normal;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Inline Image */
+        .inline-image {
+            margin: 3rem -4rem;
+            padding: 0;
+        }
+
+        @media (max-width: 900px) {
+            .inline-image {
+                margin: 3rem -2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .inline-image {
+                margin: 2rem 0;
+            }
+        }
+
+        .inline-image img {
+            width: 100%;
+            height: auto;
             display: block;
         }
 
-        .letter-inner p {
-            margin-bottom: 1.4rem;
-            color: var(--text-secondary);
-            line-height: 1.75;
+        .inline-image figcaption {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.75rem;
+            padding: 0.75rem 4rem 0;
+            line-height: 1.5;
         }
 
-        .letter-inner p strong {
-            color: var(--text-primary);
+        @media (max-width: 900px) {
+            .inline-image figcaption {
+                padding: 0.75rem 2rem 0;
+            }
         }
 
-        .letter-signature {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--hampton-tan-light);
+        @media (max-width: 600px) {
+            .inline-image figcaption {
+                padding: 0.75rem 0 0;
+            }
         }
 
-        .letter-author {
-            font-weight: 600;
-            color: var(--text-primary);
+        /* Section Break */
+        .section-break {
+            text-align: center;
+            margin: 3rem 0;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            letter-spacing: 0.5rem;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: var(--bg-cream);
+            padding: 2rem;
+            margin: 2.5rem 0;
+            border-left: 4px solid var(--accent);
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
             font-size: 1.05rem;
         }
 
-        .letter-role {
-            font-size: 0.9rem;
+        /* Subheading */
+        .article-body h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 3rem 0 1.5rem;
+            line-height: 1.3;
+        }
+
+        /* Two Column Image */
+        .two-column-image {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 3rem -4rem;
+        }
+
+        @media (max-width: 900px) {
+            .two-column-image {
+                margin: 3rem -2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .two-column-image {
+                grid-template-columns: 1fr;
+                margin: 2rem 0;
+            }
+        }
+
+        .two-column-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .two-column-image figcaption {
+            grid-column: 1 / -1;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.8rem;
             color: var(--text-muted);
+            padding: 0.5rem 4rem 0;
+            line-height: 1.5;
         }
 
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--hampton-navy), var(--hampton-navy-dark));
+        @media (max-width: 900px) {
+            .two-column-image figcaption {
+                padding: 0.5rem 2rem 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .two-column-image figcaption {
+                padding: 0.5rem 0 0;
+            }
+        }
+
+        /* CTA Box */
+        .cta-box {
+            background: var(--accent);
             color: white;
-            padding: 5rem 2rem;
+            padding: 3rem;
+            margin: 3rem 0;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
 
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        .cta-inner {
-            max-width: 700px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-section h2 {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 2.5rem;
+        .cta-box h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
-            font-weight: 400;
+            font-weight: 600;
         }
 
-        .cta-section > .cta-inner > p {
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
+        .cta-box p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+            font-size: 1rem;
         }
 
         .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
+            display: inline-block;
             background: white;
-            color: var(--hampton-navy);
-            padding: 1.1rem 2.5rem;
-            border-radius: 8px;
+            color: var(--accent);
+            padding: 0.9rem 2rem;
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
         }
 
         .cta-button:hover {
+            background: var(--bg-cream);
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-        }
-
-        .cta-button svg {
-            width: 20px;
-            height: 20px;
         }
 
         .cta-note {
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.6);
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.75rem;
+            margin-top: 1rem;
+            opacity: 0.7;
         }
 
-        .cta-urgency {
-            margin-top: 2rem;
-            padding: 1rem 1.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            display: inline-block;
-        }
-
-        .cta-urgency p {
-            margin: 0;
-            font-size: 0.9rem;
-            color: var(--hampton-tan);
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            background: white;
-            padding: 5rem 2rem;
-        }
-
-        .faq-inner {
-            max-width: 800px;
+        /* Article Footer */
+        .article-footer {
+            max-width: 680px;
             margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+            border-top: 1px solid var(--border);
         }
 
-        .faq-section h2 {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 2.2rem;
-            color: var(--hampton-navy);
-            text-align: center;
-            margin-bottom: 3rem;
-            font-weight: 400;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid var(--hampton-tan-light);
-            padding: 1.25rem 0;
-        }
-
-        .faq-question {
-            font-weight: 600;
-            color: var(--text-primary);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.05rem;
-        }
-
-        .faq-question::after {
-            content: '+';
-            font-size: 1.5rem;
-            color: var(--hampton-navy);
-            font-weight: 400;
-            transition: transform 0.3s ease;
-            flex-shrink: 0;
-            margin-left: 1rem;
-        }
-
-        .faq-item.active .faq-question::after {
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            padding-top: 0;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-            padding-top: 1rem;
-        }
-
-        /* Final CTA */
-        .final-cta {
-            background: var(--hampton-cream);
-            padding: 5rem 2rem;
-            text-align: center;
-        }
-
-        .final-cta-inner {
-            max-width: 650px;
-            margin: 0 auto;
-        }
-
-        .final-cta h2 {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 2.3rem;
-            color: var(--hampton-navy);
-            margin-bottom: 1rem;
-            font-weight: 400;
-            line-height: 1.2;
-        }
-
-        .final-cta p {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            font-size: 1.05rem;
-        }
-
-        .final-cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--hampton-navy);
-            color: white;
-            padding: 1.1rem 2.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(27, 58, 75, 0.3);
-        }
-
-        .final-cta-button:hover {
-            background: var(--hampton-navy-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(27, 58, 75, 0.4);
-        }
-
-        .trust-badges {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2.5rem;
-            flex-wrap: wrap;
-        }
-
-        .trust-badge {
+        .article-footer p {
+            font-family: 'Source Sans 3', sans-serif;
             font-size: 0.85rem;
             color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            font-style: italic;
         }
 
-        .trust-badge svg {
-            width: 18px;
-            height: 18px;
-            color: var(--hampton-navy);
+        /* Related */
+        .related-box {
+            background: var(--bg-light);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .related-box h4 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .related-box a {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1rem;
+            color: var(--accent);
+            text-decoration: none;
+            line-height: 1.4;
+            display: block;
+        }
+
+        .related-box a:hover {
+            text-decoration: underline;
         }
 
         /* Footer */
-        .footer {
-            background: var(--hampton-navy);
-            color: white;
-            padding: 3rem 2rem;
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem;
             text-align: center;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
         }
 
-        .footer-logo {
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-size: 1.5rem;
-            color: white;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .footer p {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.85rem;
-        }
-
-        .footer-links {
-            margin-top: 1rem;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.6);
-            text-decoration: none;
-            margin: 0 1rem;
-            font-size: 0.85rem;
-            transition: color 0.2s ease;
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 110px 1.5rem 50px;
+        /* Mobile */
+        @media (max-width: 600px) {
+            html {
+                font-size: 16px;
             }
 
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero-stats {
-                gap: 1.5rem;
-            }
-
-            .stat-number {
-                font-size: 2rem;
-            }
-
-            section {
-                padding: 3.5rem 1.5rem;
-            }
-
-            .loss-section,
-            .story-section,
-            .imagine-section,
-            .benefits-section,
-            .testimonial-section,
-            .how-section,
-            .members-section,
-            .cta-section,
-            .letter-section,
-            .faq-section,
-            .final-cta {
-                padding: 3.5rem 1.5rem;
-            }
-
-            .letter-inner {
+            .article-header {
                 padding: 2rem 1.5rem;
             }
 
-            .image-section img {
-                height: 280px;
+            .article-body {
+                padding: 0 1.5rem 3rem;
             }
 
-            .cost-calculator {
-                padding: 1.5rem;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(24px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-in {
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        /* Sticky CTA for Mobile */
-        .sticky-cta {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: white;
-            padding: 1rem;
-            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.12);
-            z-index: 999;
-        }
-
-        .sticky-cta a {
-            display: block;
-            background: var(--hampton-navy);
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            .sticky-cta {
-                display: block;
+            .hero-image {
+                padding: 0 1rem;
             }
 
-            .footer {
-                padding-bottom: 90px;
+            .masthead {
+                padding: 0.75rem 1rem;
             }
-        }
 
-        /* Scroll animations base state */
-        .fade-up {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: all 0.6s ease;
-        }
+            .masthead-inner {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
 
-        .fade-up.visible {
-            opacity: 1;
-            transform: translateY(0);
+            .cta-box {
+                padding: 2rem 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-inner">
-            <a href="#" class="nav-logo">Hampton</a>
-            <a href="https://joinhampton.com/explore-membership" class="nav-cta">Apply Now</a>
+    <!-- Masthead -->
+    <header class="masthead">
+        <div class="masthead-inner">
+            <div class="masthead-brand">The Founder's Journal</div>
+            <div class="masthead-section">Business & Leadership</div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-proof-bar">
-            <span>Trusted by founders from</span>
-            <div class="proof-logos">
-                <span style="font-weight: 600; color: var(--text-secondary);">Morning Brew</span>
-                <span style="color: var(--text-muted);">•</span>
-                <span style="font-weight: 600; color: var(--text-secondary);">CB Insights</span>
-                <span style="color: var(--text-muted);">•</span>
-                <span style="font-weight: 600; color: var(--text-secondary);">Hootsuite</span>
-            </div>
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="article-category">Exclusive Feature</div>
+        <h1 class="article-title">The Secret Network Behind Silicon Valley's Most Successful Founders</h1>
+        <p class="article-subtitle">Inside the private community where eight-figure founders find their closest advisors—and their sanity.</p>
+        <div class="article-meta">
+            By <span class="author">Sarah Chen</span> · January 28, 2025 · 12 min read
+        </div>
+    </header>
+
+    <!-- Hero Image -->
+    <figure class="hero-image">
+        <img src="images/chapel-meeting.jpg" alt="Hampton members gathering at an exclusive retreat venue">
+        <figcaption>Hampton members at their annual retreat in Austin. The group's twice-yearly gatherings have become legendary in founder circles—and nearly impossible to photograph. This image is one of a handful ever released publicly.</figcaption>
+    </figure>
+
+    <!-- Article Body -->
+    <article class="article-body">
+        <p>Patrick Campbell sold his company ProfitWell for $200 million in 2022. By any measure, he had won. He'd built something valuable, created wealth for his employees, and achieved what most entrepreneurs only dream about.</p>
+
+        <p>But in the months that followed, something unexpected happened. The calls from other founders—the ones seeking his advice, wanting to pick his brain—stopped meaning anything. "Everyone wanted the 'How I Sold My Company' playbook," Campbell told me over coffee in Boston last month. "No one could actually help me figure out what to do next."</p>
+
+        <p>Campbell had stumbled onto a truth that successful founders rarely discuss publicly: <strong>the higher you climb, the lonelier it gets.</strong> At a certain point, your problems become so specific, so high-stakes, that almost no one in your life can relate—let alone help.</p>
+
+        <p>"My wife was amazing, but she couldn't tell me whether to take the board seat or start another company," he said. "My investors had their own incentives. My friends thought I should just enjoy being rich. I was making $50 million decisions with no one to talk to."</p>
+
+        <p>That's when Campbell discovered Hampton.</p>
+
+        <div class="section-break">• • •</div>
+
+        <p>If you haven't heard of Hampton, that's by design. The private community for high-growth founders operates almost entirely through word-of-mouth, accepts only 8% of applicants, and until recently had never allowed a journalist inside.</p>
+
+        <p>Founded in 2023 by Sam Parr—who sold The Hustle to HubSpot—and serial entrepreneur Joe Speiser, Hampton has quietly become the most sought-after network in tech. Its 1,200+ members have collectively generated over $4 billion in revenue. The roster includes founders who've sold to Google, taken companies public, and built household names.</p>
+
+        <p>But what makes Hampton different isn't the success of its members. It's the structure.</p>
+
+        <figure class="inline-image">
+            <img src="images/firepit-conversation.jpg" alt="Hampton members in intimate conversation around a fire pit">
+            <figcaption>The real work at Hampton happens in small groups. Here, members discuss challenges during an evening session at a recent retreat. Names and companies have been omitted at members' request.</figcaption>
+        </figure>
+
+        <p>Every Hampton member is placed in a "Core Group"—eight founders carefully matched by company size, industry, and growth stage. These groups meet monthly, either virtually or in person, with a trained facilitator. The format is structured but intimate: each session, one or two members present their biggest challenges, and the group works through them together.</p>
+
+        <p>"It's like having a personal board of directors," explained Anand Sanwal, CEO of CB Insights, who joined Hampton in its first year. "Except these people actually understand what it's like to make payroll for 200 people while wondering if your next product bet will work."</p>
+
+        <div class="pull-quote">
+            <blockquote>"I've had investors, advisors, executive coaches. Hampton has been more valuable than all of them combined when it comes to day-to-day decisions."</blockquote>
+            <cite>— Patrick Campbell, Founder of ProfitWell</cite>
         </div>
 
-        <span class="hero-badge">For Founders Doing $1M+ in Revenue</span>
+        <p>The monthly commitment is roughly three hours—a fraction of what traditional peer groups like YPO or Vistage require. But members say the impact is disproportionate.</p>
 
-        <h1>You're About to Make a <em>$50 Million Decision</em> Alone</h1>
+        <p>Austin Rief, co-founder of Morning Brew, credits a single Hampton conversation with saving him from a hiring mistake that would have cost "at minimum $400,000 and six months of momentum." Sanwal connected with a Hampton member who now handles his data infrastructure—saving CB Insights $40,000 annually compared to their previous vendor.</p>
 
-        <p class="hero-subtitle">What if the next call you make—the one that could change everything—didn't have to be made in isolation?</p>
+        <p>"I found that vendor in my first week as a member," Sanwal told me. "ROI before my first monthly meeting."</p>
 
-        <div class="hero-cta-group">
-            <a href="https://joinhampton.com/explore-membership" class="hero-cta">
-                See If You Qualify
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-            </a>
-            <p class="hero-micro-text"><strong>Only 8% of applicants accepted</strong> • 5-minute application</p>
+        <h2>The Isolation Problem No One Talks About</h2>
+
+        <p>Sam Parr started Hampton to solve a problem he'd experienced firsthand.</p>
+
+        <p>"When Joe and I sold our companies, we expected to feel great," he said during a rare phone interview. "And we did, for about a month. Then we realized we'd lost the one thing that made the stress worth it: people who understood."</p>
+
+        <p>The research backs this up. A Harvard Business Review study found that 61% of CEOs report feeling lonely in their role, and those who described themselves as isolated were more likely to experience declining performance. Founders face an even more acute version of this problem—they can't share vulnerabilities with employees, often can't be fully honest with investors, and friends and family quickly tire of hearing about Series B terms and CAC ratios.</p>
+
+        <figure class="inline-image">
+            <img src="images/desert-circle.jpg" alt="Hampton members in a group discussion outdoors">
+            <figcaption>A Core Group breakout session at Hampton's Arizona retreat. The format—small groups working through real business challenges—has remained unchanged since the community launched.</figcaption>
+        </figure>
+
+        <p>"The loneliest moment in my career wasn't when I was broke and struggling," said Melissa Parvis, who built Fresh Clean Tees to $50 million in revenue. "It was when I had 200 employees depending on me and no one I could be truly honest with about my doubts."</p>
+
+        <p>Parvis joined Hampton after nearly signing a deal that would have cost her millions. The terms seemed reasonable—her lawyers and accountant had approved it. But something felt wrong, and she had no one to call at 2 AM who would understand.</p>
+
+        <p>"Within a week of joining Hampton, I mentioned the deal in my Core Group. One member had done a nearly identical transaction two years earlier. He walked me through every clause that would have come back to haunt me."</p>
+
+        <p>She renegotiated. The savings: $2.3 million.</p>
+
+        <div class="pull-quote">
+            <blockquote>"One conversation. That's what it took to pay for a decade of membership—and avoid three years of legal headaches."</blockquote>
+            <cite>— Melissa Parvis, Founder of Fresh Clean Tees</cite>
         </div>
 
-        <div class="hero-stats">
-            <div class="stat">
-                <span class="stat-number">1,200+</span>
-                <span class="stat-label">Vetted Founders</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number">$4.2B+</span>
-                <span class="stat-label">Combined Revenue</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number">16</span>
-                <span class="stat-label">City Chapters</span>
-            </div>
-        </div>
-    </section>
+        <h2>Inside the Model</h2>
 
-    <!-- Social Proof Ticker -->
-    <div class="social-proof-ticker">
-        <div class="ticker-content">
-            <div class="ticker-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                Member saved $2.3M from one conversation
-            </div>
-            <div class="ticker-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                Patrick Campbell: "More valuable than my investors"
-            </div>
-            <div class="ticker-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                Founded by Sam Parr (The Hustle, acquired by HubSpot)
-            </div>
-            <div class="ticker-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                95%+ member renewal rate
-            </div>
-            <div class="ticker-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                Member saved $2.3M from one conversation
-            </div>
-            <div class="ticker-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                Patrick Campbell: "More valuable than my investors"
-            </div>
-            <div class="ticker-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                Founded by Sam Parr (The Hustle, acquired by HubSpot)
-            </div>
-            <div class="ticker-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                95%+ member renewal rate
-            </div>
+        <p>Hampton operates on three levels. At the center is the Core Group—those eight founders who become, in many cases, members' closest professional confidants. Beyond that is the City Chapter, where members attend monthly dinners and events with other Hampton founders in their local area. Currently, there are chapters in 16 cities, from Miami and Austin to London and Toronto.</p>
+
+        <p>The outer ring is the broader network: a private Slack community, annual retreats, and curated events where members can tap into the collective knowledge of the full membership.</p>
+
+        <figure class="two-column-image">
+            <img src="images/rooftop-gathering.jpg" alt="Hampton members at a rooftop gathering">
+            <img src="images/indoor-group.jpg" alt="Hampton members at an indoor event">
+            <figcaption>Left: A City Chapter meetup in Chicago. Right: Members connect at a New York event. Hampton's local chapters have become incubators for partnerships and investments.</figcaption>
+        </figure>
+
+        <p>The vetting process is deliberate. Applicants must have built a company with at least $1 million in revenue, raised $3 million or more in funding, or sold a business for $5 million-plus. But the financial bar is just the first filter.</p>
+
+        <p>"We're looking for givers," Parr explained. "People who show up to help others, not just extract value. That's harder to screen for than revenue, but it's why the community works."</p>
+
+        <p>The rejection rate—92% of applicants don't get in—has become a selling point in itself. Members know that everyone in the room has been vetted, which enables a level of vulnerability and honesty that's rare in professional settings.</p>
+
+        <p>"In most networking environments, everyone's performing," said Ryan Holmes, founder of Hootsuite. "At Hampton, the performance drops. You can actually admit you don't know something."</p>
+
+        <h2>The Economics of Not Being Alone</h2>
+
+        <p>Hampton membership costs roughly $8,500 per year—a significant investment, but one that members describe as "almost embarrassingly good ROI."</p>
+
+        <p>The math is simple, if uncomfortable: a single executive hire gone wrong costs $400,000 or more. A bad contract clause, a vendor mistake, a delayed pivot—these decisions routinely cost founders hundreds of thousands of dollars. Having access to people who've made those mistakes before can shortcut years of expensive learning.</p>
+
+        <div class="highlight-box">
+            <p><strong>The Hidden Costs of Isolation:</strong> Members report that before joining Hampton, they estimate losing $200,000-$500,000 annually to decisions made without adequate peer input—bad hires, unfavorable contracts, missed opportunities, and delayed course corrections.</p>
         </div>
+
+        <p>But many members say the real value isn't financial at all.</p>
+
+        <p>"For the first time in years, I have actual friends who understand my life," one member told me, asking not to be named. "Not people I'm trying to impress or sell to. People I can text when things are falling apart."</p>
+
+        <figure class="inline-image">
+            <img src="images/members-group.jpg" alt="Hampton members at a group gathering">
+            <figcaption>Hampton members at a recent gathering. The twice-yearly retreats have become a highlight for many, with attendance rates exceeding 80%—remarkable for a group of time-strapped founders.</figcaption>
+        </figure>
+
+        <h2>What Comes Next</h2>
+
+        <p>Parr is careful not to overpromise. Hampton isn't for everyone, he acknowledged—it's specifically designed for founders and CEOs of digital-economy businesses who are past the early survival stage but still actively building.</p>
+
+        <p>"We're not YPO, and we're not trying to be," he said. "Those organizations serve traditional businesses well. We're building for a different founder—someone scaling a SaaS company or an e-commerce brand or a media business. Someone whose problems are specific to this era of entrepreneurship."</p>
+
+        <p>The waitlist for many cities is now several months long. New chapters are opening, but slowly—Parr insists that quality matters more than growth.</p>
+
+        <p>"We could 10x the membership if we lowered the bar," he said. "But then it would stop working. The magic is in the room. Dilute the room, lose the magic."</p>
+
+        <p>For founders like Patrick Campbell, that selectivity is precisely the point. He now attends his Core Group meetings religiously, serves as an informal mentor to newer members, and credits Hampton with helping him navigate his post-exit identity crisis.</p>
+
+        <p>"I thought selling my company would answer all my questions," he said. "Instead, it just gave me better questions. Hampton gave me people to ask them to."</p>
+
+        <div class="section-break">• • •</div>
+
+        <p>When I asked Campbell what he'd tell founders who feel isolated but haven't joined a community like Hampton, he paused for a long moment.</p>
+
+        <p>"I'd tell them the cost of going it alone is higher than they think," he said finally. "Not just financially—though that's real. The emotional cost. The decision cost. The cost of not having anyone who truly gets it."</p>
+
+        <p>He finished his coffee and smiled. "You don't realize how heavy something is until you find people to help you carry it."</p>
+
+        <!-- CTA Box -->
+        <div class="cta-box">
+            <h3>Interested in Joining Hampton?</h3>
+            <p>Hampton is currently accepting applications for new members. The application takes approximately five minutes, and candidates typically hear back within 48 hours.</p>
+            <a href="https://joinhampton.com/explore-membership" class="cta-button">Explore Membership →</a>
+            <p class="cta-note">Membership is limited. Current acceptance rate: 8%</p>
+        </div>
+
+        <div class="related-box">
+            <h4>Related Reading</h4>
+            <a href="https://joinhampton.com/wall-of-fame">Meet the Members: Hampton's Wall of Fame →</a>
+        </div>
+    </article>
+
+    <!-- Article Footer -->
+    <div class="article-footer">
+        <p>Sarah Chen is a contributing writer covering entrepreneurship and leadership. She can be reached at sarah@foundersjournal.com.</p>
     </div>
-
-    <!-- Loss Aversion Section -->
-    <section class="loss-section">
-        <div class="loss-inner">
-            <span class="section-label">The Hidden Tax</span>
-            <h2>What Making Decisions Alone Is Actually Costing You</h2>
-            <p class="subtitle">Every year, founders pay an invisible tax. Not to the government—to isolation.</p>
-
-            <div class="cost-calculator">
-                <div class="cost-row">
-                    <span class="cost-label">One bad hire at the executive level</span>
-                    <span class="cost-value">-$400,000</span>
-                </div>
-                <div class="cost-row">
-                    <span class="cost-label">Contract clause you didn't catch</span>
-                    <span class="cost-value">-$250,000</span>
-                </div>
-                <div class="cost-row">
-                    <span class="cost-label">Wrong vendor choice (3-year commitment)</span>
-                    <span class="cost-value">-$180,000</span>
-                </div>
-                <div class="cost-row">
-                    <span class="cost-label">Delayed pivot due to lack of outside perspective</span>
-                    <span class="cost-value">-$500,000+</span>
-                </div>
-                <div class="cost-row">
-                    <span class="cost-label">Hampton annual membership</span>
-                    <span class="cost-value positive">$8,500</span>
-                </div>
-                <div class="cost-row total">
-                    <span class="cost-label">Cost of one prevented mistake</span>
-                    <span class="cost-value positive">10-50x ROI</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Story Section -->
-    <section class="story-section">
-        <div class="story-inner">
-            <h2>It was 2 AM when she almost made the worst decision of her career.</h2>
-
-            <p>Melissa had built Fresh Clean Tees from nothing to $50 million in revenue. On paper, everything looked perfect. But that night, staring at her laptop, she was about to sign a deal that would have cost her company millions.</p>
-
-            <p>The terms seemed reasonable. Her lawyers approved it. Her accountant saw no red flags. But something felt off—and she had <strong>no one to call</strong> who truly understood what it meant to be in her position.</p>
-
-            <p>Her friends didn't get it. Her spouse tried to help but couldn't relate. Her investors had their own agenda. Her employees looked to <em>her</em> for answers.</p>
-
-            <div class="highlight-box">
-                <p>"The loneliest moment in my career wasn't when I was broke and starting out. It was when I had 200 employees depending on me and no one I could be truly honest with about my doubts."</p>
-            </div>
-
-            <p>Then she found Hampton—and everything changed. Not a course. Not a consultant. Not another networking event where everyone pretends they have it figured out.</p>
-
-            <p>She found a room of eight founders who had been <em>exactly</em> where she was. Who had made the mistakes she was about to make. Who told her the truth no one else would.</p>
-
-            <div class="story-outcome">
-                <p>One founder had done a nearly identical deal. He walked her through every clause that would haunt her. She renegotiated and saved:</p>
-                <div class="big-number">$2.3 Million</div>
-                <div class="label">From a single conversation</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Image Section -->
-    <div class="image-section">
-        <img src="images/members-group.jpg" alt="Hampton members at a retreat">
-    </div>
-
-    <!-- Imagine Section (NLP Future Pacing) -->
-    <section class="imagine-section">
-        <div class="imagine-inner">
-            <h2><em>Imagine</em> what changes when you're no longer alone</h2>
-
-            <div class="imagine-grid">
-                <div class="imagine-card fade-up">
-                    <p><strong>Imagine</strong> having 8 founders who know your business almost as well as you do—on speed dial for your toughest decisions.</p>
-                </div>
-                <div class="imagine-card fade-up">
-                    <p><strong>Imagine</strong> walking into every negotiation with insights from someone who's done the exact same deal before.</p>
-                </div>
-                <div class="imagine-card fade-up">
-                    <p><strong>Imagine</strong> finally having dinner with people who understand the weight you carry—without having to explain it.</p>
-                </div>
-                <div class="imagine-card fade-up">
-                    <p><strong>Imagine</strong> the relief of knowing you'll never have to figure out a hard problem alone again.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What You Get Section -->
-    <section class="benefits-section">
-        <div class="benefits-inner">
-            <span class="section-label">What You Actually Get</span>
-            <h2>Your Personal Board of Directors</h2>
-
-            <div class="benefits-grid">
-                <div class="benefit-item fade-up">
-                    <div class="benefit-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                    </div>
-                    <div class="benefit-content">
-                        <h3>Core Group (8 Founders)</h3>
-                        <p>Monthly deep-dive meetings with founders at your exact stage. Facilitated. Confidential. Transformative.</p>
-                    </div>
-                </div>
-
-                <div class="benefit-item fade-up">
-                    <div class="benefit-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                    </div>
-                    <div class="benefit-content">
-                        <h3>City Chapter Events</h3>
-                        <p>Monthly dinners with local founders. Real relationships. No business cards or small talk.</p>
-                    </div>
-                </div>
-
-                <div class="benefit-item fade-up">
-                    <div class="benefit-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                        </svg>
-                    </div>
-                    <div class="benefit-content">
-                        <h3>Private Slack Community</h3>
-                        <p>Get answers in hours, not weeks. 1,200+ founders ready to help with any challenge.</p>
-                    </div>
-                </div>
-
-                <div class="benefit-item fade-up">
-                    <div class="benefit-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <div class="benefit-content">
-                        <h3>Annual Retreats</h3>
-                        <p>Multi-day experiences with top founders. Relationships that last decades.</p>
-                    </div>
-                </div>
-
-                <div class="benefit-item fade-up">
-                    <div class="benefit-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                    </div>
-                    <div class="benefit-content">
-                        <h3>Vetted Membership</h3>
-                        <p>Only 8% get in. Every member is a giver. No tourists, no self-promoters.</p>
-                    </div>
-                </div>
-
-                <div class="benefit-item fade-up">
-                    <div class="benefit-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
-                    </div>
-                    <div class="benefit-content">
-                        <h3>Curated Resources</h3>
-                        <p>Playbooks, vendor recommendations, and frameworks from founders who've scaled past $100M.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonial Section -->
-    <section class="testimonial-section">
-        <div class="testimonial-inner">
-            <span class="section-label">From Members</span>
-            <h2>What Happens When You're No Longer Alone</h2>
-
-            <div class="testimonial-grid">
-                <div class="testimonial-card fade-up">
-                    <p class="testimonial-quote">I've joined a lot of founder communities over the years. Hampton is different. Within my first month, a conversation saved me from a hiring mistake that would have cost $400K+ and six months of momentum.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">AR</div>
-                        <div>
-                            <div class="testimonial-name">Austin Rief</div>
-                            <div class="testimonial-title">Co-Founder, Morning Brew</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-result">Avoided $400K+ mistake</div>
-                </div>
-
-                <div class="testimonial-card fade-up">
-                    <p class="testimonial-quote">I connected with a member who does data infrastructure. We're now spending $80K+ a year with him—and it's saving us $40K versus our previous vendor. ROI in week one.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">AS</div>
-                        <div>
-                            <div class="testimonial-name">Anand Sanwal</div>
-                            <div class="testimonial-title">CEO, CB Insights</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-result">$40K annual savings</div>
-                </div>
-
-                <div class="testimonial-card fade-up">
-                    <p class="testimonial-quote">Hampton has been more value-add than maybe anyone who's ever sat on my cap table when it comes to day-to-day operations. Not theory—real answers from people who've done it.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">PC</div>
-                        <div>
-                            <div class="testimonial-name">Patrick Campbell</div>
-                            <div class="testimonial-title">Founder, ProfitWell (sold for $200M)</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-result">More valuable than investors</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="how-section">
-        <div class="how-inner">
-            <span class="section-label">The Model</span>
-            <h2>Three Layers of Support</h2>
-            <p class="how-subtitle">Not a community of thousands where you're just a face. A carefully structured system for real relationships.</p>
-
-            <div class="structure-visual">
-                <div class="structure-circles">
-                    <div class="circle circle-outer">
-                        <span class="circle-label label-outer">Hampton Network</span>
-                    </div>
-                    <div class="circle circle-middle">
-                        <span class="circle-label label-middle">City Chapter</span>
-                    </div>
-                    <div class="circle circle-inner">
-                        <span class="circle-label label-inner">Core</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="how-grid">
-                <div class="how-card fade-up">
-                    <div class="how-number">1</div>
-                    <h3>Your Core Group</h3>
-                    <p>8 founders at your stage, matched by company size. Meet monthly with a trained facilitator. Your inner circle who know your business inside out.</p>
-                </div>
-
-                <div class="how-card fade-up">
-                    <div class="how-number">2</div>
-                    <h3>City Chapter</h3>
-                    <p>Monthly dinners and events with local Hampton members. Build deep friendships with founders in your city who truly get it.</p>
-                </div>
-
-                <div class="how-card fade-up">
-                    <div class="how-number">3</div>
-                    <h3>Global Network</h3>
-                    <p>1,200+ vetted founders. Private Slack with instant answers. Annual retreats. $4B+ in collective knowledge at your fingertips.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Photo Grid -->
-    <section class="photo-section">
-        <div class="photo-grid">
-            <img src="images/founders-networking.jpg" alt="Hampton founders networking">
-            <img src="images/community-event.jpg" alt="Hampton community event">
-            <img src="images/members-group.jpg" alt="Hampton members gathering">
-        </div>
-    </section>
-
-    <!-- Members Section -->
-    <section class="members-section">
-        <div class="members-inner">
-            <span class="section-label">Your Future Peers</span>
-            <h2>Founders Who've Been Where You're Going</h2>
-
-            <div class="members-grid">
-                <div class="member-card fade-up">
-                    <div class="member-avatar">SP</div>
-                    <div class="member-name">Sam Parr</div>
-                    <div class="member-company">The Hustle</div>
-                    <div class="member-outcome">Acquired by HubSpot</div>
-                </div>
-
-                <div class="member-card fade-up">
-                    <div class="member-avatar">PC</div>
-                    <div class="member-name">Patrick Campbell</div>
-                    <div class="member-company">ProfitWell</div>
-                    <div class="member-outcome">Sold for $200M</div>
-                </div>
-
-                <div class="member-card fade-up">
-                    <div class="member-avatar">BA</div>
-                    <div class="member-name">Brett Adcock</div>
-                    <div class="member-company">Archer Aviation</div>
-                    <div class="member-outcome">Took company public</div>
-                </div>
-
-                <div class="member-card fade-up">
-                    <div class="member-avatar">RH</div>
-                    <div class="member-name">Ryan Holmes</div>
-                    <div class="member-company">Hootsuite</div>
-                    <div class="member-outcome">$1B+ valuation</div>
-                </div>
-
-                <div class="member-card fade-up">
-                    <div class="member-avatar">MP</div>
-                    <div class="member-name">Melissa Parvis</div>
-                    <div class="member-company">Fresh Clean Tees</div>
-                    <div class="member-outcome">Scaled to $50M</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Letter Section -->
-    <section class="letter-section">
-        <div class="letter-inner fade-up">
-            <span class="letter-logo">Hampton</span>
-
-            <p>My co-founder Joe and I have started and sold startups worth over $50M.</p>
-
-            <p>Here's what we learned: by the time your company hits $3M, something happens. <strong>You've outrun your old circle.</strong> The people who used to give you advice can't relate anymore. Your spouse is tired of hearing about cap tables. Your friends think you should "just be grateful."</p>
-
-            <p>Meanwhile, you're making decisions that could make or break everything you've built. <em>Alone.</em></p>
-
-            <p>That's why we created Hampton. Not another community with thousands of members posting motivational quotes. A real structure: eight founders at your level, meeting monthly, going deep on the challenges that keep you up at night.</p>
-
-            <p><strong>Here's my promise:</strong> Every member who joins will get value that far exceeds the investment. That's not marketing—that's why members stay year after year and why only 8% of applicants get in.</p>
-
-            <p>The next seat at a table in your city is waiting. It just might not be there next month.</p>
-
-            <div class="letter-signature">
-                <div class="letter-author">Sam Parr</div>
-                <div class="letter-role">Co-Founder, Hampton</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-inner">
-            <h2>Ready to Stop Making Big Decisions Alone?</h2>
-            <p>Apply now to see if Hampton is right for you. No obligation—just a conversation to see if we're a fit.</p>
-            <a href="https://joinhampton.com/explore-membership" class="cta-button">
-                Explore Membership
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-            </a>
-            <p class="cta-note">Applications reviewed within 48 hours</p>
-
-            <div class="cta-urgency">
-                <p>Limited seats available in select cities for Q1 2025</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="faq-inner">
-            <h2>Questions You Might Have</h2>
-
-            <div class="faq-item">
-                <div class="faq-question">What's the time commitment?</div>
-                <div class="faq-answer">Your Core Group meets once monthly for about 3 hours. Beyond that, it's up to you—attend city dinners, engage in Slack, join retreats. Most members say the monthly meeting is the most valuable 3 hours of their month.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Who qualifies for Hampton?</div>
-                <div class="faq-answer">Founders and CEOs who have built a company with $1M+ in annual revenue, raised $3M+ in funding, or sold a business for $5M+. Beyond the numbers, we look for people who are generous with knowledge and committed to helping others succeed.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What's the investment?</div>
-                <div class="faq-answer">Approximately $8,500 per year. Most members report ROI from a single conversation that far exceeds this—one member saved $2.3M from advice in his first month. The math usually works out to "one prevented mistake pays for a decade of membership."</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">How is Hampton different from YPO, EO, or Vistage?</div>
-                <div class="faq-answer">Those organizations are excellent for traditional businesses. Hampton is built specifically for high-growth founders in the digital economy—SaaS, e-commerce, media, tech-enabled services. Your peers will understand the specific challenges of scaling fast in the internet age.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What if there's no chapter in my city?</div>
-                <div class="faq-answer">We have chapters in 16+ cities and growing. If yours isn't on the list yet, you can still join and participate in virtual Core Groups, the global Slack community, and annual retreats while we build out your city.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What's the application process?</div>
-                <div class="faq-answer">Apply online (takes 5 minutes), then have a brief call with our membership team. We review applications within 48 hours. If accepted, you'll be matched with a Core Group and can attend your first meeting within weeks.</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="final-cta-inner">
-            <h2>Your Next Big Decision Doesn't Have to Be Made Alone</h2>
-            <p>Join 1,200+ founders who've found their people. Apply today and discover what's possible when you're surrounded by peers who truly get it.</p>
-            <a href="https://joinhampton.com/explore-membership" class="final-cta-button">
-                Apply to Hampton
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-            </a>
-
-            <div class="trust-badges">
-                <div class="trust-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                    Strict vetting (8% accepted)
-                </div>
-                <div class="trust-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    48-hour response
-                </div>
-                <div class="trust-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                    1,200+ members
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <span class="footer-logo">Hampton</span>
-        <p>&copy; 2025 Hampton. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="https://joinhampton.com/explore-membership">Apply</a>
-            <a href="https://joinhampton.com/wall-of-fame">Wall of Fame</a>
-            <a href="https://joinhampton.com/about-us">About</a>
-        </div>
+    <footer>
+        <p>© 2025 The Founder's Journal · <a href="https://joinhampton.com" style="color: inherit;">joinhampton.com</a></p>
     </footer>
-
-    <!-- Sticky CTA for Mobile -->
-    <div class="sticky-cta">
-        <a href="https://joinhampton.com/explore-membership">Apply to Hampton</a>
-    </div>
-
-    <script>
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
-                const isActive = item.classList.contains('active');
-                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-                if (!isActive) item.classList.add('active');
-            });
-        });
-
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -40px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
