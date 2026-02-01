@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxwell Finn | Scale Your Brand with Paid Advertising</title>
+    <meta name="description" content="Serial entrepreneur & paid advertising pioneer. $250M+ in revenue generated. Work with Maxwell Finn to scale your brand profitably.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Maxwell Finn | Scale Your Brand with Paid Advertising">
+    <meta property="og:description" content="Serial entrepreneur & paid advertising pioneer. $250M+ in revenue generated.">
+    <meta property="og:image" content="https://maxwellfinn.com/max-website/max-standing-headshot.jpg.webp">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-400: #a3a3a3;
+            --gray-500: #737373;
+            --gray-700: #404040;
+            --gray-800: #262626;
+            --gray-900: #171717;
+            --accent: #ff3d00;
+            --accent-dark: #cc3100;
+            --accent-glow: rgba(255, 61, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 5vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .header-cta {
+            padding: 12px 24px;
+            background: var(--accent);
+            color: var(--white);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .header-cta:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 140px 5vw 80px;
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (max-width: 900px) {
+            .hero-content {
+                padding: 120px 5vw 60px;
+                order: 2;
+            }
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 18px;
+            background: rgba(255, 61, 0, 0.1);
+            border: 1px solid rgba(255, 61, 0, 0.25);
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 28px;
+            width: fit-content;
+        }
+
+        .hero-tag-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .hero-title {
+            font-size: clamp(36px, 5.5vw, 64px);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+        }
+
+        .hero-title em {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            color: var(--accent);
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--gray-400);
+            max-width: 460px;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--gray-800);
+        }
+
+        @media (max-width: 500px) {
+            .hero-stats {
+                gap: 24px;
+                flex-wrap: wrap;
+            }
+        }
+
+        .hero-stat-value {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .hero-stat-value span {
+            color: var(--accent);
+        }
+
+        .hero-stat-label {
+            font-size: 11px;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 40px;
+            background: var(--accent);
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 20px 50px rgba(255, 61, 0, 0.25);
+        }
+
+        .hero-cta:hover {
+            background: var(--accent-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 25px 60px rgba(255, 61, 0, 0.35);
+        }
+
+        .hero-cta svg {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s;
+        }
+
+        .hero-cta:hover svg {
+            transform: translateX(4px);
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 900px) {
+            .hero-image-wrapper {
+                height: 60vh;
+                order: 1;
+            }
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .hero-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, var(--black) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        @media (max-width: 900px) {
+            .hero-image-overlay {
+                background: linear-gradient(to top, var(--black) 0%, transparent 60%);
+            }
+        }
+
+        /* Logos/Social Proof Bar */
+        .logos-bar {
+            padding: 40px 5vw;
+            background: var(--gray-900);
+            border-top: 1px solid var(--gray-800);
+            border-bottom: 1px solid var(--gray-800);
+        }
+
+        .logos-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .logos-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+        }
+
+        .logos-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .logos-list span {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-500);
+            letter-spacing: 1px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 120px 5vw;
+        }
+
+        .services-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .section-tag-line {
+            width: 32px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .section-tag-text {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .section-title em {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .section-subtitle {
+            font-size: 17px;
+            color: var(--gray-400);
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        @media (max-width: 800px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .service-card {
+            padding: 40px 32px;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-800);
+            transition: all 0.4s;
+            position: relative;
+        }
+
+        .service-card:hover {
+            border-color: var(--gray-700);
+            transform: translateY(-4px);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 24px;
+            color: var(--accent);
+        }
+
+        .service-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+
+        .service-text {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.7;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 120px 5vw;
+            background: var(--gray-900);
+        }
+
+        .testimonials-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 700px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .testimonial-card {
+            padding: 40px;
+            background: var(--black);
+            border: 1px solid var(--gray-800);
+        }
+
+        .testimonial-quote {
+            font-size: 64px;
+            font-family: 'Playfair Display', serif;
+            color: var(--gray-800);
+            line-height: 1;
+            margin-bottom: -20px;
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            color: var(--gray-400);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-result {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(255, 61, 0, 0.1);
+            border: 1px solid rgba(255, 61, 0, 0.25);
+            color: var(--accent);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            background: var(--gray-800);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 2px;
+        }
+
+        .testimonial-role {
+            font-size: 13px;
+            color: var(--gray-500);
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 160px 5vw;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .final-cta-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .final-cta-title {
+            font-size: clamp(40px, 7vw, 72px);
+            font-weight: 800;
+            letter-spacing: -3px;
+            line-height: 1;
+            margin-bottom: 24px;
+        }
+
+        .final-cta-title em {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            color: var(--accent);
+        }
+
+        .final-cta-text {
+            font-size: 18px;
+            color: var(--gray-400);
+            max-width: 480px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .final-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 22px 48px;
+            background: var(--accent);
+            color: var(--white);
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 20px 50px rgba(255, 61, 0, 0.3);
+        }
+
+        .final-cta-btn:hover {
+            background: var(--accent-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 30px 70px rgba(255, 61, 0, 0.4);
+        }
+
+        .final-cta-btn svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s;
+        }
+
+        .final-cta-btn:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 48px 5vw;
+            background: var(--gray-900);
+            border-top: 1px solid var(--gray-800);
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            color: var(--gray-500);
+        }
+
+        .footer-links {
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: var(--gray-500);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="https://maxwellfinn.com" class="logo">Maxwell Finn</a>
+        <a href="https://maxwellfinn.com" class="header-cta">Learn More</a>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-tag">
+                <span class="hero-tag-dot"></span>
+                <span>Paid Advertising Expert</span>
+            </div>
+
+            <h1 class="hero-title">
+                Scale Your Brand<br>with <em>Proven</em> Systems
+            </h1>
+
+            <p class="hero-subtitle">
+                I've helped generate over $250 million in revenue through paid advertising. From Facebook's earliest days to TikTok mastery.
+            </p>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">$250M<span>+</span></div>
+                    <div class="hero-stat-label">Revenue</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">10K<span>+</span></div>
+                    <div class="hero-stat-label">Trained</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">12<span>+</span></div>
+                    <div class="hero-stat-label">Years</div>
+                </div>
+            </div>
+
+            <a href="https://maxwellfinn.com" class="hero-cta">
+                Work With Maxwell
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="hero-image-wrapper">
+            <img src="../max-website/max-standing-headshot.jpg.webp" alt="Maxwell Finn" class="hero-image">
+            <div class="hero-image-overlay"></div>
+        </div>
+    </section>
+
+    <!-- Logos Bar -->
+    <section class="logos-bar">
+        <div class="logos-inner">
+            <div class="logos-label">Featured & Worked With</div>
+            <div class="logos-list">
+                <span>ClickFunnels</span>
+                <span>Shark Tank</span>
+                <span>3M</span>
+                <span>TikTok</span>
+                <span>DigitalMarketer</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="services-inner">
+            <div class="section-header">
+                <div class="section-tag">
+                    <span class="section-tag-line"></span>
+                    <span class="section-tag-text">What I Do</span>
+                    <span class="section-tag-line"></span>
+                </div>
+                <h2 class="section-title">Deep expertise where it <em>matters</em></h2>
+                <p class="section-subtitle">Over a decade of hands-on experience scaling brands across platforms and industries.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                    <h3 class="service-title">Paid Media Strategy</h3>
+                    <p class="service-text">Facebook, TikTok, and emerging platforms. Profitable customer acquisition systems that scale predictably.</p>
+                </div>
+
+                <div class="service-card">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M23 6l-9.5 9.5-5-5L1 18"/>
+                        <path d="M17 6h6v6"/>
+                    </svg>
+                    <h3 class="service-title">Brand Scaling</h3>
+                    <p class="service-text">From $0 to $500K run rate in 6 months. Proven systems for scaling fast while maintaining profitability.</p>
+                </div>
+
+                <div class="service-card">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <h3 class="service-title">Training & Advisory</h3>
+                    <p class="service-text">10,000+ marketers trained. Complex paid media strategies broken down into actionable frameworks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="testimonials-inner">
+            <div class="section-header">
+                <div class="section-tag">
+                    <span class="section-tag-line"></span>
+                    <span class="section-tag-text">Proof</span>
+                    <span class="section-tag-line"></span>
+                </div>
+                <h2 class="section-title">What industry leaders say</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <article class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Maxwell is one of the most knowledgeable paid media experts I've ever worked with. His ability to break down complex strategies into actionable steps is unmatched.</p>
+                    <div class="testimonial-result">Brand acquired for 7-figures</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RB</div>
+                        <div>
+                            <div class="testimonial-name">Russell Brunson</div>
+                            <div class="testimonial-role">Founder, ClickFunnels</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">I've seen Maxwell speak multiple times and he always delivers incredible value. He's not about hype—he's about results.</p>
+                    <div class="testimonial-result">Top-rated speaker at T&C Summit</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RD</div>
+                        <div>
+                            <div class="testimonial-name">Ryan Deiss</div>
+                            <div class="testimonial-role">Founder, DigitalMarketer</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="final-cta-inner">
+            <h2 class="final-cta-title">Ready to <em>scale?</em></h2>
+            <p class="final-cta-text">Whether you need strategic advisory, hands-on campaign management, or training for your team—let's connect.</p>
+            <a href="https://maxwellfinn.com" class="final-cta-btn">
+                Visit MaxwellFinn.com
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">Maxwell Finn</div>
+        <p class="footer-text">Serial entrepreneur, investor & paid advertising pioneer.</p>
+        <div class="footer-links">
+            <a href="https://maxwellfinn.com">Main Site</a>
+            <a href="https://www.linkedin.com/in/maxfinn/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://twitter.com/maxwellfinn" target="_blank" rel="noopener">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>
